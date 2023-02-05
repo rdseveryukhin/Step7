@@ -4,67 +4,67 @@ VERSION : 0.1
 
 
   STRUCT 	
-   Status_start : BOOL ;	//Программа запущена
-   Status_ready : BOOL ;	//ТФ готова
-   Minoil_start : BOOL ;	//Загрузка масла запущена
-   Emuls1_start : BOOL ;	//Загрузка эмульгатора 1 запущена
-   Emuls2_start : BOOL ;	//Загрузка эмульгатора 2 запущена
-   Mixer_start : BOOL ;	//Запущена мешалка
-   IBC_start : BOOL ;	//Перекачивание в IBC
-   Mixer_ES : BOOL ;	//Аварийная кнопка мешалки
-   Mixer_stop : BOOL ;	//Останов мешалки
-   Minoil_stop : BOOL ;	//Останов загрузки масла
-   Emuls1_stop : BOOL ;	//Останов загрузки эмульгатора 1
-   Emuls2_stop : BOOL ;	//Останов загрузки эмульгатора 2
-   IBC_stop : BOOL ;	//Останов перекачивания в IBC
-   Process_busy : BOOL ;	//Процесс запущен
-   IBC_start_auto : BOOL ;	//Перекачивание в IBC авторежим
-   Status_stop : BOOL ;	//Остановка программы
-   Current_id : INT ;	//Выбранный рецепт
+   Status_start : BOOL ;	//Program is started
+   Status_ready : BOOL ;	//FP is ready
+   Minoil_start : BOOL ;	//Min. oil downloading is started
+   Emuls1_start : BOOL ;	//Emulgator1 downloading is started
+   Emuls2_start : BOOL ;	//Emulgator2 downloading is started
+   Mixer_start : BOOL ;	//Mixer is started
+   IBC_start : BOOL ;	//Transfer to IBC
+   Mixer_ES : BOOL ;	//Mixer emergency stop
+   Mixer_stop : BOOL ;	//Stop mixer
+   Minoil_stop : BOOL ;	//Stop min. oil downloading
+   Emuls1_stop : BOOL ;	//Stop emulgator1 downloading
+   Emuls2_stop : BOOL ;	//Stop emulgator2 downloading
+   IBC_stop : BOOL ;	//Stop transfer to IBC
+   Process_busy : BOOL ;	//Process is started
+   IBC_start_auto : BOOL ;	//Transfer to IBC auto mode
+   Status_stop : BOOL ;	//Stop programm
+   Current_id : INT ;	//Current recipe
    Recipe : STRUCT 	
-    rec_id : INT ;	//Номер рецепта
-    weight : REAL ;	//Общий вес (кг)
-    minoil_amount : REAL ;	//Кол-во мин. масла (кг)
-    minoil_capacity : REAL ;	//Объем мин. масла (%)
-    emuls1_amount : REAL ;	//Кол-во эмульгатора 1 (кг)
-    emuls1_capacity : REAL ;	//Объем эмульгатора 1 (%)
-    emuls2_amount : REAL ;	//Кол-во эмульгатора 2 (кг)
-    emuls2_capacity : REAL ;	//Объем эмульгатора 2 (%)
-    mixer_time : DINT ;	//Время перемешивания (мин)
-    mixer_using : BOOL  := TRUE;	//Использование мешалки (да/нет)
+    rec_id : INT ;	//Number of recipe
+    weight : REAL ;	//Common weqght (kg)
+    minoil_amount : REAL ;	//Min. oil amount (kg)
+    minoil_capacity : REAL ;	//Min. oil capacity (%)
+    emuls1_amount : REAL ;	//Emulgator1 amount (kg)
+    emuls1_capacity : REAL ;	//Emulgator1 capacity (%)
+    emuls2_amount : REAL ;	//Emulgator2 amount (kg)
+    emuls2_capacity : REAL ;	//Emulgator2 capacity (%)
+    mixer_time : DINT ;	//Mixing time (min)
+    mixer_using : BOOL  := TRUE;	//Using mixer (yes/no)
    END_STRUCT ;	
-   Weight_control : REAL  := 1.000000e+000;	//Уставка контроля наличия жидкости в емкости B-FS-09
-   Error : WORD ;	//Ошибки
-   Idling_time : DINT  := L#30;	//Время на определение ХХ "DB_P-FS-10M"
-   Idling_control : REAL ;	//Значение массы емкости предыдущего цикла ПЛК
-   IBC_setpoint : REAL  := 9.000000e+002;	//Значение допустимой массы IBC
-   IBC_start_value : REAL ;	//Значение массы перед началом перекачки в IBC
-   Max_value : REAL  := 1.350000e+003;	//Значение допустимой массы B-FS-09
-   IBC_stop_auto : BOOL ;	//Останов перекачивания в IBC авторежим
-   FrontMerker1 : BOOL ;	//Бит для переднего фронта
-   Program_interrupt : BOOL ;	//Программа прервана
-   Mixer_enable : BOOL ;	//Запуск мешалки в авто режиме
-   Mixer_end : BOOL ;	//Окончание работы мешалки по времени
-   Warning : WORD ;	//Предупреждения
-   Control : DWORD ;	//Управление с WinCC
-   minoil_balance_value : REAL ;	//Равное значение количества и объема мин. масла
-   emuls1_balance_value : REAL ;	//Равное значение количества и объема эмульгатора 1
-   emuls2_balance_value : REAL ;	//Равное значение количества и объема эмульгатора 2
-   Reset : WORD ;	//Сброс ошибок
-   Max_value_limit : REAL  := 9.500000e+001;	//Процент от уставки максимально допустимой массы B-FS-09
-   Minoil_amount_current : REAL ;	//Текущее значение минерального масла в емкости
-   Emuls1_amount_current : REAL ;	//Текущее значение эмульгатора 1 в емкости
-   Emuls2_amount_current : REAL ;	//Текущее значение эмульгатора 2 в емкости
-   Common_amount_current : REAL ;	//Общий вес в емкости
-   Minoil_capacity_current : REAL ;	//Текущий процент минерального масла в емкости
-   Emuls1_capacity_current : REAL ;	//Текущий процент эмульгатора 1 в емкости
-   Emuls2_capacity_current : REAL ;	//Текущий процент эмульгатора 2 в емкости
-   Common_capacity_current : REAL ;	//Процент заполнения емкости
-   Previous_weight : REAL ;	//Значение веса в емкости предыдущего цикла
-   IBC_setpoint_HL : REAL  := 9.000000e+002;	//Максимально допустимая уставка массы IBC
-   Max_value_HL : REAL  := 1.350000e+003;	//Максимально допустимая уставка массы B-FS-09
-   rec_name : STRING  [20 ];	//Название текущего рецепта
-   Mixer_timer : INT ;	//Факическое время работы мешалки
+   Weight_control : REAL  := 1.000000e+000;	//Setpoint of control liquid in capacity B-FS-09
+   Error : WORD ;	//Errors
+   Idling_time : DINT  := L#30;	//Time to determine idling "DB_P-FS-10M"
+   Idling_control : REAL ;	//Capacity weqght in previous cycle PLC
+   IBC_setpoint : REAL  := 9.000000e+002;	//Allowable weight of IBC
+   IBC_start_value : REAL ;	//Weight before transfering to IBC
+   Max_value : REAL  := 1.350000e+003;	//Allowable weight of B-FS-09
+   IBC_stop_auto : BOOL ;	//Stop transfer to IBC auto mode
+   FrontMerker1 : BOOL ;	//Bit for rising edge
+   Program_interrupt : BOOL ;	//Programm is aborted
+   Mixer_enable : BOOL ;	//Start mixer auto mode
+   Mixer_end : BOOL ;	//Finish mixer due time
+   Warning : WORD ;	//Warnings
+   Control : DWORD ;	//Operation from WinCC
+   minoil_balance_value : REAL ;	//Equal values min. oil amount and capacity
+   emuls1_balance_value : REAL ;	//Equal values emulgator1 amount and capacity
+   emuls2_balance_value : REAL ;	//Equal values emulgator2 amount and capacity
+   Reset : WORD ;	//Reset errors
+   Max_value_limit : REAL  := 9.500000e+001;	//Percent from setpoint max allowable weight of B-FS-09
+   Minoil_amount_current : REAL ;	//Current min. oil value 
+   Emuls1_amount_current : REAL ;	//Current emulgator1 value 
+   Emuls2_amount_current : REAL ;	//Current emulgator2 value 
+   Common_amount_current : REAL ;	//Common weight
+   Minoil_capacity_current : REAL ;	//Current min. oil per cent
+   Emuls1_capacity_current : REAL ;	//Current emulgator1 per cent
+   Emuls2_capacity_current : REAL ;	//Current emulgator2 per cent
+   Common_capacity_current : REAL ;	//Per cent of filling
+   Previous_weight : REAL ;	//Weight in previous cycle
+   IBC_setpoint_HL : REAL  := 9.000000e+002;	//Max allowable setpoint of weight IBC
+   Max_value_HL : REAL  := 1.350000e+003;	//Max allowable setpoint of weight B-FS-09
+   rec_name : STRING  [20 ];	//Name of current recipe
+   Mixer_timer : INT ;	//Actual time of mixer working
   END_STRUCT ;	
 BEGIN
    Status_start := FALSE; 
