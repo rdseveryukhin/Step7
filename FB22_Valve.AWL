@@ -1,0 +1,240 @@
+FUNCTION_BLOCK "FB_3way_Valves"
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  Open_WinCC : BOOL ;	
+  Open_OP : BOOL ;	
+  Open_Button : BOOL ;	
+  Open_Reserve : BOOL ;	
+  Close_WinCC : BOOL ;	
+  Close_OP : BOOL ;	
+  Close_Button : BOOL ;	
+  Close_Reserve : BOOL ;	
+  SQ_Open : BOOL ;	
+  SQ_Close : BOOL ;	
+  Reset_Error : BOOL ;	
+  Error_Time : INT ;	
+END_VAR
+VAR_OUTPUT
+  Start : BOOL ;	
+  Stop : BOOL ;	
+  Status_Open : BOOL ;	
+  Status_Close : BOOL ;	
+  Error : BOOL ;	
+  Hold : BOOL ;	
+  MT_mode : BOOL ;	
+  Reset : BOOL ;	
+  Simulation : BOOL ;	
+  Cycles : INT ;	
+  On_Time : DINT ;	
+  Off_Time : DINT ;	
+END_VAR
+VAR
+  Pulse : BOOL ;	
+  Pulse_On_Time : BOOL ;	
+  Pulse_Off_Time : BOOL ;	
+  Pulse_cycles : BOOL ;	
+  Count : INT ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =Feedback simulation
+
+      A     #Simulation; 
+      A     #Start; 
+      AN    #Stop; 
+      JNB   _008; 
+      =     #SQ_Open; 
+      CLR   ; 
+      =     #SQ_Close; 
+_008: NOP   0; 
+
+      A     #Simulation; 
+      AN    #Start; 
+      A     #Stop; 
+      JNB   _009; 
+      =     #SQ_Close; 
+      CLR   ; 
+      =     #SQ_Open; 
+_009: NOP   0; 
+NETWORK
+TITLE =Error message setting
+
+      A(    ; 
+      A(    ; 
+      A     #Start; 
+      AN    #SQ_Open; 
+      O     ; 
+      A     #Stop; 
+      AN    #SQ_Close; 
+      O     ; 
+      A     #SQ_Open; 
+      A     #SQ_Close; 
+      O     ; 
+      AN    #SQ_Open; 
+      AN    #SQ_Close; 
+      )     ; 
+      A     "Voltage control".SV_MCC1; 
+      A     "1sec"; 
+      FP    #Pulse; 
+      JNB   _001; 
+      L     #Count; 
+      L     1; 
+      +I    ; 
+      T     #Count; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_001: A     BR; 
+      )     ; 
+      A(    ; 
+      L     #Error_Time; 
+      L     #Count; 
+      ==I   ; 
+      )     ; 
+      JNB   _002; 
+      L     0; 
+      T     #Count; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_002: A     BR; 
+      S     #Error; 
+NETWORK
+TITLE =Reset error message
+
+      A     #Reset_Error; 
+      R     #Error; 
+NETWORK
+TITLE =Reset counter
+
+      A(    ; 
+      A     #Start; 
+      A     #SQ_Open; 
+      AN    #SQ_Close; 
+      O     ; 
+      A     #Stop; 
+      AN    #SQ_Open; 
+      A     #SQ_Close; 
+      O     #Error; 
+      )     ; 
+      JNB   _003; 
+      L     0; 
+      T     #Count; 
+_003: NOP   0; 
+NETWORK
+TITLE =Open valve
+
+      A(    ; 
+      O     #Open_WinCC; 
+      O     #Open_OP; 
+      O     #Open_Button; 
+      )     ; 
+      AN    #SQ_Open; 
+      AN    #MT_mode; 
+      S     #Start; 
+      R     #Stop; 
+NETWORK
+TITLE =Close Valve
+
+      A(    ; 
+      A(    ; 
+      O     #Close_WinCC; 
+      O     #Close_OP; 
+      O     #Close_Button; 
+      )     ; 
+      AN    #SQ_Close; 
+      O     #Error; 
+
+
+      )     ; 
+      AN    #MT_mode; 
+      S     #Stop; 
+      R     #Start; 
+NETWORK
+TITLE =Status setting
+
+
+      A     #SQ_Open; 
+      AN    #SQ_Close; 
+      AN    #Error; 
+      =     #Status_Open; 
+
+      AN    #SQ_Open; 
+      A     #SQ_Close; 
+      AN    #Error; 
+      =     #Status_Close; 
+
+
+NETWORK
+TITLE =Time & Cycles Counting
+
+// On_Time counting
+      A     #Status_Open; 
+      AN    #MT_mode; 
+      A     "1sec"; 
+      FP    #Pulse_On_Time; 
+      JNB   _004; 
+      L     #On_Time; 
+      L     1; //1 sec
+      +D    ; 
+      T     #On_Time; 
+_004: NOP   0; 
+
+// Off_Time counting
+      A     #Status_Close; 
+      AN    #MT_mode; 
+      A     "1sec"; 
+      FP    #Pulse_Off_Time; 
+      JNB   _005; 
+      L     #Off_Time; 
+      L     1; //1 sec
+      +D    ; 
+      T     #Off_Time; 
+_005: NOP   0; 
+
+//Cycles counting
+      A     #Status_Open; 
+      FP    #Pulse_cycles; 
+      JNB   _006; 
+      L     #Cycles; 
+      L     1; 
+      +I    ; 
+      T     #Cycles; 
+_006: NOP   0; 
+
+//Reset counting
+      A     #Reset; 
+      JNB   _007; 
+      L     0; 
+      T     #On_Time; 
+      T     #Off_Time; 
+      L     0; 
+      T     #Cycles; 
+      R     #Reset; 
+_007: NOP   0; 
+NETWORK
+TITLE =Reset buttons
+//
+//
+      A     #Open_WinCC; 
+      R     #Open_WinCC; 
+
+      A     #Open_OP; 
+      R     #Open_OP; 
+
+      A     #Close_WinCC; 
+      R     #Close_WinCC; 
+
+      A     #Close_OP; 
+      R     #Close_OP; 
+
+      A     #Reset_Error; 
+      R     #Reset_Error; 
+
+
+
+END_FUNCTION_BLOCK
+
