@@ -49,7 +49,7 @@ VAR
 END_VAR
 BEGIN
 NETWORK
-TITLE =Симуляция обратной связи
+TITLE =Feedback simulation
 
       A     #Simulation; 
       S     #Automatic_Switch; 
@@ -60,7 +60,7 @@ TITLE =Симуляция обратной связи
       =     #Aux_Switch; 
 _011: NOP   0; 
 NETWORK
-TITLE =Выставление ошибки обратной связи (счетчик ожидания об.связи)
+TITLE =Error of feedback
 
       A(    ; 
       A(    ; 
@@ -97,7 +97,7 @@ _001: A     BR;
 _002: A     BR; 
       S     #ErrorFB; 
 NETWORK
-TITLE =Выставление ошибки доп. контакта АВ
+TITLE =Error of circuit breker contact
 
       A(    ; 
       O     #Start_WinCC; 
@@ -109,23 +109,23 @@ TITLE =Выставление ошибки доп. контакта АВ
       A     "Voltage control".SV_MCC1; 
       S     #ErrorQF; 
 NETWORK
-TITLE =Сброс ошибки обратной связи
+TITLE =Reset error of feedback
 
       A     #Reset_ErrorFB; 
       R     #ErrorFB; 
 NETWORK
-TITLE =Сброс ошибки доп. конткта АВ
+TITLE =Reset error of circuit breker contact
 
       A     #Reset_ErrorQF; 
       R     #ErrorQF; 
 NETWORK
-TITLE =Наличие какой-либо ошибки
+TITLE =Some errors presence
 
       O     #ErrorFB; 
       O     #ErrorQF; 
       =     #HmiError; 
 NETWORK
-TITLE =Сброс счетчика
+TITLE =Reset counter
 
       A(    ; 
       A     #Start; 
@@ -141,7 +141,7 @@ TITLE =Сброс счетчика
       T     #count; 
 _003: NOP   0; 
 NETWORK
-TITLE =Старт мотора
+TITLE =Start drive
 
       A(    ; 
       O     #Start_WinCC; 
@@ -163,7 +163,7 @@ _004: A     BR;
       S     #Start; 
       R     #Stop; 
 NETWORK
-TITLE =Стоп мотора
+TITLE =Stop drive
 
       A(    ; 
       A(    ; 
@@ -192,13 +192,13 @@ _005: A     BR;
       S     #Stop; 
       R     #Start; 
 NETWORK
-TITLE =Симуляция обратной связи от частотников
+TITLE =Simulation feedback
 
       L     #Analog_Set_Value; 
       T     #FB_Analog; 
 
 NETWORK
-TITLE =Пересылка аналогового значения
+TITLE =Transfer analog value
 
 
 
@@ -218,7 +218,7 @@ TITLE =Пересылка аналогового значения
            Out_of_range             := "NULL");
 _006: NOP   0; 
 NETWORK
-TITLE =Установка статусов
+TITLE =Set statuses
 
       A     #Remote_Switch; 
       A     #Automatic_Switch; 
@@ -235,7 +235,7 @@ TITLE =Установка статусов
 
 
 NETWORK
-TITLE =Расчет времени работы/простоя и циклов включения
+TITLE =Calculation time of working and staying
 
 // On_Time counting
       A     #Status_ON; 
@@ -282,7 +282,7 @@ _009: NOP   0;
       R     #Reset; 
 _010: NOP   0; 
 NETWORK
-TITLE =Сброс кнопок
+TITLE =Reset buttons
 //
 //
       A     #Start_WinCC; 
