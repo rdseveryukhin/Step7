@@ -11,58 +11,58 @@ VAR_TEMP
 END_VAR
 BEGIN
 NETWORK
-TITLE =Ошибки и блокировки
+TITLE =ГЋГёГЁГЎГЄГЁ ГЁ ГЎГ«Г®ГЄГЁГ°Г®ГўГЄГЁ
 
-//Сброс ошибок
-//Слить предыдущую партию
+//Г‘ГЎГ°Г®Г± Г®ГёГЁГЎГ®ГЄ
+//Г‘Г«ГЁГІГј ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГіГѕ ГЇГ Г°ГІГЁ
       A     DB24.DBX   86.0; 
       JNB   _250; 
       R     DB24.DBX   44.0; 
       R     DB24.DBX   86.0; 
 
-//Холостой ход DB_P-FS-10M
+//Г•Г®Г«Г®Г±ГІГ®Г© ГµГ®Г¤ DB_P-FS-10M
 _250: A     DB24.DBX   86.1; 
       JNB   _251; 
       R     DB24.DBX   44.1; 
       R     DB24.DBX   86.1; 
 
-//Перелив IBC
+//ГЏГҐГ°ГҐГ«ГЁГў IBC
 _251: A     DB24.DBX   86.2; 
       JNB   _252; 
       R     DB24.DBX   44.2; 
       R     DB24.DBX   86.2; 
 
-//Перелив B-FS-09
+//ГЏГҐГ°ГҐГ«ГЁГў B-FS-09
 _252: A     DB24.DBX   86.3; 
       JNB   _253; 
       R     DB24.DBX   44.3; 
       R     DB24.DBX   86.3; 
 
-//Аварийный останов мешалки A-FS-30M
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M
 _253: A     DB24.DBX   86.4; 
       JNB   _254; 
       R     DB24.DBX   44.4; 
       R     DB24.DBX   86.4; 
 
-//Аварийный останов
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў
 _254: A     DB24.DBX   86.5; 
       JNB   _255; 
       R     DB24.DBX   44.5; 
       R     DB24.DBX   86.5; 
 
-//Заняты оба насоса P-FS-03M и P-FS-04M
+//Г‡Г Г­ГїГІГ» Г®ГЎГ  Г­Г Г±Г®Г±Г  P-FS-03M ГЁ P-FS-04M
 _255: A     DB24.DBX   86.6; 
       JNB   _256; 
       R     DB24.DBX   44.6; 
       R     DB24.DBX   86.6; 
 
-//Запущен ручной процесс
+//Г‡Г ГЇГіГ№ГҐГ­ Г°ГіГ·Г­Г®Г© ГЇГ°Г®Г¶ГҐГ±Г±
 _256: A     DB24.DBX   86.7; 
       JNB   _257; 
       R     DB24.DBX   44.7; 
       R     DB24.DBX   86.7; 
 
-//Некорректные параметры рецепта
+//ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г°ГҐГ¶ГҐГЇГІГ 
 _257: A     DB24.DBX   87.0; 
       JNB   _258; 
       R     DB24.DBX   68.1; 
@@ -71,8 +71,8 @@ _257: A     DB24.DBX   87.0;
 _258: NOP   0; 
 
 
-//Установка флагов ошибок
-//Слить предыдущую партию
+//Г“Г±ГІГ Г­Г®ГўГЄГ  ГґГ«Г ГЈГ®Гў Г®ГёГЁГЎГ®ГЄ
+//Г‘Г«ГЁГІГј ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГіГѕ ГЇГ Г°ГІГЁГѕ
       A     DB24.DBX   70.0; 
       JNB   _200; 
       A(    ; 
@@ -85,7 +85,7 @@ _258: NOP   0;
       A     DB24.DBX   44.0; 
       R     DB24.DBX   70.0; 
 
-//Холостой ход DB_P-FS-10M
+//Г•Г®Г«Г®Г±ГІГ®Г© ГµГ®Г¤ DB_P-FS-10M
 _200: A     T     29; 
       R     T     29; 
       S     DB24.DBX   44.1; 
@@ -142,7 +142,7 @@ _213: L     "Fuel Phase Block".Idling_time;
       T     "Fuel Phase Block".Idling_control; 
 
 
-//Перелив IBC
+//ГЏГҐГ°ГҐГ«ГЁГў IBC
       A(    ; 
       L     "Fuel Phase Block".IBC_setpoint; 
       L     "Fuel Phase Block".IBC_setpoint_HL; 
@@ -187,7 +187,7 @@ _203: L     0;
       T     "Fuel Phase Block".IBC_start_value; 
 
 
-//Перелив B-FS-09
+//ГЏГҐГ°ГҐГ«ГЁГў B-FS-09
 _205: A(    ; 
       L     "Fuel Phase Block".Max_value; 
       L     "Fuel Phase Block".Max_value_HL; 
@@ -236,7 +236,7 @@ _202: A(    ;
 
 
 
-//Предупреждение перелива B-FS-09
+//ГЏГ°ГҐГ¤ГіГЇГ°ГҐГ¦Г¤ГҐГ­ГЁГҐ ГЇГҐГ°ГҐГ«ГЁГўГ  B-FS-09
 _206: A(    ; 
       L     "Fuel Phase Block".Max_value_limit; 
       L     1.000000e+002; 
@@ -258,14 +258,14 @@ _212: A(    ;
       =     DB24.DBX   68.0; 
 
 
-//Аварийный останов мешалки A-FS-30M
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M
       AN    "Fuel Phase Block".Mixer_ES; 
       JNB   _207; 
       R     "Fuel Phase Block".Mixer_start; 
       S     DB24.DBX   44.4; 
 
 
-//Аварийный останов
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў
 _207: A     "Emergency Blocks".HS_EZ_07; 
       O     "Emergency Blocks".HS_EZ_01; 
       =     DB24.DBX   44.5; 
@@ -317,7 +317,7 @@ _207: A     "Emergency Blocks".HS_EZ_07;
 
 
 
-//Заняты оба насоса P-FS-03M и P-FS-04M
+//Г‡Г Г­ГїГІГ» Г®ГЎГ  Г­Г Г±Г®Г±Г  P-FS-03M ГЁ P-FS-04M
 _208: A(    ; 
       A     DB24.DBX   70.0; 
       O     DB24.DBX   70.4; 
@@ -329,14 +329,14 @@ _208: A(    ;
       R     DB24.DBX   70.0; 
       R     DB24.DBX   70.4; 
 
-//Запущен ручной процесс
+//Г‡Г ГЇГіГ№ГҐГ­ Г°ГіГ·Г­Г®Г© ГЇГ°Г®Г¶ГҐГ±Г±
 _209: A     DB24.DBX   70.0; 
       JNB   _210; 
       A     "Fuel Phase Block".Process_busy; 
       S     DB24.DBX   44.7; 
       R     DB24.DBX   70.0; 
 
-//Некорректные параметры рецепта          
+//ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г°ГҐГ¶ГҐГЇГІГ           
 _210: A(    ; 
       O     DB24.DBX   70.0; 
       O     DB24.DBX   71.7; 
@@ -377,7 +377,7 @@ _210: A(    ;
       A     DB24.DBX   71.7; 
       R     DB24.DBX   71.7; 
 
-//Некорректные параметры рецепта
+//ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г°ГҐГ¶ГҐГЇГІГ 
 _211: A     DB24.DBX   71.6; 
       JNB   _214; 
       A(    ; 
@@ -389,7 +389,7 @@ _211: A     DB24.DBX   71.6;
       S     DB24.DBX   68.1; 
       R     DB24.DBX   71.6; 
 
-//Сработавшие блокировки P-FS-03M или P-FS-04M
+//Г‘Г°Г ГЎГ®ГІГ ГўГёГЁГҐ ГЎГ«Г®ГЄГЁГ°Г®ГўГЄГЁ P-FS-03M ГЁГ«ГЁ P-FS-04M
 _214: A     "Interlocks".Interlock_95_1; 
       O     "Interlocks".Interlock_95_2; 
       O     "Interlocks".Interlock_52_2; 
@@ -407,7 +407,7 @@ _214: A     "Interlocks".Interlock_95_1;
       R     "Fuel Phase Block".Minoil_start; 
       R     "Fuel Phase Block".Process_busy; 
 
-//Сработавшие блокировки P-FS-02M
+//Г‘Г°Г ГЎГ®ГІГ ГўГёГЁГҐ ГЎГ«Г®ГЄГЁГ°Г®ГўГЄГЁ P-FS-02M
 _215: A     "Interlocks".Interlock_63_1; 
       JNB   _216; 
       A     "Fuel Phase Block".IBC_start; 
@@ -424,14 +424,14 @@ _216: NOP   0;
 
 
 NETWORK
-TITLE =Рецепт расчет
+TITLE =ГђГҐГ¶ГҐГЇГІ Г°Г Г±Г·ГҐГІ
 
-//Расчет параметров рецепта
-//Проверка на программа запущена в авто режиме
+//ГђГ Г±Г·ГҐГІ ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г°ГҐГ¶ГҐГЇГІГ 
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  Г§Г ГЇГіГ№ГҐГ­Г  Гў Г ГўГІГ® Г°ГҐГ¦ГЁГ¬ГҐ
       AN    "Fuel Phase Block".Status_start; 
       JNB   _309; 
 
-//Проверка на общий вес не равен 0
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г®ГЎГ№ГЁГ© ГўГҐГ± Г­ГҐ Г°Г ГўГҐГ­ 0
       A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     0.000000e+000; 
@@ -439,7 +439,7 @@ TITLE =Рецепт расчет
       )     ; 
       JNB   _300; 
 
-//Проверка на соответствие количества мин. масла объему
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  Г¬ГЁГ­. Г¬Г Г±Г«Г  Г®ГЎГєГҐГ¬Гі
       A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -454,7 +454,7 @@ TITLE =Рецепт расчет
       T     "Fuel Phase Block".minoil_balance_value; 
       JU    _303; 
 
-//Перевод кг в % мин. масло если количество изменено
+//ГЏГҐГ°ГҐГўГ®Г¤ ГЄГЈ Гў % Г¬ГЁГ­. Г¬Г Г±Г«Г® ГҐГ±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЁГ§Г¬ГҐГ­ГҐГ­Г®
 _301: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".minoil_balance_value; 
@@ -469,7 +469,7 @@ _301: A(    ;
       T     "Fuel Phase Block".Recipe.minoil_capacity; 
       JU    _303; 
 
-//Перевод % в кг мин. масло если объем изменен
+//ГЏГҐГ°ГҐГўГ®Г¤ % Гў ГЄГЈ Г¬ГЁГ­. Г¬Г Г±Г«Г® ГҐГ±Г«ГЁ Г®ГЎГєГҐГ¬ ГЁГ§Г¬ГҐГ­ГҐГ­
 _302: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -487,7 +487,7 @@ _302: A(    ;
       *R    ; 
       T     "Fuel Phase Block".Recipe.minoil_amount; 
 
-//Проверка на соответствие количества эмульгатора 1 объему
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 Г®ГЎГєГҐГ¬Гі
 _303: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -502,7 +502,7 @@ _303: A(    ;
       T     "Fuel Phase Block".emuls1_balance_value; 
       JU    _306; 
 
-//Перевод кг в % эмульгатор 1 если количество изменено
+//ГЏГҐГ°ГҐГўГ®Г¤ ГЄГЈ Гў % ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЁГ§Г¬ГҐГ­ГҐГ­Г®
 _304: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
       L     "Fuel Phase Block".emuls1_balance_value; 
@@ -517,7 +517,7 @@ _304: A(    ;
       T     "Fuel Phase Block".Recipe.emuls1_capacity; 
       JU    _306; 
 
-//Перевод % в кг эмульгатор 1 если объем изменен
+//ГЏГҐГ°ГҐГўГ®Г¤ % Гў ГЄГЈ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ Г®ГЎГєГҐГ¬ ГЁГ§Г¬ГҐГ­ГҐГ­
 _305: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -535,7 +535,7 @@ _305: A(    ;
       *R    ; 
       T     "Fuel Phase Block".Recipe.emuls1_amount; 
 
-//Проверка на соответствие количества эмульгатора 2 объему
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 Г®ГЎГєГҐГ¬Гі
 _306: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -550,7 +550,7 @@ _306: A(    ;
       T     "Fuel Phase Block".emuls2_balance_value; 
       JU    _309; 
 
-//Перевод кг в % эмульгатор 1 если количество изменено
+//ГЏГҐГ°ГҐГўГ®Г¤ ГЄГЈ Гў % ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЁГ§Г¬ГҐГ­ГҐГ­Г®
 _307: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls2_amount; 
       L     "Fuel Phase Block".emuls2_balance_value; 
@@ -565,7 +565,7 @@ _307: A(    ;
       T     "Fuel Phase Block".Recipe.emuls2_capacity; 
       JU    _309; 
 
-//Перевод % в кг эмульгатор 1 если объем изменен
+//ГЏГҐГ°ГҐГўГ®Г¤ % Гў ГЄГЈ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ Г®ГЎГєГҐГ¬ ГЁГ§Г¬ГҐГ­ГҐГ­
 _308: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -584,7 +584,7 @@ _308: A(    ;
       T     "Fuel Phase Block".Recipe.emuls2_amount; 
       JU    _309; 
 
-//Сброс параметров мин. масла
+//Г‘ГЎГ°Г®Г± ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г¬ГЁГ­. Г¬Г Г±Г«Г 
 _300: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     0.000000e+000; 
@@ -595,7 +595,7 @@ _300: A(    ;
       T     "Fuel Phase Block".Recipe.minoil_amount; 
       T     "Fuel Phase Block".Recipe.minoil_capacity; 
 
-//Сброс параметров эмульгатора 1
+//Г‘ГЎГ°Г®Г± ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _310: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
       L     0.000000e+000; 
@@ -606,7 +606,7 @@ _310: A(    ;
       T     "Fuel Phase Block".Recipe.emuls1_amount; 
       T     "Fuel Phase Block".Recipe.emuls1_capacity; 
 
-//Сброс параметров эмульгатора 2
+//Г‘ГЎГ°Г®Г± ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _311: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls2_amount; 
       L     0.000000e+000; 
@@ -638,12 +638,12 @@ _309: NOP   0;
 
 
 
-//Вывод фактических значений
-//Общий вес в емкости (кг)
+//Г‚Г»ГўГ®Г¤ ГґГ ГЄГІГЁГ·ГҐГ±ГЄГЁГµ Г§Г­Г Г·ГҐГ­ГЁГ©
+//ГЋГЎГ№ГЁГ© ГўГҐГ± Гў ГҐГ¬ГЄГ®Г±ГІГЁ (ГЄГЈ)
       L     "DB_TenzoM".Analog_Output; 
       T     "Fuel Phase Block".Common_amount_current; 
 
-//Мин. масло (кг)
+//ГЊГЁГ­. Г¬Г Г±Г«Г® (ГЄГЈ)
       A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -663,7 +663,7 @@ _309: NOP   0;
       +R    ; 
       T     "Fuel Phase Block".Minoil_amount_current; 
 
-//Эмульгатор 1 (кг)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 (ГЄГЈ)
 _500: A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -690,7 +690,7 @@ _500: A(    ;
       +R    ; 
       T     "Fuel Phase Block".Emuls1_amount_current; 
 
-//Эмульгатор 2 (кг)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 2 (ГЄГЈ)
 _501: A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -722,7 +722,7 @@ _501: A(    ;
       T     "Fuel Phase Block".Emuls2_amount_current; 
 
 
-//Общий вес в емкости (%)
+//ГЋГЎГ№ГЁГ© ГўГҐГ± Гў ГҐГ¬ГЄГ®Г±ГІГЁ (%)
 _502: A(    ; 
       L     "Fuel Phase Block".Max_value; 
       L     0.000000e+000; 
@@ -740,7 +740,7 @@ _502: A(    ;
 _503: L     0.000000e+000; 
       T     "Fuel Phase Block".Common_capacity_current; 
 
-//Мин. масло (%)
+//ГЊГЁГ­. Г¬Г Г±Г«Г® (%)
 _504: A(    ; 
       L     "Fuel Phase Block".Common_amount_current; 
       L     0.000000e+000; 
@@ -754,7 +754,7 @@ _504: A(    ;
       /R    ; 
       T     "Fuel Phase Block".Minoil_capacity_current; 
 
-//Эмульгатор 1 (%)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 (%)
       L     "Fuel Phase Block".Emuls1_amount_current; 
       L     1.000000e+002; 
       *R    ; 
@@ -762,7 +762,7 @@ _504: A(    ;
       /R    ; 
       T     "Fuel Phase Block".Emuls1_capacity_current; 
 
-//Эмульгатор 2 (%)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 2 (%)
       L     "Fuel Phase Block".Emuls2_amount_current; 
       L     1.000000e+002; 
       *R    ; 
@@ -776,7 +776,7 @@ _505: L     0.000000e+000;
       T     "Fuel Phase Block".Emuls1_capacity_current; 
       T     "Fuel Phase Block".Emuls2_capacity_current; 
 
-//Сброс значений
+//Г‘ГЎГ°Г®Г± Г§Г­Г Г·ГҐГ­ГЁГ©
 _506: A     "Fuel Phase Block".IBC_start; 
       O     "Fuel Phase Block".IBC_start_auto; 
       O(    ; 
@@ -794,7 +794,7 @@ _506: A     "Fuel Phase Block".IBC_start;
       T     "Fuel Phase Block".Emuls1_amount_current; 
       T     "Fuel Phase Block".Emuls2_amount_current; 
 
-//Запись значения текущего цикла
+//Г‡Г ГЇГЁГ±Гј Г§Г­Г Г·ГҐГ­ГЁГї ГІГҐГЄГіГ№ГҐГЈГ® Г¶ГЁГЄГ«Г 
 _507: L     "DB_TenzoM".Analog_Output; 
       T     "Fuel Phase Block".Previous_weight; 
 
@@ -803,9 +803,9 @@ _507: L     "DB_TenzoM".Analog_Output;
 
 
 NETWORK
-TITLE =Управление приготовлением топливной фазы
+TITLE =Г“ГЇГ°Г ГўГ«ГҐГ­ГЁГҐ ГЇГ°ГЁГЈГ®ГІГ®ГўГ«ГҐГ­ГЁГҐГ¬ ГІГ®ГЇГ«ГЁГўГ­Г®Г© ГґГ Г§Г»
 
-//Запуск программы в автоматическом режиме
+//Г‡Г ГЇГіГ±ГЄ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г» Гў Г ГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГ®Г¬ Г°ГҐГ¦ГЁГ¬ГҐ
       A     DB24.DBX   70.0; 
       JNB   _000; 
       R     DB24.DBX   70.0; 
@@ -814,7 +814,7 @@ TITLE =Управление приготовлением топливной фазы
       AN    "Fuel Phase Block".Status_stop; 
       S     "Fuel Phase Block".Status_start; 
 
-//Останов программы
+//ГЋГ±ГІГ Г­Г®Гў ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
 _000: A     DB24.DBX   70.1; 
       JNB   _001; 
       R     "Fuel Phase Block".Status_start; 
@@ -822,7 +822,7 @@ _000: A     DB24.DBX   70.1;
       S     "Fuel Phase Block".Status_stop; 
       R     DB24.DBX   70.1; 
 
-//ТФ готова
+//Г’Г” ГЈГ®ГІГ®ГўГ 
 _001: A     DB24.DBX   70.2; 
       JNB   _002; 
       R     DB24.DBX   70.2; 
@@ -830,13 +830,13 @@ _001: A     DB24.DBX   70.2;
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Status_ready; 
 
-//ТФ не готова
+//Г’Г” Г­ГҐ ГЈГ®ГІГ®ГўГ 
 _002: A     DB24.DBX   70.3; 
       JNB   _003; 
       R     "Fuel Phase Block".Status_ready; 
       R     DB24.DBX   70.3; 
 
-//Запуск загрузки минерального масла. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬ГЁГ­ГҐГ°Г Г«ГјГ­Г®ГЈГ® Г¬Г Г±Г«Г . ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _003: A     DB24.DBX   70.4; 
       JNB   _004; 
       R     DB24.DBX   70.4; 
@@ -848,7 +848,7 @@ _003: A     DB24.DBX   70.4;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Minoil_start; 
 
-//Останов загрузки минерального масла. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬ГЁГ­ГҐГ°Г Г«ГјГ­Г®ГЈГ® Г¬Г Г±Г«Г . ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _004: A     DB24.DBX   70.5; 
       JNB   _005; 
       R     DB24.DBX   70.5; 
@@ -856,7 +856,7 @@ _004: A     DB24.DBX   70.5;
       R     "Fuel Phase Block".Minoil_start; 
       S     "Fuel Phase Block".Minoil_stop; 
 
-//Запуск загрузки эмульгатора 1. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _005: A     DB24.DBX   70.6; 
       JNB   _006; 
       R     DB24.DBX   70.6; 
@@ -869,7 +869,7 @@ _005: A     DB24.DBX   70.6;
       S     "Fuel Phase Block".Emuls1_start; 
 
 
-//Останов загрузки эмульгатора 1. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _006: A     DB24.DBX   70.7; 
       JNB   _007; 
       R     DB24.DBX   70.7; 
@@ -877,7 +877,7 @@ _006: A     DB24.DBX   70.7;
       R     "Fuel Phase Block".Emuls1_start; 
       S     "Fuel Phase Block".Emuls1_stop; 
 
-//Запуск загрузки эмульгатора 2. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _007: A     DB24.DBX   71.0; 
       JNB   _008; 
       R     DB24.DBX   71.0; 
@@ -889,7 +889,7 @@ _007: A     DB24.DBX   71.0;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Emuls2_start; 
 
-//Останов загрузки эмульгатора 2. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _008: A     DB24.DBX   71.1; 
       JNB   _009; 
       R     DB24.DBX   71.1; 
@@ -897,7 +897,7 @@ _008: A     DB24.DBX   71.1;
       R     "Fuel Phase Block".Emuls2_start; 
       S     "Fuel Phase Block".Emuls2_stop; 
 
-//Запуск перекачивания в IBC. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _009: A     DB24.DBX   71.2; 
       JNB   _010; 
       R     DB24.DBX   71.2; 
@@ -908,7 +908,7 @@ _009: A     DB24.DBX   71.2;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".IBC_start; 
 
-//Останов перекачивания в IBC. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _010: A     DB24.DBX   71.3; 
       JNB   _011; 
       R     DB24.DBX   71.3; 
@@ -916,7 +916,7 @@ _010: A     DB24.DBX   71.3;
       R     "Fuel Phase Block".IBC_start; 
       S     "Fuel Phase Block".IBC_stop; 
 
-//Запуск мешалки A-FS-30M. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _011: A     DB24.DBX   71.4; 
       JNB   _012; 
       R     DB24.DBX   71.4; 
@@ -924,18 +924,18 @@ _011: A     DB24.DBX   71.4;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Mixer_start; 
 
-//Останов мешалки A-FS-30M. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _012: A     DB24.DBX   71.5; 
       JNB   _013; 
       R     "Fuel Phase Block".Mixer_start; 
       S     "Fuel Phase Block".Mixer_stop; 
       R     DB24.DBX   71.5; 
 
-//Загрузить рецепт   
+//Г‡Г ГЈГ°ГіГ§ГЁГІГј Г°ГҐГ¶ГҐГЇГІ   
 _013: A     DB24.DBX   71.6; 
       JNB   _014; 
 
-//Загрузка рецепта
+//Г‡Г ГЈГ°ГіГ§ГЄГ  Г°ГҐГ¶ГҐГЇГІГ 
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     0; 
@@ -985,20 +985,20 @@ _013: A     DB24.DBX   71.6;
       L     DBW [AR1,P#34.0]; 
       T     DIW [AR2,P#34.0]; 
 
-//Загрузка названия
-//Тип BYTE
+//Г‡Г ГЈГ°ГіГ§ГЄГ  Г­Г Г§ГўГ Г­ГЁГї
+//Г’ГЁГЇ BYTE
       L     W#16#1002; 
       T     LW     8; 
 
-//Число байтов
+//Г—ГЁГ±Г«Г® ГЎГ Г©ГІГ®Гў
       L     22; 
       T     LW    10; 
 
-//Исходный DB
+//Г€Г±ГµГ®Г¤Г­Г»Г© DB
       L     713; 
       T     LW    12; 
 
-//Начало исходных данных
+//ГЌГ Г·Г Г«Г® ГЁГ±ГµГ®Г¤Г­Г»Гµ Г¤Г Г­Г­Г»Гµ
       TAR1  ; 
       L     P#DBX 36.0; 
       +D    ; 
@@ -1012,11 +1012,11 @@ _013: A     DB24.DBX   71.6;
       SET   ; 
       R     DB24.DBX   71.6; 
 
-//Cохранить рецепт
+//CГ®ГµГ°Г Г­ГЁГІГј Г°ГҐГ¶ГҐГЇГІ
 _014: A     DB24.DBX   71.7; 
       JNB   _015; 
 
-//Сохранение рецепта
+//Г‘Г®ГµГ°Г Г­ГҐГ­ГЁГҐ Г°ГҐГ¶ГҐГЇГІГ 
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     0; 
@@ -1068,20 +1068,20 @@ _014: A     DB24.DBX   71.7;
       L     DBW [AR1,P#34.0]; 
       T     DIW [AR2,P#34.0]; 
 
-//Сохранение названия
-//Тип BYTE
+//Г‘Г®ГµГ°Г Г­ГҐГ­ГЁГҐ Г­Г Г§ГўГ Г­ГЁГї
+//Г’ГЁГЇ BYTE
       L     W#16#1002; 
       T     LW     8; 
 
-//Число байтов
+//Г—ГЁГ±Г«Г® ГЎГ Г©ГІГ®Гў
       L     22; 
       T     LW    10; 
 
-//Исходный DB
+//Г€Г±ГµГ®Г¤Г­Г»Г© DB
       L     713; 
       T     LW    12; 
 
-//Начало исходных данных
+//ГЌГ Г·Г Г«Г® ГЁГ±ГµГ®Г¤Г­Г»Гµ Г¤Г Г­Г­Г»Гµ
       TAR2  ; 
       L     P#DBX 36.0; 
       +D    ; 
@@ -1095,7 +1095,7 @@ _014: A     DB24.DBX   71.7;
       SET   ; 
       R     DB24.DBX   71.7; 
 
-//Запуск перекачивания в IBC. Авто режим
+//Г‡Г ГЇГіГ±ГЄ ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГЂГўГІГ® Г°ГҐГ¦ГЁГ¬
 _015: A     DB24.DBX   72.0; 
       JNB   _016; 
       R     DB24.DBX   72.0; 
@@ -1105,7 +1105,7 @@ _015: A     DB24.DBX   72.0;
       AN    DB24.DBX   44.5; 
       =     "Fuel Phase Block".IBC_start_auto; 
 
-//Останов перекачивания в IBC. Авто режим
+//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГЂГўГІГ® Г°ГҐГ¦ГЁГ¬
 _016: A     DB24.DBX   72.1; 
       JNB   _017; 
       R     DB24.DBX   72.1; 
@@ -1117,13 +1117,13 @@ _017: NOP   0;
 
 
 NETWORK
-TITLE =Запуск оборудования в авто режиме
+TITLE =Г‡Г ГЇГіГ±ГЄ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГї Гў Г ГўГІГ® Г°ГҐГ¦ГЁГ¬ГҐ
 
-//Запуск в авторежиме
+//Г‡Г ГЇГіГ±ГЄ Гў Г ГўГІГ®Г°ГҐГ¦ГЁГ¬ГҐ
       A     "Fuel Phase Block".Status_start; 
       JNB   _080; 
 
-//Копирование текущего рецепта
+//ГЉГ®ГЇГЁГ°Г®ГўГ Г­ГЁГҐ ГІГҐГЄГіГ№ГҐГЈГ® Г°ГҐГ¶ГҐГЇГІГ 
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     "Fuel Phase Block".Recipe.rec_id; 
@@ -1133,7 +1133,7 @@ TITLE =Запуск оборудования в авто режиме
       L     "Fuel Phase Block".Current_id; 
       T     "Fuel Phase Block".Recipe.rec_id; 
 
-//Блок работы мешалки
+//ГЃГ«Г®ГЄ Г°Г ГЎГ®ГІГ» Г¬ГҐГёГ Г«ГЄГЁ
 nex3: A     "Fuel Phase Block".Recipe.mixer_using; 
       JNB   _049; 
 
@@ -1187,7 +1187,7 @@ nex2: A(    ;
       L     0; 
       T     "Fuel Phase Block".Mixer_timer; 
 
-//Проверка окончания загрузки масла 
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬Г Г±Г«Г  
 _049: A(    ; 
       L     "DB_TenzoM".Analog_Output; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -1195,8 +1195,8 @@ _049: A(    ;
       )     ; 
       JC    _054; 
 
-//Подача масла в емкость
-//Проверка на запуск какого-либо из узлов
+//ГЏГ®Г¤Г Г·Г  Г¬Г Г±Г«Г  Гў ГҐГ¬ГЄГ®Г±ГІГј
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г§Г ГЇГіГ±ГЄ ГЄГ ГЄГ®ГЈГ®-Г«ГЁГЎГ® ГЁГ§ ГіГ§Г«Г®Гў
       A(    ; 
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
@@ -1207,39 +1207,39 @@ _049: A(    ;
       )     ; 
       JC    MAN; 
 
-//Свободен насос DB_P-FS-03M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-03M
       A     "DB_P-FS-03M".Status_OFF; 
       AN    "DB_H-FS-50".Start; 
       JC    _050; 
 
-//Свободен насос DB_P-FS-04M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-04M
       A     "DB_P-FS-04M".Status_OFF; 
       AN    "DB_H-FS-49".Start; 
       JC    _051; 
 
-//Открытие клапана DB_H-FS-49    
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-49    
 _050: AN    "DB_H-FS-49".Status_Open; 
       AN    "DB_H-FS-49".Start; 
       =     "DB_H-FS-49".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-03M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-03M
       A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_P-FS-03M".Start_WinCC; 
       JU    MAN; 
 
-//Открытие клапана DB_H-FS-50
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-50
 _051: AN    "DB_H-FS-50".Status_Open; 
       AN    "DB_H-FS-50".Start; 
       =     "DB_H-FS-50".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-04M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-04M
       A     "DB_H-FS-50".Status_Open; 
       A     "DB_P-FS-04M".Status_OFF; 
       =     "DB_P-FS-04M".Start_WinCC; 
       JU    MAN; 
 
-//Проверка окончания загрузки эмульгатора 1
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _054: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
@@ -1249,17 +1249,17 @@ _054: A(    ;
       )     ; 
       JC    _057; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    MAN; 
 
-//Проверка на остановку узлов
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г®Г±ГІГ Г­Г®ГўГЄГі ГіГ§Г«Г®Гў
       A     "DB_H-FS-49".Status_Close; 
       A     "DB_H-FS-50".Status_Close; 
       JC    _053; 
 
-//Если запущен узел 1
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 1
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _055; 
@@ -1267,7 +1267,7 @@ _054: A(    ;
       =     "DB_P-FS-03M".Stop_WinCC; 
       JU    _056; 
 
-//Если запущен узел 2
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 2
 _055: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _056; 
@@ -1275,7 +1275,7 @@ _055: A     "DB_P-FS-04M".Status_ON;
       =     "DB_P-FS-04M".Stop_WinCC; 
       JU    _056; 
 
-//Останов насоса и клапана
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  ГЁ ГЄГ«Г ГЇГ Г­Г 
 _056: A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_H-FS-49".Close_WinCC; 
@@ -1284,20 +1284,20 @@ _056: A     "DB_H-FS-49".Status_Open;
       =     "DB_H-FS-50".Close_WinCC; 
       JU    MAN; 
 
-//Подача эмульгатора 1 в емкость
-//Переключение клапана DB_H-FS-51 в положение 1
+//ГЏГ®Г¤Г Г·Г  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 Гў ГҐГ¬ГЄГ®Г±ГІГј
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 1
 _053: AN    "DB_H-FS-51".Status_Open; 
       AN    "DB_H-FS-51".Start; 
       =     "DB_H-FS-51".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    MAN; 
 
-//Проверка окончания загрузки эмульгатора 2
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _057: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
@@ -1309,47 +1309,47 @@ _057: A(    ;
       )     ; 
       JC    _058; 
 
-//Подача эмульгатора 2 в емкость
-//Проверка включения узла    
+//ГЏГ®Г¤Г Г·Г  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 Гў ГҐГ¬ГЄГ®Г±ГІГј
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г     
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Open; 
       =     "DB_P-FS-10M".Stop_WinCC; 
 
-//Переключение клапана DB_H-FS-51 в положение 2
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 2
       AN    "DB_H-FS-51".Status_Close; 
       AN    "DB_H-FS-51".Stop; 
       A     "DB_P-FS-10M".Status_OFF; 
       =     "DB_H-FS-51".Close_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    MAN; 
 
-//Окончание загрузки компонентов
-//Проверка остановки насоса
+//ГЋГЄГ®Г­Г·Г Г­ГЁГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГ®Гў
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®Г±ГІГ Г­Г®ГўГЄГЁ Г­Г Г±Г®Г±Г 
 _058: A     "DB_P-FS-10M".Status_OFF; 
       JC    _059; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
 
-//Завершение программы
-//Проверка окончания работы мешалки
+//Г‡Г ГўГҐГ°ГёГҐГ­ГЁГҐ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г°Г ГЎГ®ГІГ» Г¬ГҐГёГ Г«ГЄГЁ
 _059: A     "DB_A-FS-30M".Status_OFF; 
       JNB   MAN; 
 
-//Проверка завершения программы
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г§Г ГўГҐГ°ГёГҐГ­ГЁГї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
       A     "Fuel Phase Block".Status_start; 
       JNB   MAN; 
       R     "Fuel Phase Block".Status_start; 
@@ -1362,11 +1362,11 @@ _059: A     "DB_A-FS-30M".Status_OFF;
 
 
 
-//Останов программы
+//ГЋГ±ГІГ Г­Г®Гў ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
 _080: A     "Fuel Phase Block".Status_stop; 
       JNB   _060; 
 
-//Отключение мешалки 
+//ГЋГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ Г¬ГҐГёГ Г«ГЄГЁ 
       R     "Fuel Phase Block".Mixer_end; 
       R     "Fuel Phase Block".Mixer_enable; 
       A     "DB_A-FS-30M".Status_ON; 
@@ -1374,7 +1374,7 @@ _080: A     "Fuel Phase Block".Status_stop;
       A     "DB_A-FS-30M".Status_ON; 
       =     "DB_A-FS-30M".Stop_WinCC; 
 
-//Останов на этапе загрузки мин. масла
+//ГЋГ±ГІГ Г­Г®Гў Г­Г  ГЅГІГ ГЇГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬ГЁГ­. Г¬Г Г±Г«Г 
 _081: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "DB_TenzoM".Analog_Output; 
@@ -1383,13 +1383,13 @@ _081: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _082; 
 
-//Отключение узлов мин. масла
+//ГЋГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГіГ§Г«Г®Гў Г¬ГЁГ­. Г¬Г Г±Г«Г 
       A     "DB_H-FS-49".Status_Close; 
       A     "DB_H-FS-50".Status_Close; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Если запущен узел 1
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 1
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _083; 
@@ -1397,14 +1397,14 @@ _081: A     "Fuel Phase Block".Status_stop;
       =     "DB_P-FS-03M".Stop_WinCC; 
       JU    _084; 
 
-//Если запущен узел 2
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 2
 _083: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _084; 
       A     "DB_P-FS-04M".Status_ON; 
       =     "DB_P-FS-04M".Stop_WinCC; 
 
-//Закрытие клапана
+//Г‡Г ГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г 
 _084: A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_H-FS-49".Close_WinCC; 
@@ -1413,7 +1413,7 @@ _084: A     "DB_H-FS-49".Status_Open;
       =     "DB_H-FS-50".Close_WinCC; 
       JU    MAN; 
 
-//Останов на этапе загрузки эмульгатора 1
+//ГЋГ±ГІГ Г­Г®Гў Г­Г  ГЅГІГ ГЇГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _082: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -1424,17 +1424,17 @@ _082: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _085; 
 
-//Проверка останова насоса
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®Г±ГІГ Г­Г®ГўГ  Г­Г Г±Г®Г±Г 
       A     "DB_P-FS-10M".Status_OFF; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
 
-//Останов на этапе загрузки эмульгатора 2
+//ГЋГ±ГІГ Г­Г®Гў Г­Г  ГЅГІГ ГЇГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _085: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -1447,12 +1447,12 @@ _085: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _086; 
 
-//Проверка останова насоса
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®Г±ГІГ Г­Г®ГўГ  Г­Г Г±Г®Г±Г 
       A     "DB_P-FS-10M".Status_OFF; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
@@ -1465,13 +1465,13 @@ _086: A     "Fuel Phase Block".Status_stop;
 
 
 
-//Перекачивание в IBC
+//ГЏГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГҐ Гў IBC
 _060: A     "Fuel Phase Block".IBC_start_auto; 
       JNB   _070; 
       A     "Fuel Phase Block".Status_ready; 
       R     "Fuel Phase Block".Status_ready; 
 
-//Контроль перекачки по весу
+//ГЉГ®Г­ГІГ°Г®Г«Гј ГЇГҐГ°ГҐГЄГ Г·ГЄГЁ ГЇГ® ГўГҐГ±Гі
       A(    ; 
       L     "DB_TenzoM".Analog_Output; 
       L     "Fuel Phase Block".Weight_control; 
@@ -1483,18 +1483,18 @@ _060: A     "Fuel Phase Block".IBC_start_auto;
       S     "Fuel Phase Block".IBC_stop_auto; 
       JU    _070; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _061: A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_ON; 
       JC    MAN; 
 
-//Открытие клапана DB_H-FS-52
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Open; 
       AN    "DB_H-FS-52".Start; 
       =     "DB_H-FS-52".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-02M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_OFF; 
       =     "DB_P-FS-02M".Start_WinCC; 
@@ -1504,22 +1504,22 @@ _061: A     "DB_H-FS-52".Status_Open;
 
 
 
-//Останов перекачивания в IBC
+//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC
 _070: A     "Fuel Phase Block".IBC_stop_auto; 
       JNB   MAN; 
 
-//Проверка отключения
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї
       A     "DB_P-FS-02M".Status_OFF; 
       A     "DB_H-FS-52".Status_Close; 
       R     "Fuel Phase Block".IBC_stop_auto; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-02M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_P-FS-02M".Status_ON; 
       A     "DB_H-FS-52".Status_Open; 
       =     "DB_P-FS-02M".Stop_WinCC; 
 
-//Закрытие клапана DB_H-FS-52
+//Г‡Г ГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Close; 
       AN    "DB_H-FS-52".Stop; 
@@ -1527,9 +1527,9 @@ _070: A     "Fuel Phase Block".IBC_stop_auto;
       JU    MAN; 
 
 NETWORK
-TITLE =Запуск оборудования в ручном режиме
+TITLE =Г‡Г ГЇГіГ±ГЄ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГї Гў Г°ГіГ·Г­Г®Г¬ Г°ГҐГ¦ГЁГ¬ГҐ
 
-//Запуск мешалки
+//Г‡Г ГЇГіГ±ГЄ Г¬ГҐГёГ Г«ГЄГЁ
 MAN:  A     "Fuel Phase Block".Mixer_start; 
       JNB   _100; 
       A     "DB_A-FS-30M".Status_ON; 
@@ -1538,7 +1538,7 @@ MAN:  A     "Fuel Phase Block".Mixer_start;
       AN    DB24.DBX   44.4; 
       =     "DB_A-FS-30M".Start_WinCC; 
 
-//Останов мешалки
+//ГЋГ±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ
 _100: A     "Fuel Phase Block".Mixer_stop; 
       JNB   _101; 
       A     "DB_A-FS-30M".Status_OFF; 
@@ -1547,15 +1547,15 @@ _100: A     "Fuel Phase Block".Mixer_stop;
       A     "DB_A-FS-30M".Status_ON; 
       =     "DB_A-FS-30M".Stop_WinCC; 
 
-//Загрузка масла
+//Г‡Г ГЈГ°ГіГ§ГЄГ  Г¬Г Г±Г«Г 
 _101: A     "Fuel Phase Block".Minoil_start; 
       JNB   _102; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка на запуск какого-либо из узлов
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г§Г ГЇГіГ±ГЄ ГЄГ ГЄГ®ГЈГ®-Г«ГЁГЎГ® ГЁГ§ ГіГ§Г«Г®Гў
       A(    ; 
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
@@ -1566,39 +1566,39 @@ _101: A     "Fuel Phase Block".Minoil_start;
       )     ; 
       JC    END; 
 
-//Свободен насос DB_P-FS-03M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-03M
       A     "DB_P-FS-03M".Status_OFF; 
       AN    "DB_H-FS-50".Start; 
       JC    _103; 
 
-//Свободен насос DB_P-FS-04M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-04M
       A     "DB_P-FS-04M".Status_OFF; 
       AN    "DB_H-FS-49".Start; 
       JC    _104; 
 
-//Открытие клапана DB_H-FS-49    
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-49    
 _103: AN    "DB_H-FS-49".Status_Open; 
       AN    "DB_H-FS-49".Start; 
       =     "DB_H-FS-49".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-03M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-03M
       A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_P-FS-03M".Start_WinCC; 
       JU    END; 
 
-//Открытие клапана DB_H-FS-50
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-50
 _104: AN    "DB_H-FS-50".Status_Open; 
       AN    "DB_H-FS-50".Start; 
       =     "DB_H-FS-50".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-04M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-04M
       A     "DB_H-FS-50".Status_Open; 
       A     "DB_P-FS-04M".Status_OFF; 
       =     "DB_P-FS-04M".Start_WinCC; 
       JU    END; 
 
-//Проверка на остановку узлов
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г®Г±ГІГ Г­Г®ГўГЄГі ГіГ§Г«Г®Гў
 _102: A     "Fuel Phase Block".Minoil_stop; 
       JNB   _105; 
       A     "DB_H-FS-49".Status_Close; 
@@ -1607,7 +1607,7 @@ _102: A     "Fuel Phase Block".Minoil_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _105; 
 
-//Если запущен узел 1
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 1
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _106; 
@@ -1617,7 +1617,7 @@ _102: A     "Fuel Phase Block".Minoil_stop;
       T     MW   102; 
       JU    _107; 
 
-//Если запущен узел 2
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 2
 _106: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _107; 
@@ -1627,7 +1627,7 @@ _106: A     "DB_P-FS-04M".Status_ON;
       T     MW   102; 
       JU    _107; 
 
-//Останов насоса и клапана     
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  ГЁ ГЄГ«Г ГЇГ Г­Г      
 _107: NOP   0; 
       OPN   DB [MW 100]; 
       OPN   DI [MW 102]; 
@@ -1637,32 +1637,32 @@ _107: NOP   0;
       =     DIX    0.4; 
       JU    END; 
 
-//Загрузка эмульгатора 1
+//Г‡Г ГЈГ°ГіГ§ГЄГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _105: A     "Fuel Phase Block".Emuls1_start; 
       JNB   _108; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    END; 
 
-//Переключение клапана DB_H-FS-51 в положение 1
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 1
       AN    "DB_H-FS-51".Status_Open; 
       AN    "DB_H-FS-51".Start; 
       =     "DB_H-FS-51".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    END; 
 
-//Проверка отключения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _108: A     "Fuel Phase Block".Emuls1_stop; 
       JNB   _109; 
       A     "DB_P-FS-10M".Status_OFF; 
@@ -1670,39 +1670,39 @@ _108: A     "Fuel Phase Block".Emuls1_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _109; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Open; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    END; 
 
-//Загрузка эмульгатора 2
+//Г‡Г ГЈГ°ГіГ§ГЄГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _109: A     "Fuel Phase Block".Emuls2_start; 
       JNB   _110; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    END; 
 
-//Переключение клапана DB_H-FS-51 в положение 2
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 2
       AN    "DB_H-FS-51".Status_Close; 
       AN    "DB_H-FS-51".Stop; 
       A     "DB_P-FS-10M".Status_OFF; 
       =     "DB_H-FS-51".Close_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    END; 
 
-//Проверка отключения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _110: A     "Fuel Phase Block".Emuls2_stop; 
       JNB   _111; 
       A     "DB_P-FS-10M".Status_OFF; 
@@ -1710,42 +1710,42 @@ _110: A     "Fuel Phase Block".Emuls2_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _111; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Close; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    END; 
 
-//Перекачивание в IBC
+//ГЏГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГҐ Гў IBC
 _111: A     "Fuel Phase Block".IBC_start; 
       JNB   _112; 
 
-//Сброс ТФ готова
+//Г‘ГЎГ°Г®Г± Г’Г” ГЈГ®ГІГ®ГўГ 
       A     "Fuel Phase Block".Status_ready; 
       R     "Fuel Phase Block".Status_ready; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_ON; 
       JC    END; 
 
-//Открытие клапана DB_H-FS-52
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Open; 
       AN    "DB_H-FS-52".Start; 
       =     "DB_H-FS-52".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-02M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_OFF; 
       =     "DB_P-FS-02M".Start_WinCC; 
       JU    END; 
 
-//Проверка отключения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _112: A     "Fuel Phase Block".IBC_stop; 
       JNB   END; 
       A     "DB_P-FS-02M".Status_OFF; 
@@ -1754,12 +1754,12 @@ _112: A     "Fuel Phase Block".IBC_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    END; 
 
-//Останов насоса DB_P-FS-02M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_P-FS-02M".Status_ON; 
       A     "DB_H-FS-52".Status_Open; 
       =     "DB_P-FS-02M".Stop_WinCC; 
 
-//Закрытие клапана DB_H-FS-52
+//Г‡Г ГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Close; 
       AN    "DB_H-FS-52".Stop; 
