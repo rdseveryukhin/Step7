@@ -1,0 +1,307 @@
+FUNCTION_BLOCK "FB_Freq_Converters_addDI"
+TITLE =
+VERSION : 0.1
+
+
+VAR_INPUT
+  Start_WinCC : BOOL ;	
+  Start_OP : BOOL ;	
+  Start_Button : BOOL ;	
+  Start_Reserve : BOOL ;	
+  Stop_WinCC : BOOL ;	
+  Stop_OP : BOOL ;	
+  Stop_Button : BOOL ;	
+  Stop_Reserve : BOOL ;	
+  Remote_Switch : BOOL ;	
+  Aux_Switch : BOOL ;	
+  Reset_ErrorFB : BOOL ;	
+  Automatic_Switch : BOOL ;	
+  Reset_ErrorQF : BOOL ;	
+  Error_Time : INT ;	
+END_VAR
+VAR_OUTPUT
+  Start : BOOL ;	
+  Stop : BOOL ;	
+  Status_ON : BOOL ;	
+  Status_OFF : BOOL ;	
+  ErrorFB : BOOL ;	
+  Hold : BOOL ;	
+  MT_mode : BOOL ;	
+  Reset : BOOL ;	
+  Simulation : BOOL ;	
+  ErrorQF : BOOL ;	
+  HmiError : BOOL ;	
+END_VAR
+VAR_IN_OUT
+  Analog_Set_Value : WORD ;	
+  FB_Analog : WORD ;	
+  Analog_Output : WORD ;	
+  Cycles : INT ;	
+  On_Time : DINT ;	
+  Off_Time : DINT ;	
+END_VAR
+VAR
+  pulse : BOOL ;	
+  Pulse_On_Time : BOOL ;	
+  Pulse_Off_Time : BOOL ;	
+  Pulse_cycles : BOOL ;	
+  count : INT ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =Симуляция обратной связи
+
+      A     #Simulation; 
+      S     #Automatic_Switch; 
+      A     #Simulation; 
+      A     #Start; 
+      AN    #Stop; 
+      JNB   _011; 
+      =     #Aux_Switch; 
+_011: NOP   0; 
+NETWORK
+TITLE =Выставление ошибки обратной связи (счетчик ожидания об.связи)
+
+      A(    ; 
+      A(    ; 
+      A     #Start; 
+      AN    #Aux_Switch; 
+      O     ; 
+      A     #Stop; 
+      A     #Aux_Switch; 
+      )     ; 
+      A     "Voltage control".SV_MCC1; 
+      A     "1sec"; 
+      FP    #pulse; 
+      JNB   _001; 
+      L     #count; 
+      L     1; 
+      +I    ; 
+      T     #count; 
+      AN    OV; 
+      SAVE  ; 
+      CLR   ; 
+_001: A     BR; 
+      )     ; 
+      A(    ; 
+      L     #Error_Time; 
+      L     #count; 
+      ==I   ; 
+      )     ; 
+      JNB   _002; 
+      L     0; 
+      T     #count; 
+      SET   ; 
+      SAVE  ; 
+      CLR   ; 
+_002: A     BR; 
+      S     #ErrorFB; 
+NETWORK
+TITLE =Выставление ошибки доп. контакта АВ
+
+      A(    ; 
+      O     #Start_WinCC; 
+      O     #Start_OP; 
+      O     #Start_Button; 
+      O     #Start; 
+      )     ; 
+      AN    #Automatic_Switch; 
+      A     "Voltage control".SV_MCC1; 
+      S     #ErrorQF; 
+NETWORK
+TITLE =Сброс ошибки обратной связи
+
+      A     #Reset_ErrorFB; 
+      R     #ErrorFB; 
+NETWORK
+TITLE =Сброс ошибки доп. конткта АВ
+
+      A     #Reset_ErrorQF; 
+      R     #ErrorQF; 
+NETWORK
+TITLE =Наличие какой-либо ошибки
+
+      O     #ErrorFB; 
+      O     #ErrorQF; 
+      =     #HmiError; 
+NETWORK
+TITLE =Сброс счетчика
+
+      A(    ; 
+      A     #Start; 
+      A     #Aux_Switch; 
+      O     ; 
+      A     #Stop; 
+      AN    #Aux_Switch; 
+      O     #ErrorFB; 
+      O     #ErrorQF; 
+      )     ; 
+      JNB   _003; 
+      L     0; 
+      T     #count; 
+_003: NOP   0; 
+NETWORK
+TITLE =Старт мотора
+
+      A(    ; 
+      O     #Start_WinCC; 
+      O     #Start_OP; 
+      O     #Start_Button; 
+      )     ; 
+      A     #Remote_Switch; 
+      A     #Automatic_Switch; 
+      AN    #Aux_Switch; 
+      AN    #MT_mode; 
+      JNB   _004; 
+      CALL "Write Analog Value" (
+           AI                       := #Analog_Set_Value,
+           HighLevel                := 100,
+           LowLevel                 := 0,
+           AO                       := #Analog_Output,
+           Out_of_range             := "NULL");
+_004: A     BR; 
+      S     #Start; 
+      R     #Stop; 
+NETWORK
+TITLE =Стоп мотора
+
+      A(    ; 
+      A(    ; 
+      O     #Stop_WinCC; 
+      O     #Stop_OP; 
+      O     #Stop_Button; 
+      )     ; 
+      A     #Remote_Switch; 
+      A     #Automatic_Switch; 
+      A     #Aux_Switch; 
+      O     ; 
+      AN    #Remote_Switch; 
+      A     #Aux_Switch; 
+      O     #ErrorFB; 
+      O     #ErrorQF; 
+      )     ; 
+      AN    #MT_mode; 
+      JNB   _005; 
+      CALL "Write Analog Value" (
+           AI                       := W#16#0,
+           HighLevel                := 100,
+           LowLevel                 := 0,
+           AO                       := #Analog_Output,
+           Out_of_range             := "NULL");
+_005: A     BR; 
+      S     #Stop; 
+      R     #Start; 
+NETWORK
+TITLE =Симуляция обратной связи от частотников
+
+      L     #Analog_Set_Value; 
+      T     #FB_Analog; 
+
+NETWORK
+TITLE =Пересылка аналогового значения
+
+
+
+      A     #Start; 
+      A     #Remote_Switch; 
+      A     #Automatic_Switch; 
+      A     #Aux_Switch; 
+      AN    #ErrorFB; 
+      AN    #ErrorQF; 
+      AN    #MT_mode; 
+      JNB   _006; 
+      CALL "Write Analog Value" (
+           AI                       := #Analog_Set_Value,
+           HighLevel                := 100,
+           LowLevel                 := 0,
+           AO                       := #Analog_Output,
+           Out_of_range             := "NULL");
+_006: NOP   0; 
+NETWORK
+TITLE =Установка статусов
+
+      A     #Remote_Switch; 
+      A     #Automatic_Switch; 
+      A     #Aux_Switch; 
+      AN    #ErrorFB; 
+      AN    #ErrorQF; 
+      =     #Status_ON; 
+
+//     A     #Remote_Switch
+      AN    #Aux_Switch; 
+      AN    #ErrorFB; 
+      AN    #ErrorQF; 
+      =     #Status_OFF; 
+
+
+NETWORK
+TITLE =Расчет времени работы/простоя и циклов включения
+
+// On_Time counting
+      A     #Status_ON; 
+      AN    #MT_mode; 
+      A     "1sec"; 
+      FP    #Pulse_On_Time; 
+      JNB   _007; 
+      L     #On_Time; 
+      L     1; //1 sec
+      +D    ; 
+      T     #On_Time; 
+_007: NOP   0; 
+
+// Off_Time counting
+      A     #Status_OFF; 
+      AN    #MT_mode; 
+      A     "1sec"; 
+      FP    #Pulse_Off_Time; 
+      JNB   _008; 
+      L     #Off_Time; 
+      L     1; //1 sec
+      +D    ; 
+      T     #Off_Time; 
+_008: NOP   0; 
+
+//Cycles counting
+      A     #Status_ON; 
+      FP    #Pulse_cycles; 
+      JNB   _009; 
+      L     #Cycles; 
+      L     1; 
+      +I    ; 
+      T     #Cycles; 
+_009: NOP   0; 
+
+//Reset counting
+      A     #Reset; 
+      JNB   _010; 
+      L     0; 
+      T     #On_Time; 
+      T     #Off_Time; 
+      L     0; 
+      T     #Cycles; 
+      R     #Reset; 
+_010: NOP   0; 
+NETWORK
+TITLE =Сброс кнопок
+//
+//
+      A     #Start_WinCC; 
+      R     #Start_WinCC; 
+
+      A     #Start_OP; 
+      R     #Start_OP; 
+
+      A     #Stop_WinCC; 
+      R     #Stop_WinCC; 
+
+      A     #Stop_OP; 
+      R     #Stop_OP; 
+
+      A     #Reset_ErrorFB; 
+      R     #Reset_ErrorFB; 
+
+      A     #Reset_ErrorQF; 
+      R     #Reset_ErrorQF; 
+
+END_FUNCTION_BLOCK
+

@@ -1,0 +1,1770 @@
+FUNCTION "Fuel phase" : VOID
+TITLE =
+VERSION : 0.1
+
+
+VAR_TEMP
+  tempIdling_time : TIME ;	
+  tempIdling_s5time : S5TIME ;	
+  tempRet : INT ;	
+  tempPointer : ANY ;	
+END_VAR
+BEGIN
+NETWORK
+TITLE =Ошибки и блокировки
+
+//Сброс ошибок
+//Слить предыдущую партию
+      A     DB24.DBX   86.0; 
+      JNB   _250; 
+      R     DB24.DBX   44.0; 
+      R     DB24.DBX   86.0; 
+
+//Холостой ход DB_P-FS-10M
+_250: A     DB24.DBX   86.1; 
+      JNB   _251; 
+      R     DB24.DBX   44.1; 
+      R     DB24.DBX   86.1; 
+
+//Перелив IBC
+_251: A     DB24.DBX   86.2; 
+      JNB   _252; 
+      R     DB24.DBX   44.2; 
+      R     DB24.DBX   86.2; 
+
+//Перелив B-FS-09
+_252: A     DB24.DBX   86.3; 
+      JNB   _253; 
+      R     DB24.DBX   44.3; 
+      R     DB24.DBX   86.3; 
+
+//Аварийный останов мешалки A-FS-30M
+_253: A     DB24.DBX   86.4; 
+      JNB   _254; 
+      R     DB24.DBX   44.4; 
+      R     DB24.DBX   86.4; 
+
+//Аварийный останов
+_254: A     DB24.DBX   86.5; 
+      JNB   _255; 
+      R     DB24.DBX   44.5; 
+      R     DB24.DBX   86.5; 
+
+//Заняты оба насоса P-FS-03M и P-FS-04M
+_255: A     DB24.DBX   86.6; 
+      JNB   _256; 
+      R     DB24.DBX   44.6; 
+      R     DB24.DBX   86.6; 
+
+//Запущен ручной процесс
+_256: A     DB24.DBX   86.7; 
+      JNB   _257; 
+      R     DB24.DBX   44.7; 
+      R     DB24.DBX   86.7; 
+
+//Некорректные параметры рецепта
+_257: A     DB24.DBX   87.0; 
+      JNB   _258; 
+      R     DB24.DBX   68.1; 
+      R     DB24.DBX   87.0; 
+
+_258: NOP   0; 
+
+
+//Установка флагов ошибок
+//Слить предыдущую партию
+      A     DB24.DBX   70.0; 
+      JNB   _200; 
+      A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Weight_control; 
+      >R    ; 
+      )     ; 
+      AN    "Fuel Phase Block".Program_interrupt; 
+      S     DB24.DBX   44.0; 
+      A     DB24.DBX   44.0; 
+      R     DB24.DBX   70.0; 
+
+//Холостой ход DB_P-FS-10M
+_200: A     T     29; 
+      R     T     29; 
+      S     DB24.DBX   44.1; 
+
+      A     DB24.DBX   44.1; 
+      JNB   _213; 
+
+      A     "DB_P-FS-10M".Status_ON; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+
+      A     "DB_A-FS-30M".Status_ON; 
+      =     "DB_A-FS-30M".Stop_WinCC; 
+
+      A     "Fuel Phase Block".Emuls1_start; 
+      R     "Fuel Phase Block".Emuls1_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".Emuls2_start; 
+      R     "Fuel Phase Block".Emuls2_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".Status_start; 
+      R     "Fuel Phase Block".Status_start; 
+      S     "Fuel Phase Block".Program_interrupt; 
+
+      A     "Fuel Phase Block".Mixer_start; 
+      R     "Fuel Phase Block".Mixer_start; 
+
+_213: L     "Fuel Phase Block".Idling_time; 
+      L     L#1000; 
+      *D    ; 
+      T     #tempIdling_time; 
+
+      CALL "TIM_S5TI" (
+           IN                       := #tempIdling_time,
+           RET_VAL                  := #tempIdling_s5time);
+
+      A(    ; 
+      A     "Fuel Phase Block".Status_start; 
+      O     "Fuel Phase Block".Emuls1_start; 
+      O     "Fuel Phase Block".Emuls2_start; 
+      )     ; 
+      A     "DB_P-FS-10M".Status_ON; 
+      A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Idling_control; 
+      ==R   ; 
+      )     ; 
+
+      L     #tempIdling_s5time; 
+      SD    T     29; 
+
+      L     "DB_TenzoM".Analog_Output; 
+      T     "Fuel Phase Block".Idling_control; 
+
+
+//Перелив IBC
+      A(    ; 
+      L     "Fuel Phase Block".IBC_setpoint; 
+      L     "Fuel Phase Block".IBC_setpoint_HL; 
+      >=R   ; 
+      )     ; 
+      JNB   _201; 
+      L     "Fuel Phase Block".IBC_setpoint_HL; 
+      T     "Fuel Phase Block".IBC_setpoint; 
+
+_201: A(    ; 
+      A     "Fuel Phase Block".IBC_start; 
+      O     "Fuel Phase Block".IBC_start_auto; 
+      )     ; 
+      A     "DB_H-FS-52".Status_Open; 
+      JNB   _203; 
+
+      A(    ; 
+      L     "Fuel Phase Block".IBC_start_value; 
+      L     0; 
+      ==R   ; 
+      )     ; 
+      JNB   _204; 
+
+      L     "DB_TenzoM".Analog_Output; 
+      T     "Fuel Phase Block".IBC_start_value; 
+
+_204: A(    ; 
+      L     "Fuel Phase Block".IBC_start_value; 
+      L     "DB_TenzoM".Analog_Output; 
+      -R    ; 
+      L     "Fuel Phase Block".IBC_setpoint; 
+      >=R   ; 
+      )     ; 
+      =     "DB_P-FS-02M".Stop_WinCC; 
+      S     DB24.DBX   44.2; 
+      R     "Fuel Phase Block".IBC_start; 
+      R     "Fuel Phase Block".IBC_start_auto; 
+      R     "Fuel Phase Block".Process_busy; 
+      JU    _205; 
+
+_203: L     0; 
+      T     "Fuel Phase Block".IBC_start_value; 
+
+
+//Перелив B-FS-09
+_205: A(    ; 
+      L     "Fuel Phase Block".Max_value; 
+      L     "Fuel Phase Block".Max_value_HL; 
+      >=R   ; 
+      )     ; 
+      JNB   _202; 
+      L     "Fuel Phase Block".Max_value_HL; 
+      T     "Fuel Phase Block".Max_value; 
+
+_202: A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Max_value; 
+      >=R   ; 
+      )     ; 
+      JNB   _206; 
+      S     DB24.DBX   44.3; 
+
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      =     "DB_P-FS-03M".Stop_WinCC; 
+
+      A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      =     "DB_P-FS-04M".Stop_WinCC; 
+
+      A     "DB_P-FS-10M".Status_ON; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+
+      A     "DB_A-FS-30M".Status_ON; 
+      =     "DB_A-FS-30M".Stop_WinCC; 
+
+      A     "Fuel Phase Block".Minoil_start; 
+      R     "Fuel Phase Block".Minoil_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".Emuls1_start; 
+      R     "Fuel Phase Block".Emuls1_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".Emuls2_start; 
+      R     "Fuel Phase Block".Emuls2_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".Status_start; 
+      R     "Fuel Phase Block".Status_start; 
+
+
+
+//Предупреждение перелива B-FS-09
+_206: A(    ; 
+      L     "Fuel Phase Block".Max_value_limit; 
+      L     1.000000e+002; 
+      >R    ; 
+      )     ; 
+      JNB   _212; 
+      L     1.000000e+002; 
+      T     "Fuel Phase Block".Max_value_limit; 
+
+_212: A(    ; 
+      L     "Fuel Phase Block".Max_value; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Max_value_limit; 
+      *R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      <=R   ; 
+      )     ; 
+      =     DB24.DBX   68.0; 
+
+
+//Аварийный останов мешалки A-FS-30M
+      AN    "Fuel Phase Block".Mixer_ES; 
+      JNB   _207; 
+      R     "Fuel Phase Block".Mixer_start; 
+      S     DB24.DBX   44.4; 
+
+
+//Аварийный останов
+_207: A     "Emergency Blocks".HS_EZ_07; 
+      O     "Emergency Blocks".HS_EZ_01; 
+      =     DB24.DBX   44.5; 
+
+      A     DB24.DBX   44.5; 
+      JNB   _208; 
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      =     "DB_P-FS-03M".Stop_WinCC; 
+
+      A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      =     "DB_P-FS-04M".Stop_WinCC; 
+
+      A     "DB_P-FS-10M".Status_ON; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+
+      A     "DB_A-FS-30M".Status_ON; 
+      =     "DB_A-FS-30M".Stop_WinCC; 
+
+      A     "DB_P-FS-02M".Status_ON; 
+      =     "DB_P-FS-02M".Stop_WinCC; 
+
+      A     "Fuel Phase Block".Minoil_start; 
+      R     "Fuel Phase Block".Minoil_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".Emuls1_start; 
+      R     "Fuel Phase Block".Emuls1_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".Emuls2_start; 
+      R     "Fuel Phase Block".Emuls2_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".IBC_start; 
+      R     "Fuel Phase Block".IBC_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".IBC_start_auto; 
+      R     "Fuel Phase Block".IBC_start_auto; 
+
+      A     "Fuel Phase Block".Mixer_start; 
+      R     "Fuel Phase Block".Mixer_start; 
+
+      A     "Fuel Phase Block".Status_start; 
+      R     "Fuel Phase Block".Status_start; 
+      S     "Fuel Phase Block".Program_interrupt; 
+
+
+
+//Заняты оба насоса P-FS-03M и P-FS-04M
+_208: A(    ; 
+      A     DB24.DBX   70.0; 
+      O     DB24.DBX   70.4; 
+      )     ; 
+      JNB   _209; 
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_P-FS-04M".Status_ON; 
+      S     DB24.DBX   44.6; 
+      R     DB24.DBX   70.0; 
+      R     DB24.DBX   70.4; 
+
+//Запущен ручной процесс
+_209: A     DB24.DBX   70.0; 
+      JNB   _210; 
+      A     "Fuel Phase Block".Process_busy; 
+      S     DB24.DBX   44.7; 
+      R     DB24.DBX   70.0; 
+
+//Некорректные параметры рецепта          
+_210: A(    ; 
+      O     DB24.DBX   70.0; 
+      O     DB24.DBX   71.7; 
+      )     ; 
+      JNB   _211; 
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_capacity; 
+      L     "Fuel Phase Block".Recipe.emuls1_capacity; 
+      +R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_capacity; 
+      +R    ; 
+      L     1.000000e+002; 
+      <>R   ; 
+      )     ; 
+      O(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      +R    ; 
+      L     "Fuel Phase Block".Max_value; 
+      >=R   ; 
+      )     ; 
+      O(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     0.000000e+000; 
+      ==R   ; 
+      )     ; 
+      O(    ; 
+      L     "Fuel Phase Block".Current_id; 
+      L     20; 
+      >I    ; 
+      )     ; 
+      JNB   _211; 
+      S     DB24.DBX   68.1; 
+      A     DB24.DBX   70.0; 
+      R     DB24.DBX   70.0; 
+      A     DB24.DBX   71.7; 
+      R     DB24.DBX   71.7; 
+
+//Некорректные параметры рецепта
+_211: A     DB24.DBX   71.6; 
+      JNB   _214; 
+      A(    ; 
+      L     "Fuel Phase Block".Current_id; 
+      L     20; 
+      >I    ; 
+      )     ; 
+      JNB   _214; 
+      S     DB24.DBX   68.1; 
+      R     DB24.DBX   71.6; 
+
+//Сработавшие блокировки P-FS-03M или P-FS-04M
+_214: A     "Interlocks".Interlock_95_1; 
+      O     "Interlocks".Interlock_95_2; 
+      O     "Interlocks".Interlock_52_2; 
+      O     "Interlocks".Interlock_53_1; 
+      JNB   _215; 
+      A     "Fuel Phase Block".Status_start; 
+      R     "Fuel Phase Block".Status_start; 
+      S     "Fuel Phase Block".Program_interrupt; 
+
+      A     "DB_A-FS-30M".Status_ON; 
+      AN    "Fuel Phase Block".Mixer_start; 
+      S     "DB_A-FS-30M".Stop_WinCC; 
+
+      A     "Fuel Phase Block".Minoil_start; 
+      R     "Fuel Phase Block".Minoil_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+//Сработавшие блокировки P-FS-02M
+_215: A     "Interlocks".Interlock_63_1; 
+      JNB   _216; 
+      A     "Fuel Phase Block".IBC_start; 
+      R     "Fuel Phase Block".IBC_start; 
+      R     "Fuel Phase Block".Process_busy; 
+
+      A     "Fuel Phase Block".IBC_start_auto; 
+      R     "Fuel Phase Block".IBC_start_auto; 
+
+_216: NOP   0; 
+
+
+
+
+
+NETWORK
+TITLE =Рецепт расчет
+
+//Расчет параметров рецепта
+//Проверка на программа запущена в авто режиме
+      AN    "Fuel Phase Block".Status_start; 
+      JNB   _309; 
+
+//Проверка на общий вес не равен 0
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     0.000000e+000; 
+      <>R   ; 
+      )     ; 
+      JNB   _300; 
+
+//Проверка на соответствие количества мин. масла объему
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.minoil_capacity; 
+      *R    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      ==R   ; 
+      )     ; 
+      JNB   _301; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      T     "Fuel Phase Block".minoil_balance_value; 
+      JU    _303; 
+
+//Перевод кг в % мин. масло если количество изменено
+_301: A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".minoil_balance_value; 
+      <>R   ; 
+      )     ; 
+      JNB   _302; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     1.000000e+002; 
+      *R    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      /R    ; 
+      T     "Fuel Phase Block".Recipe.minoil_capacity; 
+      JU    _303; 
+
+//Перевод % в кг мин. масло если объем изменен
+_302: A(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.minoil_capacity; 
+      *R    ; 
+      L     "Fuel Phase Block".minoil_balance_value; 
+      <>R   ; 
+      )     ; 
+      JNB   _303; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.minoil_capacity; 
+      *R    ; 
+      T     "Fuel Phase Block".Recipe.minoil_amount; 
+
+//Проверка на соответствие количества эмульгатора 1 объему
+_303: A(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.emuls1_capacity; 
+      *R    ; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      ==R   ; 
+      )     ; 
+      JNB   _304; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      T     "Fuel Phase Block".emuls1_balance_value; 
+      JU    _306; 
+
+//Перевод кг в % эмульгатор 1 если количество изменено
+_304: A(    ; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      L     "Fuel Phase Block".emuls1_balance_value; 
+      <>R   ; 
+      )     ; 
+      JNB   _305; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      L     1.000000e+002; 
+      *R    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      /R    ; 
+      T     "Fuel Phase Block".Recipe.emuls1_capacity; 
+      JU    _306; 
+
+//Перевод % в кг эмульгатор 1 если объем изменен
+_305: A(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.emuls1_capacity; 
+      *R    ; 
+      L     "Fuel Phase Block".emuls1_balance_value; 
+      <>R   ; 
+      )     ; 
+      JNB   _306; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.emuls1_capacity; 
+      *R    ; 
+      T     "Fuel Phase Block".Recipe.emuls1_amount; 
+
+//Проверка на соответствие количества эмульгатора 2 объему
+_306: A(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_capacity; 
+      *R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      ==R   ; 
+      )     ; 
+      JNB   _307; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      T     "Fuel Phase Block".emuls2_balance_value; 
+      JU    _309; 
+
+//Перевод кг в % эмульгатор 1 если количество изменено
+_307: A(    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      L     "Fuel Phase Block".emuls2_balance_value; 
+      <>R   ; 
+      )     ; 
+      JNB   _308; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      L     1.000000e+002; 
+      *R    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      /R    ; 
+      T     "Fuel Phase Block".Recipe.emuls2_capacity; 
+      JU    _309; 
+
+//Перевод % в кг эмульгатор 1 если объем изменен
+_308: A(    ; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_capacity; 
+      *R    ; 
+      L     "Fuel Phase Block".emuls2_balance_value; 
+      <>R   ; 
+      )     ; 
+      JNB   _309; 
+      L     "Fuel Phase Block".Recipe.weight; 
+      L     1.000000e+002; 
+      /R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_capacity; 
+      *R    ; 
+      T     "Fuel Phase Block".Recipe.emuls2_amount; 
+      JU    _309; 
+
+//Сброс параметров мин. масла
+_300: A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     0.000000e+000; 
+      <>R   ; 
+      )     ; 
+      JNB   _310; 
+      L     0.000000e+000; 
+      T     "Fuel Phase Block".Recipe.minoil_amount; 
+      T     "Fuel Phase Block".Recipe.minoil_capacity; 
+
+//Сброс параметров эмульгатора 1
+_310: A(    ; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      L     0.000000e+000; 
+      <>R   ; 
+      )     ; 
+      JNB   _311; 
+      L     0.000000e+000; 
+      T     "Fuel Phase Block".Recipe.emuls1_amount; 
+      T     "Fuel Phase Block".Recipe.emuls1_capacity; 
+
+//Сброс параметров эмульгатора 2
+_311: A(    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      L     0.000000e+000; 
+      <>R   ; 
+      )     ; 
+      JNB   _312; 
+      L     0.000000e+000; 
+      T     "Fuel Phase Block".Recipe.emuls2_amount; 
+      T     "Fuel Phase Block".Recipe.emuls2_capacity; 
+
+_312: A(    ; 
+      L     "Fuel Phase Block".minoil_balance_value; 
+      L     "Fuel Phase Block".emuls1_balance_value; 
+      +R    ; 
+      L     "Fuel Phase Block".emuls2_balance_value; 
+      +R    ; 
+      L     0.000000e+000; 
+      <>R   ; 
+      )     ; 
+      JNB   _309; 
+      L     0.000000e+000; 
+      T     "Fuel Phase Block".minoil_balance_value; 
+      T     "Fuel Phase Block".emuls1_balance_value; 
+      T     "Fuel Phase Block".emuls2_balance_value; 
+
+_309: NOP   0; 
+
+
+
+
+
+//Вывод фактических значений
+//Общий вес в емкости (кг)
+      L     "DB_TenzoM".Analog_Output; 
+      T     "Fuel Phase Block".Common_amount_current; 
+
+//Мин. масло (кг)
+      A(    ; 
+      A     "Fuel Phase Block".Status_start; 
+      O     "Fuel Phase Block".Status_stop; 
+      )     ; 
+      A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      <R    ; 
+      )     ; 
+      O     "Fuel Phase Block".Minoil_start; 
+      O     "Fuel Phase Block".Minoil_stop; 
+      JNB   _500; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Previous_weight; 
+      -R    ; 
+      L     "Fuel Phase Block".Minoil_amount_current; 
+      +R    ; 
+      T     "Fuel Phase Block".Minoil_amount_current; 
+
+//Эмульгатор 1 (кг)
+_500: A(    ; 
+      A     "Fuel Phase Block".Status_start; 
+      O     "Fuel Phase Block".Status_stop; 
+      )     ; 
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      >R    ; 
+      )     ; 
+      A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      >=R   ; 
+      )     ; 
+      O     "Fuel Phase Block".Emuls1_start; 
+      O     "Fuel Phase Block".Emuls1_stop; 
+      JNB   _501; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Previous_weight; 
+      -R    ; 
+      L     "Fuel Phase Block".Emuls1_amount_current; 
+      +R    ; 
+      T     "Fuel Phase Block".Emuls1_amount_current; 
+
+//Эмульгатор 2 (кг)
+_501: A(    ; 
+      A     "Fuel Phase Block".Status_start; 
+      O     "Fuel Phase Block".Status_stop; 
+      )     ; 
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      +R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      >R    ; 
+      )     ; 
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      <=R   ; 
+      )     ; 
+      O     "Fuel Phase Block".Emuls2_start; 
+      O     "Fuel Phase Block".Emuls2_stop; 
+      JNB   _502; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Previous_weight; 
+      -R    ; 
+      L     "Fuel Phase Block".Emuls2_amount_current; 
+      +R    ; 
+      T     "Fuel Phase Block".Emuls2_amount_current; 
+
+
+//Общий вес в емкости (%)
+_502: A(    ; 
+      L     "Fuel Phase Block".Max_value; 
+      L     0.000000e+000; 
+      <>R   ; 
+      )     ; 
+      JNB   _503; 
+      L     "Fuel Phase Block".Common_amount_current; 
+      L     1.000000e+002; 
+      *R    ; 
+      L     "Fuel Phase Block".Max_value; 
+      /R    ; 
+      T     "Fuel Phase Block".Common_capacity_current; 
+      JU    _504; 
+
+_503: L     0.000000e+000; 
+      T     "Fuel Phase Block".Common_capacity_current; 
+
+//Мин. масло (%)
+_504: A(    ; 
+      L     "Fuel Phase Block".Common_amount_current; 
+      L     0.000000e+000; 
+      <>R   ; 
+      )     ; 
+      JNB   _505; 
+      L     "Fuel Phase Block".Minoil_amount_current; 
+      L     1.000000e+002; 
+      *R    ; 
+      L     "Fuel Phase Block".Common_amount_current; 
+      /R    ; 
+      T     "Fuel Phase Block".Minoil_capacity_current; 
+
+//Эмульгатор 1 (%)
+      L     "Fuel Phase Block".Emuls1_amount_current; 
+      L     1.000000e+002; 
+      *R    ; 
+      L     "Fuel Phase Block".Common_amount_current; 
+      /R    ; 
+      T     "Fuel Phase Block".Emuls1_capacity_current; 
+
+//Эмульгатор 2 (%)
+      L     "Fuel Phase Block".Emuls2_amount_current; 
+      L     1.000000e+002; 
+      *R    ; 
+      L     "Fuel Phase Block".Common_amount_current; 
+      /R    ; 
+      T     "Fuel Phase Block".Emuls2_capacity_current; 
+      JU    _506; 
+
+_505: L     0.000000e+000; 
+      T     "Fuel Phase Block".Minoil_capacity_current; 
+      T     "Fuel Phase Block".Emuls1_capacity_current; 
+      T     "Fuel Phase Block".Emuls2_capacity_current; 
+
+//Сброс значений
+_506: A     "Fuel Phase Block".IBC_start; 
+      O     "Fuel Phase Block".IBC_start_auto; 
+      O(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Weight_control; 
+      <R    ; 
+      )     ; 
+      AN    "Fuel Phase Block".Status_start; 
+      AN    "Fuel Phase Block".Minoil_start; 
+      AN    "Fuel Phase Block".Emuls1_start; 
+      AN    "Fuel Phase Block".Emuls2_start; 
+      JNB   _507; 
+      L     0.000000e+000; 
+      T     "Fuel Phase Block".Minoil_amount_current; 
+      T     "Fuel Phase Block".Emuls1_amount_current; 
+      T     "Fuel Phase Block".Emuls2_amount_current; 
+
+//Запись значения текущего цикла
+_507: L     "DB_TenzoM".Analog_Output; 
+      T     "Fuel Phase Block".Previous_weight; 
+
+
+
+
+
+NETWORK
+TITLE =Управление приготовлением топливной фазы
+
+//Запуск программы в автоматическом режиме
+      A     DB24.DBX   70.0; 
+      JNB   _000; 
+      R     DB24.DBX   70.0; 
+      AN    DB24.DBX   44.3; 
+      AN    DB24.DBX   44.5; 
+      AN    "Fuel Phase Block".Status_stop; 
+      S     "Fuel Phase Block".Status_start; 
+
+//Останов программы
+_000: A     DB24.DBX   70.1; 
+      JNB   _001; 
+      R     "Fuel Phase Block".Status_start; 
+      R     "Fuel Phase Block".Program_interrupt; 
+      S     "Fuel Phase Block".Status_stop; 
+      R     DB24.DBX   70.1; 
+
+//ТФ готова
+_001: A     DB24.DBX   70.2; 
+      JNB   _002; 
+      R     DB24.DBX   70.2; 
+      AN    "Fuel Phase Block".Status_start; 
+      AN    "Fuel Phase Block".Process_busy; 
+      S     "Fuel Phase Block".Status_ready; 
+
+//ТФ не готова
+_002: A     DB24.DBX   70.3; 
+      JNB   _003; 
+      R     "Fuel Phase Block".Status_ready; 
+      R     DB24.DBX   70.3; 
+
+//Запуск загрузки минерального масла. Ручной режим
+_003: A     DB24.DBX   70.4; 
+      JNB   _004; 
+      R     DB24.DBX   70.4; 
+      AN    "Fuel Phase Block".Process_busy; 
+      AN    "Fuel Phase Block".Status_ready; 
+      AN    "Fuel Phase Block".Status_start; 
+      AN    "Fuel Phase Block".IBC_start_auto; 
+      AN    DB24.DBX   44.3; 
+      AN    DB24.DBX   44.5; 
+      S     "Fuel Phase Block".Minoil_start; 
+
+//Останов загрузки минерального масла. Ручной режим
+_004: A     DB24.DBX   70.5; 
+      JNB   _005; 
+      R     DB24.DBX   70.5; 
+      A     "Fuel Phase Block".Minoil_start; 
+      R     "Fuel Phase Block".Minoil_start; 
+      S     "Fuel Phase Block".Minoil_stop; 
+
+//Запуск загрузки эмульгатора 1. Ручной режим
+_005: A     DB24.DBX   70.6; 
+      JNB   _006; 
+      R     DB24.DBX   70.6; 
+      AN    "Fuel Phase Block".Process_busy; 
+      AN    "Fuel Phase Block".Status_ready; 
+      AN    "Fuel Phase Block".Status_start; 
+      AN    "Fuel Phase Block".IBC_start_auto; 
+      AN    DB24.DBX   44.3; 
+      AN    DB24.DBX   44.5; 
+      S     "Fuel Phase Block".Emuls1_start; 
+
+
+//Останов загрузки эмульгатора 1. Ручной режим
+_006: A     DB24.DBX   70.7; 
+      JNB   _007; 
+      R     DB24.DBX   70.7; 
+      A     "Fuel Phase Block".Emuls1_start; 
+      R     "Fuel Phase Block".Emuls1_start; 
+      S     "Fuel Phase Block".Emuls1_stop; 
+
+//Запуск загрузки эмульгатора 2. Ручной режим
+_007: A     DB24.DBX   71.0; 
+      JNB   _008; 
+      R     DB24.DBX   71.0; 
+      AN    "Fuel Phase Block".Process_busy; 
+      AN    "Fuel Phase Block".Status_ready; 
+      AN    "Fuel Phase Block".Status_start; 
+      AN    "Fuel Phase Block".IBC_start_auto; 
+      AN    DB24.DBX   44.3; 
+      AN    DB24.DBX   44.5; 
+      S     "Fuel Phase Block".Emuls2_start; 
+
+//Останов загрузки эмульгатора 2. Ручной режим
+_008: A     DB24.DBX   71.1; 
+      JNB   _009; 
+      R     DB24.DBX   71.1; 
+      A     "Fuel Phase Block".Emuls2_start; 
+      R     "Fuel Phase Block".Emuls2_start; 
+      S     "Fuel Phase Block".Emuls2_stop; 
+
+//Запуск перекачивания в IBC. Ручной режим
+_009: A     DB24.DBX   71.2; 
+      JNB   _010; 
+      R     DB24.DBX   71.2; 
+      AN    "Fuel Phase Block".Process_busy; 
+      AN    "Fuel Phase Block".Status_start; 
+      AN    "Fuel Phase Block".IBC_start_auto; 
+      AN    DB24.DBX   44.2; 
+      AN    DB24.DBX   44.5; 
+      S     "Fuel Phase Block".IBC_start; 
+
+//Останов перекачивания в IBC. Ручной режим
+_010: A     DB24.DBX   71.3; 
+      JNB   _011; 
+      R     DB24.DBX   71.3; 
+      A     "Fuel Phase Block".IBC_start; 
+      R     "Fuel Phase Block".IBC_start; 
+      S     "Fuel Phase Block".IBC_stop; 
+
+//Запуск мешалки A-FS-30M. Ручной режим
+_011: A     DB24.DBX   71.4; 
+      JNB   _012; 
+      R     DB24.DBX   71.4; 
+      AN    DB24.DBX   44.4; 
+      AN    DB24.DBX   44.5; 
+      S     "Fuel Phase Block".Mixer_start; 
+
+//Останов мешалки A-FS-30M. Ручной режим
+_012: A     DB24.DBX   71.5; 
+      JNB   _013; 
+      R     "Fuel Phase Block".Mixer_start; 
+      S     "Fuel Phase Block".Mixer_stop; 
+      R     DB24.DBX   71.5; 
+
+//Загрузить рецепт   
+_013: A     DB24.DBX   71.6; 
+      JNB   _014; 
+
+//Загрузка рецепта
+      A(    ; 
+      L     "Fuel Phase Block".Current_id; 
+      L     0; 
+      ==I   ; 
+      )     ; 
+      O     "Fuel Phase Block".Status_start; 
+      O     "Fuel Phase Block".Status_stop; 
+      R     DB24.DBX   71.6; 
+      JC    _014; 
+      L     "Fuel Phase Block".Current_id; 
+      L     1; 
+      -I    ; 
+      L     464; 
+      *I    ; 
+      LAR1  ; 
+      LAR2  P#4.0; 
+      OPN   "Recipes Block"; 
+      OPN   DI    24; 
+//rec_id
+      L     DBW [AR1,P#0.0]; 
+      T     DIW [AR2,P#0.0]; 
+//weight
+      L     DBD [AR1,P#2.0]; 
+      T     DID [AR2,P#2.0]; 
+//minoil_amount
+      L     DBD [AR1,P#6.0]; 
+      T     DID [AR2,P#6.0]; 
+//minoil_capacity
+      L     DBD [AR1,P#10.0]; 
+      T     DID [AR2,P#10.0]; 
+//emuls1_amount
+      L     DBD [AR1,P#14.0]; 
+      T     DID [AR2,P#14.0]; 
+//emuls1_capacity
+      L     DBD [AR1,P#18.0]; 
+      T     DID [AR2,P#18.0]; 
+//emuls2_amount
+      L     DBD [AR1,P#22.0]; 
+      T     DID [AR2,P#22.0]; 
+//emuls2_capacity
+      L     DBD [AR1,P#26.0]; 
+      T     DID [AR2,P#26.0]; 
+//mixer_time
+      L     DBD [AR1,P#30.0]; 
+      T     DID [AR2,P#30.0]; 
+//mixer_using
+      L     DBW [AR1,P#34.0]; 
+      T     DIW [AR2,P#34.0]; 
+
+//Загрузка названия
+//Тип BYTE
+      L     W#16#1002; 
+      T     LW     8; 
+
+//Число байтов
+      L     22; 
+      T     LW    10; 
+
+//Исходный DB
+      L     713; 
+      T     LW    12; 
+
+//Начало исходных данных
+      TAR1  ; 
+      L     P#DBX 36.0; 
+      +D    ; 
+      T     LD    14; 
+
+      CALL "BLKMOV" (
+           SRCBLK                   := #tempPointer,
+           RET_VAL                  := #tempRet,
+           DSTBLK                   := "Fuel Phase Block".rec_name);
+
+      SET   ; 
+      R     DB24.DBX   71.6; 
+
+//Cохранить рецепт
+_014: A     DB24.DBX   71.7; 
+      JNB   _015; 
+
+//Сохранение рецепта
+      A(    ; 
+      L     "Fuel Phase Block".Current_id; 
+      L     0; 
+      ==I   ; 
+      )     ; 
+      O     "Fuel Phase Block".Status_start; 
+      O     "Fuel Phase Block".Status_stop; 
+      R     DB24.DBX   71.7; 
+      JC    _015; 
+      L     "Fuel Phase Block".Current_id; 
+      T     "Fuel Phase Block".Recipe.rec_id; 
+      L     "Fuel Phase Block".Current_id; 
+      L     1; 
+      -I    ; 
+      L     464; 
+      *I    ; 
+      LAR2  ; 
+      LAR1  P#4.0; 
+      OPN   "Fuel Phase Block"; 
+      OPN   DI   713; 
+//rec_id
+      L     DBW [AR1,P#0.0]; 
+      T     DIW [AR2,P#0.0]; 
+//weight
+      L     DBD [AR1,P#2.0]; 
+      T     DID [AR2,P#2.0]; 
+//minoil_amount
+      L     DBD [AR1,P#6.0]; 
+      T     DID [AR2,P#6.0]; 
+//minoil_capacity
+      L     DBD [AR1,P#10.0]; 
+      T     DID [AR2,P#10.0]; 
+//emuls1_amount
+      L     DBD [AR1,P#14.0]; 
+      T     DID [AR2,P#14.0]; 
+//emuls1_capacity
+      L     DBD [AR1,P#18.0]; 
+      T     DID [AR2,P#18.0]; 
+//emuls2_amount
+      L     DBD [AR1,P#22.0]; 
+      T     DID [AR2,P#22.0]; 
+//emuls2_capacity
+      L     DBD [AR1,P#26.0]; 
+      T     DID [AR2,P#26.0]; 
+//mixer_time
+      L     DBD [AR1,P#30.0]; 
+      T     DID [AR2,P#30.0]; 
+//mixer_using
+      L     DBW [AR1,P#34.0]; 
+      T     DIW [AR2,P#34.0]; 
+
+//Сохранение названия
+//Тип BYTE
+      L     W#16#1002; 
+      T     LW     8; 
+
+//Число байтов
+      L     22; 
+      T     LW    10; 
+
+//Исходный DB
+      L     713; 
+      T     LW    12; 
+
+//Начало исходных данных
+      TAR2  ; 
+      L     P#DBX 36.0; 
+      +D    ; 
+      T     LD    14; 
+
+      CALL "BLKMOV" (
+           SRCBLK                   := "Fuel Phase Block".rec_name,
+           RET_VAL                  := #tempRet,
+           DSTBLK                   := #tempPointer);
+
+      SET   ; 
+      R     DB24.DBX   71.7; 
+
+//Запуск перекачивания в IBC. Авто режим
+_015: A     DB24.DBX   72.0; 
+      JNB   _016; 
+      R     DB24.DBX   72.0; 
+      A     "Fuel Phase Block".Status_ready; 
+      AN    "Fuel Phase Block".Process_busy; 
+      AN    DB24.DBX   44.2; 
+      AN    DB24.DBX   44.5; 
+      =     "Fuel Phase Block".IBC_start_auto; 
+
+//Останов перекачивания в IBC. Авто режим
+_016: A     DB24.DBX   72.1; 
+      JNB   _017; 
+      R     DB24.DBX   72.1; 
+      A     "Fuel Phase Block".IBC_start_auto; 
+      R     "Fuel Phase Block".IBC_start_auto; 
+      S     "Fuel Phase Block".IBC_stop_auto; 
+
+_017: NOP   0; 
+
+
+NETWORK
+TITLE =Запуск оборудования в авто режиме
+
+//Запуск в авторежиме
+      A     "Fuel Phase Block".Status_start; 
+      JNB   _080; 
+
+//Копирование текущего рецепта
+      A(    ; 
+      L     "Fuel Phase Block".Current_id; 
+      L     "Fuel Phase Block".Recipe.rec_id; 
+      <>I   ; 
+      )     ; 
+      JNB   nex3; 
+      L     "Fuel Phase Block".Current_id; 
+      T     "Fuel Phase Block".Recipe.rec_id; 
+
+//Блок работы мешалки
+nex3: A     "Fuel Phase Block".Recipe.mixer_using; 
+      JNB   _049; 
+
+      A     "Fuel Phase Block".Mixer_end; 
+      O     DB24.DBX   44.4; 
+      JNB   nex0; 
+      AN    "Fuel Phase Block".Mixer_start; 
+      AN    "Fuel Phase Block".Mixer_stop; 
+      A     "DB_A-FS-30M".Status_ON; 
+      =     "DB_A-FS-30M".Stop_WinCC; 
+      JU    _049; 
+
+nex0: AN    "Fuel Phase Block".Mixer_enable; 
+      JNB   nex1; 
+      A(    ; 
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      )     ; 
+      O(    ; 
+      A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      )     ; 
+      S     "Fuel Phase Block".Mixer_enable; 
+
+nex1: A     "Fuel Phase Block".Mixer_enable; 
+      A     "Fuel Phase Block".Status_start; 
+      AN    "DB_A-FS-30M".Status_ON; 
+      =     "DB_A-FS-30M".Start_WinCC; 
+
+      A     "Fuel Phase Block".Mixer_enable; 
+      A     "Fuel Phase Block".Status_start; 
+      A     "1sec"; 
+      FP    "Fuel Phase Block".FrontMerker1; 
+
+      A     "Fuel Phase Block".FrontMerker1; 
+      JNB   nex2; 
+      L     "Fuel Phase Block".Mixer_timer; 
+      L     1; 
+      +I    ; 
+      T     "Fuel Phase Block".Mixer_timer; 
+
+nex2: A(    ; 
+      L     "Fuel Phase Block".Recipe.mixer_time; 
+      L     60; 
+      *I    ; 
+      L     "Fuel Phase Block".Mixer_timer; 
+      <=I   ; 
+      )     ; 
+      JNB   _049; 
+      S     "Fuel Phase Block".Mixer_end; 
+      L     0; 
+      T     "Fuel Phase Block".Mixer_timer; 
+
+//Проверка окончания загрузки масла 
+_049: A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      >=R   ; 
+      )     ; 
+      JC    _054; 
+
+//Подача масла в емкость
+//Проверка на запуск какого-либо из узлов
+      A(    ; 
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      )     ; 
+      O(    ; 
+      A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      )     ; 
+      JC    MAN; 
+
+//Свободен насос DB_P-FS-03M
+      A     "DB_P-FS-03M".Status_OFF; 
+      AN    "DB_H-FS-50".Start; 
+      JC    _050; 
+
+//Свободен насос DB_P-FS-04M
+      A     "DB_P-FS-04M".Status_OFF; 
+      AN    "DB_H-FS-49".Start; 
+      JC    _051; 
+
+//Открытие клапана DB_H-FS-49    
+_050: AN    "DB_H-FS-49".Status_Open; 
+      AN    "DB_H-FS-49".Start; 
+      =     "DB_H-FS-49".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-03M
+      A     "DB_H-FS-49".Status_Open; 
+      A     "DB_P-FS-03M".Status_OFF; 
+      =     "DB_P-FS-03M".Start_WinCC; 
+      JU    MAN; 
+
+//Открытие клапана DB_H-FS-50
+_051: AN    "DB_H-FS-50".Status_Open; 
+      AN    "DB_H-FS-50".Start; 
+      =     "DB_H-FS-50".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-04M
+      A     "DB_H-FS-50".Status_Open; 
+      A     "DB_P-FS-04M".Status_OFF; 
+      =     "DB_P-FS-04M".Start_WinCC; 
+      JU    MAN; 
+
+//Проверка окончания загрузки эмульгатора 1
+_054: A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      <=R   ; 
+      )     ; 
+      JC    _057; 
+
+//Проверка включения узла
+      A     "DB_H-FS-51".Status_Open; 
+      A     "DB_P-FS-10M".Status_ON; 
+      JC    MAN; 
+
+//Проверка на остановку узлов
+      A     "DB_H-FS-49".Status_Close; 
+      A     "DB_H-FS-50".Status_Close; 
+      JC    _053; 
+
+//Если запущен узел 1
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      JNB   _055; 
+      A     "DB_P-FS-03M".Status_ON; 
+      =     "DB_P-FS-03M".Stop_WinCC; 
+      JU    _056; 
+
+//Если запущен узел 2
+_055: A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      JNB   _056; 
+      A     "DB_P-FS-04M".Status_ON; 
+      =     "DB_P-FS-04M".Stop_WinCC; 
+      JU    _056; 
+
+//Останов насоса и клапана
+_056: A     "DB_H-FS-49".Status_Open; 
+      A     "DB_P-FS-03M".Status_OFF; 
+      =     "DB_H-FS-49".Close_WinCC; 
+      A     "DB_H-FS-50".Status_Open; 
+      A     "DB_P-FS-04M".Status_OFF; 
+      =     "DB_H-FS-50".Close_WinCC; 
+      JU    MAN; 
+
+//Подача эмульгатора 1 в емкость
+//Переключение клапана DB_H-FS-51 в положение 1
+_053: AN    "DB_H-FS-51".Status_Open; 
+      AN    "DB_H-FS-51".Start; 
+      =     "DB_H-FS-51".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-10M
+      A     "DB_H-FS-51".Status_Open; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      AN    DB24.DBX   44.1; 
+      =     "DB_P-FS-10M".Start_WinCC; 
+      JU    MAN; 
+
+//Проверка окончания загрузки эмульгатора 2
+_057: A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      +R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      <=R   ; 
+      )     ; 
+      JC    _058; 
+
+//Подача эмульгатора 2 в емкость
+//Проверка включения узла    
+      A     "DB_H-FS-51".Status_Close; 
+      A     "DB_P-FS-10M".Status_ON; 
+      JC    MAN; 
+
+//Останов насоса DB_P-FS-10M
+      A     "DB_P-FS-10M".Status_ON; 
+      A     "DB_H-FS-51".Status_Open; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+
+//Переключение клапана DB_H-FS-51 в положение 2
+      AN    "DB_H-FS-51".Status_Close; 
+      AN    "DB_H-FS-51".Stop; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      =     "DB_H-FS-51".Close_WinCC; 
+
+//Запуск насоса DB_P-FS-10M
+      A     "DB_H-FS-51".Status_Close; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      AN    DB24.DBX   44.1; 
+      =     "DB_P-FS-10M".Start_WinCC; 
+      JU    MAN; 
+
+//Окончание загрузки компонентов
+//Проверка остановки насоса
+_058: A     "DB_P-FS-10M".Status_OFF; 
+      JC    _059; 
+
+//Останов насоса DB_P-FS-10M
+      A     "DB_H-FS-51".Status_Close; 
+      A     "DB_P-FS-10M".Status_ON; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+      JU    MAN; 
+
+//Завершение программы
+//Проверка окончания работы мешалки
+_059: A     "DB_A-FS-30M".Status_OFF; 
+      JNB   MAN; 
+
+//Проверка завершения программы
+      A     "Fuel Phase Block".Status_start; 
+      JNB   MAN; 
+      R     "Fuel Phase Block".Status_start; 
+      R     "Fuel Phase Block".Program_interrupt; 
+      R     "Fuel Phase Block".Mixer_end; 
+      R     "Fuel Phase Block".Mixer_enable; 
+      JU    MAN; 
+
+
+
+
+
+//Останов программы
+_080: A     "Fuel Phase Block".Status_stop; 
+      JNB   _060; 
+
+//Отключение мешалки 
+      R     "Fuel Phase Block".Mixer_end; 
+      R     "Fuel Phase Block".Mixer_enable; 
+      A     "DB_A-FS-30M".Status_ON; 
+      JNB   _081; 
+      A     "DB_A-FS-30M".Status_ON; 
+      =     "DB_A-FS-30M".Stop_WinCC; 
+
+//Останов на этапе загрузки мин. масла
+_081: A     "Fuel Phase Block".Status_stop; 
+      A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      <R    ; 
+      )     ; 
+      JNB   _082; 
+
+//Отключение узлов мин. масла
+      A     "DB_H-FS-49".Status_Close; 
+      A     "DB_H-FS-50".Status_Close; 
+      R     "Fuel Phase Block".Status_stop; 
+      JC    MAN; 
+
+//Если запущен узел 1
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      JNB   _083; 
+      A     "DB_P-FS-03M".Status_ON; 
+      =     "DB_P-FS-03M".Stop_WinCC; 
+      JU    _084; 
+
+//Если запущен узел 2
+_083: A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      JNB   _084; 
+      A     "DB_P-FS-04M".Status_ON; 
+      =     "DB_P-FS-04M".Stop_WinCC; 
+
+//Закрытие клапана
+_084: A     "DB_H-FS-49".Status_Open; 
+      A     "DB_P-FS-03M".Status_OFF; 
+      =     "DB_H-FS-49".Close_WinCC; 
+      A     "DB_H-FS-50".Status_Open; 
+      A     "DB_P-FS-04M".Status_OFF; 
+      =     "DB_H-FS-50".Close_WinCC; 
+      JU    MAN; 
+
+//Останов на этапе загрузки эмульгатора 1
+_082: A     "Fuel Phase Block".Status_stop; 
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      >R    ; 
+      )     ; 
+      JNB   _085; 
+
+//Проверка останова насоса
+      A     "DB_P-FS-10M".Status_OFF; 
+      R     "Fuel Phase Block".Status_stop; 
+      JC    MAN; 
+
+//Останов насоса DB_P-FS-10M
+      A     "DB_P-FS-10M".Status_ON; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+      JU    MAN; 
+
+//Останов на этапе загрузки эмульгатора 2
+_085: A     "Fuel Phase Block".Status_stop; 
+      A(    ; 
+      L     "Fuel Phase Block".Recipe.minoil_amount; 
+      L     "Fuel Phase Block".Recipe.emuls1_amount; 
+      +R    ; 
+      L     "Fuel Phase Block".Recipe.emuls2_amount; 
+      +R    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      >R    ; 
+      )     ; 
+      JNB   _086; 
+
+//Проверка останова насоса
+      A     "DB_P-FS-10M".Status_OFF; 
+      R     "Fuel Phase Block".Status_stop; 
+      JC    MAN; 
+
+//Останов насоса DB_P-FS-10M
+      A     "DB_P-FS-10M".Status_ON; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+      JU    MAN; 
+
+_086: A     "Fuel Phase Block".Status_stop; 
+      R     "Fuel Phase Block".Status_stop; 
+      JU    MAN; 
+
+
+
+
+
+//Перекачивание в IBC
+_060: A     "Fuel Phase Block".IBC_start_auto; 
+      JNB   _070; 
+      A     "Fuel Phase Block".Status_ready; 
+      R     "Fuel Phase Block".Status_ready; 
+
+//Контроль перекачки по весу
+      A(    ; 
+      L     "DB_TenzoM".Analog_Output; 
+      L     "Fuel Phase Block".Weight_control; 
+      <R    ; 
+      )     ; 
+      JNB   _061; 
+      R     "Fuel Phase Block".Status_ready; 
+      R     "Fuel Phase Block".IBC_start_auto; 
+      S     "Fuel Phase Block".IBC_stop_auto; 
+      JU    _070; 
+
+//Проверка включения узла
+_061: A     "DB_H-FS-52".Status_Open; 
+      A     "DB_P-FS-02M".Status_ON; 
+      JC    MAN; 
+
+//Открытие клапана DB_H-FS-52
+      A     "DB_P-FS-02M".Status_OFF; 
+      AN    "DB_H-FS-52".Status_Open; 
+      AN    "DB_H-FS-52".Start; 
+      =     "DB_H-FS-52".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-02M
+      A     "DB_H-FS-52".Status_Open; 
+      A     "DB_P-FS-02M".Status_OFF; 
+      =     "DB_P-FS-02M".Start_WinCC; 
+      JU    MAN; 
+
+
+
+
+
+//Останов перекачивания в IBC
+_070: A     "Fuel Phase Block".IBC_stop_auto; 
+      JNB   MAN; 
+
+//Проверка отключения
+      A     "DB_P-FS-02M".Status_OFF; 
+      A     "DB_H-FS-52".Status_Close; 
+      R     "Fuel Phase Block".IBC_stop_auto; 
+      JC    MAN; 
+
+//Останов насоса DB_P-FS-02M
+      A     "DB_P-FS-02M".Status_ON; 
+      A     "DB_H-FS-52".Status_Open; 
+      =     "DB_P-FS-02M".Stop_WinCC; 
+
+//Закрытие клапана DB_H-FS-52
+      A     "DB_P-FS-02M".Status_OFF; 
+      AN    "DB_H-FS-52".Status_Close; 
+      AN    "DB_H-FS-52".Stop; 
+      =     "DB_H-FS-52".Close_WinCC; 
+      JU    MAN; 
+
+NETWORK
+TITLE =Запуск оборудования в ручном режиме
+
+//Запуск мешалки
+MAN:  A     "Fuel Phase Block".Mixer_start; 
+      JNB   _100; 
+      A     "DB_A-FS-30M".Status_ON; 
+      JC    _100; 
+      A     "DB_A-FS-30M".Status_OFF; 
+      AN    DB24.DBX   44.4; 
+      =     "DB_A-FS-30M".Start_WinCC; 
+
+//Останов мешалки
+_100: A     "Fuel Phase Block".Mixer_stop; 
+      JNB   _101; 
+      A     "DB_A-FS-30M".Status_OFF; 
+      R     "Fuel Phase Block".Mixer_stop; 
+      JC    _101; 
+      A     "DB_A-FS-30M".Status_ON; 
+      =     "DB_A-FS-30M".Stop_WinCC; 
+
+//Загрузка масла
+_101: A     "Fuel Phase Block".Minoil_start; 
+      JNB   _102; 
+
+//Активация бита запущенного процесса
+      AN    "Fuel Phase Block".Process_busy; 
+      S     "Fuel Phase Block".Process_busy; 
+
+//Проверка на запуск какого-либо из узлов
+      A(    ; 
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      )     ; 
+      O(    ; 
+      A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      )     ; 
+      JC    END; 
+
+//Свободен насос DB_P-FS-03M
+      A     "DB_P-FS-03M".Status_OFF; 
+      AN    "DB_H-FS-50".Start; 
+      JC    _103; 
+
+//Свободен насос DB_P-FS-04M
+      A     "DB_P-FS-04M".Status_OFF; 
+      AN    "DB_H-FS-49".Start; 
+      JC    _104; 
+
+//Открытие клапана DB_H-FS-49    
+_103: AN    "DB_H-FS-49".Status_Open; 
+      AN    "DB_H-FS-49".Start; 
+      =     "DB_H-FS-49".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-03M
+      A     "DB_H-FS-49".Status_Open; 
+      A     "DB_P-FS-03M".Status_OFF; 
+      =     "DB_P-FS-03M".Start_WinCC; 
+      JU    END; 
+
+//Открытие клапана DB_H-FS-50
+_104: AN    "DB_H-FS-50".Status_Open; 
+      AN    "DB_H-FS-50".Start; 
+      =     "DB_H-FS-50".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-04M
+      A     "DB_H-FS-50".Status_Open; 
+      A     "DB_P-FS-04M".Status_OFF; 
+      =     "DB_P-FS-04M".Start_WinCC; 
+      JU    END; 
+
+//Проверка на остановку узлов
+_102: A     "Fuel Phase Block".Minoil_stop; 
+      JNB   _105; 
+      A     "DB_H-FS-49".Status_Close; 
+      A     "DB_H-FS-50".Status_Close; 
+      R     "Fuel Phase Block".Minoil_stop; 
+      R     "Fuel Phase Block".Process_busy; 
+      JC    _105; 
+
+//Если запущен узел 1
+      A     "DB_P-FS-03M".Status_ON; 
+      A     "DB_H-FS-49".Status_Open; 
+      JNB   _106; 
+      L     115; 
+      T     MW   100; 
+      L     258; 
+      T     MW   102; 
+      JU    _107; 
+
+//Если запущен узел 2
+_106: A     "DB_P-FS-04M".Status_ON; 
+      A     "DB_H-FS-50".Status_Open; 
+      JNB   _107; 
+      L     116; 
+      T     MW   100; 
+      L     257; 
+      T     MW   102; 
+      JU    _107; 
+
+//Останов насоса и клапана     
+_107: NOP   0; 
+      OPN   DB [MW 100]; 
+      OPN   DI [MW 102]; 
+      A     DBX    4.2; 
+      =     DBX    0.4; 
+      A     DBX    4.3; 
+      =     DIX    0.4; 
+      JU    END; 
+
+//Загрузка эмульгатора 1
+_105: A     "Fuel Phase Block".Emuls1_start; 
+      JNB   _108; 
+
+//Активация бита запущенного процесса
+      AN    "Fuel Phase Block".Process_busy; 
+      S     "Fuel Phase Block".Process_busy; 
+
+//Проверка включения узла
+      A     "DB_H-FS-51".Status_Open; 
+      A     "DB_P-FS-10M".Status_ON; 
+      JC    END; 
+
+//Переключение клапана DB_H-FS-51 в положение 1
+      AN    "DB_H-FS-51".Status_Open; 
+      AN    "DB_H-FS-51".Start; 
+      =     "DB_H-FS-51".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-10M
+      A     "DB_H-FS-51".Status_Open; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      AN    DB24.DBX   44.1; 
+      =     "DB_P-FS-10M".Start_WinCC; 
+      JU    END; 
+
+//Проверка отключения узла
+_108: A     "Fuel Phase Block".Emuls1_stop; 
+      JNB   _109; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      R     "Fuel Phase Block".Emuls1_stop; 
+      R     "Fuel Phase Block".Process_busy; 
+      JC    _109; 
+
+//Останов насоса DB_P-FS-10M
+      A     "DB_P-FS-10M".Status_ON; 
+      A     "DB_H-FS-51".Status_Open; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+      JU    END; 
+
+//Загрузка эмульгатора 2
+_109: A     "Fuel Phase Block".Emuls2_start; 
+      JNB   _110; 
+
+//Активация бита запущенного процесса
+      AN    "Fuel Phase Block".Process_busy; 
+      S     "Fuel Phase Block".Process_busy; 
+
+//Проверка включения узла
+      A     "DB_H-FS-51".Status_Close; 
+      A     "DB_P-FS-10M".Status_ON; 
+      JC    END; 
+
+//Переключение клапана DB_H-FS-51 в положение 2
+      AN    "DB_H-FS-51".Status_Close; 
+      AN    "DB_H-FS-51".Stop; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      =     "DB_H-FS-51".Close_WinCC; 
+
+//Запуск насоса DB_P-FS-10M
+      A     "DB_H-FS-51".Status_Close; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      AN    DB24.DBX   44.1; 
+      =     "DB_P-FS-10M".Start_WinCC; 
+      JU    END; 
+
+//Проверка отключения узла
+_110: A     "Fuel Phase Block".Emuls2_stop; 
+      JNB   _111; 
+      A     "DB_P-FS-10M".Status_OFF; 
+      R     "Fuel Phase Block".Emuls2_stop; 
+      R     "Fuel Phase Block".Process_busy; 
+      JC    _111; 
+
+//Останов насоса DB_P-FS-10M
+      A     "DB_P-FS-10M".Status_ON; 
+      A     "DB_H-FS-51".Status_Close; 
+      =     "DB_P-FS-10M".Stop_WinCC; 
+      JU    END; 
+
+//Перекачивание в IBC
+_111: A     "Fuel Phase Block".IBC_start; 
+      JNB   _112; 
+
+//Сброс ТФ готова
+      A     "Fuel Phase Block".Status_ready; 
+      R     "Fuel Phase Block".Status_ready; 
+
+//Активация бита запущенного процесса
+      AN    "Fuel Phase Block".Process_busy; 
+      S     "Fuel Phase Block".Process_busy; 
+
+//Проверка включения узла
+      A     "DB_H-FS-52".Status_Open; 
+      A     "DB_P-FS-02M".Status_ON; 
+      JC    END; 
+
+//Открытие клапана DB_H-FS-52
+      A     "DB_P-FS-02M".Status_OFF; 
+      AN    "DB_H-FS-52".Status_Open; 
+      AN    "DB_H-FS-52".Start; 
+      =     "DB_H-FS-52".Open_WinCC; 
+
+//Запуск насоса DB_P-FS-02M
+      A     "DB_H-FS-52".Status_Open; 
+      A     "DB_P-FS-02M".Status_OFF; 
+      =     "DB_P-FS-02M".Start_WinCC; 
+      JU    END; 
+
+//Проверка отключения узла
+_112: A     "Fuel Phase Block".IBC_stop; 
+      JNB   END; 
+      A     "DB_P-FS-02M".Status_OFF; 
+      A     "DB_H-FS-52".Status_Close; 
+      R     "Fuel Phase Block".IBC_stop; 
+      R     "Fuel Phase Block".Process_busy; 
+      JC    END; 
+
+//Останов насоса DB_P-FS-02M
+      A     "DB_P-FS-02M".Status_ON; 
+      A     "DB_H-FS-52".Status_Open; 
+      =     "DB_P-FS-02M".Stop_WinCC; 
+
+//Закрытие клапана DB_H-FS-52
+      A     "DB_P-FS-02M".Status_OFF; 
+      AN    "DB_H-FS-52".Status_Close; 
+      AN    "DB_H-FS-52".Stop; 
+      =     "DB_H-FS-52".Close_WinCC; 
+
+END:  NOP   0; 
+END_FUNCTION
+
