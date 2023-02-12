@@ -4,25 +4,25 @@ VERSION : 0.1
 
 
   STRUCT 	
-   HS_EZ_01 : BOOL ;	//Îáùåçàâîäñêàÿ àâàðèÿ
-   HS_EZ_02 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP1
-   HS_EZ_03 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP2
-   HS_EZ_04 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP3
-   HS_EZ_05 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP4
-   HS_EZ_06 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP5
-   HS_EZ_07 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP6
-   HS_EZ_08 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP7
-   HS_EZ_09 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP8
-   HS_EZ_11 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP10
-   HS_EZ_12 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP11
-   HS_EZ_13 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP12
-   HS_EZ_14 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP13
-   HS_EZ_15 : BOOL ;	//Àâàðèéíàÿ êíîïêà øêàôà CP14
-   reserve : BOOL ;	//ðåçåðâ
-   HS_EZ_49 : BOOL ;	//Àâàðèéíàÿ êíîïêà ó÷àñòêà óêñóñíîé êèñëîòû
-   UPS_OK : BOOL ;	//UPS ðàáîòàåò â íîðìàëüíîì ðåæèìå
-   UPS_BAT_FAULT : BOOL ;	//UPS áàòàðåÿ íå ãîòîâà
-   COMM1_ERROR : BOOL ;	//Îøèáêà êîììóòàòîðà 1
+   HS_EZ_01 : BOOL ;	
+   HS_EZ_02 : BOOL ;	
+   HS_EZ_03 : BOOL ;	
+   HS_EZ_04 : BOOL ;	
+   HS_EZ_05 : BOOL ;	
+   HS_EZ_06 : BOOL ;	
+   HS_EZ_07 : BOOL ;	
+   HS_EZ_08 : BOOL ;	
+   HS_EZ_09 : BOOL ;	
+   HS_EZ_11 : BOOL ;	
+   HS_EZ_12 : BOOL ;	
+   HS_EZ_13 : BOOL ;	
+   HS_EZ_14 : BOOL ;	
+   HS_EZ_15 : BOOL ;	
+   reserve : BOOL ;	
+   HS_EZ_49 : BOOL ;	
+   UPS_OK : BOOL ;	
+   UPS_BAT_FAULT : BOOL ;	
+   COMM1_ERROR : BOOL ;	
   END_STRUCT ;	
 BEGIN
    HS_EZ_01 := TRUE; 
@@ -52,199 +52,199 @@ VERSION : 0.1
 
 
   STRUCT 	
-   Interlock_16_1 : BOOL ;	//Áëîêèðîâêà 16. Òàéìåð çàäåðæêè ïîêðûòèÿ
-   Interlock_16_2 : BOOL ;	//Áëîêèðîâêà 16. Ðåçåðâ
-   Interlock_16_3 : BOOL ;	//Áëîêèðîâêà 16. Ðåçåðâ
-   Interlock_16_4 : BOOL ;	//Áëîêèðîâêà 16. Ðåçåðâ
-   Interlock_16_5 : BOOL ;	//Áëîêèðîâêà 16. Ðåçåðâ
-   Interlock_16_6 : BOOL ;	//Áëîêèðîâêà 16. Ðåçåðâ
-   Interlock_16_7 : BOOL ;	//Áëîêèðîâêà 16. Ðåçåðâ
-   Interlock_16_8 : BOOL ;	//Áëîêèðîâêà 16. Ðåçåðâ
-   Interlock_17_1 : BOOL ;	//Áëîêèðîâêà 17. Êëàïàí H-LPS-03
-   Interlock_17_2 : BOOL ;	//Áëîêèðîâêà 17. Ðåçåðâ
-   Interlock_17_3 : BOOL ;	//Áëîêèðîâêà 17. Ðåçåðâ
-   Interlock_17_4 : BOOL ;	//Áëîêèðîâêà 17. Ðåçåðâ
-   Interlock_17_5 : BOOL ;	//Áëîêèðîâêà 17. Ðåçåðâ
-   Interlock_17_6 : BOOL ;	//Áëîêèðîâêà 17. Ðåçåðâ
-   Interlock_17_7 : BOOL ;	//Áëîêèðîâêà 17. Ðåçåðâ
-   Interlock_17_8 : BOOL ;	//Áëîêèðîâêà 17. Ðåçåðâ
-   Interlock_18_1 : BOOL ;	//Áëîêèðîâêà 18. Äâèãàòåëü R-OS-01M
-   Interlock_18_2 : BOOL ;	//Áëîêèðîâêà 18. Äâèãàòåëü H-AN-01M
-   Interlock_18_3 : BOOL ;	//Áëîêèðîâêà 18. Êëàïàí H-LPS-06
-   Interlock_18_4 : BOOL ;	//Áëîêèðîâêà 18. Ðåçåðâ
-   Interlock_18_5 : BOOL ;	//Áëîêèðîâêà 18. Ðåçåðâ
-   Interlock_18_6 : BOOL ;	//Áëîêèðîâêà 18. Ðåçåðâ
-   Interlock_18_7 : BOOL ;	//Áëîêèðîâêà 18. Ðåçåðâ
-   Interlock_18_8 : BOOL ;	//Áëîêèðîâêà 18. Ðåçåðâ
-   Interlock_19_1 : BOOL ;	//Áëîêèðîâêà 19. Íàñîñ P-OS-01M
-   Interlock_19_2 : BOOL ;	//Áëîêèðîâêà 19. Ðåçåðâ
-   Interlock_19_3 : BOOL ;	//Áëîêèðîâêà 19. Ðåçåðâ
-   Interlock_19_4 : BOOL ;	//Áëîêèðîâêà 19. Ðåçåðâ
-   Interlock_19_5 : BOOL ;	//Áëîêèðîâêà 19. Ðåçåðâ
-   Interlock_19_6 : BOOL ;	//Áëîêèðîâêà 19. Ðåçåðâ
-   Interlock_19_7 : BOOL ;	//Áëîêèðîâêà 19. Ðåçåðâ
-   Interlock_19_8 : BOOL ;	//Áëîêèðîâêà 19. Ðåçåðâ
-   Interlock_20_1 : BOOL ;	//Áëîêèðîâêà 20. Äâèãàòåëü H-AN-01M
-   Interlock_20_2 : BOOL ;	//Áëîêèðîâêà 20. Ðåçåðâ
-   Interlock_20_3 : BOOL ;	//Áëîêèðîâêà 20. Ðåçåðâ
-   Interlock_20_4 : BOOL ;	//Áëîêèðîâêà 20. Ðåçåðâ
-   Interlock_20_5 : BOOL ;	//Áëîêèðîâêà 20. Ðåçåðâ
-   Interlock_20_6 : BOOL ;	//Áëîêèðîâêà 20. Ðåçåðâ
-   Interlock_20_7 : BOOL ;	//Áëîêèðîâêà 20. Ðåçåðâ
-   Interlock_20_8 : BOOL ;	//Áëîêèðîâêà 20. Ðåçåðâ
-   Interlock_21_1 : BOOL ;	//Áëîêèðîâêà 21. Êëàïàí H-LPS-06
-   Interlock_21_2 : BOOL ;	//Áëîêèðîâêà 21. Ðåçåðâ
-   Interlock_21_3 : BOOL ;	//Áëîêèðîâêà 21. Ðåçåðâ
-   Interlock_21_4 : BOOL ;	//Áëîêèðîâêà 21. Ðåçåðâ
-   Interlock_21_5 : BOOL ;	//Áëîêèðîâêà 21. Ðåçåðâ
-   Interlock_21_6 : BOOL ;	//Áëîêèðîâêà 21. Ðåçåðâ
-   Interlock_21_7 : BOOL ;	//Áëîêèðîâêà 21. Ðåçåðâ
-   Interlock_21_8 : BOOL ;	//Áëîêèðîâêà 21. Ðåçåðâ
-   Interlock_22_1 : BOOL ;	//Áëîêèðîâêà 22. Íàñîñ P-OS-01M
-   Interlock_22_2 : BOOL ;	//Áëîêèðîâêà 22. Ðåçåðâ
-   Interlock_22_3 : BOOL ;	//Áëîêèðîâêà 22. Ðåçåðâ
-   Interlock_22_4 : BOOL ;	//Áëîêèðîâêà 22. Ðåçåðâ
-   Interlock_22_5 : BOOL ;	//Áëîêèðîâêà 22. Ðåçåðâ
-   Interlock_22_6 : BOOL ;	//Áëîêèðîâêà 22. Ðåçåðâ
-   Interlock_22_7 : BOOL ;	//Áëîêèðîâêà 22. Ðåçåðâ
-   Interlock_22_8 : BOOL ;	//Áëîêèðîâêà 22. Ðåçåðâ
-   Interlock_23_1 : BOOL ;	//Áëîêèðîâêà 23. Êëàïàí H-LPS-03
-   Interlock_23_2 : BOOL ;	//Áëîêèðîâêà 23. Êëàïàí H-LPS-06
-   Interlock_23_3 : BOOL ;	//Áëîêèðîâêà 23. Ðåçåðâ
-   Interlock_23_4 : BOOL ;	//Áëîêèðîâêà 23. Ðåçåðâ
-   Interlock_23_5 : BOOL ;	//Áëîêèðîâêà 23. Ðåçåðâ
-   Interlock_23_6 : BOOL ;	//Áëîêèðîâêà 23. Ðåçåðâ
-   Interlock_23_7 : BOOL ;	//Áëîêèðîâêà 23. Ðåçåðâ
-   Interlock_23_8 : BOOL ;	//Áëîêèðîâêà 23. Ðåçåðâ
-   Interlock_24_1 : BOOL ;	//Áëîêèðîâêà 24. Äâèãàòåëü H-AN-01M
-   Interlock_24_2 : BOOL ;	//Áëîêèðîâêà 24. Äâèãàòåëü H-AN-01M
-   Interlock_24_3 : BOOL ;	//Áëîêèðîâêà 24. Ðåçåðâ
-   Interlock_24_4 : BOOL ;	//Áëîêèðîâêà 24. Ðåçåðâ
-   Interlock_24_5 : BOOL ;	//Áëîêèðîâêà 24. Ðåçåðâ
-   Interlock_24_6 : BOOL ;	//Áëîêèðîâêà 24. Ðåçåðâ
-   Interlock_24_7 : BOOL ;	//Áëîêèðîâêà 24. Ðåçåðâ
-   Interlock_24_8 : BOOL ;	//Áëîêèðîâêà 24. Ðåçåðâ
-   Interlock_25_1 : BOOL ;	//Áëîêèðîâêà 25. Íàñîñ P-OS-02M
-   Interlock_25_2 : BOOL ;	//Áëîêèðîâêà 25. Ðåçåðâ
-   Interlock_25_3 : BOOL ;	//Áëîêèðîâêà 25. Ðåçåðâ
-   Interlock_25_4 : BOOL ;	//Áëîêèðîâêà 25. Ðåçåðâ
-   Interlock_25_5 : BOOL ;	//Áëîêèðîâêà 25. Ðåçåðâ
-   Interlock_25_6 : BOOL ;	//Áëîêèðîâêà 25. Ðåçåðâ
-   Interlock_25_7 : BOOL ;	//Áëîêèðîâêà 25. Ðåçåðâ
-   Interlock_25_8 : BOOL ;	//Áëîêèðîâêà 25. Ðåçåðâ
-   Interlock_26_1 : BOOL ;	//Áëîêèðîâêà 26. Äâèãàòåëü R-OS-02M
-   Interlock_26_2 : BOOL ;	//Áëîêèðîâêà 26. Øíåê H-AN-02M
-   Interlock_26_3 : BOOL ;	//Áëîêèðîâêà 26. Êëàïàí H-LPS-17
-   Interlock_26_4 : BOOL ;	//Áëîêèðîâêà 26. Ðåçåðâ
-   Interlock_26_5 : BOOL ;	//Áëîêèðîâêà 26. Ðåçåðâ
-   Interlock_26_6 : BOOL ;	//Áëîêèðîâêà 26. Ðåçåðâ
-   Interlock_26_7 : BOOL ;	//Áëîêèðîâêà 26. Ðåçåðâ
-   Interlock_26_8 : BOOL ;	//Áëîêèðîâêà 26. Ðåçåðâ
-   Interlock_27_1 : BOOL ;	//Áëîêèðîâêà 27. Òàéìåð çàäåðæêè ïîêðûòèÿ
-   Interlock_27_2 : BOOL ;	//Áëîêèðîâêà 27. Ðåçåðâ
-   Interlock_27_3 : BOOL ;	//Áëîêèðîâêà 27. Ðåçåðâ
-   Interlock_27_4 : BOOL ;	//Áëîêèðîâêà 27. Ðåçåðâ
-   Interlock_27_5 : BOOL ;	//Áëîêèðîâêà 27. Ðåçåðâ
-   Interlock_27_6 : BOOL ;	//Áëîêèðîâêà 27. Ðåçåðâ
-   Interlock_27_7 : BOOL ;	//Áëîêèðîâêà 27. Ðåçåðâ
-   Interlock_27_8 : BOOL ;	//Áëîêèðîâêà 27. Ðåçåðâ
-   Interlock_28_1 : BOOL ;	//Áëîêèðîâêà 28. Êëàïàí H-LPS-14
-   Interlock_28_2 : BOOL ;	//Áëîêèðîâêà 28. Ðåçåðâ
-   Interlock_28_3 : BOOL ;	//Áëîêèðîâêà 28. Ðåçåðâ
-   Interlock_28_4 : BOOL ;	//Áëîêèðîâêà 28. Ðåçåðâ
-   Interlock_28_5 : BOOL ;	//Áëîêèðîâêà 28. Ðåçåðâ
-   Interlock_28_6 : BOOL ;	//Áëîêèðîâêà 28. Ðåçåðâ
-   Interlock_28_7 : BOOL ;	//Áëîêèðîâêà 28. Ðåçåðâ
-   Interlock_28_8 : BOOL ;	//Áëîêèðîâêà 28. Ðåçåðâ
-   Interlock_29_1 : BOOL ;	//Áëîêèðîâêà 29. Äâèãàòåëü H-AN-02M
-   Interlock_29_2 : BOOL ;	//Áëîêèðîâêà 29. Ðåçåðâ
-   Interlock_29_3 : BOOL ;	//Áëîêèðîâêà 29. Ðåçåðâ
-   Interlock_29_4 : BOOL ;	//Áëîêèðîâêà 29. Ðåçåðâ
-   Interlock_29_5 : BOOL ;	//Áëîêèðîâêà 29. Ðåçåðâ
-   Interlock_29_6 : BOOL ;	//Áëîêèðîâêà 29. Ðåçåðâ
-   Interlock_29_7 : BOOL ;	//Áëîêèðîâêà 29. Ðåçåðâ
-   Interlock_29_8 : BOOL ;	//Áëîêèðîâêà 29. Ðåçåðâ
-   Interlock_30_1 : BOOL ;	//Áëîêèðîâêà 30. Êëàïàí H-LPS-17
-   Interlock_30_2 : BOOL ;	//Áëîêèðîâêà 30. Ðåçåðâ
-   Interlock_30_3 : BOOL ;	//Áëîêèðîâêà 30. Ðåçåðâ
-   Interlock_30_4 : BOOL ;	//Áëîêèðîâêà 30. Ðåçåðâ
-   Interlock_30_5 : BOOL ;	//Áëîêèðîâêà 30. Ðåçåðâ
-   Interlock_30_6 : BOOL ;	//Áëîêèðîâêà 30. Ðåçåðâ
-   Interlock_30_7 : BOOL ;	//Áëîêèðîâêà 30. Ðåçåðâ
-   Interlock_30_8 : BOOL ;	//Áëîêèðîâêà 30. Ðåçåðâ
-   Interlock_31_1 : BOOL ;	//Áëîêèðîâêà 31. Íàñîñ P-OS-02M
-   Interlock_31_2 : BOOL ;	//Áëîêèðîâêà 31. Ðåçåðâ
-   Interlock_31_3 : BOOL ;	//Áëîêèðîâêà 31. Ðåçåðâ
-   Interlock_31_4 : BOOL ;	//Áëîêèðîâêà 31. Ðåçåðâ
-   Interlock_31_5 : BOOL ;	//Áëîêèðîâêà 31. Ðåçåðâ
-   Interlock_31_6 : BOOL ;	//Áëîêèðîâêà 31. Ðåçåðâ
-   Interlock_31_7 : BOOL ;	//Áëîêèðîâêà 31. Ðåçåðâ
-   Interlock_31_8 : BOOL ;	//Áëîêèðîâêà 31. Ðåçåðâ
-   Interlock_32_1 : BOOL ;	//Áëîêèðîâêà 32. Êëàïàí H-LPS-14
-   Interlock_32_2 : BOOL ;	//Áëîêèðîâêà 32. Êëàïàí H-LPS-17
-   Interlock_32_3 : BOOL ;	//Áëîêèðîâêà 32. Ðåçåðâ
-   Interlock_32_4 : BOOL ;	//Áëîêèðîâêà 32. Ðåçåðâ
-   Interlock_32_5 : BOOL ;	//Áëîêèðîâêà 32. Ðåçåðâ
-   Interlock_32_6 : BOOL ;	//Áëîêèðîâêà 32. Ðåçåðâ
-   Interlock_32_7 : BOOL ;	//Áëîêèðîâêà 32. Ðåçåðâ
-   Interlock_32_8 : BOOL ;	//Áëîêèðîâêà 32. Ðåçåðâ
-   Interlock_33_1 : BOOL ;	//Áëîêèðîâêà 33. Äâèãàòåëü H-AN-02M
-   Interlock_33_2 : BOOL ;	//Áëîêèðîâêà 33. Äâèãàòåëü H-AN-02M
-   Interlock_33_3 : BOOL ;	//Áëîêèðîâêà 33. Ðåçåðâ
-   Interlock_33_4 : BOOL ;	//Áëîêèðîâêà 33. Ðåçåðâ
-   Interlock_33_5 : BOOL ;	//Áëîêèðîâêà 33. Ðåçåðâ
-   Interlock_33_6 : BOOL ;	//Áëîêèðîâêà 33. Ðåçåðâ
-   Interlock_33_7 : BOOL ;	//Áëîêèðîâêà 33. Ðåçåðâ
-   Interlock_33_8 : BOOL ;	//Áëîêèðîâêà 33. Ðåçåðâ
-   Interlock_34_1 : BOOL ;	//Áëîêèðîâêà 34. Íàñîñ P-OS-01M
-   Interlock_34_2 : BOOL ;	//Áëîêèðîâêà 34. Êëàïàí H-PW-02
-   Interlock_34_3 : BOOL ;	//Áëîêèðîâêà 34. Ðåçåðâ
-   Interlock_34_4 : BOOL ;	//Áëîêèðîâêà 34. Ðåçåðâ
-   Interlock_34_5 : BOOL ;	//Áëîêèðîâêà 34. Ðåçåðâ
-   Interlock_34_6 : BOOL ;	//Áëîêèðîâêà 34. Ðåçåðâ
-   Interlock_34_7 : BOOL ;	//Áëîêèðîâêà 34. Ðåçåðâ
-   Interlock_34_8 : BOOL ;	//Áëîêèðîâêà 34. Ðåçåðâ
-   Interlock_35_1 : BOOL ;	//Áëîêèðîâêà 35. Íàñîñ P-OS-02M
-   Interlock_35_2 : BOOL ;	//Áëîêèðîâêà 35. Êëàïàí H-PW-02
-   Interlock_35_3 : BOOL ;	//Áëîêèðîâêà 35. Ðåçåðâ
-   Interlock_35_4 : BOOL ;	//Áëîêèðîâêà 35. Ðåçåðâ
-   Interlock_35_5 : BOOL ;	//Áëîêèðîâêà 35. Ðåçåðâ
-   Interlock_35_6 : BOOL ;	//Áëîêèðîâêà 35. Ðåçåðâ
-   Interlock_35_7 : BOOL ;	//Áëîêèðîâêà 35. Ðåçåðâ
-   Interlock_35_8 : BOOL ;	//Áëîêèðîâêà 35. Ðåçåðâ
-   Interlock_36_1 : BOOL ;	//Áëîêèðîâêà 36. Íàñîñ P-OS-01M
-   Interlock_36_2 : BOOL ;	//Áëîêèðîâêà 36. Íàñîñ P-OS-02M
-   Interlock_36_3 : BOOL ;	//Áëîêèðîâêà 36. Êëàïàí H-PW-02
-   Interlock_36_4 : BOOL ;	//Áëîêèðîâêà 36. Ðåçåðâ
-   Interlock_36_5 : BOOL ;	//Áëîêèðîâêà 36. Ðåçåðâ
-   Interlock_36_6 : BOOL ;	//Áëîêèðîâêà 36. Ðåçåðâ
-   Interlock_36_7 : BOOL ;	//Áëîêèðîâêà 36. Ðåçåðâ
-   Interlock_36_8 : BOOL ;	//Áëîêèðîâêà 36. Ðåçåðâ
-   Interlock_37_1 : BOOL ;	//Áëîêèðîâêà 37. Êëàïàí H-HW-03
-   Interlock_37_2 : BOOL ;	//Áëîêèðîâêà 37. Ðåçåðâ
-   Interlock_37_3 : BOOL ;	//Áëîêèðîâêà 37. Ðåçåðâ
-   Interlock_37_4 : BOOL ;	//Áëîêèðîâêà 37. Ðåçåðâ
-   Interlock_37_5 : BOOL ;	//Áëîêèðîâêà 37. Ðåçåðâ
-   Interlock_37_6 : BOOL ;	//Áëîêèðîâêà 37. Ðåçåðâ
-   Interlock_37_7 : BOOL ;	//Áëîêèðîâêà 37. Ðåçåðâ
-   Interlock_37_8 : BOOL ;	//Áëîêèðîâêà 37. Ðåçåðâ
-   Interlock_38_1 : BOOL ;	//Áëîêèðîâêà 38. Íàñîñ P-OS-03M
-   Interlock_38_2 : BOOL ;	//Áëîêèðîâêà 38. Êëàïàí H-HW-03
-   Interlock_38_3 : BOOL ;	//Áëîêèðîâêà 38. PID ðåãóëÿòîð P-OS-03
-   Interlock_38_4 : BOOL ;	//Áëîêèðîâêà 38. Ðåçåðâ
-   Interlock_38_5 : BOOL ;	//Áëîêèðîâêà 38. Ðåçåðâ
-   Interlock_38_6 : BOOL ;	//Áëîêèðîâêà 38. Ðåçåðâ
-   Interlock_38_7 : BOOL ;	//Áëîêèðîâêà 38. Ðåçåðâ
-   Interlock_38_8 : BOOL ;	//Áëîêèðîâêà 38. Ðåçåðâ
-   Interlock_39_1 : BOOL ;	//Áëîêèðîâêà 39. Íàñîñ P-OS-03M
-   Interlock_39_2 : BOOL ;	//Áëîêèðîâêà 39. PID ðåãóëÿòîð P-OS-03
-   Interlock_39_3 : BOOL ;	//Áëîêèðîâêà 39. Ðåçåðâ
-   Interlock_39_4 : BOOL ;	//Áëîêèðîâêà 39. Ðåçåðâ
-   Interlock_39_5 : BOOL ;	//Áëîêèðîâêà 39. Ðåçåðâ
-   Interlock_39_6 : BOOL ;	//Áëîêèðîâêà 39. Ðåçåðâ
-   Interlock_39_7 : BOOL ;	//Áëîêèðîâêà 39. Ðåçåðâ
-   Interlock_39_8 : BOOL ;	//Áëîêèðîâêà 39. Ðåçåðâ
-   Interlock_40_1 : BOOL ;	//Áëîêèðîâêà 40. Íàñîñ P-OS-03M
+   Interlock_16_1 : BOOL ;	
+   Interlock_16_2 : BOOL ;	
+   Interlock_16_3 : BOOL ;	
+   Interlock_16_4 : BOOL ;	
+   Interlock_16_5 : BOOL ;	
+   Interlock_16_6 : BOOL ;	
+   Interlock_16_7 : BOOL ;	
+   Interlock_16_8 : BOOL ;	
+   Interlock_17_1 : BOOL ;	
+   Interlock_17_2 : BOOL ;	
+   Interlock_17_3 : BOOL ;	
+   Interlock_17_4 : BOOL ;	
+   Interlock_17_5 : BOOL ;	
+   Interlock_17_6 : BOOL ;	
+   Interlock_17_7 : BOOL ;	
+   Interlock_17_8 : BOOL ;	
+   Interlock_18_1 : BOOL ;	
+   Interlock_18_2 : BOOL ;	
+   Interlock_18_3 : BOOL ;	
+   Interlock_18_4 : BOOL ;	
+   Interlock_18_5 : BOOL ;	
+   Interlock_18_6 : BOOL ;	
+   Interlock_18_7 : BOOL ;	
+   Interlock_18_8 : BOOL ;	
+   Interlock_19_1 : BOOL ;	
+   Interlock_19_2 : BOOL ;	
+   Interlock_19_3 : BOOL ;	
+   Interlock_19_4 : BOOL ;	
+   Interlock_19_5 : BOOL ;	
+   Interlock_19_6 : BOOL ;	
+   Interlock_19_7 : BOOL ;	
+   Interlock_19_8 : BOOL ;	
+   Interlock_20_1 : BOOL ;	
+   Interlock_20_2 : BOOL ;	
+   Interlock_20_3 : BOOL ;	
+   Interlock_20_4 : BOOL ;	
+   Interlock_20_5 : BOOL ;	
+   Interlock_20_6 : BOOL ;	
+   Interlock_20_7 : BOOL ;	
+   Interlock_20_8 : BOOL ;	
+   Interlock_21_1 : BOOL ; 
+   Interlock_21_2 : BOOL ;	
+   Interlock_21_3 : BOOL ;	
+   Interlock_21_4 : BOOL ;	
+   Interlock_21_5 : BOOL ;	
+   Interlock_21_6 : BOOL ;	
+   Interlock_21_7 : BOOL ;	
+   Interlock_21_8 : BOOL ;	
+   Interlock_22_1 : BOOL ;	
+   Interlock_22_2 : BOOL ;	
+   Interlock_22_3 : BOOL ;	
+   Interlock_22_4 : BOOL ;	
+   Interlock_22_5 : BOOL ;	
+   Interlock_22_6 : BOOL ;	
+   Interlock_22_7 : BOOL ;	
+   Interlock_22_8 : BOOL ;	
+   Interlock_23_1 : BOOL ;	
+   Interlock_23_2 : BOOL ;	
+   Interlock_23_3 : BOOL ;	
+   Interlock_23_4 : BOOL ;	
+   Interlock_23_5 : BOOL ;	
+   Interlock_23_6 : BOOL ;	
+   Interlock_23_7 : BOOL ;	
+   Interlock_23_8 : BOOL ;	
+   Interlock_24_1 : BOOL ;	
+   Interlock_24_2 : BOOL ;	
+   Interlock_24_3 : BOOL ;	
+   Interlock_24_4 : BOOL ;	
+   Interlock_24_5 : BOOL ;	
+   Interlock_24_6 : BOOL ;	
+   Interlock_24_7 : BOOL ;	
+   Interlock_24_8 : BOOL ;	
+   Interlock_25_1 : BOOL ;
+   Interlock_25_2 : BOOL ;	
+   Interlock_25_3 : BOOL ;	
+   Interlock_25_4 : BOOL ;	
+   Interlock_25_5 : BOOL ;	
+   Interlock_25_6 : BOOL ;	
+   Interlock_25_7 : BOOL ;	
+   Interlock_25_8 : BOOL ;	
+   Interlock_26_1 : BOOL ;	
+   Interlock_26_2 : BOOL ;	
+   Interlock_26_3 : BOOL ;	
+   Interlock_26_4 : BOOL ;	
+   Interlock_26_5 : BOOL ;
+   Interlock_26_6 : BOOL ;	
+   Interlock_26_7 : BOOL ;	
+   Interlock_26_8 : BOOL ;
+   Interlock_27_1 : BOOL ;	
+   Interlock_27_2 : BOOL ;	
+   Interlock_27_3 : BOOL ;	
+   Interlock_27_4 : BOOL ;	
+   Interlock_27_5 : BOOL ;	
+   Interlock_27_6 : BOOL ;	
+   Interlock_27_7 : BOOL ;	
+   Interlock_27_8 : BOOL ;	
+   Interlock_28_1 : BOOL ;	
+   Interlock_28_2 : BOOL ;	
+   Interlock_28_3 : BOOL ;	
+   Interlock_28_4 : BOOL ;	
+   Interlock_28_5 : BOOL ;	
+   Interlock_28_6 : BOOL ;	
+   Interlock_28_7 : BOOL ;	
+   Interlock_28_8 : BOOL ;	
+   Interlock_29_1 : BOOL ;	
+   Interlock_29_2 : BOOL ;	
+   Interlock_29_3 : BOOL ;	
+   Interlock_29_4 : BOOL ;	
+   Interlock_29_5 : BOOL ;	
+   Interlock_29_6 : BOOL ;	
+   Interlock_29_7 : BOOL ;	
+   Interlock_29_8 : BOOL ;	
+   Interlock_30_1 : BOOL ;	
+   Interlock_30_2 : BOOL ;	
+   Interlock_30_3 : BOOL ;	
+   Interlock_30_4 : BOOL ;	
+   Interlock_30_5 : BOOL ;	
+   Interlock_30_6 : BOOL ;	
+   Interlock_30_7 : BOOL ;	
+   Interlock_30_8 : BOOL ;	
+   Interlock_31_1 : BOOL ;	
+   Interlock_31_2 : BOOL ;	
+   Interlock_31_3 : BOOL ;	
+   Interlock_31_4 : BOOL ;	
+   Interlock_31_5 : BOOL ;	
+   Interlock_31_6 : BOOL ;	
+   Interlock_31_7 : BOOL ;	
+   Interlock_31_8 : BOOL ;	
+   Interlock_32_1 : BOOL ;	
+   Interlock_32_2 : BOOL ;	
+   Interlock_32_3 : BOOL ;	
+   Interlock_32_4 : BOOL ;	
+   Interlock_32_5 : BOOL ;	
+   Interlock_32_6 : BOOL ;	
+   Interlock_32_7 : BOOL ;	
+   Interlock_32_8 : BOOL ;	
+   Interlock_33_1 : BOOL ;	
+   Interlock_33_2 : BOOL ;	
+   Interlock_33_3 : BOOL ;	
+   Interlock_33_4 : BOOL ;	
+   Interlock_33_5 : BOOL ;	
+   Interlock_33_6 : BOOL ;	
+   Interlock_33_7 : BOOL ;	
+   Interlock_33_8 : BOOL ;	
+   Interlock_34_1 : BOOL ;	
+   Interlock_34_2 : BOOL ;	
+   Interlock_34_3 : BOOL ;	
+   Interlock_34_4 : BOOL ;	
+   Interlock_34_5 : BOOL ;	
+   Interlock_34_6 : BOOL ;	
+   Interlock_34_7 : BOOL ;	
+   Interlock_34_8 : BOOL ;	
+   Interlock_35_1 : BOOL ;	
+   Interlock_35_2 : BOOL ;	
+   Interlock_35_3 : BOOL ;	
+   Interlock_35_4 : BOOL ;	
+   Interlock_35_5 : BOOL ;	
+   Interlock_35_6 : BOOL ;	
+   Interlock_35_7 : BOOL ;	
+   Interlock_35_8 : BOOL ;	
+   Interlock_36_1 : BOOL ;	
+   Interlock_36_2 : BOOL ;	
+   Interlock_36_3 : BOOL ;	
+   Interlock_36_4 : BOOL ;	
+   Interlock_36_5 : BOOL ;	
+   Interlock_36_6 : BOOL ;	
+   Interlock_36_7 : BOOL ;	
+   Interlock_36_8 : BOOL ;	
+   Interlock_37_1 : BOOL ;	
+   Interlock_37_2 : BOOL ;	
+   Interlock_37_3 : BOOL ;	
+   Interlock_37_4 : BOOL ;	
+   Interlock_37_5 : BOOL ;	
+   Interlock_37_6 : BOOL ;	
+   Interlock_37_7 : BOOL ;	
+   Interlock_37_8 : BOOL ;	
+   Interlock_38_1 : BOOL ;	
+   Interlock_38_2 : BOOL ;	
+   Interlock_38_3 : BOOL ;	
+   Interlock_38_4 : BOOL ;	
+   Interlock_38_5 : BOOL ;	
+   Interlock_38_6 : BOOL ;	
+   Interlock_38_7 : BOOL ;	
+   Interlock_38_8 : BOOL ;	
+   Interlock_39_1 : BOOL ;	
+   Interlock_39_2 : BOOL ;	
+   Interlock_39_3 : BOOL ;	
+   Interlock_39_4 : BOOL ;	
+   Interlock_39_5 : BOOL ;	
+   Interlock_39_6 : BOOL ;	
+   Interlock_39_7 : BOOL ;	
+   Interlock_39_8 : BOOL ;	
+   Interlock_40_1 : BOOL ;	
    Interlock_40_2 : BOOL ;	//Áëîêèðîâêà 40. Êëàïàí H-OS-48
    Interlock_40_3 : BOOL ;	//Áëîêèðîâêà 40. Êëàïàí H-FS-47
    Interlock_40_4 : BOOL ;	//Áëîêèðîâêà 40. Êëàïàí H-FS-24
@@ -688,42 +688,42 @@ VERSION : 0.1
    Interlock_95_2 : BOOL ;	//Áëîêèðîâêà 95. Äâèãàòåëü P-FS-04
    Interlock_95_3 : BOOL ;	//Áëîêèðîâêà 95. Êëàïàí H-OS-48
    Interlock_95_4 : BOOL ;	//Áëîêèðîâêà 95. Êëàïàí H-OS-53
-   Interlock_95_5 : BOOL ;	//Áëîêèðîâêà 95. Êëàïàí H-FS-47
-   Interlock_95_6 : BOOL ;	//Áëîêèðîâêà 95. Êëàïàí H-FS-24
-   Interlock_95_7 : BOOL ;	//Áëîêèðîâêà 95. Êëàïàí H-FS-48
-   Interlock_95_8 : BOOL ;	//Áëîêèðîâêà 95. Êëàïàí H-FS-23
-   Interlock_96_1 : BOOL ;	//Áëîêèðîâêà 96. PID-ðåãóëÿòîð P-FS-03M
-   Interlock_96_2 : BOOL ;	//Áëîêèðîâêà 96. PID-ðåãóëÿòîð P-FS-04M
-   Interlock_96_3 : BOOL ;	//Áëîêèðîâêà 96. Ðåçåðâ
-   Interlock_96_4 : BOOL ;	//Áëîêèðîâêà 96. Ðåçåðâ
-   Interlock_96_5 : BOOL ;	//Áëîêèðîâêà 96. Ðåçåðâ
-   Interlock_96_6 : BOOL ;	//Áëîêèðîâêà 96. Ðåçåðâ
-   Interlock_96_7 : BOOL ;	//Áëîêèðîâêà 96. Ðåçåðâ
-   Interlock_96_8 : BOOL ;	//Áëîêèðîâêà 96. Ðåçåðâ
-   Interlock_97_1 : BOOL ;	//Áëîêèðîâêà 97. Äâèãàòåëü P-HW-03
-   Interlock_97_2 : BOOL ;	//Áëîêèðîâêà 97. Äâèãàòåëü P-HW-04
-   Interlock_97_3 : BOOL ;	//Áëîêèðîâêà 97. Ðåçåðâ
-   Interlock_97_4 : BOOL ;	//Áëîêèðîâêà 97. Ðåçåðâ
-   Interlock_97_5 : BOOL ;	//Áëîêèðîâêà 97. Ðåçåðâ
-   Interlock_97_6 : BOOL ;	//Áëîêèðîâêà 97. Ðåçåðâ
-   Interlock_97_7 : BOOL ;	//Áëîêèðîâêà 97. Ðåçåðâ
-   Interlock_97_8 : BOOL ;	//Áëîêèðîâêà 97. Ðåçåðâ
-   Interlock_98_1 : BOOL ;	//Áëîêèðîâêà 98. Êëàïàíà H-LPS-03
-   Interlock_98_2 : BOOL ;	//Áëîêèðîâêà 98. Êëàïàíà H-LPS-06
-   Interlock_98_3 : BOOL ;	//Áëîêèðîâêà 98. Ðåçåðâ
-   Interlock_98_4 : BOOL ;	//Áëîêèðîâêà 98. Ðåçåðâ
-   Interlock_98_5 : BOOL ;	//Áëîêèðîâêà 98. Ðåçåðâ
-   Interlock_98_6 : BOOL ;	//Áëîêèðîâêà 98. Ðåçåðâ
-   Interlock_98_7 : BOOL ;	//Áëîêèðîâêà 98. Ðåçåðâ
-   Interlock_98_8 : BOOL ;	//Áëîêèðîâêà 98. Ðåçåðâ
-   Interlock_99_1 : BOOL ;	//Áëîêèðîâêà 99. Êëàïàíà H-LPS-14
-   Interlock_99_2 : BOOL ;	//Áëîêèðîâêà 99. Êëàïàíà H-LPS-17
-   Interlock_99_3 : BOOL ;	//Áëîêèðîâêà 99. Ðåçåðâ
-   Interlock_99_4 : BOOL ;	//Áëîêèðîâêà 99. Ðåçåðâ
-   Interlock_99_5 : BOOL ;	//Áëîêèðîâêà 99. Ðåçåðâ
-   Interlock_99_6 : BOOL ;	//Áëîêèðîâêà 99. Ðåçåðâ
-   Interlock_99_7 : BOOL ;	//Áëîêèðîâêà 99. Ðåçåðâ
-   Interlock_99_8 : BOOL ;	//Áëîêèðîâêà 99. Ðåçåðâ
+   Interlock_95_5 : BOOL ;	
+   Interlock_95_6 : BOOL ;	
+   Interlock_95_7 : BOOL ;	
+   Interlock_95_8 : BOOL ;	
+   Interlock_96_1 : BOOL ;	
+   Interlock_96_2 : BOOL ;	
+   Interlock_96_3 : BOOL ;	
+   Interlock_96_4 : BOOL ;	
+   Interlock_96_5 : BOOL ;	
+   Interlock_96_6 : BOOL ;	
+   Interlock_96_7 : BOOL ;	
+   Interlock_96_8 : BOOL ;	
+   Interlock_97_1 : BOOL ;	
+   Interlock_97_2 : BOOL ;	
+   Interlock_97_3 : BOOL ;	
+   Interlock_97_4 : BOOL ;	
+   Interlock_97_5 : BOOL ;	
+   Interlock_97_6 : BOOL ;
+   Interlock_97_7 : BOOL ;
+   Interlock_97_8 : BOOL ;
+   Interlock_98_1 : BOOL ;
+   Interlock_98_2 : BOOL ;
+   Interlock_98_3 : BOOL ;
+   Interlock_98_4 : BOOL ;
+   Interlock_98_5 : BOOL ;
+   Interlock_98_6 : BOOL ;
+   Interlock_98_7 : BOOL ;
+   Interlock_98_8 : BOOL ;
+   Interlock_99_1 : BOOL ;
+   Interlock_99_2 : BOOL ;
+   Interlock_99_3 : BOOL ;
+   Interlock_99_4 : BOOL ;
+   Interlock_99_5 : BOOL ;
+   Interlock_99_6 : BOOL ;
+   Interlock_99_7 : BOOL ;
+   Interlock_99_8 : BOOL ;
   END_STRUCT ;	
 BEGIN
    Interlock_16_1 := FALSE; 
@@ -1400,73 +1400,74 @@ BEGIN
    Interlock_99_8 := FALSE; 
 END_DATA_BLOCK
 
-DATA_BLOCK "Fuel Phase Block"
+
+DATA_BLOCK DB 24
 TITLE =
 VERSION : 0.1
 
 
   STRUCT 	
-   Status_start : BOOL ;	//Ïðîãðàììà çàïóùåíà
-   Status_ready : BOOL ;	//ÒÔ ãîòîâà
-   Minoil_start : BOOL ;	//Çàãðóçêà ìàñëà çàïóùåíà
-   Emuls1_start : BOOL ;	//Çàãðóçêà ýìóëüãàòîðà 1 çàïóùåíà
-   Emuls2_start : BOOL ;	//Çàãðóçêà ýìóëüãàòîðà 2 çàïóùåíà
-   Mixer_start : BOOL ;	//Çàïóùåíà ìåøàëêà
-   IBC_start : BOOL ;	//Ïåðåêà÷èâàíèå â IBC
-   Mixer_ES : BOOL ;	//Àâàðèéíàÿ êíîïêà ìåøàëêè
-   Mixer_stop : BOOL ;	//Îñòàíîâ ìåøàëêè
-   Minoil_stop : BOOL ;	//Îñòàíîâ çàãðóçêè ìàñëà
-   Emuls1_stop : BOOL ;	//Îñòàíîâ çàãðóçêè ýìóëüãàòîðà 1
-   Emuls2_stop : BOOL ;	//Îñòàíîâ çàãðóçêè ýìóëüãàòîðà 2
-   IBC_stop : BOOL ;	//Îñòàíîâ ïåðåêà÷èâàíèÿ â IBC
-   Process_busy : BOOL ;	//Ïðîöåññ çàïóùåí
-   IBC_start_auto : BOOL ;	//Ïåðåêà÷èâàíèå â IBC àâòîðåæèì
-   Status_stop : BOOL ;	//Îñòàíîâêà ïðîãðàììû
-   Current_id : INT ;	//Âûáðàííûé ðåöåïò
+   Status_start : BOOL ;	//Program is started
+   Status_ready : BOOL ;	//FP is ready
+   Minoil_start : BOOL ;	//Min. oil downloading is started
+   Emuls1_start : BOOL ;	//Emulgator1 downloading is started
+   Emuls2_start : BOOL ;	//Emulgator2 downloading is started
+   Mixer_start : BOOL ;	//Mixer is started
+   IBC_start : BOOL ;	//Transfer to IBC
+   Mixer_ES : BOOL ;	//Mixer emergency stop
+   Mixer_stop : BOOL ;	//Stop mixer
+   Minoil_stop : BOOL ;	//Stop min. oil downloading
+   Emuls1_stop : BOOL ;	//Stop emulgator1 downloading
+   Emuls2_stop : BOOL ;	//Stop emulgator2 downloading
+   IBC_stop : BOOL ;	//Stop transfer to IBC
+   Process_busy : BOOL ;	//Process is started
+   IBC_start_auto : BOOL ;	//Transfer to IBC auto mode
+   Status_stop : BOOL ;	//Stop programm
+   Current_id : INT ;	//Current recipe
    Recipe : STRUCT 	
-    rec_id : INT ;	//Íîìåð ðåöåïòà
-    weight : REAL ;	//Îáùèé âåñ (êã)
-    minoil_amount : REAL ;	//Êîë-âî ìèí. ìàñëà (êã)
-    minoil_capacity : REAL ;	//Îáúåì ìèí. ìàñëà (%)
-    emuls1_amount : REAL ;	//Êîë-âî ýìóëüãàòîðà 1 (êã)
-    emuls1_capacity : REAL ;	//Îáúåì ýìóëüãàòîðà 1 (%)
-    emuls2_amount : REAL ;	//Êîë-âî ýìóëüãàòîðà 2 (êã)
-    emuls2_capacity : REAL ;	//Îáúåì ýìóëüãàòîðà 2 (%)
-    mixer_time : DINT ;	//Âðåìÿ ïåðåìåøèâàíèÿ (ìèí)
-    mixer_using : BOOL  := TRUE;	//Èñïîëüçîâàíèå ìåøàëêè (äà/íåò)
+    rec_id : INT ;	//Number of recipe
+    weight : REAL ;	//Common weqght (kg)
+    minoil_amount : REAL ;	//Min. oil amount (kg)
+    minoil_capacity : REAL ;	//Min. oil capacity (%)
+    emuls1_amount : REAL ;	//Emulgator1 amount (kg)
+    emuls1_capacity : REAL ;	//Emulgator1 capacity (%)
+    emuls2_amount : REAL ;	//Emulgator2 amount (kg)
+    emuls2_capacity : REAL ;	//Emulgator2 capacity (%)
+    mixer_time : DINT ;	//Mixing time (min)
+    mixer_using : BOOL  := TRUE;	//Using mixer (yes/no)
    END_STRUCT ;	
-   Weight_control : REAL  := 1.000000e+000;	//Óñòàâêà êîíòðîëÿ íàëè÷èÿ æèäêîñòè â åìêîñòè B-FS-09
-   Error : WORD ;	//Îøèáêè
-   Idling_time : DINT  := L#30;	//Âðåìÿ íà îïðåäåëåíèå ÕÕ "DB_P-FS-10M"
-   Idling_control : REAL ;	//Çíà÷åíèå ìàññû åìêîñòè ïðåäûäóùåãî öèêëà ÏËÊ
-   IBC_setpoint : REAL  := 9.000000e+002;	//Çíà÷åíèå äîïóñòèìîé ìàññû IBC
-   IBC_start_value : REAL ;	//Çíà÷åíèå ìàññû ïåðåä íà÷àëîì ïåðåêà÷êè â IBC
-   Max_value : REAL  := 1.350000e+003;	//Çíà÷åíèå äîïóñòèìîé ìàññû B-FS-09
-   IBC_stop_auto : BOOL ;	//Îñòàíîâ ïåðåêà÷èâàíèÿ â IBC àâòîðåæèì
-   FrontMerker1 : BOOL ;	//Áèò äëÿ ïåðåäíåãî ôðîíòà
-   Program_interrupt : BOOL ;	//Ïðîãðàììà ïðåðâàíà
-   Mixer_enable : BOOL ;	//Çàïóñê ìåøàëêè â àâòî ðåæèìå
-   Mixer_end : BOOL ;	//Îêîí÷àíèå ðàáîòû ìåøàëêè ïî âðåìåíè
-   Warning : WORD ;	//Ïðåäóïðåæäåíèÿ
-   Control : DWORD ;	//Óïðàâëåíèå ñ WinCC
-   minoil_balance_value : REAL ;	//Ðàâíîå çíà÷åíèå êîëè÷åñòâà è îáúåìà ìèí. ìàñëà
-   emuls1_balance_value : REAL ;	//Ðàâíîå çíà÷åíèå êîëè÷åñòâà è îáúåìà ýìóëüãàòîðà 1
-   emuls2_balance_value : REAL ;	//Ðàâíîå çíà÷åíèå êîëè÷åñòâà è îáúåìà ýìóëüãàòîðà 2
-   Reset : WORD ;	//Ñáðîñ îøèáîê
-   Max_value_limit : REAL  := 9.500000e+001;	//Ïðîöåíò îò óñòàâêè ìàêñèìàëüíî äîïóñòèìîé ìàññû B-FS-09
-   Minoil_amount_current : REAL ;	//Òåêóùåå çíà÷åíèå ìèíåðàëüíîãî ìàñëà â åìêîñòè
-   Emuls1_amount_current : REAL ;	//Òåêóùåå çíà÷åíèå ýìóëüãàòîðà 1 â åìêîñòè
-   Emuls2_amount_current : REAL ;	//Òåêóùåå çíà÷åíèå ýìóëüãàòîðà 2 â åìêîñòè
-   Common_amount_current : REAL ;	//Îáùèé âåñ â åìêîñòè
-   Minoil_capacity_current : REAL ;	//Òåêóùèé ïðîöåíò ìèíåðàëüíîãî ìàñëà â åìêîñòè
-   Emuls1_capacity_current : REAL ;	//Òåêóùèé ïðîöåíò ýìóëüãàòîðà 1 â åìêîñòè
-   Emuls2_capacity_current : REAL ;	//Òåêóùèé ïðîöåíò ýìóëüãàòîðà 2 â åìêîñòè
-   Common_capacity_current : REAL ;	//Ïðîöåíò çàïîëíåíèÿ åìêîñòè
-   Previous_weight : REAL ;	//Çíà÷åíèå âåñà â åìêîñòè ïðåäûäóùåãî öèêëà
-   IBC_setpoint_HL : REAL  := 9.000000e+002;	//Ìàêñèìàëüíî äîïóñòèìàÿ óñòàâêà ìàññû IBC
-   Max_value_HL : REAL  := 1.350000e+003;	//Ìàêñèìàëüíî äîïóñòèìàÿ óñòàâêà ìàññû B-FS-09
-   rec_name : STRING  [20 ];	//Íàçâàíèå òåêóùåãî ðåöåïòà
-   Mixer_timer : INT ;	//Ôàêè÷åñêîå âðåìÿ ðàáîòû ìåøàëêè
+   Weight_control : REAL  := 1.000000e+000;	//Setpoint of control liquid in capacity B-FS-09
+   Error : WORD ;	//Errors
+   Idling_time : DINT  := L#30;	//Time to determine idling "DB_P-FS-10M"
+   Idling_control : REAL ;	//Capacity weqght in previous cycle PLC
+   IBC_setpoint : REAL  := 9.000000e+002;	//Allowable weight of IBC
+   IBC_start_value : REAL ;	//Weight before transfering to IBC
+   Max_value : REAL  := 1.350000e+003;	//Allowable weight of B-FS-09
+   IBC_stop_auto : BOOL ;	//Stop transfer to IBC auto mode
+   FrontMerker1 : BOOL ;	//Bit for rising edge
+   Program_interrupt : BOOL ;	//Programm is aborted
+   Mixer_enable : BOOL ;	//Start mixer auto mode
+   Mixer_end : BOOL ;	//Finish mixer due time
+   Warning : WORD ;	//Warnings
+   Control : DWORD ;	//Operation from WinCC
+   minoil_balance_value : REAL ;	//Equal values min. oil amount and capacity
+   emuls1_balance_value : REAL ;	//Equal values emulgator1 amount and capacity
+   emuls2_balance_value : REAL ;	//Equal values emulgator2 amount and capacity
+   Reset : WORD ;	//Reset errors
+   Max_value_limit : REAL  := 9.500000e+001;	//Percent from setpoint max allowable weight of B-FS-09
+   Minoil_amount_current : REAL ;	//Current min. oil value 
+   Emuls1_amount_current : REAL ;	//Current emulgator1 value 
+   Emuls2_amount_current : REAL ;	//Current emulgator2 value 
+   Common_amount_current : REAL ;	//Common weight
+   Minoil_capacity_current : REAL ;	//Current min. oil per cent
+   Emuls1_capacity_current : REAL ;	//Current emulgator1 per cent
+   Emuls2_capacity_current : REAL ;	//Current emulgator2 per cent
+   Common_capacity_current : REAL ;	//Per cent of filling
+   Previous_weight : REAL ;	//Weight in previous cycle
+   IBC_setpoint_HL : REAL  := 9.000000e+002;	//Max allowable setpoint of weight IBC
+   Max_value_HL : REAL  := 1.350000e+003;	//Max allowable setpoint of weight B-FS-09
+   rec_name : STRING  [20 ];	//Name of current recipe
+   Mixer_timer : INT ;	//Actual time of mixer working
   END_STRUCT ;	
 BEGIN
    Status_start := FALSE; 
@@ -2459,7 +2460,7 @@ VAR
 END_VAR
 BEGIN
 NETWORK
-TITLE =Ñèìóëÿöèÿ îáðàòíîé ñâÿçè
+TITLE =Feedback simulation
 
       A     #Simulation; 
       S     #Automatic_Switch; 
@@ -2470,7 +2471,7 @@ TITLE =Ñèìóëÿöèÿ îáðàòíîé ñâÿçè
       =     #Aux_Switch; 
 _011: NOP   0; 
 NETWORK
-TITLE =Âûñòàâëåíèå îøèáêè îáðàòíîé ñâÿçè (ñ÷åò÷èê îæèäàíèÿ îá.ñâÿçè)
+TITLE =Error of feedback
 
       A(    ; 
       A(    ; 
@@ -2507,7 +2508,7 @@ _001: A     BR;
 _002: A     BR; 
       S     #ErrorFB; 
 NETWORK
-TITLE =Âûñòàâëåíèå îøèáêè äîï. êîíòàêòà ÀÂ
+TITLE =Error of circuit breker contact
 
       A(    ; 
       O     #Start_WinCC; 
@@ -2519,23 +2520,23 @@ TITLE =Âûñòàâëåíèå îøèáêè äîï. êîíòàêòà ÀÂ
       A     "Voltage control".SV_MCC1; 
       S     #ErrorQF; 
 NETWORK
-TITLE =Ñáðîñ îøèáêè îáðàòíîé ñâÿçè
+TITLE =Reset error of feedback
 
       A     #Reset_ErrorFB; 
       R     #ErrorFB; 
 NETWORK
-TITLE =Ñáðîñ îøèáêè äîï. êîíòêòà ÀÂ
+TITLE =Reset error of circuit breker contact
 
       A     #Reset_ErrorQF; 
       R     #ErrorQF; 
 NETWORK
-TITLE =Íàëè÷èå êàêîé-ëèáî îøèáêè
+TITLE =Some errors presence
 
       O     #ErrorFB; 
       O     #ErrorQF; 
       =     #HmiError; 
 NETWORK
-TITLE =Ñáðîñ ñ÷åò÷èêà
+TITLE =Reset counter
 
       A(    ; 
       A     #Start; 
@@ -2551,7 +2552,7 @@ TITLE =Ñáðîñ ñ÷åò÷èêà
       T     #count; 
 _003: NOP   0; 
 NETWORK
-TITLE =Ñòàðò ìîòîðà
+TITLE =Start drive
 
       A(    ; 
       O     #Start_WinCC; 
@@ -2573,7 +2574,7 @@ _004: A     BR;
       S     #Start; 
       R     #Stop; 
 NETWORK
-TITLE =Ñòîï ìîòîðà
+TITLE =Stop drive
 
       A(    ; 
       A(    ; 
@@ -2602,13 +2603,13 @@ _005: A     BR;
       S     #Stop; 
       R     #Start; 
 NETWORK
-TITLE =Ñèìóëÿöèÿ îáðàòíîé ñâÿçè îò ÷àñòîòíèêîâ
+TITLE =Simulation feedback
 
       L     #Analog_Set_Value; 
       T     #FB_Analog; 
 
 NETWORK
-TITLE =Ïåðåñûëêà àíàëîãîâîãî çíà÷åíèÿ
+TITLE =Transfer analog value
 
 
 
@@ -2628,7 +2629,7 @@ TITLE =Ïåðåñûëêà àíàëîãîâîãî çíà÷åíèÿ
            Out_of_range             := "NULL");
 _006: NOP   0; 
 NETWORK
-TITLE =Óñòàíîâêà ñòàòóñîâ
+TITLE =Set statuses
 
       A     #Remote_Switch; 
       A     #Automatic_Switch; 
@@ -2645,7 +2646,7 @@ TITLE =Óñòàíîâêà ñòàòóñîâ
 
 
 NETWORK
-TITLE =Ðàñ÷åò âðåìåíè ðàáîòû/ïðîñòîÿ è öèêëîâ âêëþ÷åíèÿ
+TITLE =Calculation time of working and staying
 
 // On_Time counting
       A     #Status_ON; 
@@ -2692,7 +2693,7 @@ _009: NOP   0;
       R     #Reset; 
 _010: NOP   0; 
 NETWORK
-TITLE =Ñáðîñ êíîïîê
+TITLE =Reset buttons
 //
 //
       A     #Start_WinCC; 
@@ -3312,58 +3313,58 @@ VAR_TEMP
 END_VAR
 BEGIN
 NETWORK
-TITLE =Îøèáêè è áëîêèðîâêè
+TITLE = Errors and interlocks
 
-//Ñáðîñ îøèáîê
-//Ñëèòü ïðåäûäóùóþ ïàðòèþ
+//Reset errors
+//Pour down previous batch
       A     DB24.DBX   86.0; 
       JNB   _250; 
       R     DB24.DBX   44.0; 
       R     DB24.DBX   86.0; 
 
-//Õîëîñòîé õîä DB_P-FS-10M
+//Idling of DB_P-FS-10M
 _250: A     DB24.DBX   86.1; 
       JNB   _251; 
       R     DB24.DBX   44.1; 
       R     DB24.DBX   86.1; 
 
-//Ïåðåëèâ IBC
+//Overflow IBC
 _251: A     DB24.DBX   86.2; 
       JNB   _252; 
       R     DB24.DBX   44.2; 
       R     DB24.DBX   86.2; 
 
-//Ïåðåëèâ B-FS-09
+//Overflow B-FS-09
 _252: A     DB24.DBX   86.3; 
       JNB   _253; 
       R     DB24.DBX   44.3; 
       R     DB24.DBX   86.3; 
 
-//Àâàðèéíûé îñòàíîâ ìåøàëêè A-FS-30M
+//Emergency stop A-FS-30M
 _253: A     DB24.DBX   86.4; 
       JNB   _254; 
       R     DB24.DBX   44.4; 
       R     DB24.DBX   86.4; 
 
-//Àâàðèéíûé îñòàíîâ
+//Emergency stop
 _254: A     DB24.DBX   86.5; 
       JNB   _255; 
       R     DB24.DBX   44.5; 
       R     DB24.DBX   86.5; 
 
-//Çàíÿòû îáà íàñîñà P-FS-03M è P-FS-04M
+//Both pumps are busy P-FS-03M and P-FS-04M
 _255: A     DB24.DBX   86.6; 
       JNB   _256; 
       R     DB24.DBX   44.6; 
       R     DB24.DBX   86.6; 
 
-//Çàïóùåí ðó÷íîé ïðîöåññ
+//Manual process is started
 _256: A     DB24.DBX   86.7; 
       JNB   _257; 
       R     DB24.DBX   44.7; 
       R     DB24.DBX   86.7; 
 
-//Íåêîððåêòíûå ïàðàìåòðû ðåöåïòà
+//Incorrect parametres of recipe
 _257: A     DB24.DBX   87.0; 
       JNB   _258; 
       R     DB24.DBX   68.1; 
@@ -3372,8 +3373,8 @@ _257: A     DB24.DBX   87.0;
 _258: NOP   0; 
 
 
-//Óñòàíîâêà ôëàãîâ îøèáîê
-//Ñëèòü ïðåäûäóùóþ ïàðòèþ
+//Setting of error's flags
+//Pour down previous batch
       A     DB24.DBX   70.0; 
       JNB   _200; 
       A(    ; 
@@ -3386,7 +3387,7 @@ _258: NOP   0;
       A     DB24.DBX   44.0; 
       R     DB24.DBX   70.0; 
 
-//Õîëîñòîé õîä DB_P-FS-10M
+//Idling of DB_P-FS-10M
 _200: A     T     29; 
       R     T     29; 
       S     DB24.DBX   44.1; 
@@ -3443,7 +3444,7 @@ _213: L     "Fuel Phase Block".Idling_time;
       T     "Fuel Phase Block".Idling_control; 
 
 
-//Ïåðåëèâ IBC
+//Overflow IBC
       A(    ; 
       L     "Fuel Phase Block".IBC_setpoint; 
       L     "Fuel Phase Block".IBC_setpoint_HL; 
@@ -3488,7 +3489,7 @@ _203: L     0;
       T     "Fuel Phase Block".IBC_start_value; 
 
 
-//Ïåðåëèâ B-FS-09
+//Overflow B-FS-09
 _205: A(    ; 
       L     "Fuel Phase Block".Max_value; 
       L     "Fuel Phase Block".Max_value_HL; 
@@ -3537,7 +3538,7 @@ _202: A(    ;
 
 
 
-//Ïðåäóïðåæäåíèå ïåðåëèâà B-FS-09
+//Warning overflow B-FS-09
 _206: A(    ; 
       L     "Fuel Phase Block".Max_value_limit; 
       L     1.000000e+002; 
@@ -3559,14 +3560,14 @@ _212: A(    ;
       =     DB24.DBX   68.0; 
 
 
-//Àâàðèéíûé îñòàíîâ ìåøàëêè A-FS-30M
+//Emergency stop of mixer A-FS-30M
       AN    "Fuel Phase Block".Mixer_ES; 
       JNB   _207; 
       R     "Fuel Phase Block".Mixer_start; 
       S     DB24.DBX   44.4; 
 
 
-//Àâàðèéíûé îñòàíîâ
+//Emergency stop
 _207: A     "Emergency Blocks".HS_EZ_07; 
       O     "Emergency Blocks".HS_EZ_01; 
       =     DB24.DBX   44.5; 
@@ -3618,7 +3619,7 @@ _207: A     "Emergency Blocks".HS_EZ_07;
 
 
 
-//Çàíÿòû îáà íàñîñà P-FS-03M è P-FS-04M
+//Both pumps are busy P-FS-03M and P-FS-04M
 _208: A(    ; 
       A     DB24.DBX   70.0; 
       O     DB24.DBX   70.4; 
@@ -3630,14 +3631,14 @@ _208: A(    ;
       R     DB24.DBX   70.0; 
       R     DB24.DBX   70.4; 
 
-//Çàïóùåí ðó÷íîé ïðîöåññ
+//Manual process is started
 _209: A     DB24.DBX   70.0; 
       JNB   _210; 
       A     "Fuel Phase Block".Process_busy; 
       S     DB24.DBX   44.7; 
       R     DB24.DBX   70.0; 
 
-//Íåêîððåêòíûå ïàðàìåòðû ðåöåïòà          
+//Incorrect parametres of recipe          
 _210: A(    ; 
       O     DB24.DBX   70.0; 
       O     DB24.DBX   71.7; 
@@ -3678,7 +3679,7 @@ _210: A(    ;
       A     DB24.DBX   71.7; 
       R     DB24.DBX   71.7; 
 
-//Íåêîððåêòíûå ïàðàìåòðû ðåöåïòà
+//Incorrect parametres of recipe
 _211: A     DB24.DBX   71.6; 
       JNB   _214; 
       A(    ; 
@@ -3690,7 +3691,7 @@ _211: A     DB24.DBX   71.6;
       S     DB24.DBX   68.1; 
       R     DB24.DBX   71.6; 
 
-//Ñðàáîòàâøèå áëîêèðîâêè P-FS-03M èëè P-FS-04M
+//Interlocks are in process P-FS-03M or P-FS-04M
 _214: A     "Interlocks".Interlock_95_1; 
       O     "Interlocks".Interlock_95_2; 
       O     "Interlocks".Interlock_52_2; 
@@ -3708,7 +3709,7 @@ _214: A     "Interlocks".Interlock_95_1;
       R     "Fuel Phase Block".Minoil_start; 
       R     "Fuel Phase Block".Process_busy; 
 
-//Ñðàáîòàâøèå áëîêèðîâêè P-FS-02M
+//Interlock is in process P-FS-02M
 _215: A     "Interlocks".Interlock_63_1; 
       JNB   _216; 
       A     "Fuel Phase Block".IBC_start; 
@@ -3725,14 +3726,14 @@ _216: NOP   0;
 
 
 NETWORK
-TITLE =Ðåöåïò ðàñ÷åò
+TITLE = Calculation of recipe
 
-//Ðàñ÷åò ïàðàìåòðîâ ðåöåïòà
-//Ïðîâåðêà íà ïðîãðàììà çàïóùåíà â àâòî ðåæèìå
+//Calculation of recipe's parametres
+//Check-up is programm in auto mode
       AN    "Fuel Phase Block".Status_start; 
       JNB   _309; 
 
-//Ïðîâåðêà íà îáùèé âåñ íå ðàâåí 0
+//Check-up is common weight not equal to 0
       A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     0.000000e+000; 
@@ -3740,7 +3741,7 @@ TITLE =Ðåöåïò ðàñ÷åò
       )     ; 
       JNB   _300; 
 
-//Ïðîâåðêà íà ñîîòâåòñòâèå êîëè÷åñòâà ìèí. ìàñëà îáúåìó
+//Check-up compliance min. oil amount and capacity
       A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3755,7 +3756,7 @@ TITLE =Ðåöåïò ðàñ÷åò
       T     "Fuel Phase Block".minoil_balance_value; 
       JU    _303; 
 
-//Ïåðåâîä êã â % ìèí. ìàñëî åñëè êîëè÷åñòâî èçìåíåíî
+//Transfer kg to % min. oil if amount is changed
 _301: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".minoil_balance_value; 
@@ -3770,7 +3771,7 @@ _301: A(    ;
       T     "Fuel Phase Block".Recipe.minoil_capacity; 
       JU    _303; 
 
-//Ïåðåâîä % â êã ìèí. ìàñëî åñëè îáúåì èçìåíåí
+//Transfer % to kg min. oil if capacity is changed
 _302: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3788,7 +3789,7 @@ _302: A(    ;
       *R    ; 
       T     "Fuel Phase Block".Recipe.minoil_amount; 
 
-//Ïðîâåðêà íà ñîîòâåòñòâèå êîëè÷åñòâà ýìóëüãàòîðà 1 îáúåìó
+//Check-up compliance emulgator1 amount and capacity
 _303: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3803,7 +3804,7 @@ _303: A(    ;
       T     "Fuel Phase Block".emuls1_balance_value; 
       JU    _306; 
 
-//Ïåðåâîä êã â % ýìóëüãàòîð 1 åñëè êîëè÷åñòâî èçìåíåíî
+//Transfer kg to % emulgator1 if amount is changed
 _304: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
       L     "Fuel Phase Block".emuls1_balance_value; 
@@ -3818,7 +3819,7 @@ _304: A(    ;
       T     "Fuel Phase Block".Recipe.emuls1_capacity; 
       JU    _306; 
 
-//Ïåðåâîä % â êã ýìóëüãàòîð 1 åñëè îáúåì èçìåíåí
+//Transfer % to kg emulgator1 if capacity is changed
 _305: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3836,7 +3837,7 @@ _305: A(    ;
       *R    ; 
       T     "Fuel Phase Block".Recipe.emuls1_amount; 
 
-//Ïðîâåðêà íà ñîîòâåòñòâèå êîëè÷åñòâà ýìóëüãàòîðà 2 îáúåìó
+//Check-up compliance emulgator2 amount and capacity
 _306: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3851,7 +3852,7 @@ _306: A(    ;
       T     "Fuel Phase Block".emuls2_balance_value; 
       JU    _309; 
 
-//Ïåðåâîä êã â % ýìóëüãàòîð 1 åñëè êîëè÷åñòâî èçìåíåíî
+//Transfer kg to % emulgator2 if amount is changed
 _307: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls2_amount; 
       L     "Fuel Phase Block".emuls2_balance_value; 
@@ -3866,7 +3867,7 @@ _307: A(    ;
       T     "Fuel Phase Block".Recipe.emuls2_capacity; 
       JU    _309; 
 
-//Ïåðåâîä % â êã ýìóëüãàòîð 1 åñëè îáúåì èçìåíåí
+//Transfer % to kg emulgator2 if capacity is changed
 _308: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3885,7 +3886,7 @@ _308: A(    ;
       T     "Fuel Phase Block".Recipe.emuls2_amount; 
       JU    _309; 
 
-//Ñáðîñ ïàðàìåòðîâ ìèí. ìàñëà
+//Reset parametres of min. oil
 _300: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     0.000000e+000; 
@@ -3896,7 +3897,7 @@ _300: A(    ;
       T     "Fuel Phase Block".Recipe.minoil_amount; 
       T     "Fuel Phase Block".Recipe.minoil_capacity; 
 
-//Ñáðîñ ïàðàìåòðîâ ýìóëüãàòîðà 1
+//Reset parametres of emulgator1
 _310: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
       L     0.000000e+000; 
@@ -3907,7 +3908,7 @@ _310: A(    ;
       T     "Fuel Phase Block".Recipe.emuls1_amount; 
       T     "Fuel Phase Block".Recipe.emuls1_capacity; 
 
-//Ñáðîñ ïàðàìåòðîâ ýìóëüãàòîðà 2
+//Reset parametres of emulgator2
 _311: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls2_amount; 
       L     0.000000e+000; 
@@ -3939,12 +3940,12 @@ _309: NOP   0;
 
 
 
-//Âûâîä ôàêòè÷åñêèõ çíà÷åíèé
-//Îáùèé âåñ â åìêîñòè (êã)
+//Output actual values
+//Common weight (kg)
       L     "DB_TenzoM".Analog_Output; 
       T     "Fuel Phase Block".Common_amount_current; 
 
-//Ìèí. ìàñëî (êã)
+//Min. oil (kg)
       A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -3964,7 +3965,7 @@ _309: NOP   0;
       +R    ; 
       T     "Fuel Phase Block".Minoil_amount_current; 
 
-//Ýìóëüãàòîð 1 (êã)
+//Emulgator1 (kg)
 _500: A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -3991,7 +3992,7 @@ _500: A(    ;
       +R    ; 
       T     "Fuel Phase Block".Emuls1_amount_current; 
 
-//Ýìóëüãàòîð 2 (êã)
+//Emulgator2 (kg)
 _501: A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -4023,7 +4024,7 @@ _501: A(    ;
       T     "Fuel Phase Block".Emuls2_amount_current; 
 
 
-//Îáùèé âåñ â åìêîñòè (%)
+//Common wight (%)
 _502: A(    ; 
       L     "Fuel Phase Block".Max_value; 
       L     0.000000e+000; 
@@ -4041,7 +4042,7 @@ _502: A(    ;
 _503: L     0.000000e+000; 
       T     "Fuel Phase Block".Common_capacity_current; 
 
-//Ìèí. ìàñëî (%)
+//Min. oil (%)
 _504: A(    ; 
       L     "Fuel Phase Block".Common_amount_current; 
       L     0.000000e+000; 
@@ -4055,7 +4056,7 @@ _504: A(    ;
       /R    ; 
       T     "Fuel Phase Block".Minoil_capacity_current; 
 
-//Ýìóëüãàòîð 1 (%)
+//Emulgator1 (%)
       L     "Fuel Phase Block".Emuls1_amount_current; 
       L     1.000000e+002; 
       *R    ; 
@@ -4063,7 +4064,7 @@ _504: A(    ;
       /R    ; 
       T     "Fuel Phase Block".Emuls1_capacity_current; 
 
-//Ýìóëüãàòîð 2 (%)
+//Emulgator2 (%)
       L     "Fuel Phase Block".Emuls2_amount_current; 
       L     1.000000e+002; 
       *R    ; 
@@ -4077,7 +4078,7 @@ _505: L     0.000000e+000;
       T     "Fuel Phase Block".Emuls1_capacity_current; 
       T     "Fuel Phase Block".Emuls2_capacity_current; 
 
-//Ñáðîñ çíà÷åíèé
+//Reset values
 _506: A     "Fuel Phase Block".IBC_start; 
       O     "Fuel Phase Block".IBC_start_auto; 
       O(    ; 
@@ -4095,7 +4096,7 @@ _506: A     "Fuel Phase Block".IBC_start;
       T     "Fuel Phase Block".Emuls1_amount_current; 
       T     "Fuel Phase Block".Emuls2_amount_current; 
 
-//Çàïèñü çíà÷åíèÿ òåêóùåãî öèêëà
+//Current cycle's value record
 _507: L     "DB_TenzoM".Analog_Output; 
       T     "Fuel Phase Block".Previous_weight; 
 
@@ -4104,9 +4105,9 @@ _507: L     "DB_TenzoM".Analog_Output;
 
 
 NETWORK
-TITLE =Óïðàâëåíèå ïðèãîòîâëåíèåì òîïëèâíîé ôàçû
+TITLE = Producing fuel phase
 
-//Çàïóñê ïðîãðàììû â àâòîìàòè÷åñêîì ðåæèìå
+//Start programm in auto mode
       A     DB24.DBX   70.0; 
       JNB   _000; 
       R     DB24.DBX   70.0; 
@@ -4115,7 +4116,7 @@ TITLE =Óïðàâëåíèå ïðèãîòîâëåíèåì òîïëèâíîé ôà
       AN    "Fuel Phase Block".Status_stop; 
       S     "Fuel Phase Block".Status_start; 
 
-//Îñòàíîâ ïðîãðàììû
+//Stop programm
 _000: A     DB24.DBX   70.1; 
       JNB   _001; 
       R     "Fuel Phase Block".Status_start; 
@@ -4123,7 +4124,7 @@ _000: A     DB24.DBX   70.1;
       S     "Fuel Phase Block".Status_stop; 
       R     DB24.DBX   70.1; 
 
-//ÒÔ ãîòîâà
+//FP is ready
 _001: A     DB24.DBX   70.2; 
       JNB   _002; 
       R     DB24.DBX   70.2; 
@@ -4131,13 +4132,13 @@ _001: A     DB24.DBX   70.2;
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Status_ready; 
 
-//ÒÔ íå ãîòîâà
+//FP isn't ready
 _002: A     DB24.DBX   70.3; 
       JNB   _003; 
       R     "Fuel Phase Block".Status_ready; 
       R     DB24.DBX   70.3; 
 
-//Çàïóñê çàãðóçêè ìèíåðàëüíîãî ìàñëà. Ðó÷íîé ðåæèì
+//Downloading min. oil. Manual mode
 _003: A     DB24.DBX   70.4; 
       JNB   _004; 
       R     DB24.DBX   70.4; 
@@ -4149,7 +4150,7 @@ _003: A     DB24.DBX   70.4;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Minoil_start; 
 
-//Îñòàíîâ çàãðóçêè ìèíåðàëüíîãî ìàñëà. Ðó÷íîé ðåæèì
+//Stop downloading min. oil. Manual mode
 _004: A     DB24.DBX   70.5; 
       JNB   _005; 
       R     DB24.DBX   70.5; 
@@ -4157,7 +4158,7 @@ _004: A     DB24.DBX   70.5;
       R     "Fuel Phase Block".Minoil_start; 
       S     "Fuel Phase Block".Minoil_stop; 
 
-//Çàïóñê çàãðóçêè ýìóëüãàòîðà 1. Ðó÷íîé ðåæèì
+//Downloading emulgator1. Manual mode
 _005: A     DB24.DBX   70.6; 
       JNB   _006; 
       R     DB24.DBX   70.6; 
@@ -4170,7 +4171,7 @@ _005: A     DB24.DBX   70.6;
       S     "Fuel Phase Block".Emuls1_start; 
 
 
-//Îñòàíîâ çàãðóçêè ýìóëüãàòîðà 1. Ðó÷íîé ðåæèì
+//Stop downloading emulgator1. Manual mode
 _006: A     DB24.DBX   70.7; 
       JNB   _007; 
       R     DB24.DBX   70.7; 
@@ -4178,7 +4179,7 @@ _006: A     DB24.DBX   70.7;
       R     "Fuel Phase Block".Emuls1_start; 
       S     "Fuel Phase Block".Emuls1_stop; 
 
-//Çàïóñê çàãðóçêè ýìóëüãàòîðà 2. Ðó÷íîé ðåæèì
+//Downloading emulgator2. Manual mode
 _007: A     DB24.DBX   71.0; 
       JNB   _008; 
       R     DB24.DBX   71.0; 
@@ -4190,7 +4191,7 @@ _007: A     DB24.DBX   71.0;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Emuls2_start; 
 
-//Îñòàíîâ çàãðóçêè ýìóëüãàòîðà 2. Ðó÷íîé ðåæèì
+//Stop downloading emulgator2. Manual mode
 _008: A     DB24.DBX   71.1; 
       JNB   _009; 
       R     DB24.DBX   71.1; 
@@ -4198,7 +4199,7 @@ _008: A     DB24.DBX   71.1;
       R     "Fuel Phase Block".Emuls2_start; 
       S     "Fuel Phase Block".Emuls2_stop; 
 
-//Çàïóñê ïåðåêà÷èâàíèÿ â IBC. Ðó÷íîé ðåæèì
+//Transfer to IBC. Manual mode
 _009: A     DB24.DBX   71.2; 
       JNB   _010; 
       R     DB24.DBX   71.2; 
@@ -4209,7 +4210,7 @@ _009: A     DB24.DBX   71.2;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".IBC_start; 
 
-//Îñòàíîâ ïåðåêà÷èâàíèÿ â IBC. Ðó÷íîé ðåæèì
+//Stop transfer to IBC. Manual mode
 _010: A     DB24.DBX   71.3; 
       JNB   _011; 
       R     DB24.DBX   71.3; 
@@ -4217,7 +4218,7 @@ _010: A     DB24.DBX   71.3;
       R     "Fuel Phase Block".IBC_start; 
       S     "Fuel Phase Block".IBC_stop; 
 
-//Çàïóñê ìåøàëêè A-FS-30M. Ðó÷íîé ðåæèì
+//Start mixer A-FS-30M. Manual mode
 _011: A     DB24.DBX   71.4; 
       JNB   _012; 
       R     DB24.DBX   71.4; 
@@ -4225,18 +4226,18 @@ _011: A     DB24.DBX   71.4;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Mixer_start; 
 
-//Îñòàíîâ ìåøàëêè A-FS-30M. Ðó÷íîé ðåæèì
+//Stop mixer A-FS-30M. Manual mode
 _012: A     DB24.DBX   71.5; 
       JNB   _013; 
       R     "Fuel Phase Block".Mixer_start; 
       S     "Fuel Phase Block".Mixer_stop; 
       R     DB24.DBX   71.5; 
 
-//Çàãðóçèòü ðåöåïò   
+//Download recipe   
 _013: A     DB24.DBX   71.6; 
       JNB   _014; 
 
-//Çàãðóçêà ðåöåïòà
+//Downloading recipe
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     0; 
@@ -4286,20 +4287,20 @@ _013: A     DB24.DBX   71.6;
       L     DBW [AR1,P#34.0]; 
       T     DIW [AR2,P#34.0]; 
 
-//Çàãðóçêà íàçâàíèÿ
-//Òèï BYTE
+//Downloading name of recipe
+//Type BYTE
       L     W#16#1002; 
       T     LW     8; 
 
-//×èñëî áàéòîâ
+//Number of bytes
       L     22; 
       T     LW    10; 
 
-//Èñõîäíûé DB
+//Source DB
       L     713; 
       T     LW    12; 
 
-//Íà÷àëî èñõîäíûõ äàííûõ
+//Source data
       TAR1  ; 
       L     P#DBX 36.0; 
       +D    ; 
@@ -4313,11 +4314,11 @@ _013: A     DB24.DBX   71.6;
       SET   ; 
       R     DB24.DBX   71.6; 
 
-//Cîõðàíèòü ðåöåïò
+//Save recipe
 _014: A     DB24.DBX   71.7; 
       JNB   _015; 
 
-//Ñîõðàíåíèå ðåöåïòà
+//Saving recipe
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     0; 
@@ -4369,20 +4370,20 @@ _014: A     DB24.DBX   71.7;
       L     DBW [AR1,P#34.0]; 
       T     DIW [AR2,P#34.0]; 
 
-//Ñîõðàíåíèå íàçâàíèÿ
-//Òèï BYTE
+//Saving name of recipe
+//Type BYTE
       L     W#16#1002; 
       T     LW     8; 
 
-//×èñëî áàéòîâ
+//Number of bytes
       L     22; 
       T     LW    10; 
 
-//Èñõîäíûé DB
+//Source DB
       L     713; 
       T     LW    12; 
 
-//Íà÷àëî èñõîäíûõ äàííûõ
+//Source data
       TAR2  ; 
       L     P#DBX 36.0; 
       +D    ; 
@@ -4396,7 +4397,7 @@ _014: A     DB24.DBX   71.7;
       SET   ; 
       R     DB24.DBX   71.7; 
 
-//Çàïóñê ïåðåêà÷èâàíèÿ â IBC. Àâòî ðåæèì
+//Start transfer to IBC. Auto mode
 _015: A     DB24.DBX   72.0; 
       JNB   _016; 
       R     DB24.DBX   72.0; 
@@ -4406,7 +4407,7 @@ _015: A     DB24.DBX   72.0;
       AN    DB24.DBX   44.5; 
       =     "Fuel Phase Block".IBC_start_auto; 
 
-//Îñòàíîâ ïåðåêà÷èâàíèÿ â IBC. Àâòî ðåæèì
+//Stop transfer to IBC. Auto mode
 _016: A     DB24.DBX   72.1; 
       JNB   _017; 
       R     DB24.DBX   72.1; 
@@ -4418,13 +4419,13 @@ _017: NOP   0;
 
 
 NETWORK
-TITLE =Çàïóñê îáîðóäîâàíèÿ â àâòî ðåæèìå
+TITLE = Start process in auto mode
 
-//Çàïóñê â àâòîðåæèìå
+//Start auto mode
       A     "Fuel Phase Block".Status_start; 
       JNB   _080; 
 
-//Êîïèðîâàíèå òåêóùåãî ðåöåïòà
+//Copy current recipe
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     "Fuel Phase Block".Recipe.rec_id; 
@@ -4434,7 +4435,7 @@ TITLE =Çàïóñê îáîðóäîâàíèÿ â àâòî ðåæèìå
       L     "Fuel Phase Block".Current_id; 
       T     "Fuel Phase Block".Recipe.rec_id; 
 
-//Áëîê ðàáîòû ìåøàëêè
+//Logic of mixer working
 nex3: A     "Fuel Phase Block".Recipe.mixer_using; 
       JNB   _049; 
 
@@ -4488,7 +4489,7 @@ nex2: A(    ;
       L     0; 
       T     "Fuel Phase Block".Mixer_timer; 
 
-//Ïðîâåðêà îêîí÷àíèÿ çàãðóçêè ìàñëà 
+//Check-up is min. oil downnloading finished
 _049: A(    ; 
       L     "DB_TenzoM".Analog_Output; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -4496,8 +4497,8 @@ _049: A(    ;
       )     ; 
       JC    _054; 
 
-//Ïîäà÷à ìàñëà â åìêîñòü
-//Ïðîâåðêà íà çàïóñê êàêîãî-ëèáî èç óçëîâ
+//Start transfer min. oil to capacity
+//Check-up is one of nodes started
       A(    ; 
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
@@ -4508,39 +4509,39 @@ _049: A(    ;
       )     ; 
       JC    MAN; 
 
-//Ñâîáîäåí íàñîñ DB_P-FS-03M
+//Pump is free DB_P-FS-03M
       A     "DB_P-FS-03M".Status_OFF; 
       AN    "DB_H-FS-50".Start; 
       JC    _050; 
 
-//Ñâîáîäåí íàñîñ DB_P-FS-04M
+//Pump is free DB_P-FS-04M
       A     "DB_P-FS-04M".Status_OFF; 
       AN    "DB_H-FS-49".Start; 
       JC    _051; 
 
-//Îòêðûòèå êëàïàíà DB_H-FS-49    
+//Opening valve DB_H-FS-49    
 _050: AN    "DB_H-FS-49".Status_Open; 
       AN    "DB_H-FS-49".Start; 
       =     "DB_H-FS-49".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-03M
+//Start pump DB_P-FS-03M
       A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_P-FS-03M".Start_WinCC; 
       JU    MAN; 
 
-//Îòêðûòèå êëàïàíà DB_H-FS-50
+//Opening valve DB_H-FS-50
 _051: AN    "DB_H-FS-50".Status_Open; 
       AN    "DB_H-FS-50".Start; 
       =     "DB_H-FS-50".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-04M
+//Start pump DB_P-FS-04M
       A     "DB_H-FS-50".Status_Open; 
       A     "DB_P-FS-04M".Status_OFF; 
       =     "DB_P-FS-04M".Start_WinCC; 
       JU    MAN; 
 
-//Ïðîâåðêà îêîí÷àíèÿ çàãðóçêè ýìóëüãàòîðà 1
+//Check-up is emulgator1 downnloading finished
 _054: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
@@ -4550,17 +4551,17 @@ _054: A(    ;
       )     ; 
       JC    _057; 
 
-//Ïðîâåðêà âêëþ÷åíèÿ óçëà
+//Check-up is node turned on
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    MAN; 
 
-//Ïðîâåðêà íà îñòàíîâêó óçëîâ
+//Check-up are nodes turned off
       A     "DB_H-FS-49".Status_Close; 
       A     "DB_H-FS-50".Status_Close; 
       JC    _053; 
 
-//Åñëè çàïóùåí óçåë 1
+//If node 1 is started
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _055; 
@@ -4568,7 +4569,7 @@ _054: A(    ;
       =     "DB_P-FS-03M".Stop_WinCC; 
       JU    _056; 
 
-//Åñëè çàïóùåí óçåë 2
+//If node 2 is started
 _055: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _056; 
@@ -4576,7 +4577,7 @@ _055: A     "DB_P-FS-04M".Status_ON;
       =     "DB_P-FS-04M".Stop_WinCC; 
       JU    _056; 
 
-//Îñòàíîâ íàñîñà è êëàïàíà
+//Stop pump and valve
 _056: A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_H-FS-49".Close_WinCC; 
@@ -4585,20 +4586,20 @@ _056: A     "DB_H-FS-49".Status_Open;
       =     "DB_H-FS-50".Close_WinCC; 
       JU    MAN; 
 
-//Ïîäà÷à ýìóëüãàòîðà 1 â åìêîñòü
-//Ïåðåêëþ÷åíèå êëàïàíà DB_H-FS-51 â ïîëîæåíèå 1
+//Transfer emulgator1 to capacity
+//Switch DB_H-FS-51 in position 1
 _053: AN    "DB_H-FS-51".Status_Open; 
       AN    "DB_H-FS-51".Start; 
       =     "DB_H-FS-51".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-10M
+//Start pump DB_P-FS-10M
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    MAN; 
 
-//Ïðîâåðêà îêîí÷àíèÿ çàãðóçêè ýìóëüãàòîðà 2
+//Check-up is emulgator2 downnloading finished
 _057: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
@@ -4610,47 +4611,47 @@ _057: A(    ;
       )     ; 
       JC    _058; 
 
-//Ïîäà÷à ýìóëüãàòîðà 2 â åìêîñòü
-//Ïðîâåðêà âêëþ÷åíèÿ óçëà    
+//Transfer emulgator2 to capacity
+//Check-up is node turned on   
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    MAN; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-10M
+//Stop pump DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Open; 
       =     "DB_P-FS-10M".Stop_WinCC; 
 
-//Ïåðåêëþ÷åíèå êëàïàíà DB_H-FS-51 â ïîëîæåíèå 2
+//Switch valve DB_H-FS-51 to position 2
       AN    "DB_H-FS-51".Status_Close; 
       AN    "DB_H-FS-51".Stop; 
       A     "DB_P-FS-10M".Status_OFF; 
       =     "DB_H-FS-51".Close_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-10M
+//Start pump DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    MAN; 
 
-//Îêîí÷àíèå çàãðóçêè êîìïîíåíòîâ
-//Ïðîâåðêà îñòàíîâêè íàñîñà
+//Finish downloading of components
+//Check-up is pump stopped
 _058: A     "DB_P-FS-10M".Status_OFF; 
       JC    _059; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-10M
+//Stop pump DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
 
-//Çàâåðøåíèå ïðîãðàììû
-//Ïðîâåðêà îêîí÷àíèÿ ðàáîòû ìåøàëêè
+//Finish programm
+//Check-up is mixer turned off
 _059: A     "DB_A-FS-30M".Status_OFF; 
       JNB   MAN; 
 
-//Ïðîâåðêà çàâåðøåíèÿ ïðîãðàììû
+//Check-up is programm finished
       A     "Fuel Phase Block".Status_start; 
       JNB   MAN; 
       R     "Fuel Phase Block".Status_start; 
@@ -4663,11 +4664,11 @@ _059: A     "DB_A-FS-30M".Status_OFF;
 
 
 
-//Îñòàíîâ ïðîãðàììû
+//Stop programm
 _080: A     "Fuel Phase Block".Status_stop; 
       JNB   _060; 
 
-//Îòêëþ÷åíèå ìåøàëêè 
+//Turn off mixer
       R     "Fuel Phase Block".Mixer_end; 
       R     "Fuel Phase Block".Mixer_enable; 
       A     "DB_A-FS-30M".Status_ON; 
@@ -4675,7 +4676,7 @@ _080: A     "Fuel Phase Block".Status_stop;
       A     "DB_A-FS-30M".Status_ON; 
       =     "DB_A-FS-30M".Stop_WinCC; 
 
-//Îñòàíîâ íà ýòàïå çàãðóçêè ìèí. ìàñëà
+//Stop on step downloading min. oil
 _081: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "DB_TenzoM".Analog_Output; 
@@ -4684,13 +4685,13 @@ _081: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _082; 
 
-//Îòêëþ÷åíèå óçëîâ ìèí. ìàñëà
+//Turn off min. oil nodes
       A     "DB_H-FS-49".Status_Close; 
       A     "DB_H-FS-50".Status_Close; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Åñëè çàïóùåí óçåë 1
+//If node 1 is started
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _083; 
@@ -4698,14 +4699,14 @@ _081: A     "Fuel Phase Block".Status_stop;
       =     "DB_P-FS-03M".Stop_WinCC; 
       JU    _084; 
 
-//Åñëè çàïóùåí óçåë 2
+//If node 2 is started
 _083: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _084; 
       A     "DB_P-FS-04M".Status_ON; 
       =     "DB_P-FS-04M".Stop_WinCC; 
 
-//Çàêðûòèå êëàïàíà
+//Close valve
 _084: A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_H-FS-49".Close_WinCC; 
@@ -4714,7 +4715,7 @@ _084: A     "DB_H-FS-49".Status_Open;
       =     "DB_H-FS-50".Close_WinCC; 
       JU    MAN; 
 
-//Îñòàíîâ íà ýòàïå çàãðóçêè ýìóëüãàòîðà 1
+//Stop on step downloading emulgator1
 _082: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -4725,17 +4726,17 @@ _082: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _085; 
 
-//Ïðîâåðêà îñòàíîâà íàñîñà
+//Check-up is pump stopped
       A     "DB_P-FS-10M".Status_OFF; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-10M
+//Stop pump DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
 
-//Îñòàíîâ íà ýòàïå çàãðóçêè ýìóëüãàòîðà 2
+//Stop on step downloading emulgator2
 _085: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -4748,12 +4749,12 @@ _085: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _086; 
 
-//Ïðîâåðêà îñòàíîâà íàñîñà
+//Check-up is pump stopped
       A     "DB_P-FS-10M".Status_OFF; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-10M
+//Stop pump DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
@@ -4766,13 +4767,13 @@ _086: A     "Fuel Phase Block".Status_stop;
 
 
 
-//Ïåðåêà÷èâàíèå â IBC
+//Transfer to IBC
 _060: A     "Fuel Phase Block".IBC_start_auto; 
       JNB   _070; 
       A     "Fuel Phase Block".Status_ready; 
       R     "Fuel Phase Block".Status_ready; 
 
-//Êîíòðîëü ïåðåêà÷êè ïî âåñó
+//Control weight
       A(    ; 
       L     "DB_TenzoM".Analog_Output; 
       L     "Fuel Phase Block".Weight_control; 
@@ -4784,18 +4785,18 @@ _060: A     "Fuel Phase Block".IBC_start_auto;
       S     "Fuel Phase Block".IBC_stop_auto; 
       JU    _070; 
 
-//Ïðîâåðêà âêëþ÷åíèÿ óçëà
+//Check-up is node turned on
 _061: A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_ON; 
       JC    MAN; 
 
-//Îòêðûòèå êëàïàíà DB_H-FS-52
+//Open valve DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Open; 
       AN    "DB_H-FS-52".Start; 
       =     "DB_H-FS-52".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-02M
+//Start pump DB_P-FS-02M
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_OFF; 
       =     "DB_P-FS-02M".Start_WinCC; 
@@ -4805,22 +4806,22 @@ _061: A     "DB_H-FS-52".Status_Open;
 
 
 
-//Îñòàíîâ ïåðåêà÷èâàíèÿ â IBC
+//Stop transfer to IBC
 _070: A     "Fuel Phase Block".IBC_stop_auto; 
       JNB   MAN; 
 
-//Ïðîâåðêà îòêëþ÷åíèÿ
+//Check-up is turned off
       A     "DB_P-FS-02M".Status_OFF; 
       A     "DB_H-FS-52".Status_Close; 
       R     "Fuel Phase Block".IBC_stop_auto; 
       JC    MAN; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-02M
+//Stop pump DB_P-FS-02M
       A     "DB_P-FS-02M".Status_ON; 
       A     "DB_H-FS-52".Status_Open; 
       =     "DB_P-FS-02M".Stop_WinCC; 
 
-//Çàêðûòèå êëàïàíà DB_H-FS-52
+//Close valve DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Close; 
       AN    "DB_H-FS-52".Stop; 
@@ -4828,9 +4829,9 @@ _070: A     "Fuel Phase Block".IBC_stop_auto;
       JU    MAN; 
 
 NETWORK
-TITLE =Çàïóñê îáîðóäîâàíèÿ â ðó÷íîì ðåæèìå
+TITLE = Start machines in manual mode
 
-//Çàïóñê ìåøàëêè
+//Start mixer
 MAN:  A     "Fuel Phase Block".Mixer_start; 
       JNB   _100; 
       A     "DB_A-FS-30M".Status_ON; 
@@ -4839,7 +4840,7 @@ MAN:  A     "Fuel Phase Block".Mixer_start;
       AN    DB24.DBX   44.4; 
       =     "DB_A-FS-30M".Start_WinCC; 
 
-//Îñòàíîâ ìåøàëêè
+//Stop mixer
 _100: A     "Fuel Phase Block".Mixer_stop; 
       JNB   _101; 
       A     "DB_A-FS-30M".Status_OFF; 
@@ -4848,15 +4849,15 @@ _100: A     "Fuel Phase Block".Mixer_stop;
       A     "DB_A-FS-30M".Status_ON; 
       =     "DB_A-FS-30M".Stop_WinCC; 
 
-//Çàãðóçêà ìàñëà
+//Start downloading min. oil
 _101: A     "Fuel Phase Block".Minoil_start; 
       JNB   _102; 
 
-//Àêòèâàöèÿ áèòà çàïóùåííîãî ïðîöåññà
+//Process is started
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Ïðîâåðêà íà çàïóñê êàêîãî-ëèáî èç óçëîâ
+//Check-up is one of nodes started
       A(    ; 
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
@@ -4867,39 +4868,39 @@ _101: A     "Fuel Phase Block".Minoil_start;
       )     ; 
       JC    END; 
 
-//Ñâîáîäåí íàñîñ DB_P-FS-03M
+//Pump is free DB_P-FS-03M
       A     "DB_P-FS-03M".Status_OFF; 
       AN    "DB_H-FS-50".Start; 
       JC    _103; 
 
-//Ñâîáîäåí íàñîñ DB_P-FS-04M
+//Pump is free DB_P-FS-04M
       A     "DB_P-FS-04M".Status_OFF; 
       AN    "DB_H-FS-49".Start; 
       JC    _104; 
 
-//Îòêðûòèå êëàïàíà DB_H-FS-49    
+//Open valve DB_H-FS-49    
 _103: AN    "DB_H-FS-49".Status_Open; 
       AN    "DB_H-FS-49".Start; 
       =     "DB_H-FS-49".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-03M
+//Start pump DB_P-FS-03M
       A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_P-FS-03M".Start_WinCC; 
       JU    END; 
 
-//Îòêðûòèå êëàïàíà DB_H-FS-50
+//Open valve DB_H-FS-50
 _104: AN    "DB_H-FS-50".Status_Open; 
       AN    "DB_H-FS-50".Start; 
       =     "DB_H-FS-50".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-04M
+//Start pump DB_P-FS-04M
       A     "DB_H-FS-50".Status_Open; 
       A     "DB_P-FS-04M".Status_OFF; 
       =     "DB_P-FS-04M".Start_WinCC; 
       JU    END; 
 
-//Ïðîâåðêà íà îñòàíîâêó óçëîâ
+//Check-up are nodes stopped
 _102: A     "Fuel Phase Block".Minoil_stop; 
       JNB   _105; 
       A     "DB_H-FS-49".Status_Close; 
@@ -4908,7 +4909,7 @@ _102: A     "Fuel Phase Block".Minoil_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _105; 
 
-//Åñëè çàïóùåí óçåë 1
+//If node 1 is started
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _106; 
@@ -4918,7 +4919,7 @@ _102: A     "Fuel Phase Block".Minoil_stop;
       T     MW   102; 
       JU    _107; 
 
-//Åñëè çàïóùåí óçåë 2
+//If node 2 is started
 _106: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _107; 
@@ -4928,7 +4929,7 @@ _106: A     "DB_P-FS-04M".Status_ON;
       T     MW   102; 
       JU    _107; 
 
-//Îñòàíîâ íàñîñà è êëàïàíà     
+//Stop pump and valve     
 _107: NOP   0; 
       OPN   DB [MW 100]; 
       OPN   DI [MW 102]; 
@@ -4938,32 +4939,32 @@ _107: NOP   0;
       =     DIX    0.4; 
       JU    END; 
 
-//Çàãðóçêà ýìóëüãàòîðà 1
+//Downloading emulgator 1
 _105: A     "Fuel Phase Block".Emuls1_start; 
       JNB   _108; 
 
-//Àêòèâàöèÿ áèòà çàïóùåííîãî ïðîöåññà
+//Process is started
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Ïðîâåðêà âêëþ÷åíèÿ óçëà
+//Check-up is node turned on
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    END; 
 
-//Ïåðåêëþ÷åíèå êëàïàíà DB_H-FS-51 â ïîëîæåíèå 1
+//Switch valve DB_H-FS-51 to position 1
       AN    "DB_H-FS-51".Status_Open; 
       AN    "DB_H-FS-51".Start; 
       =     "DB_H-FS-51".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-10M
+//Start pump DB_P-FS-10M
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    END; 
 
-//Ïðîâåðêà îòêëþ÷åíèÿ óçëà
+//Check-up is node turned off
 _108: A     "Fuel Phase Block".Emuls1_stop; 
       JNB   _109; 
       A     "DB_P-FS-10M".Status_OFF; 
@@ -4971,39 +4972,39 @@ _108: A     "Fuel Phase Block".Emuls1_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _109; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-10M
+//Stop pump DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Open; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    END; 
 
-//Çàãðóçêà ýìóëüãàòîðà 2
+//Downloading emulgator2
 _109: A     "Fuel Phase Block".Emuls2_start; 
       JNB   _110; 
 
-//Àêòèâàöèÿ áèòà çàïóùåííîãî ïðîöåññà
+//Process is started
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Ïðîâåðêà âêëþ÷åíèÿ óçëà
+//Check-up is node turned on
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    END; 
 
-//Ïåðåêëþ÷åíèå êëàïàíà DB_H-FS-51 â ïîëîæåíèå 2
+//Switch valve DB_H-FS-51 to position 2
       AN    "DB_H-FS-51".Status_Close; 
       AN    "DB_H-FS-51".Stop; 
       A     "DB_P-FS-10M".Status_OFF; 
       =     "DB_H-FS-51".Close_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-10M
+//Start pump DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    END; 
 
-//Ïðîâåðêà îòêëþ÷åíèÿ óçëà
+//Check-up is node turned off
 _110: A     "Fuel Phase Block".Emuls2_stop; 
       JNB   _111; 
       A     "DB_P-FS-10M".Status_OFF; 
@@ -5011,42 +5012,42 @@ _110: A     "Fuel Phase Block".Emuls2_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _111; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-10M
+//Stop pump DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Close; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    END; 
 
-//Ïåðåêà÷èâàíèå â IBC
+//Transfer to IBC
 _111: A     "Fuel Phase Block".IBC_start; 
       JNB   _112; 
 
-//Ñáðîñ ÒÔ ãîòîâà
+//Reset FP is ready
       A     "Fuel Phase Block".Status_ready; 
       R     "Fuel Phase Block".Status_ready; 
 
-//Àêòèâàöèÿ áèòà çàïóùåííîãî ïðîöåññà
+//Process is started
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Ïðîâåðêà âêëþ÷åíèÿ óçëà
+//Check-up is node turned on
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_ON; 
       JC    END; 
 
-//Îòêðûòèå êëàïàíà DB_H-FS-52
+//Open valve DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Open; 
       AN    "DB_H-FS-52".Start; 
       =     "DB_H-FS-52".Open_WinCC; 
 
-//Çàïóñê íàñîñà DB_P-FS-02M
+//Start pump DB_P-FS-02M
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_OFF; 
       =     "DB_P-FS-02M".Start_WinCC; 
       JU    END; 
 
-//Ïðîâåðêà îòêëþ÷åíèÿ óçëà
+//Check-up is node turned off
 _112: A     "Fuel Phase Block".IBC_stop; 
       JNB   END; 
       A     "DB_P-FS-02M".Status_OFF; 
@@ -5055,12 +5056,12 @@ _112: A     "Fuel Phase Block".IBC_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    END; 
 
-//Îñòàíîâ íàñîñà DB_P-FS-02M
+//Stop pump DB_P-FS-02M
       A     "DB_P-FS-02M".Status_ON; 
       A     "DB_H-FS-52".Status_Open; 
       =     "DB_P-FS-02M".Stop_WinCC; 
 
-//Çàêðûòèå êëàïàíà DB_H-FS-52
+//Close valve DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Close; 
       AN    "DB_H-FS-52".Stop; 
