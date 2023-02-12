@@ -2,33 +2,27 @@
 STL
 
 Task for automation
-− The scope of work includes the development of a PLC control program, its testing and
-debugging
-− Existing plant automation system implemented on Siemens controller
-SIMATIC S7-300: 6ES7318-3EL01-0AB0 – CPU 319-3 PN/DP
-− Used field device connector - SIMATIC DP/PA FDC 157-0:
-6ES7157-0AC83-0XA0
-− Recommended field communication interface is Profibus PA
-− Develop an additional visualization page for the new system
-preparation of the fuel phase.
-− Place the fuel phase preparation control page on the central
-operator console and on the CP6 control panel.
-− This page should permanently display the filling level of the container.
-− The fuel phase can be prepared in automatic and manual modes
-− Automatic mode involves sequential dosing of components
-into container B-FS-09 according to the selected recipe.
-− Provide for the possibility of programming a recipe on the operator’s page (on
-the central operator console and on the control panel CP6).
-− Provide for the possibility of storing up to 20 recipes in memory. In the recipe
-the following parameters must be set:
-o Recipe name
-o Total weight of the batch (kg)
-o Component loading sequences
-o Amount (kg) or volume (% of total weight) of mineral oil
-o Quantity (kg) or volume ((% of total weight)) of emulsifier 1
-o Amount (kg) or volume ((% of total weight)) of emulsifier 2
-o Mixing time (min)
-o Whether a stirrer is used during cooking or not (yes/no)
+- The scope of work includes the development of a PLC control program, its testing and debugging
+- The existing plant automation system is implemented on Siemens SIMATIC S7-300 controller: 6ES7318-3EL01-0AB0 – CPU 319-3 PN/DP
+- Used field device connector - SIMATIC DP/PA FDC 157-0: 6ES7157-0AC83-0XA0
+- Recommended field communication interface - Profibus PA
+- Develop an additional visualization page for the new fuel phase preparation system.
+- Place the fuel phase preparation control page on the central operator console and on the CP6 control panel.
+- The fill level of the container must be permanently displayed on this page.
+- The fuel phase can be prepared in automatic and manual modes
+- Automatic mode assumes sequential dosing of components into the B-FS-09 container according to the selected recipe.
+- Provide for the possibility of programming the recipe on the operator's page (on the central operator console and on the CP6 control panel).
+- Provide for the possibility of storing up to 20 recipes in memory. The following parameters must be specified in the recipe:
+    - Recipe name
+    - Total weight of the batch (kg)
+    - Component loading sequences
+    - Amount (kg) or volume (% of total weight) of mineral oil
+    - Quantity (kg) or volume ((% of total weight)) of emulsifier 1
+    - Amount (kg) or volume ((% of total weight)) of emulsifier 2
+    - Mixing time (min)
+    - Whether a stirrer is used during cooking or not (yes/no)
+
+
 − Sequence of fuel phase preparation:
 o The current balance in the tank B-FS-09 is checked. If there is a remainder
 above some minimum (which can be adjusted), the system should
