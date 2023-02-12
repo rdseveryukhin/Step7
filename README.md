@@ -22,6 +22,22 @@ Task for automation
     - Mixing time (min)
     - Whether a stirrer is used during cooking or not (yes/no)
 
+- Fuel phase preparation sequence:
+    - The current balance in the tank B-FS-09 is checked. If there is a balance above a certain minimum (which can be configured), the system should give an error - "merge the previous batch"
+    - Recipe Selection
+    - "Start cooking in automatic mode"
+    - The system checks which pump P-FS-03 or P-FS-04 is currently free. If any is free, the system switches the corresponding valve H-FS-49 or H-FS-50 to the position for supplying oil to the B-FS-09 tank, the pump turns on and works until the required level in the tank is reached. The mass of the pumped oil is controlled by a tensometric system on the tank.
+    - When starting to load the components, the agitator is switched on
+    - After the oil is loaded, the system switches the H-FS-51 valve to position 1, turns on the P-FS-10 pump and starts pumping emulsifier 1. The mass of the pumped emulsifier is controlled by the tensometric system on the tank.
+    - After the emulsifier 1 is loaded, the system switches the H-FS-51 valve to position 2, turns on the P-FS-10 pump and starts pumping the emulsifier 2. The mass of the pumped emulsifier is controlled by a tensometric system on the tank.
+    - After the completion of the injection of all components and the stage of mixing the FF, the operator controls the quality of the resulting TF and if the results are satisfactory, presses the button "TF is ready", the message "Preparation of the fuel phase is completed" is displayed on the operator's screen. Before pressing the “TF is ready” button, the operator has the opportunity to add any of the components to the B-FS-09 tank in the required quantity.
+    - Prior to pressing the FF Ready button, the operator must not be able to pump FF from the B-FS-09 tank.
+    - After pressing the FF Ready button, the operator should not be able to add ingredients to the B-FS-09 preparation tank.
+    - It should be possible to turn off the TF Ready status from the TF preparation page.
+    - After the preparation of the fuel phase is completed, it can either be used in the current process or transferred to a special IBC for further storage. To do this, provide a button - "download fuel phase in IBC". In this case, the H-FS-52 valve switches to the IBC position (B-FS-10) and the P-FS-02 pump is turned on.
+    - In the event of a process interruption for any reason, there must be it is possible to continue the preparation of the fuel phase from the interrupted moment.
+
+
 
 − Sequence of fuel phase preparation:
 o The current balance in the tank B-FS-09 is checked. If there is a remainder
