@@ -4,25 +4,25 @@ VERSION : 0.1
 
 
   STRUCT 	
-   HS_EZ_01 : BOOL ;	//Общезаводская авария
-   HS_EZ_02 : BOOL ;	//Аварийная кнопка шкафа CP1
-   HS_EZ_03 : BOOL ;	//Аварийная кнопка шкафа CP2
-   HS_EZ_04 : BOOL ;	//Аварийная кнопка шкафа CP3
-   HS_EZ_05 : BOOL ;	//Аварийная кнопка шкафа CP4
-   HS_EZ_06 : BOOL ;	//Аварийная кнопка шкафа CP5
-   HS_EZ_07 : BOOL ;	//Аварийная кнопка шкафа CP6
-   HS_EZ_08 : BOOL ;	//Аварийная кнопка шкафа CP7
-   HS_EZ_09 : BOOL ;	//Аварийная кнопка шкафа CP8
-   HS_EZ_11 : BOOL ;	//Аварийная кнопка шкафа CP10
-   HS_EZ_12 : BOOL ;	//Аварийная кнопка шкафа CP11
-   HS_EZ_13 : BOOL ;	//Аварийная кнопка шкафа CP12
-   HS_EZ_14 : BOOL ;	//Аварийная кнопка шкафа CP13
-   HS_EZ_15 : BOOL ;	//Аварийная кнопка шкафа CP14
-   reserve : BOOL ;	//резерв
-   HS_EZ_49 : BOOL ;	//Аварийная кнопка участка уксусной кислоты
-   UPS_OK : BOOL ;	//UPS работает в нормальном режиме
-   UPS_BAT_FAULT : BOOL ;	//UPS батарея не готова
-   COMM1_ERROR : BOOL ;	//Ошибка коммутатора 1
+   HS_EZ_01 : BOOL ;	//ГЋГЎГ№ГҐГ§Г ГўГ®Г¤Г±ГЄГ Гї Г ГўГ Г°ГЁГї
+   HS_EZ_02 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP1
+   HS_EZ_03 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP2
+   HS_EZ_04 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP3
+   HS_EZ_05 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP4
+   HS_EZ_06 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP5
+   HS_EZ_07 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP6
+   HS_EZ_08 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP7
+   HS_EZ_09 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP8
+   HS_EZ_11 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP10
+   HS_EZ_12 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP11
+   HS_EZ_13 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP12
+   HS_EZ_14 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP13
+   HS_EZ_15 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГёГЄГ ГґГ  CP14
+   reserve : BOOL ;	//Г°ГҐГ§ГҐГ°Гў
+   HS_EZ_49 : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  ГіГ·Г Г±ГІГЄГ  ГіГЄГ±ГіГ±Г­Г®Г© ГЄГЁГ±Г«Г®ГІГ»
+   UPS_OK : BOOL ;	//UPS Г°Г ГЎГ®ГІГ ГҐГІ Гў Г­Г®Г°Г¬Г Г«ГјГ­Г®Г¬ Г°ГҐГ¦ГЁГ¬ГҐ
+   UPS_BAT_FAULT : BOOL ;	//UPS ГЎГ ГІГ Г°ГҐГї Г­ГҐ ГЈГ®ГІГ®ГўГ 
+   COMM1_ERROR : BOOL ;	//ГЋГёГЁГЎГЄГ  ГЄГ®Г¬Г¬ГіГІГ ГІГ®Г°Г  1
   END_STRUCT ;	
 BEGIN
    HS_EZ_01 := TRUE; 
@@ -52,678 +52,678 @@ VERSION : 0.1
 
 
   STRUCT 	
-   Interlock_16_1 : BOOL ;	//Блокировка 16. Таймер задержки покрытия
-   Interlock_16_2 : BOOL ;	//Блокировка 16. Резерв
-   Interlock_16_3 : BOOL ;	//Блокировка 16. Резерв
-   Interlock_16_4 : BOOL ;	//Блокировка 16. Резерв
-   Interlock_16_5 : BOOL ;	//Блокировка 16. Резерв
-   Interlock_16_6 : BOOL ;	//Блокировка 16. Резерв
-   Interlock_16_7 : BOOL ;	//Блокировка 16. Резерв
-   Interlock_16_8 : BOOL ;	//Блокировка 16. Резерв
-   Interlock_17_1 : BOOL ;	//Блокировка 17. Клапан H-LPS-03
-   Interlock_17_2 : BOOL ;	//Блокировка 17. Резерв
-   Interlock_17_3 : BOOL ;	//Блокировка 17. Резерв
-   Interlock_17_4 : BOOL ;	//Блокировка 17. Резерв
-   Interlock_17_5 : BOOL ;	//Блокировка 17. Резерв
-   Interlock_17_6 : BOOL ;	//Блокировка 17. Резерв
-   Interlock_17_7 : BOOL ;	//Блокировка 17. Резерв
-   Interlock_17_8 : BOOL ;	//Блокировка 17. Резерв
-   Interlock_18_1 : BOOL ;	//Блокировка 18. Двигатель R-OS-01M
-   Interlock_18_2 : BOOL ;	//Блокировка 18. Двигатель H-AN-01M
-   Interlock_18_3 : BOOL ;	//Блокировка 18. Клапан H-LPS-06
-   Interlock_18_4 : BOOL ;	//Блокировка 18. Резерв
-   Interlock_18_5 : BOOL ;	//Блокировка 18. Резерв
-   Interlock_18_6 : BOOL ;	//Блокировка 18. Резерв
-   Interlock_18_7 : BOOL ;	//Блокировка 18. Резерв
-   Interlock_18_8 : BOOL ;	//Блокировка 18. Резерв
-   Interlock_19_1 : BOOL ;	//Блокировка 19. Насос P-OS-01M
-   Interlock_19_2 : BOOL ;	//Блокировка 19. Резерв
-   Interlock_19_3 : BOOL ;	//Блокировка 19. Резерв
-   Interlock_19_4 : BOOL ;	//Блокировка 19. Резерв
-   Interlock_19_5 : BOOL ;	//Блокировка 19. Резерв
-   Interlock_19_6 : BOOL ;	//Блокировка 19. Резерв
-   Interlock_19_7 : BOOL ;	//Блокировка 19. Резерв
-   Interlock_19_8 : BOOL ;	//Блокировка 19. Резерв
-   Interlock_20_1 : BOOL ;	//Блокировка 20. Двигатель H-AN-01M
-   Interlock_20_2 : BOOL ;	//Блокировка 20. Резерв
-   Interlock_20_3 : BOOL ;	//Блокировка 20. Резерв
-   Interlock_20_4 : BOOL ;	//Блокировка 20. Резерв
-   Interlock_20_5 : BOOL ;	//Блокировка 20. Резерв
-   Interlock_20_6 : BOOL ;	//Блокировка 20. Резерв
-   Interlock_20_7 : BOOL ;	//Блокировка 20. Резерв
-   Interlock_20_8 : BOOL ;	//Блокировка 20. Резерв
-   Interlock_21_1 : BOOL ;	//Блокировка 21. Клапан H-LPS-06
-   Interlock_21_2 : BOOL ;	//Блокировка 21. Резерв
-   Interlock_21_3 : BOOL ;	//Блокировка 21. Резерв
-   Interlock_21_4 : BOOL ;	//Блокировка 21. Резерв
-   Interlock_21_5 : BOOL ;	//Блокировка 21. Резерв
-   Interlock_21_6 : BOOL ;	//Блокировка 21. Резерв
-   Interlock_21_7 : BOOL ;	//Блокировка 21. Резерв
-   Interlock_21_8 : BOOL ;	//Блокировка 21. Резерв
-   Interlock_22_1 : BOOL ;	//Блокировка 22. Насос P-OS-01M
-   Interlock_22_2 : BOOL ;	//Блокировка 22. Резерв
-   Interlock_22_3 : BOOL ;	//Блокировка 22. Резерв
-   Interlock_22_4 : BOOL ;	//Блокировка 22. Резерв
-   Interlock_22_5 : BOOL ;	//Блокировка 22. Резерв
-   Interlock_22_6 : BOOL ;	//Блокировка 22. Резерв
-   Interlock_22_7 : BOOL ;	//Блокировка 22. Резерв
-   Interlock_22_8 : BOOL ;	//Блокировка 22. Резерв
-   Interlock_23_1 : BOOL ;	//Блокировка 23. Клапан H-LPS-03
-   Interlock_23_2 : BOOL ;	//Блокировка 23. Клапан H-LPS-06
-   Interlock_23_3 : BOOL ;	//Блокировка 23. Резерв
-   Interlock_23_4 : BOOL ;	//Блокировка 23. Резерв
-   Interlock_23_5 : BOOL ;	//Блокировка 23. Резерв
-   Interlock_23_6 : BOOL ;	//Блокировка 23. Резерв
-   Interlock_23_7 : BOOL ;	//Блокировка 23. Резерв
-   Interlock_23_8 : BOOL ;	//Блокировка 23. Резерв
-   Interlock_24_1 : BOOL ;	//Блокировка 24. Двигатель H-AN-01M
-   Interlock_24_2 : BOOL ;	//Блокировка 24. Двигатель H-AN-01M
-   Interlock_24_3 : BOOL ;	//Блокировка 24. Резерв
-   Interlock_24_4 : BOOL ;	//Блокировка 24. Резерв
-   Interlock_24_5 : BOOL ;	//Блокировка 24. Резерв
-   Interlock_24_6 : BOOL ;	//Блокировка 24. Резерв
-   Interlock_24_7 : BOOL ;	//Блокировка 24. Резерв
-   Interlock_24_8 : BOOL ;	//Блокировка 24. Резерв
-   Interlock_25_1 : BOOL ;	//Блокировка 25. Насос P-OS-02M
-   Interlock_25_2 : BOOL ;	//Блокировка 25. Резерв
-   Interlock_25_3 : BOOL ;	//Блокировка 25. Резерв
-   Interlock_25_4 : BOOL ;	//Блокировка 25. Резерв
-   Interlock_25_5 : BOOL ;	//Блокировка 25. Резерв
-   Interlock_25_6 : BOOL ;	//Блокировка 25. Резерв
-   Interlock_25_7 : BOOL ;	//Блокировка 25. Резерв
-   Interlock_25_8 : BOOL ;	//Блокировка 25. Резерв
-   Interlock_26_1 : BOOL ;	//Блокировка 26. Двигатель R-OS-02M
-   Interlock_26_2 : BOOL ;	//Блокировка 26. Шнек H-AN-02M
-   Interlock_26_3 : BOOL ;	//Блокировка 26. Клапан H-LPS-17
-   Interlock_26_4 : BOOL ;	//Блокировка 26. Резерв
-   Interlock_26_5 : BOOL ;	//Блокировка 26. Резерв
-   Interlock_26_6 : BOOL ;	//Блокировка 26. Резерв
-   Interlock_26_7 : BOOL ;	//Блокировка 26. Резерв
-   Interlock_26_8 : BOOL ;	//Блокировка 26. Резерв
-   Interlock_27_1 : BOOL ;	//Блокировка 27. Таймер задержки покрытия
-   Interlock_27_2 : BOOL ;	//Блокировка 27. Резерв
-   Interlock_27_3 : BOOL ;	//Блокировка 27. Резерв
-   Interlock_27_4 : BOOL ;	//Блокировка 27. Резерв
-   Interlock_27_5 : BOOL ;	//Блокировка 27. Резерв
-   Interlock_27_6 : BOOL ;	//Блокировка 27. Резерв
-   Interlock_27_7 : BOOL ;	//Блокировка 27. Резерв
-   Interlock_27_8 : BOOL ;	//Блокировка 27. Резерв
-   Interlock_28_1 : BOOL ;	//Блокировка 28. Клапан H-LPS-14
-   Interlock_28_2 : BOOL ;	//Блокировка 28. Резерв
-   Interlock_28_3 : BOOL ;	//Блокировка 28. Резерв
-   Interlock_28_4 : BOOL ;	//Блокировка 28. Резерв
-   Interlock_28_5 : BOOL ;	//Блокировка 28. Резерв
-   Interlock_28_6 : BOOL ;	//Блокировка 28. Резерв
-   Interlock_28_7 : BOOL ;	//Блокировка 28. Резерв
-   Interlock_28_8 : BOOL ;	//Блокировка 28. Резерв
-   Interlock_29_1 : BOOL ;	//Блокировка 29. Двигатель H-AN-02M
-   Interlock_29_2 : BOOL ;	//Блокировка 29. Резерв
-   Interlock_29_3 : BOOL ;	//Блокировка 29. Резерв
-   Interlock_29_4 : BOOL ;	//Блокировка 29. Резерв
-   Interlock_29_5 : BOOL ;	//Блокировка 29. Резерв
-   Interlock_29_6 : BOOL ;	//Блокировка 29. Резерв
-   Interlock_29_7 : BOOL ;	//Блокировка 29. Резерв
-   Interlock_29_8 : BOOL ;	//Блокировка 29. Резерв
-   Interlock_30_1 : BOOL ;	//Блокировка 30. Клапан H-LPS-17
-   Interlock_30_2 : BOOL ;	//Блокировка 30. Резерв
-   Interlock_30_3 : BOOL ;	//Блокировка 30. Резерв
-   Interlock_30_4 : BOOL ;	//Блокировка 30. Резерв
-   Interlock_30_5 : BOOL ;	//Блокировка 30. Резерв
-   Interlock_30_6 : BOOL ;	//Блокировка 30. Резерв
-   Interlock_30_7 : BOOL ;	//Блокировка 30. Резерв
-   Interlock_30_8 : BOOL ;	//Блокировка 30. Резерв
-   Interlock_31_1 : BOOL ;	//Блокировка 31. Насос P-OS-02M
-   Interlock_31_2 : BOOL ;	//Блокировка 31. Резерв
-   Interlock_31_3 : BOOL ;	//Блокировка 31. Резерв
-   Interlock_31_4 : BOOL ;	//Блокировка 31. Резерв
-   Interlock_31_5 : BOOL ;	//Блокировка 31. Резерв
-   Interlock_31_6 : BOOL ;	//Блокировка 31. Резерв
-   Interlock_31_7 : BOOL ;	//Блокировка 31. Резерв
-   Interlock_31_8 : BOOL ;	//Блокировка 31. Резерв
-   Interlock_32_1 : BOOL ;	//Блокировка 32. Клапан H-LPS-14
-   Interlock_32_2 : BOOL ;	//Блокировка 32. Клапан H-LPS-17
-   Interlock_32_3 : BOOL ;	//Блокировка 32. Резерв
-   Interlock_32_4 : BOOL ;	//Блокировка 32. Резерв
-   Interlock_32_5 : BOOL ;	//Блокировка 32. Резерв
-   Interlock_32_6 : BOOL ;	//Блокировка 32. Резерв
-   Interlock_32_7 : BOOL ;	//Блокировка 32. Резерв
-   Interlock_32_8 : BOOL ;	//Блокировка 32. Резерв
-   Interlock_33_1 : BOOL ;	//Блокировка 33. Двигатель H-AN-02M
-   Interlock_33_2 : BOOL ;	//Блокировка 33. Двигатель H-AN-02M
-   Interlock_33_3 : BOOL ;	//Блокировка 33. Резерв
-   Interlock_33_4 : BOOL ;	//Блокировка 33. Резерв
-   Interlock_33_5 : BOOL ;	//Блокировка 33. Резерв
-   Interlock_33_6 : BOOL ;	//Блокировка 33. Резерв
-   Interlock_33_7 : BOOL ;	//Блокировка 33. Резерв
-   Interlock_33_8 : BOOL ;	//Блокировка 33. Резерв
-   Interlock_34_1 : BOOL ;	//Блокировка 34. Насос P-OS-01M
-   Interlock_34_2 : BOOL ;	//Блокировка 34. Клапан H-PW-02
-   Interlock_34_3 : BOOL ;	//Блокировка 34. Резерв
-   Interlock_34_4 : BOOL ;	//Блокировка 34. Резерв
-   Interlock_34_5 : BOOL ;	//Блокировка 34. Резерв
-   Interlock_34_6 : BOOL ;	//Блокировка 34. Резерв
-   Interlock_34_7 : BOOL ;	//Блокировка 34. Резерв
-   Interlock_34_8 : BOOL ;	//Блокировка 34. Резерв
-   Interlock_35_1 : BOOL ;	//Блокировка 35. Насос P-OS-02M
-   Interlock_35_2 : BOOL ;	//Блокировка 35. Клапан H-PW-02
-   Interlock_35_3 : BOOL ;	//Блокировка 35. Резерв
-   Interlock_35_4 : BOOL ;	//Блокировка 35. Резерв
-   Interlock_35_5 : BOOL ;	//Блокировка 35. Резерв
-   Interlock_35_6 : BOOL ;	//Блокировка 35. Резерв
-   Interlock_35_7 : BOOL ;	//Блокировка 35. Резерв
-   Interlock_35_8 : BOOL ;	//Блокировка 35. Резерв
-   Interlock_36_1 : BOOL ;	//Блокировка 36. Насос P-OS-01M
-   Interlock_36_2 : BOOL ;	//Блокировка 36. Насос P-OS-02M
-   Interlock_36_3 : BOOL ;	//Блокировка 36. Клапан H-PW-02
-   Interlock_36_4 : BOOL ;	//Блокировка 36. Резерв
-   Interlock_36_5 : BOOL ;	//Блокировка 36. Резерв
-   Interlock_36_6 : BOOL ;	//Блокировка 36. Резерв
-   Interlock_36_7 : BOOL ;	//Блокировка 36. Резерв
-   Interlock_36_8 : BOOL ;	//Блокировка 36. Резерв
-   Interlock_37_1 : BOOL ;	//Блокировка 37. Клапан H-HW-03
-   Interlock_37_2 : BOOL ;	//Блокировка 37. Резерв
-   Interlock_37_3 : BOOL ;	//Блокировка 37. Резерв
-   Interlock_37_4 : BOOL ;	//Блокировка 37. Резерв
-   Interlock_37_5 : BOOL ;	//Блокировка 37. Резерв
-   Interlock_37_6 : BOOL ;	//Блокировка 37. Резерв
-   Interlock_37_7 : BOOL ;	//Блокировка 37. Резерв
-   Interlock_37_8 : BOOL ;	//Блокировка 37. Резерв
-   Interlock_38_1 : BOOL ;	//Блокировка 38. Насос P-OS-03M
-   Interlock_38_2 : BOOL ;	//Блокировка 38. Клапан H-HW-03
-   Interlock_38_3 : BOOL ;	//Блокировка 38. PID регулятор P-OS-03
-   Interlock_38_4 : BOOL ;	//Блокировка 38. Резерв
-   Interlock_38_5 : BOOL ;	//Блокировка 38. Резерв
-   Interlock_38_6 : BOOL ;	//Блокировка 38. Резерв
-   Interlock_38_7 : BOOL ;	//Блокировка 38. Резерв
-   Interlock_38_8 : BOOL ;	//Блокировка 38. Резерв
-   Interlock_39_1 : BOOL ;	//Блокировка 39. Насос P-OS-03M
-   Interlock_39_2 : BOOL ;	//Блокировка 39. PID регулятор P-OS-03
-   Interlock_39_3 : BOOL ;	//Блокировка 39. Резерв
-   Interlock_39_4 : BOOL ;	//Блокировка 39. Резерв
-   Interlock_39_5 : BOOL ;	//Блокировка 39. Резерв
-   Interlock_39_6 : BOOL ;	//Блокировка 39. Резерв
-   Interlock_39_7 : BOOL ;	//Блокировка 39. Резерв
-   Interlock_39_8 : BOOL ;	//Блокировка 39. Резерв
-   Interlock_40_1 : BOOL ;	//Блокировка 40. Насос P-OS-03M
-   Interlock_40_2 : BOOL ;	//Блокировка 40. Клапан H-OS-48
-   Interlock_40_3 : BOOL ;	//Блокировка 40. Клапан H-FS-47
-   Interlock_40_4 : BOOL ;	//Блокировка 40. Клапан H-FS-24
-   Interlock_40_5 : BOOL ;	//Блокировка 40. PID регулятор P-OS-03
-   Interlock_40_6 : BOOL ;	//Блокировка 40. Резерв
-   Interlock_40_7 : BOOL ;	//Блокировка 40. Резерв
-   Interlock_40_8 : BOOL ;	//Блокировка 40. Резерв
-   Interlock_41_1 : BOOL ;	//Блокировка 41. Клапан H-HW-12
-   Interlock_41_2 : BOOL ;	//Блокировка 41. Резерв
-   Interlock_41_3 : BOOL ;	//Блокировка 41. Резерв
-   Interlock_41_4 : BOOL ;	//Блокировка 41. Резерв
-   Interlock_41_5 : BOOL ;	//Блокировка 41. Резерв
-   Interlock_41_6 : BOOL ;	//Блокировка 41. Резерв
-   Interlock_41_7 : BOOL ;	//Блокировка 41. Резерв
-   Interlock_41_8 : BOOL ;	//Блокировка 41. Резерв
-   Interlock_42_1 : BOOL ;	//Блокировка 42. Насос P-OS-04M
-   Interlock_42_2 : BOOL ;	//Блокировка 42. PID регулятор P-OS-04
-   Interlock_42_3 : BOOL ;	//Блокировка 42. Резерв
-   Interlock_42_4 : BOOL ;	//Блокировка 42. Резерв
-   Interlock_42_5 : BOOL ;	//Блокировка 42. Резерв
-   Interlock_42_6 : BOOL ;	//Блокировка 42. Резерв
-   Interlock_42_7 : BOOL ;	//Блокировка 42. Резерв
-   Interlock_42_8 : BOOL ;	//Блокировка 42. Резерв
-   Interlock_43_1 : BOOL ;	//Блокировка 43. Насос P-OS-04M
-   Interlock_43_2 : BOOL ;	//Блокировка 43. Клапан H-FS-48
-   Interlock_43_3 : BOOL ;	//Блокировка 43. Клапан H-FS-23
-   Interlock_43_4 : BOOL ;	//Блокировка 43. Клапан H-OS-53
-   Interlock_43_5 : BOOL ;	//Блокировка 43. PID регулятор P-OS-04
-   Interlock_43_6 : BOOL ;	//Блокировка 43. Резерв
-   Interlock_43_7 : BOOL ;	//Блокировка 43. Резерв
-   Interlock_43_8 : BOOL ;	//Блокировка 43. Резерв
-   Interlock_44_1 : BOOL ;	//Блокировка 44. Насос P-OS-04M
-   Interlock_44_2 : BOOL ;	//Блокировка 44. Клапан H-HW-12
-   Interlock_44_3 : BOOL ;	//Блокировка 44. PID регулятор P-OS-04
-   Interlock_44_4 : BOOL ;	//Блокировка 44. Резерв
-   Interlock_44_5 : BOOL ;	//Блокировка 44. Резерв
-   Interlock_44_6 : BOOL ;	//Блокировка 44. Резерв
-   Interlock_44_7 : BOOL ;	//Блокировка 44. Резерв
-   Interlock_44_8 : BOOL ;	//Блокировка 44. Резерв
-   Interlock_45_1 : BOOL ;	//Блокировка 45. Насос P-OS-03M
-   Interlock_45_2 : BOOL ;	//Блокировка 45. Насос P-OS-04M
-   Interlock_45_3 : BOOL ;	//Блокировка 45. Клапан H-HW-47
-   Interlock_45_4 : BOOL ;	//Блокировка 45. PID регулятор P-OS-03
-   Interlock_45_5 : BOOL ;	//Блокировка 45. PID регулятор P-OS-04
-   Interlock_45_6 : BOOL ;	//Блокировка 45. Резерв
-   Interlock_45_7 : BOOL ;	//Блокировка 45. Резерв
-   Interlock_45_8 : BOOL ;	//Блокировка 45. Резерв
-   Interlock_46_1 : BOOL ;	//Блокировка 46. Клапан H-HW-47
-   Interlock_46_2 : BOOL ;	//Блокировка 46. Резерв
-   Interlock_46_3 : BOOL ;	//Блокировка 46. Резерв
-   Interlock_46_4 : BOOL ;	//Блокировка 46. Резерв
-   Interlock_46_5 : BOOL ;	//Блокировка 46. Резерв
-   Interlock_46_6 : BOOL ;	//Блокировка 46. Резерв
-   Interlock_46_7 : BOOL ;	//Блокировка 46. Резерв
-   Interlock_46_8 : BOOL ;	//Блокировка 46. Резерв
-   Interlock_47_1 : BOOL ;	//Блокировка 47. Клапан H-OS-48
-   Interlock_47_2 : BOOL ;	//Блокировка 47. Клапан H-FS-47
-   Interlock_47_3 : BOOL ;	//Блокировка 47. Клапан H-FS-24
-   Interlock_47_4 : BOOL ;	//Блокировка 47. Резерв
-   Interlock_47_5 : BOOL ;	//Блокировка 47. Резерв
-   Interlock_47_6 : BOOL ;	//Блокировка 47. Резерв
-   Interlock_47_7 : BOOL ;	//Блокировка 47. Резерв
-   Interlock_47_8 : BOOL ;	//Блокировка 47. Резерв
-   Interlock_48_1 : BOOL ;	//Блокировка 48. Насос P-OS-05M
-   Interlock_48_2 : BOOL ;	//Блокировка 48. Резерв
-   Interlock_48_3 : BOOL ;	//Блокировка 48. Резерв
-   Interlock_48_4 : BOOL ;	//Блокировка 48. Резерв
-   Interlock_48_5 : BOOL ;	//Блокировка 48. Резерв
-   Interlock_48_6 : BOOL ;	//Блокировка 48. Резерв
-   Interlock_48_7 : BOOL ;	//Блокировка 48. Резерв
-   Interlock_48_8 : BOOL ;	//Блокировка 48. Резерв
-   Interlock_49_1 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_49_2 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_49_3 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_49_4 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_49_5 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_49_6 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_49_7 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_49_8 : BOOL ;	//Блокировка 49. Резерв
-   Interlock_50_1 : BOOL ;	//Блокировка 50. Насос P-OS-01M
-   Interlock_50_2 : BOOL ;	//Блокировка 50. Резерв
-   Interlock_50_3 : BOOL ;	//Блокировка 50. Резерв
-   Interlock_50_4 : BOOL ;	//Блокировка 50. Резерв
-   Interlock_50_5 : BOOL ;	//Блокировка 50. Резерв
-   Interlock_50_6 : BOOL ;	//Блокировка 50. Резерв
-   Interlock_50_7 : BOOL ;	//Блокировка 50. Резерв
-   Interlock_50_8 : BOOL ;	//Блокировка 50. Резерв
-   Interlock_51_1 : BOOL ;	//Блокировка 51. Насос P-FS-06M
-   Interlock_51_2 : BOOL ;	//Блокировка 51. Резерв
-   Interlock_51_3 : BOOL ;	//Блокировка 51. Резерв
-   Interlock_51_4 : BOOL ;	//Блокировка 51. Резерв
-   Interlock_51_5 : BOOL ;	//Блокировка 51. Резерв
-   Interlock_51_6 : BOOL ;	//Блокировка 51. Резерв
-   Interlock_51_7 : BOOL ;	//Блокировка 51. Резерв
-   Interlock_51_8 : BOOL ;	//Блокировка 51. Резерв
-   Interlock_52_1 : BOOL ;	//Блокировка 52. Клапан H-OS-48
-   Interlock_52_2 : BOOL ;	//Блокировка 52. Насос P-FS-03M
-   Interlock_52_3 : BOOL ;	//Блокировка 52. Клапан H-FS-47
-   Interlock_52_4 : BOOL ;	//Блокировка 52. Клапан H-FS-24
-   Interlock_52_5 : BOOL ;	//Блокировка 52. PID регулятор P-FS-03
-   Interlock_52_6 : BOOL ;	//Блокировка 52. Резерв
-   Interlock_52_7 : BOOL ;	//Блокировка 52. Резерв
-   Interlock_52_8 : BOOL ;	//Блокировка 52. Резерв
-   Interlock_53_1 : BOOL ;	//Блокировка 53. Насос P-FS-04M
-   Interlock_53_2 : BOOL ;	//Блокировка 53. Клапан H-FS-48
-   Interlock_53_3 : BOOL ;	//Блокировка 53. Клапан H-FS-23
-   Interlock_53_4 : BOOL ;	//Блокировка 53. Клапан H-OS-53
-   Interlock_53_5 : BOOL ;	//Блокировка 53.  PID регулятор P-FS-04
-   Interlock_53_6 : BOOL ;	//Блокировка 53. Резерв
-   Interlock_53_7 : BOOL ;	//Блокировка 53. Резерв
-   Interlock_53_8 : BOOL ;	//Блокировка 53. Резерв
-   Interlock_54_1 : BOOL ;	//Блокировка 54. Насос P-OS-05M
-   Interlock_54_2 : BOOL ;	//Блокировка 54. Резерв
-   Interlock_54_3 : BOOL ;	//Блокировка 54. Резерв
-   Interlock_54_4 : BOOL ;	//Блокировка 54. Резерв
-   Interlock_54_5 : BOOL ;	//Блокировка 54. Резерв
-   Interlock_54_6 : BOOL ;	//Блокировка 54. Резерв
-   Interlock_54_7 : BOOL ;	//Блокировка 54. Резерв
-   Interlock_54_8 : BOOL ;	//Блокировка 54. Резерв
-   Interlock_55_1 : BOOL ;	//Блокировка 55. Двигатель H-AN-01M
-   Interlock_55_2 : BOOL ;	//Блокировка 55. Клапан H-PW-02
-   Interlock_55_3 : BOOL ;	//Блокировка 55. Насос P-OS-05M
-   Interlock_55_4 : BOOL ;	//Блокировка 55. Резерв
-   Interlock_55_5 : BOOL ;	//Блокировка 55. Резерв
-   Interlock_55_6 : BOOL ;	//Блокировка 55. Резерв
-   Interlock_55_7 : BOOL ;	//Блокировка 55. Резерв
-   Interlock_55_8 : BOOL ;	//Блокировка 55. Резерв
-   Interlock_56_1 : BOOL ;	//Блокировка 56. Двигатель H-AN-01M
-   Interlock_56_2 : BOOL ;	//Блокировка 56. Резерв
-   Interlock_56_3 : BOOL ;	//Блокировка 56. Резерв
-   Interlock_56_4 : BOOL ;	//Блокировка 56. Резерв
-   Interlock_56_5 : BOOL ;	//Блокировка 56. Резерв
-   Interlock_56_6 : BOOL ;	//Блокировка 56. Резерв
-   Interlock_56_7 : BOOL ;	//Блокировка 56. Резерв
-   Interlock_56_8 : BOOL ;	//Блокировка 56. Резерв
-   Interlock_57_1 : BOOL ;	//Блокировка 57. Двигатель H-AN-02M
-   Interlock_57_2 : BOOL ;	//Блокировка 57. Резерв
-   Interlock_57_3 : BOOL ;	//Блокировка 57. Резерв
-   Interlock_57_4 : BOOL ;	//Блокировка 57. Резерв
-   Interlock_57_5 : BOOL ;	//Блокировка 57. Резерв
-   Interlock_57_6 : BOOL ;	//Блокировка 57. Резерв
-   Interlock_57_7 : BOOL ;	//Блокировка 57. Резерв
-   Interlock_57_8 : BOOL ;	//Блокировка 57. Резерв
-   Interlock_58_1 : BOOL ;	//Блокировка 58. Двигатель H-AN-01M
-   Interlock_58_2 : BOOL ;	//Блокировка 58. Резерв
-   Interlock_58_3 : BOOL ;	//Блокировка 58. Резерв
-   Interlock_58_4 : BOOL ;	//Блокировка 58. Резерв
-   Interlock_58_5 : BOOL ;	//Блокировка 58. Резерв
-   Interlock_58_6 : BOOL ;	//Блокировка 58. Резерв
-   Interlock_58_7 : BOOL ;	//Блокировка 58. Резерв
-   Interlock_58_8 : BOOL ;	//Блокировка 58. Резерв
-   Interlock_59_1 : BOOL ;	//Блокировка 59. Двигатель H-AN-02M
-   Interlock_59_2 : BOOL ;	//Блокировка 59. Резерв
-   Interlock_59_3 : BOOL ;	//Блокировка 59. Резерв
-   Interlock_59_4 : BOOL ;	//Блокировка 59. Резерв
-   Interlock_59_5 : BOOL ;	//Блокировка 59. Резерв
-   Interlock_59_6 : BOOL ;	//Блокировка 59. Резерв
-   Interlock_59_7 : BOOL ;	//Блокировка 59. Резерв
-   Interlock_59_8 : BOOL ;	//Блокировка 59. Резерв
-   Interlock_60_1 : BOOL ;	//Блокировка 60. Насос P-FS-01M
-   Interlock_60_2 : BOOL ;	//Блокировка 60. Клапан H-FS-48
-   Interlock_60_3 : BOOL ;	//Блокировка 60. Клапан H-FS-23
-   Interlock_60_4 : BOOL ;	//Блокировка 60. Клапан H-OS-53
-   Interlock_60_5 : BOOL ;	//Блокировка 60.  PID регулятор P-FS-01
-   Interlock_60_6 : BOOL ;	//Блокировка 60. Резерв
-   Interlock_60_7 : BOOL ;	//Блокировка 60. Резерв
-   Interlock_60_8 : BOOL ;	//Блокировка 60. Резерв
-   Interlock_61_1 : BOOL ;	//Блокировка 61. Клапан V-ANE-06
-   Interlock_61_2 : BOOL ;	//Блокировка 61. Двигатель H-AN-03M
-   Interlock_61_3 : BOOL ;	//Блокировка 61. Резерв
-   Interlock_61_4 : BOOL ;	//Блокировка 61. Резерв
-   Interlock_61_5 : BOOL ;	//Блокировка 61. Резерв
-   Interlock_61_6 : BOOL ;	//Блокировка 61. Резерв
-   Interlock_61_7 : BOOL ;	//Блокировка 61. Резерв
-   Interlock_61_8 : BOOL ;	//Блокировка 61. Резерв
-   Interlock_62_1 : BOOL ;	//Блокировка 62. Клапан V-ANE-17
-   Interlock_62_2 : BOOL ;	//Блокировка 62. Двигатель H-AN-04M
-   Interlock_62_3 : BOOL ;	//Блокировка 62. Резерв
-   Interlock_62_4 : BOOL ;	//Блокировка 62. Резерв
-   Interlock_62_5 : BOOL ;	//Блокировка 62. Резерв
-   Interlock_62_6 : BOOL ;	//Блокировка 62. Резерв
-   Interlock_62_7 : BOOL ;	//Блокировка 62. Резерв
-   Interlock_62_8 : BOOL ;	//Блокировка 62. Резерв
-   Interlock_63_1 : BOOL ;	//Блокировка 63. Насос P-FS-02M
-   Interlock_63_2 : BOOL ;	//Блокировка 63. Клапан H-FS-47
-   Interlock_63_3 : BOOL ;	//Блокировка 63. Клапан H-FS-24
-   Interlock_63_4 : BOOL ;	//Блокировка 63. Клапан H-OS-48
-   Interlock_63_5 : BOOL ;	//Блокировка 63.  PID регулятор P-FS-02
-   Interlock_63_6 : BOOL ;	//Блокировка 63. Резерв
-   Interlock_63_7 : BOOL ;	//Блокировка 63. Резерв
-   Interlock_63_8 : BOOL ;	//Блокировка 63. Резерв
-   Interlock_64_1 : BOOL ;	//Блокировка 64. Насос P-AS-01M
-   Interlock_64_2 : BOOL ;	//Блокировка 64. Резерв
-   Interlock_64_3 : BOOL ;	//Блокировка 64. Резерв
-   Interlock_64_4 : BOOL ;	//Блокировка 64. Резерв
-   Interlock_64_5 : BOOL ;	//Блокировка 64. Резерв
-   Interlock_64_6 : BOOL ;	//Блокировка 64. Резерв
-   Interlock_64_7 : BOOL ;	//Блокировка 64. Резерв
-   Interlock_64_8 : BOOL ;	//Блокировка 64. Резерв
-   Interlock_65_1 : BOOL ;	//Блокировка 65. Клапан H-OS-48
-   Interlock_65_2 : BOOL ;	//Блокировка 65. Клапан H-FS-47
-   Interlock_65_3 : BOOL ;	//Блокировка 65. Клапан H-FS-24
-   Interlock_65_4 : BOOL ;	//Блокировка 65. Резерв
-   Interlock_65_5 : BOOL ;	//Блокировка 65. Резерв
-   Interlock_65_6 : BOOL ;	//Блокировка 65. Резерв
-   Interlock_65_7 : BOOL ;	//Блокировка 65. Резерв
-   Interlock_65_8 : BOOL ;	//Блокировка 65. Резерв
-   Interlock_66_1 : BOOL ;	//Блокировка 66. Насос P-ANE-01M
-   Interlock_66_2 : BOOL ;	//Блокировка 66. PID регулятор P-ANE-01
-   Interlock_66_3 : BOOL ;	//Блокировка 66. Клапан H-OS-48
-   Interlock_66_4 : BOOL ;	//Блокировка 66. Клапан H-FS-24
-   Interlock_66_5 : BOOL ;	//Блокировка 66. Клапан H-FS-47
-   Interlock_66_6 : BOOL ;	//Блокировка 66. Резерв
-   Interlock_66_7 : BOOL ;	//Блокировка 66. Резерв
-   Interlock_66_8 : BOOL ;	//Блокировка 66. Резерв
-   Interlock_67_1 : BOOL ;	//Блокировка 67. Насос P-OS-02M
-   Interlock_67_2 : BOOL ;	//Блокировка 67. Резерв
-   Interlock_67_3 : BOOL ;	//Блокировка 67. Резерв
-   Interlock_67_4 : BOOL ;	//Блокировка 67. Резерв
-   Interlock_67_5 : BOOL ;	//Блокировка 67. Резерв
-   Interlock_67_6 : BOOL ;	//Блокировка 67. Резерв
-   Interlock_67_7 : BOOL ;	//Блокировка 67. Резерв
-   Interlock_67_8 : BOOL ;	//Блокировка 67. Резерв
-   Interlock_68_1 : BOOL ;	//Блокировка 68. Клапан V-ANE-09-B
-   Interlock_68_2 : BOOL ;	//Блокировка 68. Резерв
-   Interlock_68_3 : BOOL ;	//Блокировка 68. Резерв
-   Interlock_68_4 : BOOL ;	//Блокировка 68. Резерв
-   Interlock_68_5 : BOOL ;	//Блокировка 68. Резерв
-   Interlock_68_6 : BOOL ;	//Блокировка 68. Резерв
-   Interlock_68_7 : BOOL ;	//Блокировка 68. Резерв
-   Interlock_68_8 : BOOL ;	//Блокировка 68. Резерв
-   Interlock_69_1 : BOOL ;	//Блокировка 69. Насос P-ANE-01M
-   Interlock_69_2 : BOOL ;	//Блокировка 69. PID регулятор P-ANE-01
-   Interlock_69_3 : BOOL ;	//Блокировка 69. Клапан H-OS-48
-   Interlock_69_4 : BOOL ;	//Блокировка 69. Клапан H-FS-24
-   Interlock_69_5 : BOOL ;	//Блокировка 69. Клапан H-FS-47
-   Interlock_69_6 : BOOL ;	//Блокировка 69. Резерв
-   Interlock_69_7 : BOOL ;	//Блокировка 69. Резерв
-   Interlock_69_8 : BOOL ;	//Блокировка 69. Резерв
-   Interlock_70_1 : BOOL ;	//Блокировка 70. Клапан H-PW-02
-   Interlock_70_2 : BOOL ;	//Блокировка 70. Двигатель H-AN-02M
-   Interlock_70_3 : BOOL ;	//Блокировка 70. Насос P-OS-05M
-   Interlock_70_4 : BOOL ;	//Блокировка 70. Резерв
-   Interlock_70_5 : BOOL ;	//Блокировка 70. Резерв
-   Interlock_70_6 : BOOL ;	//Блокировка 70. Резерв
-   Interlock_70_7 : BOOL ;	//Блокировка 70. Резерв
-   Interlock_70_8 : BOOL ;	//Блокировка 70. Резерв
-   Interlock_71_1 : BOOL ;	//Блокировка 71. Клапан V-ANE-10-B
-   Interlock_71_2 : BOOL ;	//Блокировка 71. Резерв
-   Interlock_71_3 : BOOL ;	//Блокировка 71. Резерв
-   Interlock_71_4 : BOOL ;	//Блокировка 71. Резерв
-   Interlock_71_5 : BOOL ;	//Блокировка 71. Резерв
-   Interlock_71_6 : BOOL ;	//Блокировка 71. Резерв
-   Interlock_71_7 : BOOL ;	//Блокировка 71. Резерв
-   Interlock_71_8 : BOOL ;	//Блокировка 71. Резерв
-   Interlock_72_1 : BOOL ;	//Блокировка 72. Клапан H-FS-48
-   Interlock_72_2 : BOOL ;	//Блокировка 72. Клапан H-FS-23
-   Interlock_72_3 : BOOL ;	//Блокировка 72. Клапан H-OS-53
-   Interlock_72_4 : BOOL ;	//Блокировка 72. Резерв
-   Interlock_72_5 : BOOL ;	//Блокировка 72. Резерв
-   Interlock_72_6 : BOOL ;	//Блокировка 72. Резерв
-   Interlock_72_7 : BOOL ;	//Блокировка 72. Резерв
-   Interlock_72_8 : BOOL ;	//Блокировка 72. Резерв
-   Interlock_73_1 : BOOL ;	//Блокировка 73. Насос P-ANE-02M
-   Interlock_73_2 : BOOL ;	//Блокировка 73. PID регулятор P-ANE-02
-   Interlock_73_3 : BOOL ;	//Блокировка 73. Клапан H-OS-53
-   Interlock_73_4 : BOOL ;	//Блокировка 73. Клапан H-FS-23
-   Interlock_73_5 : BOOL ;	//Блокировка 73. Клапан H-FS-48
-   Interlock_73_6 : BOOL ;	//Блокировка 73. Резерв
-   Interlock_73_7 : BOOL ;	//Блокировка 73. Резерв
-   Interlock_73_8 : BOOL ;	//Блокировка 73. Резерв
-   Interlock_74_1 : BOOL ;	//Блокировка 74. Насос P-ANE-01M
-   Interlock_74_2 : BOOL ;	//Блокировка 74. PID регулятор P-ANE-01
-   Interlock_74_3 : BOOL ;	//Блокировка 74. Клапан H-OS-48
-   Interlock_74_4 : BOOL ;	//Блокировка 74. Клапан H-FS-24
-   Interlock_74_5 : BOOL ;	//Блокировка 74. Клапан H-FS-47
-   Interlock_74_6 : BOOL ;	//Блокировка 74. Резерв
-   Interlock_74_7 : BOOL ;	//Блокировка 74. Резерв
-   Interlock_74_8 : BOOL ;	//Блокировка 74. Резерв
-   Interlock_75_1 : BOOL ;	//Блокировка 75. Клапан H-ANE-16-B
-   Interlock_75_2 : BOOL ;	//Блокировка 75. Резерв
-   Interlock_75_3 : BOOL ;	//Блокировка 75. Резерв
-   Interlock_75_4 : BOOL ;	//Блокировка 75. Резерв
-   Interlock_75_5 : BOOL ;	//Блокировка 75. Резерв
-   Interlock_75_6 : BOOL ;	//Блокировка 75. Резерв
-   Interlock_75_7 : BOOL ;	//Блокировка 75. Резерв
-   Interlock_75_8 : BOOL ;	//Блокировка 75. Резерв
-   Interlock_76_1 : BOOL ;	//Блокировка 76. Насос P-ANE-02M
-   Interlock_76_2 : BOOL ;	//Блокировка 76. PID регулятор P-ANE-02
-   Interlock_76_3 : BOOL ;	//Блокировка 76. Клапан H-OS-53
-   Interlock_76_4 : BOOL ;	//Блокировка 76. Клапан H-FS-23
-   Interlock_76_5 : BOOL ;	//Блокировка 76. Клапан H-FS-48
-   Interlock_76_6 : BOOL ;	//Блокировка 76. Резерв
-   Interlock_76_7 : BOOL ;	//Блокировка 76. Резерв
-   Interlock_76_8 : BOOL ;	//Блокировка 76. Резерв
-   Interlock_77_1 : BOOL ;	//Блокировка 77. Насос P-ANE-01M
-   Interlock_77_2 : BOOL ;	//Блокировка 77. PID регулятор P-ANE-01
-   Interlock_77_3 : BOOL ;	//Блокировка 77. Клапан H-OS-48
-   Interlock_77_4 : BOOL ;	//Блокировка 77. Клапан H-FS-24
-   Interlock_77_5 : BOOL ;	//Блокировка 77. Клапан H-FS-47
-   Interlock_77_6 : BOOL ;	//Блокировка 77. Резерв
-   Interlock_77_7 : BOOL ;	//Блокировка 77. Резерв
-   Interlock_77_8 : BOOL ;	//Блокировка 77. Резерв
-   Interlock_78_1 : BOOL ;	//Блокировка 78. Клапан H-ANE-15-B
-   Interlock_78_2 : BOOL ;	//Блокировка 78. Резерв
-   Interlock_78_3 : BOOL ;	//Блокировка 78. Резерв
-   Interlock_78_4 : BOOL ;	//Блокировка 78. Резерв
-   Interlock_78_5 : BOOL ;	//Блокировка 78. Резерв
-   Interlock_78_6 : BOOL ;	//Блокировка 78. Резерв
-   Interlock_78_7 : BOOL ;	//Блокировка 78. Резерв
-   Interlock_78_8 : BOOL ;	//Блокировка 78. Резерв
-   Interlock_79_1 : BOOL ;	//Блокировка 79. Клапан H-OS-53
-   Interlock_79_2 : BOOL ;	//Блокировка 79. Клапан H-FS-48
-   Interlock_79_3 : BOOL ;	//Блокировка 79. Клапан H-FS-23
-   Interlock_79_4 : BOOL ;	//Блокировка 79. Резерв
-   Interlock_79_5 : BOOL ;	//Блокировка 79. Резерв
-   Interlock_79_6 : BOOL ;	//Блокировка 79. Резерв
-   Interlock_79_7 : BOOL ;	//Блокировка 79. Резерв
-   Interlock_79_8 : BOOL ;	//Блокировка 79. Резерв
-   Interlock_80_1 : BOOL ;	//Блокировка 80. Насос P-ANE-01M
-   Interlock_80_2 : BOOL ;	//Блокировка 80. PID регулятор P-ANE-01
-   Interlock_80_3 : BOOL ;	//Блокировка 80. Клапан H-OS-48
-   Interlock_80_4 : BOOL ;	//Блокировка 80. Клапан H-FS-24
-   Interlock_80_5 : BOOL ;	//Блокировка 80. Клапан H-FS-47
-   Interlock_80_6 : BOOL ;	//Блокировка 80. Резерв
-   Interlock_80_7 : BOOL ;	//Блокировка 80. Резерв
-   Interlock_80_8 : BOOL ;	//Блокировка 80. Резерв
-   Interlock_81_1 : BOOL ;	//Блокировка 81. Насос P-ANE-02M
-   Interlock_81_2 : BOOL ;	//Блокировка 81. PID регулятор P-ANE-02
-   Interlock_81_3 : BOOL ;	//Блокировка 81. Клапан H-OS-53
-   Interlock_81_4 : BOOL ;	//Блокировка 81. Клапан H-FS-23
-   Interlock_81_5 : BOOL ;	//Блокировка 81. Клапан H-FS-48
-   Interlock_81_6 : BOOL ;	//Блокировка 81. Резерв
-   Interlock_81_7 : BOOL ;	//Блокировка 81. Резерв
-   Interlock_81_8 : BOOL ;	//Блокировка 81. Резерв
-   Interlock_82_1 : BOOL ;	//Блокировка 82. Насос P-HW-01M
-   Interlock_82_2 : BOOL ;	//Блокировка 82. Насос P-HW-02M
-   Interlock_82_3 : BOOL ;	//Блокировка 82. Клапан S-LPS-47
-   Interlock_82_4 : BOOL ;	//Блокировка 82. Клапан H-LPS-45
-   Interlock_82_5 : BOOL ;	//Блокировка 82. PID-регулятор S-LPS-47
-   Interlock_82_6 : BOOL ;	//Блокировка 82. Резерв
-   Interlock_82_7 : BOOL ;	//Блокировка 82. Резерв
-   Interlock_82_8 : BOOL ;	//Блокировка 82. Резерв
-   Interlock_83_1 : BOOL ;	//Блокировка 83. Насос P-ANE-02M
-   Interlock_83_2 : BOOL ;	//Блокировка 83. PID регулятор P-ANE-02
-   Interlock_83_3 : BOOL ;	//Блокировка 83. Клапан H-OS-53
-   Interlock_83_4 : BOOL ;	//Блокировка 83. Клапан H-FS-23
-   Interlock_83_5 : BOOL ;	//Блокировка 83. Клапан H-FS-48
-   Interlock_83_6 : BOOL ;	//Блокировка 83. Резерв
-   Interlock_83_7 : BOOL ;	//Блокировка 83. Резерв
-   Interlock_83_8 : BOOL ;	//Блокировка 83. Резерв
-   Interlock_84_1 : BOOL ;	//Блокировка 84. Насос P-ANE-02M
-   Interlock_84_2 : BOOL ;	//Блокировка 84. PID регулятор P-ANE-02
-   Interlock_84_3 : BOOL ;	//Блокировка 84. Клапан H-OS-53
-   Interlock_84_4 : BOOL ;	//Блокировка 84. Клапан H-FS-23
-   Interlock_84_5 : BOOL ;	//Блокировка 84. Клапан H-FS-48
-   Interlock_84_6 : BOOL ;	//Блокировка 84. Резерв
-   Interlock_84_7 : BOOL ;	//Блокировка 84. Резерв
-   Interlock_84_8 : BOOL ;	//Блокировка 84. Резерв
-   Interlock_85_1 : BOOL ;	//Блокировка 85. Насос P-GLS-02M
-   Interlock_85_2 : BOOL ;	//Блокировка 85. Резерв
-   Interlock_85_3 : BOOL ;	//Блокировка 85. Резерв
-   Interlock_85_4 : BOOL ;	//Блокировка 85. Резерв
-   Interlock_85_5 : BOOL ;	//Блокировка 85. Резерв
-   Interlock_85_6 : BOOL ;	//Блокировка 85. Резерв
-   Interlock_85_7 : BOOL ;	//Блокировка 85. Резерв
-   Interlock_85_8 : BOOL ;	//Блокировка 85. Резерв
-   Interlock_86_1 : BOOL ;	//Блокировка 86. Насос P-GS-01M
-   Interlock_86_2 : BOOL ;	//Блокировка 86. Резерв
-   Interlock_86_3 : BOOL ;	//Блокировка 86. Резерв
-   Interlock_86_4 : BOOL ;	//Блокировка 86. Резерв
-   Interlock_86_5 : BOOL ;	//Блокировка 86. Резерв
-   Interlock_86_6 : BOOL ;	//Блокировка 86. Резерв
-   Interlock_86_7 : BOOL ;	//Блокировка 86. Резерв
-   Interlock_86_8 : BOOL ;	//Блокировка 86. Резерв
-   Interlock_87_1 : BOOL ;	//Блокировка 87. Насос P-HW-01M
-   Interlock_87_2 : BOOL ;	//Блокировка 87. Насос P-HW-02M
-   Interlock_87_3 : BOOL ;	//Блокировка 87. Резерв
-   Interlock_87_4 : BOOL ;	//Блокировка 87. Резерв
-   Interlock_87_5 : BOOL ;	//Блокировка 87. Резерв
-   Interlock_87_6 : BOOL ;	//Блокировка 87. Резерв
-   Interlock_87_7 : BOOL ;	//Блокировка 87. Резерв
-   Interlock_87_8 : BOOL ;	//Блокировка 87. Резерв
-   Interlock_88_1 : BOOL ;	//Блокировка 88. Насос P-PW-01M
-   Interlock_88_2 : BOOL ;	//Блокировка 88. Насос P-PW-02M
-   Interlock_88_3 : BOOL ;	//Блокировка 88. Резерв
-   Interlock_88_4 : BOOL ;	//Блокировка 88. Резерв
-   Interlock_88_5 : BOOL ;	//Блокировка 88. Резерв
-   Interlock_88_6 : BOOL ;	//Блокировка 88. Резерв
-   Interlock_88_7 : BOOL ;	//Блокировка 88. Резерв
-   Interlock_88_8 : BOOL ;	//Блокировка 88. Резерв
-   Interlock_89_1 : BOOL ;	//Блокировка 89. Насос P-PW-01M
-   Interlock_89_2 : BOOL ;	//Блокировка 89. Насос P-PW-02M
-   Interlock_89_3 : BOOL ;	//Блокировка 89. Резерв
-   Interlock_89_4 : BOOL ;	//Блокировка 89. Резерв
-   Interlock_89_5 : BOOL ;	//Блокировка 89. Резерв
-   Interlock_89_6 : BOOL ;	//Блокировка 89. Резерв
-   Interlock_89_7 : BOOL ;	//Блокировка 89. Резерв
-   Interlock_89_8 : BOOL ;	//Блокировка 89. Резерв
-   Interlock_90_1 : BOOL ;	//Блокировка 90. Двигатель H-AN-07=M
-   Interlock_90_2 : BOOL ;	//Блокировка 90. Резерв
-   Interlock_90_3 : BOOL ;	//Блокировка 90. Резерв
-   Interlock_90_4 : BOOL ;	//Блокировка 90. Резерв
-   Interlock_90_5 : BOOL ;	//Блокировка 90. Резерв
-   Interlock_90_6 : BOOL ;	//Блокировка 90. Резерв
-   Interlock_90_7 : BOOL ;	//Блокировка 90. Резерв
-   Interlock_90_8 : BOOL ;	//Блокировка 90. Резерв
-   Interlock_91_1 : BOOL ;	//Блокировка 91. Двигатель P-ANE-01M
-   Interlock_91_2 : BOOL ;	//Блокировка 91. Резерв
-   Interlock_91_3 : BOOL ;	//Блокировка 91. Резерв
-   Interlock_91_4 : BOOL ;	//Блокировка 91. Резерв
-   Interlock_91_5 : BOOL ;	//Блокировка 91. Резерв
-   Interlock_91_6 : BOOL ;	//Блокировка 91. Резерв
-   Interlock_91_7 : BOOL ;	//Блокировка 91. Резерв
-   Interlock_91_8 : BOOL ;	//Блокировка 91. Резерв
-   Interlock_92_1 : BOOL ;	//Блокировка 92. Двигатель P-ANE-02M
-   Interlock_92_2 : BOOL ;	//Блокировка 92. Резерв
-   Interlock_92_3 : BOOL ;	//Блокировка 92. Резерв
-   Interlock_92_4 : BOOL ;	//Блокировка 92. Резерв
-   Interlock_92_5 : BOOL ;	//Блокировка 92. Резерв
-   Interlock_92_6 : BOOL ;	//Блокировка 92. Резерв
-   Interlock_92_7 : BOOL ;	//Блокировка 92. Резерв
-   Interlock_92_8 : BOOL ;	//Блокировка 92. Резерв
-   Interlock_93_1 : BOOL ;	//Блокировка 93. Клапан H-FS-22
-   Interlock_93_2 : BOOL ;	//Блокировка 93. Резерв
-   Interlock_93_3 : BOOL ;	//Блокировка 93. Резерв
-   Interlock_93_4 : BOOL ;	//Блокировка 93. Резерв
-   Interlock_93_5 : BOOL ;	//Блокировка 93. Резерв
-   Interlock_93_6 : BOOL ;	//Блокировка 93. Резерв
-   Interlock_93_7 : BOOL ;	//Блокировка 93. Резерв
-   Interlock_93_8 : BOOL ;	//Блокировка 93. Резерв
-   Interlock_94_1 : BOOL ;	//Блокировка 94.Клапан H-FS-20
-   Interlock_94_2 : BOOL ;	//Блокировка 94. Резерв
-   Interlock_94_3 : BOOL ;	//Блокировка 94. Резерв
-   Interlock_94_4 : BOOL ;	//Блокировка 94. Резерв
-   Interlock_94_5 : BOOL ;	//Блокировка 94. Резерв
-   Interlock_94_6 : BOOL ;	//Блокировка 94. Резерв
-   Interlock_94_7 : BOOL ;	//Блокировка 94. Резерв
-   Interlock_94_8 : BOOL ;	//Блокировка 94. Резерв
-   Interlock_95_1 : BOOL ;	//Блокировка 95. Двигатель P-FS-03
-   Interlock_95_2 : BOOL ;	//Блокировка 95. Двигатель P-FS-04
-   Interlock_95_3 : BOOL ;	//Блокировка 95. Клапан H-OS-48
-   Interlock_95_4 : BOOL ;	//Блокировка 95. Клапан H-OS-53
-   Interlock_95_5 : BOOL ;	//Блокировка 95. Клапан H-FS-47
-   Interlock_95_6 : BOOL ;	//Блокировка 95. Клапан H-FS-24
-   Interlock_95_7 : BOOL ;	//Блокировка 95. Клапан H-FS-48
-   Interlock_95_8 : BOOL ;	//Блокировка 95. Клапан H-FS-23
-   Interlock_96_1 : BOOL ;	//Блокировка 96. PID-регулятор P-FS-03M
-   Interlock_96_2 : BOOL ;	//Блокировка 96. PID-регулятор P-FS-04M
-   Interlock_96_3 : BOOL ;	//Блокировка 96. Резерв
-   Interlock_96_4 : BOOL ;	//Блокировка 96. Резерв
-   Interlock_96_5 : BOOL ;	//Блокировка 96. Резерв
-   Interlock_96_6 : BOOL ;	//Блокировка 96. Резерв
-   Interlock_96_7 : BOOL ;	//Блокировка 96. Резерв
-   Interlock_96_8 : BOOL ;	//Блокировка 96. Резерв
-   Interlock_97_1 : BOOL ;	//Блокировка 97. Двигатель P-HW-03
-   Interlock_97_2 : BOOL ;	//Блокировка 97. Двигатель P-HW-04
-   Interlock_97_3 : BOOL ;	//Блокировка 97. Резерв
-   Interlock_97_4 : BOOL ;	//Блокировка 97. Резерв
-   Interlock_97_5 : BOOL ;	//Блокировка 97. Резерв
-   Interlock_97_6 : BOOL ;	//Блокировка 97. Резерв
-   Interlock_97_7 : BOOL ;	//Блокировка 97. Резерв
-   Interlock_97_8 : BOOL ;	//Блокировка 97. Резерв
-   Interlock_98_1 : BOOL ;	//Блокировка 98. Клапана H-LPS-03
-   Interlock_98_2 : BOOL ;	//Блокировка 98. Клапана H-LPS-06
-   Interlock_98_3 : BOOL ;	//Блокировка 98. Резерв
-   Interlock_98_4 : BOOL ;	//Блокировка 98. Резерв
-   Interlock_98_5 : BOOL ;	//Блокировка 98. Резерв
-   Interlock_98_6 : BOOL ;	//Блокировка 98. Резерв
-   Interlock_98_7 : BOOL ;	//Блокировка 98. Резерв
-   Interlock_98_8 : BOOL ;	//Блокировка 98. Резерв
-   Interlock_99_1 : BOOL ;	//Блокировка 99. Клапана H-LPS-14
-   Interlock_99_2 : BOOL ;	//Блокировка 99. Клапана H-LPS-17
-   Interlock_99_3 : BOOL ;	//Блокировка 99. Резерв
-   Interlock_99_4 : BOOL ;	//Блокировка 99. Резерв
-   Interlock_99_5 : BOOL ;	//Блокировка 99. Резерв
-   Interlock_99_6 : BOOL ;	//Блокировка 99. Резерв
-   Interlock_99_7 : BOOL ;	//Блокировка 99. Резерв
-   Interlock_99_8 : BOOL ;	//Блокировка 99. Резерв
+   Interlock_16_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. Г’Г Г©Г¬ГҐГ° Г§Г Г¤ГҐГ°Г¦ГЄГЁ ГЇГ®ГЄГ°Г»ГІГЁГї
+   Interlock_16_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. ГђГҐГ§ГҐГ°Гў
+   Interlock_16_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. ГђГҐГ§ГҐГ°Гў
+   Interlock_16_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. ГђГҐГ§ГҐГ°Гў
+   Interlock_16_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. ГђГҐГ§ГҐГ°Гў
+   Interlock_16_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. ГђГҐГ§ГҐГ°Гў
+   Interlock_16_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. ГђГҐГ§ГҐГ°Гў
+   Interlock_16_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  16. ГђГҐГ§ГҐГ°Гў
+   Interlock_17_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГЉГ«Г ГЇГ Г­ H-LPS-03
+   Interlock_17_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГђГҐГ§ГҐГ°Гў
+   Interlock_17_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГђГҐГ§ГҐГ°Гў
+   Interlock_17_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГђГҐГ§ГҐГ°Гў
+   Interlock_17_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГђГҐГ§ГҐГ°Гў
+   Interlock_17_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГђГҐГ§ГҐГ°Гў
+   Interlock_17_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГђГҐГ§ГҐГ°Гў
+   Interlock_17_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  17. ГђГҐГ§ГҐГ°Гў
+   Interlock_18_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. Г„ГўГЁГЈГ ГІГҐГ«Гј R-OS-01M
+   Interlock_18_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-01M
+   Interlock_18_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. ГЉГ«Г ГЇГ Г­ H-LPS-06
+   Interlock_18_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. ГђГҐГ§ГҐГ°Гў
+   Interlock_18_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. ГђГҐГ§ГҐГ°Гў
+   Interlock_18_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. ГђГҐГ§ГҐГ°Гў
+   Interlock_18_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. ГђГҐГ§ГҐГ°Гў
+   Interlock_18_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  18. ГђГҐГ§ГҐГ°Гў
+   Interlock_19_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГЌГ Г±Г®Г± P-OS-01M
+   Interlock_19_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГђГҐГ§ГҐГ°Гў
+   Interlock_19_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГђГҐГ§ГҐГ°Гў
+   Interlock_19_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГђГҐГ§ГҐГ°Гў
+   Interlock_19_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГђГҐГ§ГҐГ°Гў
+   Interlock_19_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГђГҐГ§ГҐГ°Гў
+   Interlock_19_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГђГҐГ§ГҐГ°Гў
+   Interlock_19_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  19. ГђГҐГ§ГҐГ°Гў
+   Interlock_20_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-01M
+   Interlock_20_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. ГђГҐГ§ГҐГ°Гў
+   Interlock_20_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. ГђГҐГ§ГҐГ°Гў
+   Interlock_20_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. ГђГҐГ§ГҐГ°Гў
+   Interlock_20_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. ГђГҐГ§ГҐГ°Гў
+   Interlock_20_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. ГђГҐГ§ГҐГ°Гў
+   Interlock_20_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. ГђГҐГ§ГҐГ°Гў
+   Interlock_20_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  20. ГђГҐГ§ГҐГ°Гў
+   Interlock_21_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГЉГ«Г ГЇГ Г­ H-LPS-06
+   Interlock_21_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГђГҐГ§ГҐГ°Гў
+   Interlock_21_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГђГҐГ§ГҐГ°Гў
+   Interlock_21_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГђГҐГ§ГҐГ°Гў
+   Interlock_21_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГђГҐГ§ГҐГ°Гў
+   Interlock_21_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГђГҐГ§ГҐГ°Гў
+   Interlock_21_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГђГҐГ§ГҐГ°Гў
+   Interlock_21_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  21. ГђГҐГ§ГҐГ°Гў
+   Interlock_22_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГЌГ Г±Г®Г± P-OS-01M
+   Interlock_22_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГђГҐГ§ГҐГ°Гў
+   Interlock_22_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГђГҐГ§ГҐГ°Гў
+   Interlock_22_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГђГҐГ§ГҐГ°Гў
+   Interlock_22_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГђГҐГ§ГҐГ°Гў
+   Interlock_22_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГђГҐГ§ГҐГ°Гў
+   Interlock_22_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГђГҐГ§ГҐГ°Гў
+   Interlock_22_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  22. ГђГҐГ§ГҐГ°Гў
+   Interlock_23_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГЉГ«Г ГЇГ Г­ H-LPS-03
+   Interlock_23_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГЉГ«Г ГЇГ Г­ H-LPS-06
+   Interlock_23_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГђГҐГ§ГҐГ°Гў
+   Interlock_23_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГђГҐГ§ГҐГ°Гў
+   Interlock_23_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГђГҐГ§ГҐГ°Гў
+   Interlock_23_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГђГҐГ§ГҐГ°Гў
+   Interlock_23_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГђГҐГ§ГҐГ°Гў
+   Interlock_23_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  23. ГђГҐГ§ГҐГ°Гў
+   Interlock_24_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-01M
+   Interlock_24_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-01M
+   Interlock_24_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. ГђГҐГ§ГҐГ°Гў
+   Interlock_24_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. ГђГҐГ§ГҐГ°Гў
+   Interlock_24_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. ГђГҐГ§ГҐГ°Гў
+   Interlock_24_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. ГђГҐГ§ГҐГ°Гў
+   Interlock_24_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. ГђГҐГ§ГҐГ°Гў
+   Interlock_24_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  24. ГђГҐГ§ГҐГ°Гў
+   Interlock_25_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГЌГ Г±Г®Г± P-OS-02M
+   Interlock_25_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГђГҐГ§ГҐГ°Гў
+   Interlock_25_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГђГҐГ§ГҐГ°Гў
+   Interlock_25_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГђГҐГ§ГҐГ°Гў
+   Interlock_25_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГђГҐГ§ГҐГ°Гў
+   Interlock_25_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГђГҐГ§ГҐГ°Гў
+   Interlock_25_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГђГҐГ§ГҐГ°Гў
+   Interlock_25_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  25. ГђГҐГ§ГҐГ°Гў
+   Interlock_26_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. Г„ГўГЁГЈГ ГІГҐГ«Гј R-OS-02M
+   Interlock_26_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. ГГ­ГҐГЄ H-AN-02M
+   Interlock_26_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. ГЉГ«Г ГЇГ Г­ H-LPS-17
+   Interlock_26_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. ГђГҐГ§ГҐГ°Гў
+   Interlock_26_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. ГђГҐГ§ГҐГ°Гў
+   Interlock_26_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. ГђГҐГ§ГҐГ°Гў
+   Interlock_26_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. ГђГҐГ§ГҐГ°Гў
+   Interlock_26_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  26. ГђГҐГ§ГҐГ°Гў
+   Interlock_27_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. Г’Г Г©Г¬ГҐГ° Г§Г Г¤ГҐГ°Г¦ГЄГЁ ГЇГ®ГЄГ°Г»ГІГЁГї
+   Interlock_27_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. ГђГҐГ§ГҐГ°Гў
+   Interlock_27_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. ГђГҐГ§ГҐГ°Гў
+   Interlock_27_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. ГђГҐГ§ГҐГ°Гў
+   Interlock_27_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. ГђГҐГ§ГҐГ°Гў
+   Interlock_27_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. ГђГҐГ§ГҐГ°Гў
+   Interlock_27_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. ГђГҐГ§ГҐГ°Гў
+   Interlock_27_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  27. ГђГҐГ§ГҐГ°Гў
+   Interlock_28_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГЉГ«Г ГЇГ Г­ H-LPS-14
+   Interlock_28_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГђГҐГ§ГҐГ°Гў
+   Interlock_28_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГђГҐГ§ГҐГ°Гў
+   Interlock_28_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГђГҐГ§ГҐГ°Гў
+   Interlock_28_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГђГҐГ§ГҐГ°Гў
+   Interlock_28_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГђГҐГ§ГҐГ°Гў
+   Interlock_28_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГђГҐГ§ГҐГ°Гў
+   Interlock_28_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  28. ГђГҐГ§ГҐГ°Гў
+   Interlock_29_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-02M
+   Interlock_29_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. ГђГҐГ§ГҐГ°Гў
+   Interlock_29_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. ГђГҐГ§ГҐГ°Гў
+   Interlock_29_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. ГђГҐГ§ГҐГ°Гў
+   Interlock_29_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. ГђГҐГ§ГҐГ°Гў
+   Interlock_29_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. ГђГҐГ§ГҐГ°Гў
+   Interlock_29_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. ГђГҐГ§ГҐГ°Гў
+   Interlock_29_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  29. ГђГҐГ§ГҐГ°Гў
+   Interlock_30_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГЉГ«Г ГЇГ Г­ H-LPS-17
+   Interlock_30_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГђГҐГ§ГҐГ°Гў
+   Interlock_30_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГђГҐГ§ГҐГ°Гў
+   Interlock_30_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГђГҐГ§ГҐГ°Гў
+   Interlock_30_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГђГҐГ§ГҐГ°Гў
+   Interlock_30_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГђГҐГ§ГҐГ°Гў
+   Interlock_30_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГђГҐГ§ГҐГ°Гў
+   Interlock_30_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  30. ГђГҐГ§ГҐГ°Гў
+   Interlock_31_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГЌГ Г±Г®Г± P-OS-02M
+   Interlock_31_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГђГҐГ§ГҐГ°Гў
+   Interlock_31_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГђГҐГ§ГҐГ°Гў
+   Interlock_31_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГђГҐГ§ГҐГ°Гў
+   Interlock_31_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГђГҐГ§ГҐГ°Гў
+   Interlock_31_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГђГҐГ§ГҐГ°Гў
+   Interlock_31_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГђГҐГ§ГҐГ°Гў
+   Interlock_31_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  31. ГђГҐГ§ГҐГ°Гў
+   Interlock_32_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГЉГ«Г ГЇГ Г­ H-LPS-14
+   Interlock_32_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГЉГ«Г ГЇГ Г­ H-LPS-17
+   Interlock_32_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГђГҐГ§ГҐГ°Гў
+   Interlock_32_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГђГҐГ§ГҐГ°Гў
+   Interlock_32_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГђГҐГ§ГҐГ°Гў
+   Interlock_32_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГђГҐГ§ГҐГ°Гў
+   Interlock_32_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГђГҐГ§ГҐГ°Гў
+   Interlock_32_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  32. ГђГҐГ§ГҐГ°Гў
+   Interlock_33_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-02M
+   Interlock_33_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-02M
+   Interlock_33_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. ГђГҐГ§ГҐГ°Гў
+   Interlock_33_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. ГђГҐГ§ГҐГ°Гў
+   Interlock_33_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. ГђГҐГ§ГҐГ°Гў
+   Interlock_33_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. ГђГҐГ§ГҐГ°Гў
+   Interlock_33_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. ГђГҐГ§ГҐГ°Гў
+   Interlock_33_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  33. ГђГҐГ§ГҐГ°Гў
+   Interlock_34_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГЌГ Г±Г®Г± P-OS-01M
+   Interlock_34_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГЉГ«Г ГЇГ Г­ H-PW-02
+   Interlock_34_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГђГҐГ§ГҐГ°Гў
+   Interlock_34_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГђГҐГ§ГҐГ°Гў
+   Interlock_34_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГђГҐГ§ГҐГ°Гў
+   Interlock_34_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГђГҐГ§ГҐГ°Гў
+   Interlock_34_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГђГҐГ§ГҐГ°Гў
+   Interlock_34_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  34. ГђГҐГ§ГҐГ°Гў
+   Interlock_35_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГЌГ Г±Г®Г± P-OS-02M
+   Interlock_35_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГЉГ«Г ГЇГ Г­ H-PW-02
+   Interlock_35_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГђГҐГ§ГҐГ°Гў
+   Interlock_35_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГђГҐГ§ГҐГ°Гў
+   Interlock_35_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГђГҐГ§ГҐГ°Гў
+   Interlock_35_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГђГҐГ§ГҐГ°Гў
+   Interlock_35_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГђГҐГ§ГҐГ°Гў
+   Interlock_35_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  35. ГђГҐГ§ГҐГ°Гў
+   Interlock_36_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГЌГ Г±Г®Г± P-OS-01M
+   Interlock_36_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГЌГ Г±Г®Г± P-OS-02M
+   Interlock_36_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГЉГ«Г ГЇГ Г­ H-PW-02
+   Interlock_36_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГђГҐГ§ГҐГ°Гў
+   Interlock_36_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГђГҐГ§ГҐГ°Гў
+   Interlock_36_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГђГҐГ§ГҐГ°Гў
+   Interlock_36_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГђГҐГ§ГҐГ°Гў
+   Interlock_36_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  36. ГђГҐГ§ГҐГ°Гў
+   Interlock_37_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГЉГ«Г ГЇГ Г­ H-HW-03
+   Interlock_37_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГђГҐГ§ГҐГ°Гў
+   Interlock_37_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГђГҐГ§ГҐГ°Гў
+   Interlock_37_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГђГҐГ§ГҐГ°Гў
+   Interlock_37_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГђГҐГ§ГҐГ°Гў
+   Interlock_37_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГђГҐГ§ГҐГ°Гў
+   Interlock_37_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГђГҐГ§ГҐГ°Гў
+   Interlock_37_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  37. ГђГҐГ§ГҐГ°Гў
+   Interlock_38_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. ГЌГ Г±Г®Г± P-OS-03M
+   Interlock_38_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. ГЉГ«Г ГЇГ Г­ H-HW-03
+   Interlock_38_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-03
+   Interlock_38_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. ГђГҐГ§ГҐГ°Гў
+   Interlock_38_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. ГђГҐГ§ГҐГ°Гў
+   Interlock_38_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. ГђГҐГ§ГҐГ°Гў
+   Interlock_38_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. ГђГҐГ§ГҐГ°Гў
+   Interlock_38_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  38. ГђГҐГ§ГҐГ°Гў
+   Interlock_39_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. ГЌГ Г±Г®Г± P-OS-03M
+   Interlock_39_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-03
+   Interlock_39_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. ГђГҐГ§ГҐГ°Гў
+   Interlock_39_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. ГђГҐГ§ГҐГ°Гў
+   Interlock_39_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. ГђГҐГ§ГҐГ°Гў
+   Interlock_39_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. ГђГҐГ§ГҐГ°Гў
+   Interlock_39_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. ГђГҐГ§ГҐГ°Гў
+   Interlock_39_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  39. ГђГҐГ§ГҐГ°Гў
+   Interlock_40_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. ГЌГ Г±Г®Г± P-OS-03M
+   Interlock_40_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_40_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_40_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_40_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-03
+   Interlock_40_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. ГђГҐГ§ГҐГ°Гў
+   Interlock_40_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. ГђГҐГ§ГҐГ°Гў
+   Interlock_40_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  40. ГђГҐГ§ГҐГ°Гў
+   Interlock_41_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГЉГ«Г ГЇГ Г­ H-HW-12
+   Interlock_41_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГђГҐГ§ГҐГ°Гў
+   Interlock_41_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГђГҐГ§ГҐГ°Гў
+   Interlock_41_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГђГҐГ§ГҐГ°Гў
+   Interlock_41_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГђГҐГ§ГҐГ°Гў
+   Interlock_41_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГђГҐГ§ГҐГ°Гў
+   Interlock_41_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГђГҐГ§ГҐГ°Гў
+   Interlock_41_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  41. ГђГҐГ§ГҐГ°Гў
+   Interlock_42_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. ГЌГ Г±Г®Г± P-OS-04M
+   Interlock_42_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-04
+   Interlock_42_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. ГђГҐГ§ГҐГ°Гў
+   Interlock_42_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. ГђГҐГ§ГҐГ°Гў
+   Interlock_42_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. ГђГҐГ§ГҐГ°Гў
+   Interlock_42_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. ГђГҐГ§ГҐГ°Гў
+   Interlock_42_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. ГђГҐГ§ГҐГ°Гў
+   Interlock_42_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  42. ГђГҐГ§ГҐГ°Гў
+   Interlock_43_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. ГЌГ Г±Г®Г± P-OS-04M
+   Interlock_43_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_43_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_43_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_43_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-04
+   Interlock_43_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. ГђГҐГ§ГҐГ°Гў
+   Interlock_43_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. ГђГҐГ§ГҐГ°Гў
+   Interlock_43_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  43. ГђГҐГ§ГҐГ°Гў
+   Interlock_44_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. ГЌГ Г±Г®Г± P-OS-04M
+   Interlock_44_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. ГЉГ«Г ГЇГ Г­ H-HW-12
+   Interlock_44_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-04
+   Interlock_44_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. ГђГҐГ§ГҐГ°Гў
+   Interlock_44_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. ГђГҐГ§ГҐГ°Гў
+   Interlock_44_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. ГђГҐГ§ГҐГ°Гў
+   Interlock_44_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. ГђГҐГ§ГҐГ°Гў
+   Interlock_44_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  44. ГђГҐГ§ГҐГ°Гў
+   Interlock_45_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. ГЌГ Г±Г®Г± P-OS-03M
+   Interlock_45_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. ГЌГ Г±Г®Г± P-OS-04M
+   Interlock_45_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. ГЉГ«Г ГЇГ Г­ H-HW-47
+   Interlock_45_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-03
+   Interlock_45_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-OS-04
+   Interlock_45_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. ГђГҐГ§ГҐГ°Гў
+   Interlock_45_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. ГђГҐГ§ГҐГ°Гў
+   Interlock_45_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  45. ГђГҐГ§ГҐГ°Гў
+   Interlock_46_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГЉГ«Г ГЇГ Г­ H-HW-47
+   Interlock_46_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГђГҐГ§ГҐГ°Гў
+   Interlock_46_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГђГҐГ§ГҐГ°Гў
+   Interlock_46_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГђГҐГ§ГҐГ°Гў
+   Interlock_46_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГђГҐГ§ГҐГ°Гў
+   Interlock_46_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГђГҐГ§ГҐГ°Гў
+   Interlock_46_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГђГҐГ§ГҐГ°Гў
+   Interlock_46_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  46. ГђГҐГ§ГҐГ°Гў
+   Interlock_47_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_47_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_47_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_47_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГђГҐГ§ГҐГ°Гў
+   Interlock_47_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГђГҐГ§ГҐГ°Гў
+   Interlock_47_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГђГҐГ§ГҐГ°Гў
+   Interlock_47_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГђГҐГ§ГҐГ°Гў
+   Interlock_47_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  47. ГђГҐГ§ГҐГ°Гў
+   Interlock_48_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГЌГ Г±Г®Г± P-OS-05M
+   Interlock_48_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГђГҐГ§ГҐГ°Гў
+   Interlock_48_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГђГҐГ§ГҐГ°Гў
+   Interlock_48_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГђГҐГ§ГҐГ°Гў
+   Interlock_48_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГђГҐГ§ГҐГ°Гў
+   Interlock_48_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГђГҐГ§ГҐГ°Гў
+   Interlock_48_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГђГҐГ§ГҐГ°Гў
+   Interlock_48_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  48. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_49_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  49. ГђГҐГ§ГҐГ°Гў
+   Interlock_50_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГЌГ Г±Г®Г± P-OS-01M
+   Interlock_50_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГђГҐГ§ГҐГ°Гў
+   Interlock_50_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГђГҐГ§ГҐГ°Гў
+   Interlock_50_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГђГҐГ§ГҐГ°Гў
+   Interlock_50_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГђГҐГ§ГҐГ°Гў
+   Interlock_50_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГђГҐГ§ГҐГ°Гў
+   Interlock_50_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГђГҐГ§ГҐГ°Гў
+   Interlock_50_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  50. ГђГҐГ§ГҐГ°Гў
+   Interlock_51_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГЌГ Г±Г®Г± P-FS-06M
+   Interlock_51_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГђГҐГ§ГҐГ°Гў
+   Interlock_51_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГђГҐГ§ГҐГ°Гў
+   Interlock_51_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГђГҐГ§ГҐГ°Гў
+   Interlock_51_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГђГҐГ§ГҐГ°Гў
+   Interlock_51_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГђГҐГ§ГҐГ°Гў
+   Interlock_51_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГђГҐГ§ГҐГ°Гў
+   Interlock_51_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  51. ГђГҐГ§ГҐГ°Гў
+   Interlock_52_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_52_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. ГЌГ Г±Г®Г± P-FS-03M
+   Interlock_52_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_52_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_52_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-FS-03
+   Interlock_52_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. ГђГҐГ§ГҐГ°Гў
+   Interlock_52_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. ГђГҐГ§ГҐГ°Гў
+   Interlock_52_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  52. ГђГҐГ§ГҐГ°Гў
+   Interlock_53_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53. ГЌГ Г±Г®Г± P-FS-04M
+   Interlock_53_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_53_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_53_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_53_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53.  PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-FS-04
+   Interlock_53_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53. ГђГҐГ§ГҐГ°Гў
+   Interlock_53_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53. ГђГҐГ§ГҐГ°Гў
+   Interlock_53_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  53. ГђГҐГ§ГҐГ°Гў
+   Interlock_54_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГЌГ Г±Г®Г± P-OS-05M
+   Interlock_54_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГђГҐГ§ГҐГ°Гў
+   Interlock_54_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГђГҐГ§ГҐГ°Гў
+   Interlock_54_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГђГҐГ§ГҐГ°Гў
+   Interlock_54_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГђГҐГ§ГҐГ°Гў
+   Interlock_54_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГђГҐГ§ГҐГ°Гў
+   Interlock_54_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГђГҐГ§ГҐГ°Гў
+   Interlock_54_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  54. ГђГҐГ§ГҐГ°Гў
+   Interlock_55_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-01M
+   Interlock_55_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. ГЉГ«Г ГЇГ Г­ H-PW-02
+   Interlock_55_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. ГЌГ Г±Г®Г± P-OS-05M
+   Interlock_55_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. ГђГҐГ§ГҐГ°Гў
+   Interlock_55_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. ГђГҐГ§ГҐГ°Гў
+   Interlock_55_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. ГђГҐГ§ГҐГ°Гў
+   Interlock_55_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. ГђГҐГ§ГҐГ°Гў
+   Interlock_55_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  55. ГђГҐГ§ГҐГ°Гў
+   Interlock_56_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-01M
+   Interlock_56_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. ГђГҐГ§ГҐГ°Гў
+   Interlock_56_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. ГђГҐГ§ГҐГ°Гў
+   Interlock_56_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. ГђГҐГ§ГҐГ°Гў
+   Interlock_56_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. ГђГҐГ§ГҐГ°Гў
+   Interlock_56_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. ГђГҐГ§ГҐГ°Гў
+   Interlock_56_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. ГђГҐГ§ГҐГ°Гў
+   Interlock_56_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  56. ГђГҐГ§ГҐГ°Гў
+   Interlock_57_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-02M
+   Interlock_57_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. ГђГҐГ§ГҐГ°Гў
+   Interlock_57_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. ГђГҐГ§ГҐГ°Гў
+   Interlock_57_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. ГђГҐГ§ГҐГ°Гў
+   Interlock_57_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. ГђГҐГ§ГҐГ°Гў
+   Interlock_57_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. ГђГҐГ§ГҐГ°Гў
+   Interlock_57_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. ГђГҐГ§ГҐГ°Гў
+   Interlock_57_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  57. ГђГҐГ§ГҐГ°Гў
+   Interlock_58_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-01M
+   Interlock_58_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. ГђГҐГ§ГҐГ°Гў
+   Interlock_58_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. ГђГҐГ§ГҐГ°Гў
+   Interlock_58_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. ГђГҐГ§ГҐГ°Гў
+   Interlock_58_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. ГђГҐГ§ГҐГ°Гў
+   Interlock_58_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. ГђГҐГ§ГҐГ°Гў
+   Interlock_58_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. ГђГҐГ§ГҐГ°Гў
+   Interlock_58_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  58. ГђГҐГ§ГҐГ°Гў
+   Interlock_59_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-02M
+   Interlock_59_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. ГђГҐГ§ГҐГ°Гў
+   Interlock_59_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. ГђГҐГ§ГҐГ°Гў
+   Interlock_59_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. ГђГҐГ§ГҐГ°Гў
+   Interlock_59_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. ГђГҐГ§ГҐГ°Гў
+   Interlock_59_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. ГђГҐГ§ГҐГ°Гў
+   Interlock_59_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. ГђГҐГ§ГҐГ°Гў
+   Interlock_59_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  59. ГђГҐГ§ГҐГ°Гў
+   Interlock_60_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60. ГЌГ Г±Г®Г± P-FS-01M
+   Interlock_60_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_60_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_60_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_60_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60.  PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-FS-01
+   Interlock_60_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60. ГђГҐГ§ГҐГ°Гў
+   Interlock_60_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60. ГђГҐГ§ГҐГ°Гў
+   Interlock_60_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  60. ГђГҐГ§ГҐГ°Гў
+   Interlock_61_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. ГЉГ«Г ГЇГ Г­ V-ANE-06
+   Interlock_61_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-03M
+   Interlock_61_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. ГђГҐГ§ГҐГ°Гў
+   Interlock_61_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. ГђГҐГ§ГҐГ°Гў
+   Interlock_61_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. ГђГҐГ§ГҐГ°Гў
+   Interlock_61_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. ГђГҐГ§ГҐГ°Гў
+   Interlock_61_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. ГђГҐГ§ГҐГ°Гў
+   Interlock_61_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  61. ГђГҐГ§ГҐГ°Гў
+   Interlock_62_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. ГЉГ«Г ГЇГ Г­ V-ANE-17
+   Interlock_62_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-04M
+   Interlock_62_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. ГђГҐГ§ГҐГ°Гў
+   Interlock_62_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. ГђГҐГ§ГҐГ°Гў
+   Interlock_62_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. ГђГҐГ§ГҐГ°Гў
+   Interlock_62_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. ГђГҐГ§ГҐГ°Гў
+   Interlock_62_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. ГђГҐГ§ГҐГ°Гў
+   Interlock_62_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  62. ГђГҐГ§ГҐГ°Гў
+   Interlock_63_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63. ГЌГ Г±Г®Г± P-FS-02M
+   Interlock_63_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_63_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_63_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_63_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63.  PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-FS-02
+   Interlock_63_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63. ГђГҐГ§ГҐГ°Гў
+   Interlock_63_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63. ГђГҐГ§ГҐГ°Гў
+   Interlock_63_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  63. ГђГҐГ§ГҐГ°Гў
+   Interlock_64_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГЌГ Г±Г®Г± P-AS-01M
+   Interlock_64_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГђГҐГ§ГҐГ°Гў
+   Interlock_64_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГђГҐГ§ГҐГ°Гў
+   Interlock_64_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГђГҐГ§ГҐГ°Гў
+   Interlock_64_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГђГҐГ§ГҐГ°Гў
+   Interlock_64_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГђГҐГ§ГҐГ°Гў
+   Interlock_64_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГђГҐГ§ГҐГ°Гў
+   Interlock_64_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  64. ГђГҐГ§ГҐГ°Гў
+   Interlock_65_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_65_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_65_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_65_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГђГҐГ§ГҐГ°Гў
+   Interlock_65_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГђГҐГ§ГҐГ°Гў
+   Interlock_65_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГђГҐГ§ГҐГ°Гў
+   Interlock_65_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГђГҐГ§ГҐГ°Гў
+   Interlock_65_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  65. ГђГҐГ§ГҐГ°Гў
+   Interlock_66_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. ГЌГ Г±Г®Г± P-ANE-01M
+   Interlock_66_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-01
+   Interlock_66_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_66_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_66_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_66_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. ГђГҐГ§ГҐГ°Гў
+   Interlock_66_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. ГђГҐГ§ГҐГ°Гў
+   Interlock_66_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  66. ГђГҐГ§ГҐГ°Гў
+   Interlock_67_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГЌГ Г±Г®Г± P-OS-02M
+   Interlock_67_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГђГҐГ§ГҐГ°Гў
+   Interlock_67_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГђГҐГ§ГҐГ°Гў
+   Interlock_67_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГђГҐГ§ГҐГ°Гў
+   Interlock_67_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГђГҐГ§ГҐГ°Гў
+   Interlock_67_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГђГҐГ§ГҐГ°Гў
+   Interlock_67_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГђГҐГ§ГҐГ°Гў
+   Interlock_67_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  67. ГђГҐГ§ГҐГ°Гў
+   Interlock_68_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГЉГ«Г ГЇГ Г­ V-ANE-09-B
+   Interlock_68_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГђГҐГ§ГҐГ°Гў
+   Interlock_68_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГђГҐГ§ГҐГ°Гў
+   Interlock_68_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГђГҐГ§ГҐГ°Гў
+   Interlock_68_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГђГҐГ§ГҐГ°Гў
+   Interlock_68_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГђГҐГ§ГҐГ°Гў
+   Interlock_68_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГђГҐГ§ГҐГ°Гў
+   Interlock_68_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  68. ГђГҐГ§ГҐГ°Гў
+   Interlock_69_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. ГЌГ Г±Г®Г± P-ANE-01M
+   Interlock_69_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-01
+   Interlock_69_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_69_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_69_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_69_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. ГђГҐГ§ГҐГ°Гў
+   Interlock_69_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. ГђГҐГ§ГҐГ°Гў
+   Interlock_69_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  69. ГђГҐГ§ГҐГ°Гў
+   Interlock_70_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. ГЉГ«Г ГЇГ Г­ H-PW-02
+   Interlock_70_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-02M
+   Interlock_70_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. ГЌГ Г±Г®Г± P-OS-05M
+   Interlock_70_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. ГђГҐГ§ГҐГ°Гў
+   Interlock_70_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. ГђГҐГ§ГҐГ°Гў
+   Interlock_70_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. ГђГҐГ§ГҐГ°Гў
+   Interlock_70_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. ГђГҐГ§ГҐГ°Гў
+   Interlock_70_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  70. ГђГҐГ§ГҐГ°Гў
+   Interlock_71_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГЉГ«Г ГЇГ Г­ V-ANE-10-B
+   Interlock_71_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГђГҐГ§ГҐГ°Гў
+   Interlock_71_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГђГҐГ§ГҐГ°Гў
+   Interlock_71_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГђГҐГ§ГҐГ°Гў
+   Interlock_71_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГђГҐГ§ГҐГ°Гў
+   Interlock_71_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГђГҐГ§ГҐГ°Гў
+   Interlock_71_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГђГҐГ§ГҐГ°Гў
+   Interlock_71_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  71. ГђГҐГ§ГҐГ°Гў
+   Interlock_72_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_72_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_72_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_72_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГђГҐГ§ГҐГ°Гў
+   Interlock_72_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГђГҐГ§ГҐГ°Гў
+   Interlock_72_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГђГҐГ§ГҐГ°Гў
+   Interlock_72_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГђГҐГ§ГҐГ°Гў
+   Interlock_72_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  72. ГђГҐГ§ГҐГ°Гў
+   Interlock_73_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. ГЌГ Г±Г®Г± P-ANE-02M
+   Interlock_73_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-02
+   Interlock_73_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_73_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_73_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_73_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. ГђГҐГ§ГҐГ°Гў
+   Interlock_73_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. ГђГҐГ§ГҐГ°Гў
+   Interlock_73_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  73. ГђГҐГ§ГҐГ°Гў
+   Interlock_74_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. ГЌГ Г±Г®Г± P-ANE-01M
+   Interlock_74_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-01
+   Interlock_74_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_74_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_74_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_74_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. ГђГҐГ§ГҐГ°Гў
+   Interlock_74_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. ГђГҐГ§ГҐГ°Гў
+   Interlock_74_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  74. ГђГҐГ§ГҐГ°Гў
+   Interlock_75_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГЉГ«Г ГЇГ Г­ H-ANE-16-B
+   Interlock_75_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГђГҐГ§ГҐГ°Гў
+   Interlock_75_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГђГҐГ§ГҐГ°Гў
+   Interlock_75_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГђГҐГ§ГҐГ°Гў
+   Interlock_75_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГђГҐГ§ГҐГ°Гў
+   Interlock_75_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГђГҐГ§ГҐГ°Гў
+   Interlock_75_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГђГҐГ§ГҐГ°Гў
+   Interlock_75_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  75. ГђГҐГ§ГҐГ°Гў
+   Interlock_76_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. ГЌГ Г±Г®Г± P-ANE-02M
+   Interlock_76_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-02
+   Interlock_76_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_76_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_76_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_76_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. ГђГҐГ§ГҐГ°Гў
+   Interlock_76_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. ГђГҐГ§ГҐГ°Гў
+   Interlock_76_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  76. ГђГҐГ§ГҐГ°Гў
+   Interlock_77_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. ГЌГ Г±Г®Г± P-ANE-01M
+   Interlock_77_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-01
+   Interlock_77_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_77_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_77_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_77_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. ГђГҐГ§ГҐГ°Гў
+   Interlock_77_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. ГђГҐГ§ГҐГ°Гў
+   Interlock_77_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  77. ГђГҐГ§ГҐГ°Гў
+   Interlock_78_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГЉГ«Г ГЇГ Г­ H-ANE-15-B
+   Interlock_78_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГђГҐГ§ГҐГ°Гў
+   Interlock_78_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГђГҐГ§ГҐГ°Гў
+   Interlock_78_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГђГҐГ§ГҐГ°Гў
+   Interlock_78_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГђГҐГ§ГҐГ°Гў
+   Interlock_78_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГђГҐГ§ГҐГ°Гў
+   Interlock_78_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГђГҐГ§ГҐГ°Гў
+   Interlock_78_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  78. ГђГҐГ§ГҐГ°Гў
+   Interlock_79_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_79_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_79_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_79_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГђГҐГ§ГҐГ°Гў
+   Interlock_79_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГђГҐГ§ГҐГ°Гў
+   Interlock_79_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГђГҐГ§ГҐГ°Гў
+   Interlock_79_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГђГҐГ§ГҐГ°Гў
+   Interlock_79_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  79. ГђГҐГ§ГҐГ°Гў
+   Interlock_80_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. ГЌГ Г±Г®Г± P-ANE-01M
+   Interlock_80_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-01
+   Interlock_80_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_80_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_80_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_80_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. ГђГҐГ§ГҐГ°Гў
+   Interlock_80_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. ГђГҐГ§ГҐГ°Гў
+   Interlock_80_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  80. ГђГҐГ§ГҐГ°Гў
+   Interlock_81_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. ГЌГ Г±Г®Г± P-ANE-02M
+   Interlock_81_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-02
+   Interlock_81_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_81_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_81_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_81_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. ГђГҐГ§ГҐГ°Гў
+   Interlock_81_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. ГђГҐГ§ГҐГ°Гў
+   Interlock_81_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  81. ГђГҐГ§ГҐГ°Гў
+   Interlock_82_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. ГЌГ Г±Г®Г± P-HW-01M
+   Interlock_82_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. ГЌГ Г±Г®Г± P-HW-02M
+   Interlock_82_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. ГЉГ«Г ГЇГ Г­ S-LPS-47
+   Interlock_82_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. ГЉГ«Г ГЇГ Г­ H-LPS-45
+   Interlock_82_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. PID-Г°ГҐГЈГіГ«ГїГІГ®Г° S-LPS-47
+   Interlock_82_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. ГђГҐГ§ГҐГ°Гў
+   Interlock_82_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. ГђГҐГ§ГҐГ°Гў
+   Interlock_82_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  82. ГђГҐГ§ГҐГ°Гў
+   Interlock_83_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. ГЌГ Г±Г®Г± P-ANE-02M
+   Interlock_83_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-02
+   Interlock_83_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_83_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_83_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_83_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. ГђГҐГ§ГҐГ°Гў
+   Interlock_83_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. ГђГҐГ§ГҐГ°Гў
+   Interlock_83_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  83. ГђГҐГ§ГҐГ°Гў
+   Interlock_84_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. ГЌГ Г±Г®Г± P-ANE-02M
+   Interlock_84_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. PID Г°ГҐГЈГіГ«ГїГІГ®Г° P-ANE-02
+   Interlock_84_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_84_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_84_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_84_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. ГђГҐГ§ГҐГ°Гў
+   Interlock_84_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. ГђГҐГ§ГҐГ°Гў
+   Interlock_84_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  84. ГђГҐГ§ГҐГ°Гў
+   Interlock_85_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГЌГ Г±Г®Г± P-GLS-02M
+   Interlock_85_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГђГҐГ§ГҐГ°Гў
+   Interlock_85_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГђГҐГ§ГҐГ°Гў
+   Interlock_85_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГђГҐГ§ГҐГ°Гў
+   Interlock_85_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГђГҐГ§ГҐГ°Гў
+   Interlock_85_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГђГҐГ§ГҐГ°Гў
+   Interlock_85_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГђГҐГ§ГҐГ°Гў
+   Interlock_85_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  85. ГђГҐГ§ГҐГ°Гў
+   Interlock_86_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГЌГ Г±Г®Г± P-GS-01M
+   Interlock_86_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГђГҐГ§ГҐГ°Гў
+   Interlock_86_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГђГҐГ§ГҐГ°Гў
+   Interlock_86_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГђГҐГ§ГҐГ°Гў
+   Interlock_86_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГђГҐГ§ГҐГ°Гў
+   Interlock_86_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГђГҐГ§ГҐГ°Гў
+   Interlock_86_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГђГҐГ§ГҐГ°Гў
+   Interlock_86_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  86. ГђГҐГ§ГҐГ°Гў
+   Interlock_87_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГЌГ Г±Г®Г± P-HW-01M
+   Interlock_87_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГЌГ Г±Г®Г± P-HW-02M
+   Interlock_87_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГђГҐГ§ГҐГ°Гў
+   Interlock_87_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГђГҐГ§ГҐГ°Гў
+   Interlock_87_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГђГҐГ§ГҐГ°Гў
+   Interlock_87_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГђГҐГ§ГҐГ°Гў
+   Interlock_87_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГђГҐГ§ГҐГ°Гў
+   Interlock_87_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  87. ГђГҐГ§ГҐГ°Гў
+   Interlock_88_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГЌГ Г±Г®Г± P-PW-01M
+   Interlock_88_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГЌГ Г±Г®Г± P-PW-02M
+   Interlock_88_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГђГҐГ§ГҐГ°Гў
+   Interlock_88_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГђГҐГ§ГҐГ°Гў
+   Interlock_88_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГђГҐГ§ГҐГ°Гў
+   Interlock_88_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГђГҐГ§ГҐГ°Гў
+   Interlock_88_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГђГҐГ§ГҐГ°Гў
+   Interlock_88_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  88. ГђГҐГ§ГҐГ°Гў
+   Interlock_89_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГЌГ Г±Г®Г± P-PW-01M
+   Interlock_89_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГЌГ Г±Г®Г± P-PW-02M
+   Interlock_89_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГђГҐГ§ГҐГ°Гў
+   Interlock_89_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГђГҐГ§ГҐГ°Гў
+   Interlock_89_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГђГҐГ§ГҐГ°Гў
+   Interlock_89_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГђГҐГ§ГҐГ°Гў
+   Interlock_89_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГђГҐГ§ГҐГ°Гў
+   Interlock_89_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  89. ГђГҐГ§ГҐГ°Гў
+   Interlock_90_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. Г„ГўГЁГЈГ ГІГҐГ«Гј H-AN-07=M
+   Interlock_90_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. ГђГҐГ§ГҐГ°Гў
+   Interlock_90_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. ГђГҐГ§ГҐГ°Гў
+   Interlock_90_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. ГђГҐГ§ГҐГ°Гў
+   Interlock_90_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. ГђГҐГ§ГҐГ°Гў
+   Interlock_90_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. ГђГҐГ§ГҐГ°Гў
+   Interlock_90_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. ГђГҐГ§ГҐГ°Гў
+   Interlock_90_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  90. ГђГҐГ§ГҐГ°Гў
+   Interlock_91_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. Г„ГўГЁГЈГ ГІГҐГ«Гј P-ANE-01M
+   Interlock_91_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. ГђГҐГ§ГҐГ°Гў
+   Interlock_91_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. ГђГҐГ§ГҐГ°Гў
+   Interlock_91_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. ГђГҐГ§ГҐГ°Гў
+   Interlock_91_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. ГђГҐГ§ГҐГ°Гў
+   Interlock_91_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. ГђГҐГ§ГҐГ°Гў
+   Interlock_91_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. ГђГҐГ§ГҐГ°Гў
+   Interlock_91_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  91. ГђГҐГ§ГҐГ°Гў
+   Interlock_92_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. Г„ГўГЁГЈГ ГІГҐГ«Гј P-ANE-02M
+   Interlock_92_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. ГђГҐГ§ГҐГ°Гў
+   Interlock_92_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. ГђГҐГ§ГҐГ°Гў
+   Interlock_92_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. ГђГҐГ§ГҐГ°Гў
+   Interlock_92_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. ГђГҐГ§ГҐГ°Гў
+   Interlock_92_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. ГђГҐГ§ГҐГ°Гў
+   Interlock_92_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. ГђГҐГ§ГҐГ°Гў
+   Interlock_92_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  92. ГђГҐГ§ГҐГ°Гў
+   Interlock_93_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГЉГ«Г ГЇГ Г­ H-FS-22
+   Interlock_93_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГђГҐГ§ГҐГ°Гў
+   Interlock_93_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГђГҐГ§ГҐГ°Гў
+   Interlock_93_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГђГҐГ§ГҐГ°Гў
+   Interlock_93_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГђГҐГ§ГҐГ°Гў
+   Interlock_93_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГђГҐГ§ГҐГ°Гў
+   Interlock_93_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГђГҐГ§ГҐГ°Гў
+   Interlock_93_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  93. ГђГҐГ§ГҐГ°Гў
+   Interlock_94_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94.ГЉГ«Г ГЇГ Г­ H-FS-20
+   Interlock_94_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94. ГђГҐГ§ГҐГ°Гў
+   Interlock_94_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94. ГђГҐГ§ГҐГ°Гў
+   Interlock_94_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94. ГђГҐГ§ГҐГ°Гў
+   Interlock_94_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94. ГђГҐГ§ГҐГ°Гў
+   Interlock_94_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94. ГђГҐГ§ГҐГ°Гў
+   Interlock_94_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94. ГђГҐГ§ГҐГ°Гў
+   Interlock_94_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  94. ГђГҐГ§ГҐГ°Гў
+   Interlock_95_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. Г„ГўГЁГЈГ ГІГҐГ«Гј P-FS-03
+   Interlock_95_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. Г„ГўГЁГЈГ ГІГҐГ«Гј P-FS-04
+   Interlock_95_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. ГЉГ«Г ГЇГ Г­ H-OS-48
+   Interlock_95_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. ГЉГ«Г ГЇГ Г­ H-OS-53
+   Interlock_95_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. ГЉГ«Г ГЇГ Г­ H-FS-47
+   Interlock_95_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. ГЉГ«Г ГЇГ Г­ H-FS-24
+   Interlock_95_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. ГЉГ«Г ГЇГ Г­ H-FS-48
+   Interlock_95_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  95. ГЉГ«Г ГЇГ Г­ H-FS-23
+   Interlock_96_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. PID-Г°ГҐГЈГіГ«ГїГІГ®Г° P-FS-03M
+   Interlock_96_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. PID-Г°ГҐГЈГіГ«ГїГІГ®Г° P-FS-04M
+   Interlock_96_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. ГђГҐГ§ГҐГ°Гў
+   Interlock_96_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. ГђГҐГ§ГҐГ°Гў
+   Interlock_96_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. ГђГҐГ§ГҐГ°Гў
+   Interlock_96_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. ГђГҐГ§ГҐГ°Гў
+   Interlock_96_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. ГђГҐГ§ГҐГ°Гў
+   Interlock_96_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  96. ГђГҐГ§ГҐГ°Гў
+   Interlock_97_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. Г„ГўГЁГЈГ ГІГҐГ«Гј P-HW-03
+   Interlock_97_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. Г„ГўГЁГЈГ ГІГҐГ«Гј P-HW-04
+   Interlock_97_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. ГђГҐГ§ГҐГ°Гў
+   Interlock_97_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. ГђГҐГ§ГҐГ°Гў
+   Interlock_97_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. ГђГҐГ§ГҐГ°Гў
+   Interlock_97_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. ГђГҐГ§ГҐГ°Гў
+   Interlock_97_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. ГђГҐГ§ГҐГ°Гў
+   Interlock_97_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  97. ГђГҐГ§ГҐГ°Гў
+   Interlock_98_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГЉГ«Г ГЇГ Г­Г  H-LPS-03
+   Interlock_98_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГЉГ«Г ГЇГ Г­Г  H-LPS-06
+   Interlock_98_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГђГҐГ§ГҐГ°Гў
+   Interlock_98_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГђГҐГ§ГҐГ°Гў
+   Interlock_98_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГђГҐГ§ГҐГ°Гў
+   Interlock_98_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГђГҐГ§ГҐГ°Гў
+   Interlock_98_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГђГҐГ§ГҐГ°Гў
+   Interlock_98_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  98. ГђГҐГ§ГҐГ°Гў
+   Interlock_99_1 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГЉГ«Г ГЇГ Г­Г  H-LPS-14
+   Interlock_99_2 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГЉГ«Г ГЇГ Г­Г  H-LPS-17
+   Interlock_99_3 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГђГҐГ§ГҐГ°Гў
+   Interlock_99_4 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГђГҐГ§ГҐГ°Гў
+   Interlock_99_5 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГђГҐГ§ГҐГ°Гў
+   Interlock_99_6 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГђГҐГ§ГҐГ°Гў
+   Interlock_99_7 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГђГҐГ§ГҐГ°Гў
+   Interlock_99_8 : BOOL ;	//ГЃГ«Г®ГЄГЁГ°Г®ГўГЄГ  99. ГђГҐГ§ГҐГ°Гў
   END_STRUCT ;	
 BEGIN
    Interlock_16_1 := FALSE; 
@@ -1406,67 +1406,67 @@ VERSION : 0.1
 
 
   STRUCT 	
-   Status_start : BOOL ;	//Программа запущена
-   Status_ready : BOOL ;	//ТФ готова
-   Minoil_start : BOOL ;	//Загрузка масла запущена
-   Emuls1_start : BOOL ;	//Загрузка эмульгатора 1 запущена
-   Emuls2_start : BOOL ;	//Загрузка эмульгатора 2 запущена
-   Mixer_start : BOOL ;	//Запущена мешалка
-   IBC_start : BOOL ;	//Перекачивание в IBC
-   Mixer_ES : BOOL ;	//Аварийная кнопка мешалки
-   Mixer_stop : BOOL ;	//Останов мешалки
-   Minoil_stop : BOOL ;	//Останов загрузки масла
-   Emuls1_stop : BOOL ;	//Останов загрузки эмульгатора 1
-   Emuls2_stop : BOOL ;	//Останов загрузки эмульгатора 2
-   IBC_stop : BOOL ;	//Останов перекачивания в IBC
-   Process_busy : BOOL ;	//Процесс запущен
-   IBC_start_auto : BOOL ;	//Перекачивание в IBC авторежим
-   Status_stop : BOOL ;	//Остановка программы
-   Current_id : INT ;	//Выбранный рецепт
+   Status_start : BOOL ;	//ГЏГ°Г®ГЈГ°Г Г¬Г¬Г  Г§Г ГЇГіГ№ГҐГ­Г 
+   Status_ready : BOOL ;	//Г’Г” ГЈГ®ГІГ®ГўГ 
+   Minoil_start : BOOL ;	//Г‡Г ГЈГ°ГіГ§ГЄГ  Г¬Г Г±Г«Г  Г§Г ГЇГіГ№ГҐГ­Г 
+   Emuls1_start : BOOL ;	//Г‡Г ГЈГ°ГіГ§ГЄГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 Г§Г ГЇГіГ№ГҐГ­Г 
+   Emuls2_start : BOOL ;	//Г‡Г ГЈГ°ГіГ§ГЄГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 Г§Г ГЇГіГ№ГҐГ­Г 
+   Mixer_start : BOOL ;	//Г‡Г ГЇГіГ№ГҐГ­Г  Г¬ГҐГёГ Г«ГЄГ 
+   IBC_start : BOOL ;	//ГЏГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГҐ Гў IBC
+   Mixer_ES : BOOL ;	//ГЂГўГ Г°ГЁГ©Г­Г Гї ГЄГ­Г®ГЇГЄГ  Г¬ГҐГёГ Г«ГЄГЁ
+   Mixer_stop : BOOL ;	//ГЋГ±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ
+   Minoil_stop : BOOL ;	//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬Г Г±Г«Г 
+   Emuls1_stop : BOOL ;	//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
+   Emuls2_stop : BOOL ;	//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
+   IBC_stop : BOOL ;	//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC
+   Process_busy : BOOL ;	//ГЏГ°Г®Г¶ГҐГ±Г± Г§Г ГЇГіГ№ГҐГ­
+   IBC_start_auto : BOOL ;	//ГЏГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГҐ Гў IBC Г ГўГІГ®Г°ГҐГ¦ГЁГ¬
+   Status_stop : BOOL ;	//ГЋГ±ГІГ Г­Г®ГўГЄГ  ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
+   Current_id : INT ;	//Г‚Г»ГЎГ°Г Г­Г­Г»Г© Г°ГҐГ¶ГҐГЇГІ
    Recipe : STRUCT 	
-    rec_id : INT ;	//Номер рецепта
-    weight : REAL ;	//Общий вес (кг)
-    minoil_amount : REAL ;	//Кол-во мин. масла (кг)
-    minoil_capacity : REAL ;	//Объем мин. масла (%)
-    emuls1_amount : REAL ;	//Кол-во эмульгатора 1 (кг)
-    emuls1_capacity : REAL ;	//Объем эмульгатора 1 (%)
-    emuls2_amount : REAL ;	//Кол-во эмульгатора 2 (кг)
-    emuls2_capacity : REAL ;	//Объем эмульгатора 2 (%)
-    mixer_time : DINT ;	//Время перемешивания (мин)
-    mixer_using : BOOL  := TRUE;	//Использование мешалки (да/нет)
+    rec_id : INT ;	//ГЌГ®Г¬ГҐГ° Г°ГҐГ¶ГҐГЇГІГ 
+    weight : REAL ;	//ГЋГЎГ№ГЁГ© ГўГҐГ± (ГЄГЈ)
+    minoil_amount : REAL ;	//ГЉГ®Г«-ГўГ® Г¬ГЁГ­. Г¬Г Г±Г«Г  (ГЄГЈ)
+    minoil_capacity : REAL ;	//ГЋГЎГєГҐГ¬ Г¬ГЁГ­. Г¬Г Г±Г«Г  (%)
+    emuls1_amount : REAL ;	//ГЉГ®Г«-ГўГ® ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 (ГЄГЈ)
+    emuls1_capacity : REAL ;	//ГЋГЎГєГҐГ¬ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 (%)
+    emuls2_amount : REAL ;	//ГЉГ®Г«-ГўГ® ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 (ГЄГЈ)
+    emuls2_capacity : REAL ;	//ГЋГЎГєГҐГ¬ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 (%)
+    mixer_time : DINT ;	//Г‚Г°ГҐГ¬Гї ГЇГҐГ°ГҐГ¬ГҐГёГЁГўГ Г­ГЁГї (Г¬ГЁГ­)
+    mixer_using : BOOL  := TRUE;	//Г€Г±ГЇГ®Г«ГјГ§Г®ГўГ Г­ГЁГҐ Г¬ГҐГёГ Г«ГЄГЁ (Г¤Г /Г­ГҐГІ)
    END_STRUCT ;	
-   Weight_control : REAL  := 1.000000e+000;	//Уставка контроля наличия жидкости в емкости B-FS-09
-   Error : WORD ;	//Ошибки
-   Idling_time : DINT  := L#30;	//Время на определение ХХ "DB_P-FS-10M"
-   Idling_control : REAL ;	//Значение массы емкости предыдущего цикла ПЛК
-   IBC_setpoint : REAL  := 9.000000e+002;	//Значение допустимой массы IBC
-   IBC_start_value : REAL ;	//Значение массы перед началом перекачки в IBC
-   Max_value : REAL  := 1.350000e+003;	//Значение допустимой массы B-FS-09
-   IBC_stop_auto : BOOL ;	//Останов перекачивания в IBC авторежим
-   FrontMerker1 : BOOL ;	//Бит для переднего фронта
-   Program_interrupt : BOOL ;	//Программа прервана
-   Mixer_enable : BOOL ;	//Запуск мешалки в авто режиме
-   Mixer_end : BOOL ;	//Окончание работы мешалки по времени
-   Warning : WORD ;	//Предупреждения
-   Control : DWORD ;	//Управление с WinCC
-   minoil_balance_value : REAL ;	//Равное значение количества и объема мин. масла
-   emuls1_balance_value : REAL ;	//Равное значение количества и объема эмульгатора 1
-   emuls2_balance_value : REAL ;	//Равное значение количества и объема эмульгатора 2
-   Reset : WORD ;	//Сброс ошибок
-   Max_value_limit : REAL  := 9.500000e+001;	//Процент от уставки максимально допустимой массы B-FS-09
-   Minoil_amount_current : REAL ;	//Текущее значение минерального масла в емкости
-   Emuls1_amount_current : REAL ;	//Текущее значение эмульгатора 1 в емкости
-   Emuls2_amount_current : REAL ;	//Текущее значение эмульгатора 2 в емкости
-   Common_amount_current : REAL ;	//Общий вес в емкости
-   Minoil_capacity_current : REAL ;	//Текущий процент минерального масла в емкости
-   Emuls1_capacity_current : REAL ;	//Текущий процент эмульгатора 1 в емкости
-   Emuls2_capacity_current : REAL ;	//Текущий процент эмульгатора 2 в емкости
-   Common_capacity_current : REAL ;	//Процент заполнения емкости
-   Previous_weight : REAL ;	//Значение веса в емкости предыдущего цикла
-   IBC_setpoint_HL : REAL  := 9.000000e+002;	//Максимально допустимая уставка массы IBC
-   Max_value_HL : REAL  := 1.350000e+003;	//Максимально допустимая уставка массы B-FS-09
-   rec_name : STRING  [20 ];	//Название текущего рецепта
-   Mixer_timer : INT ;	//Факическое время работы мешалки
+   Weight_control : REAL  := 1.000000e+000;	//Г“Г±ГІГ ГўГЄГ  ГЄГ®Г­ГІГ°Г®Г«Гї Г­Г Г«ГЁГ·ГЁГї Г¦ГЁГ¤ГЄГ®Г±ГІГЁ Гў ГҐГ¬ГЄГ®Г±ГІГЁ B-FS-09
+   Error : WORD ;	//ГЋГёГЁГЎГЄГЁ
+   Idling_time : DINT  := L#30;	//Г‚Г°ГҐГ¬Гї Г­Г  Г®ГЇГ°ГҐГ¤ГҐГ«ГҐГ­ГЁГҐ Г•Г• "DB_P-FS-10M"
+   Idling_control : REAL ;	//Г‡Г­Г Г·ГҐГ­ГЁГҐ Г¬Г Г±Г±Г» ГҐГ¬ГЄГ®Г±ГІГЁ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГҐГЈГ® Г¶ГЁГЄГ«Г  ГЏГ‹ГЉ
+   IBC_setpoint : REAL  := 9.000000e+002;	//Г‡Г­Г Г·ГҐГ­ГЁГҐ Г¤Г®ГЇГіГ±ГІГЁГ¬Г®Г© Г¬Г Г±Г±Г» IBC
+   IBC_start_value : REAL ;	//Г‡Г­Г Г·ГҐГ­ГЁГҐ Г¬Г Г±Г±Г» ГЇГҐГ°ГҐГ¤ Г­Г Г·Г Г«Г®Г¬ ГЇГҐГ°ГҐГЄГ Г·ГЄГЁ Гў IBC
+   Max_value : REAL  := 1.350000e+003;	//Г‡Г­Г Г·ГҐГ­ГЁГҐ Г¤Г®ГЇГіГ±ГІГЁГ¬Г®Г© Г¬Г Г±Г±Г» B-FS-09
+   IBC_stop_auto : BOOL ;	//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC Г ГўГІГ®Г°ГҐГ¦ГЁГ¬
+   FrontMerker1 : BOOL ;	//ГЃГЁГІ Г¤Г«Гї ГЇГҐГ°ГҐГ¤Г­ГҐГЈГ® ГґГ°Г®Г­ГІГ 
+   Program_interrupt : BOOL ;	//ГЏГ°Г®ГЈГ°Г Г¬Г¬Г  ГЇГ°ГҐГ°ГўГ Г­Г 
+   Mixer_enable : BOOL ;	//Г‡Г ГЇГіГ±ГЄ Г¬ГҐГёГ Г«ГЄГЁ Гў Г ГўГІГ® Г°ГҐГ¦ГЁГ¬ГҐ
+   Mixer_end : BOOL ;	//ГЋГЄГ®Г­Г·Г Г­ГЁГҐ Г°Г ГЎГ®ГІГ» Г¬ГҐГёГ Г«ГЄГЁ ГЇГ® ГўГ°ГҐГ¬ГҐГ­ГЁ
+   Warning : WORD ;	//ГЏГ°ГҐГ¤ГіГЇГ°ГҐГ¦Г¤ГҐГ­ГЁГї
+   Control : DWORD ;	//Г“ГЇГ°Г ГўГ«ГҐГ­ГЁГҐ Г± WinCC
+   minoil_balance_value : REAL ;	//ГђГ ГўГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЁ Г®ГЎГєГҐГ¬Г  Г¬ГЁГ­. Г¬Г Г±Г«Г 
+   emuls1_balance_value : REAL ;	//ГђГ ГўГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЁ Г®ГЎГєГҐГ¬Г  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
+   emuls2_balance_value : REAL ;	//ГђГ ГўГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЁ Г®ГЎГєГҐГ¬Г  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
+   Reset : WORD ;	//Г‘ГЎГ°Г®Г± Г®ГёГЁГЎГ®ГЄ
+   Max_value_limit : REAL  := 9.500000e+001;	//ГЏГ°Г®Г¶ГҐГ­ГІ Г®ГІ ГіГ±ГІГ ГўГЄГЁ Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г® Г¤Г®ГЇГіГ±ГІГЁГ¬Г®Г© Г¬Г Г±Г±Г» B-FS-09
+   Minoil_amount_current : REAL ;	//Г’ГҐГЄГіГ№ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Г¬ГЁГ­ГҐГ°Г Г«ГјГ­Г®ГЈГ® Г¬Г Г±Г«Г  Гў ГҐГ¬ГЄГ®Г±ГІГЁ
+   Emuls1_amount_current : REAL ;	//Г’ГҐГЄГіГ№ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 Гў ГҐГ¬ГЄГ®Г±ГІГЁ
+   Emuls2_amount_current : REAL ;	//Г’ГҐГЄГіГ№ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 Гў ГҐГ¬ГЄГ®Г±ГІГЁ
+   Common_amount_current : REAL ;	//ГЋГЎГ№ГЁГ© ГўГҐГ± Гў ГҐГ¬ГЄГ®Г±ГІГЁ
+   Minoil_capacity_current : REAL ;	//Г’ГҐГЄГіГ№ГЁГ© ГЇГ°Г®Г¶ГҐГ­ГІ Г¬ГЁГ­ГҐГ°Г Г«ГјГ­Г®ГЈГ® Г¬Г Г±Г«Г  Гў ГҐГ¬ГЄГ®Г±ГІГЁ
+   Emuls1_capacity_current : REAL ;	//Г’ГҐГЄГіГ№ГЁГ© ГЇГ°Г®Г¶ГҐГ­ГІ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 Гў ГҐГ¬ГЄГ®Г±ГІГЁ
+   Emuls2_capacity_current : REAL ;	//Г’ГҐГЄГіГ№ГЁГ© ГЇГ°Г®Г¶ГҐГ­ГІ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 Гў ГҐГ¬ГЄГ®Г±ГІГЁ
+   Common_capacity_current : REAL ;	//ГЏГ°Г®Г¶ГҐГ­ГІ Г§Г ГЇГ®Г«Г­ГҐГ­ГЁГї ГҐГ¬ГЄГ®Г±ГІГЁ
+   Previous_weight : REAL ;	//Г‡Г­Г Г·ГҐГ­ГЁГҐ ГўГҐГ±Г  Гў ГҐГ¬ГЄГ®Г±ГІГЁ ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГҐГЈГ® Г¶ГЁГЄГ«Г 
+   IBC_setpoint_HL : REAL  := 9.000000e+002;	//ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г® Г¤Г®ГЇГіГ±ГІГЁГ¬Г Гї ГіГ±ГІГ ГўГЄГ  Г¬Г Г±Г±Г» IBC
+   Max_value_HL : REAL  := 1.350000e+003;	//ГЊГ ГЄГ±ГЁГ¬Г Г«ГјГ­Г® Г¤Г®ГЇГіГ±ГІГЁГ¬Г Гї ГіГ±ГІГ ГўГЄГ  Г¬Г Г±Г±Г» B-FS-09
+   rec_name : STRING  [20 ];	//ГЌГ Г§ГўГ Г­ГЁГҐ ГІГҐГЄГіГ№ГҐГЈГ® Г°ГҐГ¶ГҐГЇГІГ 
+   Mixer_timer : INT ;	//Г”Г ГЄГЁГ·ГҐГ±ГЄГ®ГҐ ГўГ°ГҐГ¬Гї Г°Г ГЎГ®ГІГ» Г¬ГҐГёГ Г«ГЄГЁ
   END_STRUCT ;	
 BEGIN
    Status_start := FALSE; 
@@ -2067,7 +2067,7 @@ VAR
 END_VAR
 BEGIN
 NETWORK
-TITLE =Симуляция обратной связи
+TITLE =Г‘ГЁГ¬ГіГ«ГїГ¶ГЁГї Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ
 
       A     #Simulation; 
       A     #Start; 
@@ -2076,7 +2076,7 @@ TITLE =Симуляция обратной связи
       =     #Aux_Switch; 
 _011: NOP   0; 
 NETWORK
-TITLE =Выставление ошибки обратной связи (счетчик ожидания об.связи)
+TITLE =Г‚Г»Г±ГІГ ГўГ«ГҐГ­ГЁГҐ Г®ГёГЁГЎГЄГЁ Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ (Г±Г·ГҐГІГ·ГЁГЄ Г®Г¦ГЁГ¤Г Г­ГЁГї Г®ГЎ.Г±ГўГїГ§ГЁ)
 
       A(    ; 
       A(    ; 
@@ -2113,12 +2113,12 @@ _001: A     BR;
 _002: A     BR; 
       S     #Error; 
 NETWORK
-TITLE =Сброс ошибки обратной связи
+TITLE =Г‘ГЎГ°Г®Г± Г®ГёГЁГЎГЄГЁ Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ
 
       A     #Reset_Error; 
       R     #Error; 
 NETWORK
-TITLE =Сброс счетчика
+TITLE =Г‘ГЎГ°Г®Г± Г±Г·ГҐГІГ·ГЁГЄГ 
 
       A(    ; 
       A     #Start; 
@@ -2133,7 +2133,7 @@ TITLE =Сброс счетчика
       T     #count; 
 _003: NOP   0; 
 NETWORK
-TITLE =Старт мотора
+TITLE =Г‘ГІГ Г°ГІ Г¬Г®ГІГ®Г°Г 
 
       A(    ; 
       O     #Start_WinCC; 
@@ -2154,7 +2154,7 @@ _004: A     BR;
       S     #Start; 
       R     #Stop; 
 NETWORK
-TITLE =Стоп мотора
+TITLE =Г‘ГІГ®ГЇ Г¬Г®ГІГ®Г°Г 
 
       A(    ; 
       A(    ; 
@@ -2181,13 +2181,13 @@ _005: A     BR;
       S     #Stop; 
       R     #Start; 
 NETWORK
-TITLE =Симуляция обратной связи от частотников
+TITLE =Г‘ГЁГ¬ГіГ«ГїГ¶ГЁГї Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ Г®ГІ Г·Г Г±ГІГ®ГІГ­ГЁГЄГ®Гў
 
       L     #Analog_Set_Value; 
       T     #FB_Analog; 
 
 NETWORK
-TITLE =Пересылка аналогового значения
+TITLE =ГЏГҐГ°ГҐГ±Г»Г«ГЄГ  Г Г­Г Г«Г®ГЈГ®ГўГ®ГЈГ® Г§Г­Г Г·ГҐГ­ГЁГї
 
 
 
@@ -2205,7 +2205,7 @@ TITLE =Пересылка аналогового значения
            Out_of_range             := "NULL");
 _006: NOP   0; 
 NETWORK
-TITLE =Установка статусов
+TITLE =Г“Г±ГІГ Г­Г®ГўГЄГ  Г±ГІГ ГІГіГ±Г®Гў
 
       A     #Remote_Switch; 
       A     #Aux_Switch; 
@@ -2219,7 +2219,7 @@ TITLE =Установка статусов
 
 
 NETWORK
-TITLE =Расчет времени работы/простоя и циклов включения
+TITLE =ГђГ Г±Г·ГҐГІ ГўГ°ГҐГ¬ГҐГ­ГЁ Г°Г ГЎГ®ГІГ»/ГЇГ°Г®Г±ГІГ®Гї ГЁ Г¶ГЁГЄГ«Г®Гў ГўГЄГ«ГѕГ·ГҐГ­ГЁГї
 
 // On_Time counting
       A     #Status_ON; 
@@ -2266,7 +2266,7 @@ _009: NOP   0;
       R     #Reset; 
 _010: NOP   0; 
 NETWORK
-TITLE =Сброс кнопок
+TITLE =Г‘ГЎГ°Г®Г± ГЄГ­Г®ГЇГ®ГЄ
 //
 //
       A     #Start_WinCC; 
@@ -2459,7 +2459,7 @@ VAR
 END_VAR
 BEGIN
 NETWORK
-TITLE =Симуляция обратной связи
+TITLE =Г‘ГЁГ¬ГіГ«ГїГ¶ГЁГї Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ
 
       A     #Simulation; 
       S     #Automatic_Switch; 
@@ -2470,7 +2470,7 @@ TITLE =Симуляция обратной связи
       =     #Aux_Switch; 
 _011: NOP   0; 
 NETWORK
-TITLE =Выставление ошибки обратной связи (счетчик ожидания об.связи)
+TITLE =Г‚Г»Г±ГІГ ГўГ«ГҐГ­ГЁГҐ Г®ГёГЁГЎГЄГЁ Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ (Г±Г·ГҐГІГ·ГЁГЄ Г®Г¦ГЁГ¤Г Г­ГЁГї Г®ГЎ.Г±ГўГїГ§ГЁ)
 
       A(    ; 
       A(    ; 
@@ -2507,7 +2507,7 @@ _001: A     BR;
 _002: A     BR; 
       S     #ErrorFB; 
 NETWORK
-TITLE =Выставление ошибки доп. контакта АВ
+TITLE =Г‚Г»Г±ГІГ ГўГ«ГҐГ­ГЁГҐ Г®ГёГЁГЎГЄГЁ Г¤Г®ГЇ. ГЄГ®Г­ГІГ ГЄГІГ  ГЂГ‚
 
       A(    ; 
       O     #Start_WinCC; 
@@ -2519,23 +2519,23 @@ TITLE =Выставление ошибки доп. контакта АВ
       A     "Voltage control".SV_MCC1; 
       S     #ErrorQF; 
 NETWORK
-TITLE =Сброс ошибки обратной связи
+TITLE =Г‘ГЎГ°Г®Г± Г®ГёГЁГЎГЄГЁ Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ
 
       A     #Reset_ErrorFB; 
       R     #ErrorFB; 
 NETWORK
-TITLE =Сброс ошибки доп. конткта АВ
+TITLE =Г‘ГЎГ°Г®Г± Г®ГёГЁГЎГЄГЁ Г¤Г®ГЇ. ГЄГ®Г­ГІГЄГІГ  ГЂГ‚
 
       A     #Reset_ErrorQF; 
       R     #ErrorQF; 
 NETWORK
-TITLE =Наличие какой-либо ошибки
+TITLE =ГЌГ Г«ГЁГ·ГЁГҐ ГЄГ ГЄГ®Г©-Г«ГЁГЎГ® Г®ГёГЁГЎГЄГЁ
 
       O     #ErrorFB; 
       O     #ErrorQF; 
       =     #HmiError; 
 NETWORK
-TITLE =Сброс счетчика
+TITLE =Г‘ГЎГ°Г®Г± Г±Г·ГҐГІГ·ГЁГЄГ 
 
       A(    ; 
       A     #Start; 
@@ -2551,7 +2551,7 @@ TITLE =Сброс счетчика
       T     #count; 
 _003: NOP   0; 
 NETWORK
-TITLE =Старт мотора
+TITLE =Г‘ГІГ Г°ГІ Г¬Г®ГІГ®Г°Г 
 
       A(    ; 
       O     #Start_WinCC; 
@@ -2573,7 +2573,7 @@ _004: A     BR;
       S     #Start; 
       R     #Stop; 
 NETWORK
-TITLE =Стоп мотора
+TITLE =Г‘ГІГ®ГЇ Г¬Г®ГІГ®Г°Г 
 
       A(    ; 
       A(    ; 
@@ -2602,13 +2602,13 @@ _005: A     BR;
       S     #Stop; 
       R     #Start; 
 NETWORK
-TITLE =Симуляция обратной связи от частотников
+TITLE =Г‘ГЁГ¬ГіГ«ГїГ¶ГЁГї Г®ГЎГ°Г ГІГ­Г®Г© Г±ГўГїГ§ГЁ Г®ГІ Г·Г Г±ГІГ®ГІГ­ГЁГЄГ®Гў
 
       L     #Analog_Set_Value; 
       T     #FB_Analog; 
 
 NETWORK
-TITLE =Пересылка аналогового значения
+TITLE =ГЏГҐГ°ГҐГ±Г»Г«ГЄГ  Г Г­Г Г«Г®ГЈГ®ГўГ®ГЈГ® Г§Г­Г Г·ГҐГ­ГЁГї
 
 
 
@@ -2628,7 +2628,7 @@ TITLE =Пересылка аналогового значения
            Out_of_range             := "NULL");
 _006: NOP   0; 
 NETWORK
-TITLE =Установка статусов
+TITLE =Г“Г±ГІГ Г­Г®ГўГЄГ  Г±ГІГ ГІГіГ±Г®Гў
 
       A     #Remote_Switch; 
       A     #Automatic_Switch; 
@@ -2645,7 +2645,7 @@ TITLE =Установка статусов
 
 
 NETWORK
-TITLE =Расчет времени работы/простоя и циклов включения
+TITLE =ГђГ Г±Г·ГҐГІ ГўГ°ГҐГ¬ГҐГ­ГЁ Г°Г ГЎГ®ГІГ»/ГЇГ°Г®Г±ГІГ®Гї ГЁ Г¶ГЁГЄГ«Г®Гў ГўГЄГ«ГѕГ·ГҐГ­ГЁГї
 
 // On_Time counting
       A     #Status_ON; 
@@ -2692,7 +2692,7 @@ _009: NOP   0;
       R     #Reset; 
 _010: NOP   0; 
 NETWORK
-TITLE =Сброс кнопок
+TITLE =Г‘ГЎГ°Г®Г± ГЄГ­Г®ГЇГ®ГЄ
 //
 //
       A     #Start_WinCC; 
@@ -3263,7 +3263,7 @@ TITLE =
 
       SET   ; 
       SAVE  ; // BIE setzen
-      L     0; // Zeitbasis lцschen
+      L     0; // Zeitbasis lГ¶schen
       T     #y_Base; 
       L     #IN; 
       T     #d_Temp; 
@@ -3312,58 +3312,58 @@ VAR_TEMP
 END_VAR
 BEGIN
 NETWORK
-TITLE =Ошибки и блокировки
+TITLE =ГЋГёГЁГЎГЄГЁ ГЁ ГЎГ«Г®ГЄГЁГ°Г®ГўГЄГЁ
 
-//Сброс ошибок
-//Слить предыдущую партию
+//Г‘ГЎГ°Г®Г± Г®ГёГЁГЎГ®ГЄ
+//Г‘Г«ГЁГІГј ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГіГѕ ГЇГ Г°ГІГЁГѕ
       A     DB24.DBX   86.0; 
       JNB   _250; 
       R     DB24.DBX   44.0; 
       R     DB24.DBX   86.0; 
 
-//Холостой ход DB_P-FS-10M
+//Г•Г®Г«Г®Г±ГІГ®Г© ГµГ®Г¤ DB_P-FS-10M
 _250: A     DB24.DBX   86.1; 
       JNB   _251; 
       R     DB24.DBX   44.1; 
       R     DB24.DBX   86.1; 
 
-//Перелив IBC
+//ГЏГҐГ°ГҐГ«ГЁГў IBC
 _251: A     DB24.DBX   86.2; 
       JNB   _252; 
       R     DB24.DBX   44.2; 
       R     DB24.DBX   86.2; 
 
-//Перелив B-FS-09
+//ГЏГҐГ°ГҐГ«ГЁГў B-FS-09
 _252: A     DB24.DBX   86.3; 
       JNB   _253; 
       R     DB24.DBX   44.3; 
       R     DB24.DBX   86.3; 
 
-//Аварийный останов мешалки A-FS-30M
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M
 _253: A     DB24.DBX   86.4; 
       JNB   _254; 
       R     DB24.DBX   44.4; 
       R     DB24.DBX   86.4; 
 
-//Аварийный останов
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў
 _254: A     DB24.DBX   86.5; 
       JNB   _255; 
       R     DB24.DBX   44.5; 
       R     DB24.DBX   86.5; 
 
-//Заняты оба насоса P-FS-03M и P-FS-04M
+//Г‡Г Г­ГїГІГ» Г®ГЎГ  Г­Г Г±Г®Г±Г  P-FS-03M ГЁ P-FS-04M
 _255: A     DB24.DBX   86.6; 
       JNB   _256; 
       R     DB24.DBX   44.6; 
       R     DB24.DBX   86.6; 
 
-//Запущен ручной процесс
+//Г‡Г ГЇГіГ№ГҐГ­ Г°ГіГ·Г­Г®Г© ГЇГ°Г®Г¶ГҐГ±Г±
 _256: A     DB24.DBX   86.7; 
       JNB   _257; 
       R     DB24.DBX   44.7; 
       R     DB24.DBX   86.7; 
 
-//Некорректные параметры рецепта
+//ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г°ГҐГ¶ГҐГЇГІГ 
 _257: A     DB24.DBX   87.0; 
       JNB   _258; 
       R     DB24.DBX   68.1; 
@@ -3372,8 +3372,8 @@ _257: A     DB24.DBX   87.0;
 _258: NOP   0; 
 
 
-//Установка флагов ошибок
-//Слить предыдущую партию
+//Г“Г±ГІГ Г­Г®ГўГЄГ  ГґГ«Г ГЈГ®Гў Г®ГёГЁГЎГ®ГЄ
+//Г‘Г«ГЁГІГј ГЇГ°ГҐГ¤Г»Г¤ГіГ№ГіГѕ ГЇГ Г°ГІГЁГѕ
       A     DB24.DBX   70.0; 
       JNB   _200; 
       A(    ; 
@@ -3386,7 +3386,7 @@ _258: NOP   0;
       A     DB24.DBX   44.0; 
       R     DB24.DBX   70.0; 
 
-//Холостой ход DB_P-FS-10M
+//Г•Г®Г«Г®Г±ГІГ®Г© ГµГ®Г¤ DB_P-FS-10M
 _200: A     T     29; 
       R     T     29; 
       S     DB24.DBX   44.1; 
@@ -3443,7 +3443,7 @@ _213: L     "Fuel Phase Block".Idling_time;
       T     "Fuel Phase Block".Idling_control; 
 
 
-//Перелив IBC
+//ГЏГҐГ°ГҐГ«ГЁГў IBC
       A(    ; 
       L     "Fuel Phase Block".IBC_setpoint; 
       L     "Fuel Phase Block".IBC_setpoint_HL; 
@@ -3488,7 +3488,7 @@ _203: L     0;
       T     "Fuel Phase Block".IBC_start_value; 
 
 
-//Перелив B-FS-09
+//ГЏГҐГ°ГҐГ«ГЁГў B-FS-09
 _205: A(    ; 
       L     "Fuel Phase Block".Max_value; 
       L     "Fuel Phase Block".Max_value_HL; 
@@ -3537,7 +3537,7 @@ _202: A(    ;
 
 
 
-//Предупреждение перелива B-FS-09
+//ГЏГ°ГҐГ¤ГіГЇГ°ГҐГ¦Г¤ГҐГ­ГЁГҐ ГЇГҐГ°ГҐГ«ГЁГўГ  B-FS-09
 _206: A(    ; 
       L     "Fuel Phase Block".Max_value_limit; 
       L     1.000000e+002; 
@@ -3559,14 +3559,14 @@ _212: A(    ;
       =     DB24.DBX   68.0; 
 
 
-//Аварийный останов мешалки A-FS-30M
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M
       AN    "Fuel Phase Block".Mixer_ES; 
       JNB   _207; 
       R     "Fuel Phase Block".Mixer_start; 
       S     DB24.DBX   44.4; 
 
 
-//Аварийный останов
+//ГЂГўГ Г°ГЁГ©Г­Г»Г© Г®Г±ГІГ Г­Г®Гў
 _207: A     "Emergency Blocks".HS_EZ_07; 
       O     "Emergency Blocks".HS_EZ_01; 
       =     DB24.DBX   44.5; 
@@ -3618,7 +3618,7 @@ _207: A     "Emergency Blocks".HS_EZ_07;
 
 
 
-//Заняты оба насоса P-FS-03M и P-FS-04M
+//Г‡Г Г­ГїГІГ» Г®ГЎГ  Г­Г Г±Г®Г±Г  P-FS-03M ГЁ P-FS-04M
 _208: A(    ; 
       A     DB24.DBX   70.0; 
       O     DB24.DBX   70.4; 
@@ -3630,14 +3630,14 @@ _208: A(    ;
       R     DB24.DBX   70.0; 
       R     DB24.DBX   70.4; 
 
-//Запущен ручной процесс
+//Г‡Г ГЇГіГ№ГҐГ­ Г°ГіГ·Г­Г®Г© ГЇГ°Г®Г¶ГҐГ±Г±
 _209: A     DB24.DBX   70.0; 
       JNB   _210; 
       A     "Fuel Phase Block".Process_busy; 
       S     DB24.DBX   44.7; 
       R     DB24.DBX   70.0; 
 
-//Некорректные параметры рецепта          
+//ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г°ГҐГ¶ГҐГЇГІГ           
 _210: A(    ; 
       O     DB24.DBX   70.0; 
       O     DB24.DBX   71.7; 
@@ -3678,7 +3678,7 @@ _210: A(    ;
       A     DB24.DBX   71.7; 
       R     DB24.DBX   71.7; 
 
-//Некорректные параметры рецепта
+//ГЌГҐГЄГ®Г°Г°ГҐГЄГІГ­Г»ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г» Г°ГҐГ¶ГҐГЇГІГ 
 _211: A     DB24.DBX   71.6; 
       JNB   _214; 
       A(    ; 
@@ -3690,7 +3690,7 @@ _211: A     DB24.DBX   71.6;
       S     DB24.DBX   68.1; 
       R     DB24.DBX   71.6; 
 
-//Сработавшие блокировки P-FS-03M или P-FS-04M
+//Г‘Г°Г ГЎГ®ГІГ ГўГёГЁГҐ ГЎГ«Г®ГЄГЁГ°Г®ГўГЄГЁ P-FS-03M ГЁГ«ГЁ P-FS-04M
 _214: A     "Interlocks".Interlock_95_1; 
       O     "Interlocks".Interlock_95_2; 
       O     "Interlocks".Interlock_52_2; 
@@ -3708,7 +3708,7 @@ _214: A     "Interlocks".Interlock_95_1;
       R     "Fuel Phase Block".Minoil_start; 
       R     "Fuel Phase Block".Process_busy; 
 
-//Сработавшие блокировки P-FS-02M
+//Г‘Г°Г ГЎГ®ГІГ ГўГёГЁГҐ ГЎГ«Г®ГЄГЁГ°Г®ГўГЄГЁ P-FS-02M
 _215: A     "Interlocks".Interlock_63_1; 
       JNB   _216; 
       A     "Fuel Phase Block".IBC_start; 
@@ -3725,14 +3725,14 @@ _216: NOP   0;
 
 
 NETWORK
-TITLE =Рецепт расчет
+TITLE =ГђГҐГ¶ГҐГЇГІ Г°Г Г±Г·ГҐГІ
 
-//Расчет параметров рецепта
-//Проверка на программа запущена в авто режиме
+//ГђГ Г±Г·ГҐГІ ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г°ГҐГ¶ГҐГЇГІГ 
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  Г§Г ГЇГіГ№ГҐГ­Г  Гў Г ГўГІГ® Г°ГҐГ¦ГЁГ¬ГҐ
       AN    "Fuel Phase Block".Status_start; 
       JNB   _309; 
 
-//Проверка на общий вес не равен 0
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г®ГЎГ№ГЁГ© ГўГҐГ± Г­ГҐ Г°Г ГўГҐГ­ 0
       A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     0.000000e+000; 
@@ -3740,7 +3740,7 @@ TITLE =Рецепт расчет
       )     ; 
       JNB   _300; 
 
-//Проверка на соответствие количества мин. масла объему
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  Г¬ГЁГ­. Г¬Г Г±Г«Г  Г®ГЎГєГҐГ¬Гі
       A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3755,7 +3755,7 @@ TITLE =Рецепт расчет
       T     "Fuel Phase Block".minoil_balance_value; 
       JU    _303; 
 
-//Перевод кг в % мин. масло если количество изменено
+//ГЏГҐГ°ГҐГўГ®Г¤ ГЄГЈ Гў % Г¬ГЁГ­. Г¬Г Г±Г«Г® ГҐГ±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЁГ§Г¬ГҐГ­ГҐГ­Г®
 _301: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".minoil_balance_value; 
@@ -3770,7 +3770,7 @@ _301: A(    ;
       T     "Fuel Phase Block".Recipe.minoil_capacity; 
       JU    _303; 
 
-//Перевод % в кг мин. масло если объем изменен
+//ГЏГҐГ°ГҐГўГ®Г¤ % Гў ГЄГЈ Г¬ГЁГ­. Г¬Г Г±Г«Г® ГҐГ±Г«ГЁ Г®ГЎГєГҐГ¬ ГЁГ§Г¬ГҐГ­ГҐГ­
 _302: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3788,7 +3788,7 @@ _302: A(    ;
       *R    ; 
       T     "Fuel Phase Block".Recipe.minoil_amount; 
 
-//Проверка на соответствие количества эмульгатора 1 объему
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 Г®ГЎГєГҐГ¬Гі
 _303: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3803,7 +3803,7 @@ _303: A(    ;
       T     "Fuel Phase Block".emuls1_balance_value; 
       JU    _306; 
 
-//Перевод кг в % эмульгатор 1 если количество изменено
+//ГЏГҐГ°ГҐГўГ®Г¤ ГЄГЈ Гў % ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЁГ§Г¬ГҐГ­ГҐГ­Г®
 _304: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
       L     "Fuel Phase Block".emuls1_balance_value; 
@@ -3818,7 +3818,7 @@ _304: A(    ;
       T     "Fuel Phase Block".Recipe.emuls1_capacity; 
       JU    _306; 
 
-//Перевод % в кг эмульгатор 1 если объем изменен
+//ГЏГҐГ°ГҐГўГ®Г¤ % Гў ГЄГЈ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ Г®ГЎГєГҐГ¬ ГЁГ§Г¬ГҐГ­ГҐГ­
 _305: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3836,7 +3836,7 @@ _305: A(    ;
       *R    ; 
       T     "Fuel Phase Block".Recipe.emuls1_amount; 
 
-//Проверка на соответствие количества эмульгатора 2 объему
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г±Г®Г®ГІГўГҐГІГ±ГІГўГЁГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 Г®ГЎГєГҐГ¬Гі
 _306: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3851,7 +3851,7 @@ _306: A(    ;
       T     "Fuel Phase Block".emuls2_balance_value; 
       JU    _309; 
 
-//Перевод кг в % эмульгатор 1 если количество изменено
+//ГЏГҐГ°ГҐГўГ®Г¤ ГЄГЈ Гў % ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЁГ§Г¬ГҐГ­ГҐГ­Г®
 _307: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls2_amount; 
       L     "Fuel Phase Block".emuls2_balance_value; 
@@ -3866,7 +3866,7 @@ _307: A(    ;
       T     "Fuel Phase Block".Recipe.emuls2_capacity; 
       JU    _309; 
 
-//Перевод % в кг эмульгатор 1 если объем изменен
+//ГЏГҐГ°ГҐГўГ®Г¤ % Гў ГЄГЈ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 ГҐГ±Г«ГЁ Г®ГЎГєГҐГ¬ ГЁГ§Г¬ГҐГ­ГҐГ­
 _308: A(    ; 
       L     "Fuel Phase Block".Recipe.weight; 
       L     1.000000e+002; 
@@ -3885,7 +3885,7 @@ _308: A(    ;
       T     "Fuel Phase Block".Recipe.emuls2_amount; 
       JU    _309; 
 
-//Сброс параметров мин. масла
+//Г‘ГЎГ°Г®Г± ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г¬ГЁГ­. Г¬Г Г±Г«Г 
 _300: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     0.000000e+000; 
@@ -3896,7 +3896,7 @@ _300: A(    ;
       T     "Fuel Phase Block".Recipe.minoil_amount; 
       T     "Fuel Phase Block".Recipe.minoil_capacity; 
 
-//Сброс параметров эмульгатора 1
+//Г‘ГЎГ°Г®Г± ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _310: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
       L     0.000000e+000; 
@@ -3907,7 +3907,7 @@ _310: A(    ;
       T     "Fuel Phase Block".Recipe.emuls1_amount; 
       T     "Fuel Phase Block".Recipe.emuls1_capacity; 
 
-//Сброс параметров эмульгатора 2
+//Г‘ГЎГ°Г®Г± ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _311: A(    ; 
       L     "Fuel Phase Block".Recipe.emuls2_amount; 
       L     0.000000e+000; 
@@ -3939,12 +3939,12 @@ _309: NOP   0;
 
 
 
-//Вывод фактических значений
-//Общий вес в емкости (кг)
+//Г‚Г»ГўГ®Г¤ ГґГ ГЄГІГЁГ·ГҐГ±ГЄГЁГµ Г§Г­Г Г·ГҐГ­ГЁГ©
+//ГЋГЎГ№ГЁГ© ГўГҐГ± Гў ГҐГ¬ГЄГ®Г±ГІГЁ (ГЄГЈ)
       L     "DB_TenzoM".Analog_Output; 
       T     "Fuel Phase Block".Common_amount_current; 
 
-//Мин. масло (кг)
+//ГЊГЁГ­. Г¬Г Г±Г«Г® (ГЄГЈ)
       A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -3964,7 +3964,7 @@ _309: NOP   0;
       +R    ; 
       T     "Fuel Phase Block".Minoil_amount_current; 
 
-//Эмульгатор 1 (кг)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 (ГЄГЈ)
 _500: A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -3991,7 +3991,7 @@ _500: A(    ;
       +R    ; 
       T     "Fuel Phase Block".Emuls1_amount_current; 
 
-//Эмульгатор 2 (кг)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 2 (ГЄГЈ)
 _501: A(    ; 
       A     "Fuel Phase Block".Status_start; 
       O     "Fuel Phase Block".Status_stop; 
@@ -4023,7 +4023,7 @@ _501: A(    ;
       T     "Fuel Phase Block".Emuls2_amount_current; 
 
 
-//Общий вес в емкости (%)
+//ГЋГЎГ№ГЁГ© ГўГҐГ± Гў ГҐГ¬ГЄГ®Г±ГІГЁ (%)
 _502: A(    ; 
       L     "Fuel Phase Block".Max_value; 
       L     0.000000e+000; 
@@ -4041,7 +4041,7 @@ _502: A(    ;
 _503: L     0.000000e+000; 
       T     "Fuel Phase Block".Common_capacity_current; 
 
-//Мин. масло (%)
+//ГЊГЁГ­. Г¬Г Г±Г«Г® (%)
 _504: A(    ; 
       L     "Fuel Phase Block".Common_amount_current; 
       L     0.000000e+000; 
@@ -4055,7 +4055,7 @@ _504: A(    ;
       /R    ; 
       T     "Fuel Phase Block".Minoil_capacity_current; 
 
-//Эмульгатор 1 (%)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 1 (%)
       L     "Fuel Phase Block".Emuls1_amount_current; 
       L     1.000000e+002; 
       *R    ; 
@@ -4063,7 +4063,7 @@ _504: A(    ;
       /R    ; 
       T     "Fuel Phase Block".Emuls1_capacity_current; 
 
-//Эмульгатор 2 (%)
+//ГќГ¬ГіГ«ГјГЈГ ГІГ®Г° 2 (%)
       L     "Fuel Phase Block".Emuls2_amount_current; 
       L     1.000000e+002; 
       *R    ; 
@@ -4077,7 +4077,7 @@ _505: L     0.000000e+000;
       T     "Fuel Phase Block".Emuls1_capacity_current; 
       T     "Fuel Phase Block".Emuls2_capacity_current; 
 
-//Сброс значений
+//Г‘ГЎГ°Г®Г± Г§Г­Г Г·ГҐГ­ГЁГ©
 _506: A     "Fuel Phase Block".IBC_start; 
       O     "Fuel Phase Block".IBC_start_auto; 
       O(    ; 
@@ -4095,7 +4095,7 @@ _506: A     "Fuel Phase Block".IBC_start;
       T     "Fuel Phase Block".Emuls1_amount_current; 
       T     "Fuel Phase Block".Emuls2_amount_current; 
 
-//Запись значения текущего цикла
+//Г‡Г ГЇГЁГ±Гј Г§Г­Г Г·ГҐГ­ГЁГї ГІГҐГЄГіГ№ГҐГЈГ® Г¶ГЁГЄГ«Г 
 _507: L     "DB_TenzoM".Analog_Output; 
       T     "Fuel Phase Block".Previous_weight; 
 
@@ -4104,9 +4104,9 @@ _507: L     "DB_TenzoM".Analog_Output;
 
 
 NETWORK
-TITLE =Управление приготовлением топливной фазы
+TITLE =Г“ГЇГ°Г ГўГ«ГҐГ­ГЁГҐ ГЇГ°ГЁГЈГ®ГІГ®ГўГ«ГҐГ­ГЁГҐГ¬ ГІГ®ГЇГ«ГЁГўГ­Г®Г© ГґГ Г§Г»
 
-//Запуск программы в автоматическом режиме
+//Г‡Г ГЇГіГ±ГЄ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г» Гў Г ГўГІГ®Г¬Г ГІГЁГ·ГҐГ±ГЄГ®Г¬ Г°ГҐГ¦ГЁГ¬ГҐ
       A     DB24.DBX   70.0; 
       JNB   _000; 
       R     DB24.DBX   70.0; 
@@ -4115,7 +4115,7 @@ TITLE =Управление приготовлением топливной фазы
       AN    "Fuel Phase Block".Status_stop; 
       S     "Fuel Phase Block".Status_start; 
 
-//Останов программы
+//ГЋГ±ГІГ Г­Г®Гў ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
 _000: A     DB24.DBX   70.1; 
       JNB   _001; 
       R     "Fuel Phase Block".Status_start; 
@@ -4123,7 +4123,7 @@ _000: A     DB24.DBX   70.1;
       S     "Fuel Phase Block".Status_stop; 
       R     DB24.DBX   70.1; 
 
-//ТФ готова
+//Г’Г” ГЈГ®ГІГ®ГўГ 
 _001: A     DB24.DBX   70.2; 
       JNB   _002; 
       R     DB24.DBX   70.2; 
@@ -4131,13 +4131,13 @@ _001: A     DB24.DBX   70.2;
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Status_ready; 
 
-//ТФ не готова
+//Г’Г” Г­ГҐ ГЈГ®ГІГ®ГўГ 
 _002: A     DB24.DBX   70.3; 
       JNB   _003; 
       R     "Fuel Phase Block".Status_ready; 
       R     DB24.DBX   70.3; 
 
-//Запуск загрузки минерального масла. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬ГЁГ­ГҐГ°Г Г«ГјГ­Г®ГЈГ® Г¬Г Г±Г«Г . ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _003: A     DB24.DBX   70.4; 
       JNB   _004; 
       R     DB24.DBX   70.4; 
@@ -4149,7 +4149,7 @@ _003: A     DB24.DBX   70.4;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Minoil_start; 
 
-//Останов загрузки минерального масла. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬ГЁГ­ГҐГ°Г Г«ГјГ­Г®ГЈГ® Г¬Г Г±Г«Г . ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _004: A     DB24.DBX   70.5; 
       JNB   _005; 
       R     DB24.DBX   70.5; 
@@ -4157,7 +4157,7 @@ _004: A     DB24.DBX   70.5;
       R     "Fuel Phase Block".Minoil_start; 
       S     "Fuel Phase Block".Minoil_stop; 
 
-//Запуск загрузки эмульгатора 1. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _005: A     DB24.DBX   70.6; 
       JNB   _006; 
       R     DB24.DBX   70.6; 
@@ -4170,7 +4170,7 @@ _005: A     DB24.DBX   70.6;
       S     "Fuel Phase Block".Emuls1_start; 
 
 
-//Останов загрузки эмульгатора 1. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _006: A     DB24.DBX   70.7; 
       JNB   _007; 
       R     DB24.DBX   70.7; 
@@ -4178,7 +4178,7 @@ _006: A     DB24.DBX   70.7;
       R     "Fuel Phase Block".Emuls1_start; 
       S     "Fuel Phase Block".Emuls1_stop; 
 
-//Запуск загрузки эмульгатора 2. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _007: A     DB24.DBX   71.0; 
       JNB   _008; 
       R     DB24.DBX   71.0; 
@@ -4190,7 +4190,7 @@ _007: A     DB24.DBX   71.0;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Emuls2_start; 
 
-//Останов загрузки эмульгатора 2. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _008: A     DB24.DBX   71.1; 
       JNB   _009; 
       R     DB24.DBX   71.1; 
@@ -4198,7 +4198,7 @@ _008: A     DB24.DBX   71.1;
       R     "Fuel Phase Block".Emuls2_start; 
       S     "Fuel Phase Block".Emuls2_stop; 
 
-//Запуск перекачивания в IBC. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _009: A     DB24.DBX   71.2; 
       JNB   _010; 
       R     DB24.DBX   71.2; 
@@ -4209,7 +4209,7 @@ _009: A     DB24.DBX   71.2;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".IBC_start; 
 
-//Останов перекачивания в IBC. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _010: A     DB24.DBX   71.3; 
       JNB   _011; 
       R     DB24.DBX   71.3; 
@@ -4217,7 +4217,7 @@ _010: A     DB24.DBX   71.3;
       R     "Fuel Phase Block".IBC_start; 
       S     "Fuel Phase Block".IBC_stop; 
 
-//Запуск мешалки A-FS-30M. Ручной режим
+//Г‡Г ГЇГіГ±ГЄ Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _011: A     DB24.DBX   71.4; 
       JNB   _012; 
       R     DB24.DBX   71.4; 
@@ -4225,18 +4225,18 @@ _011: A     DB24.DBX   71.4;
       AN    DB24.DBX   44.5; 
       S     "Fuel Phase Block".Mixer_start; 
 
-//Останов мешалки A-FS-30M. Ручной режим
+//ГЋГ±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ A-FS-30M. ГђГіГ·Г­Г®Г© Г°ГҐГ¦ГЁГ¬
 _012: A     DB24.DBX   71.5; 
       JNB   _013; 
       R     "Fuel Phase Block".Mixer_start; 
       S     "Fuel Phase Block".Mixer_stop; 
       R     DB24.DBX   71.5; 
 
-//Загрузить рецепт   
+//Г‡Г ГЈГ°ГіГ§ГЁГІГј Г°ГҐГ¶ГҐГЇГІ   
 _013: A     DB24.DBX   71.6; 
       JNB   _014; 
 
-//Загрузка рецепта
+//Г‡Г ГЈГ°ГіГ§ГЄГ  Г°ГҐГ¶ГҐГЇГІГ 
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     0; 
@@ -4286,20 +4286,20 @@ _013: A     DB24.DBX   71.6;
       L     DBW [AR1,P#34.0]; 
       T     DIW [AR2,P#34.0]; 
 
-//Загрузка названия
-//Тип BYTE
+//Г‡Г ГЈГ°ГіГ§ГЄГ  Г­Г Г§ГўГ Г­ГЁГї
+//Г’ГЁГЇ BYTE
       L     W#16#1002; 
       T     LW     8; 
 
-//Число байтов
+//Г—ГЁГ±Г«Г® ГЎГ Г©ГІГ®Гў
       L     22; 
       T     LW    10; 
 
-//Исходный DB
+//Г€Г±ГµГ®Г¤Г­Г»Г© DB
       L     713; 
       T     LW    12; 
 
-//Начало исходных данных
+//ГЌГ Г·Г Г«Г® ГЁГ±ГµГ®Г¤Г­Г»Гµ Г¤Г Г­Г­Г»Гµ
       TAR1  ; 
       L     P#DBX 36.0; 
       +D    ; 
@@ -4313,11 +4313,11 @@ _013: A     DB24.DBX   71.6;
       SET   ; 
       R     DB24.DBX   71.6; 
 
-//Cохранить рецепт
+//CГ®ГµГ°Г Г­ГЁГІГј Г°ГҐГ¶ГҐГЇГІ
 _014: A     DB24.DBX   71.7; 
       JNB   _015; 
 
-//Сохранение рецепта
+//Г‘Г®ГµГ°Г Г­ГҐГ­ГЁГҐ Г°ГҐГ¶ГҐГЇГІГ 
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     0; 
@@ -4369,20 +4369,20 @@ _014: A     DB24.DBX   71.7;
       L     DBW [AR1,P#34.0]; 
       T     DIW [AR2,P#34.0]; 
 
-//Сохранение названия
-//Тип BYTE
+//Г‘Г®ГµГ°Г Г­ГҐГ­ГЁГҐ Г­Г Г§ГўГ Г­ГЁГї
+//Г’ГЁГЇ BYTE
       L     W#16#1002; 
       T     LW     8; 
 
-//Число байтов
+//Г—ГЁГ±Г«Г® ГЎГ Г©ГІГ®Гў
       L     22; 
       T     LW    10; 
 
-//Исходный DB
+//Г€Г±ГµГ®Г¤Г­Г»Г© DB
       L     713; 
       T     LW    12; 
 
-//Начало исходных данных
+//ГЌГ Г·Г Г«Г® ГЁГ±ГµГ®Г¤Г­Г»Гµ Г¤Г Г­Г­Г»Гµ
       TAR2  ; 
       L     P#DBX 36.0; 
       +D    ; 
@@ -4396,7 +4396,7 @@ _014: A     DB24.DBX   71.7;
       SET   ; 
       R     DB24.DBX   71.7; 
 
-//Запуск перекачивания в IBC. Авто режим
+//Г‡Г ГЇГіГ±ГЄ ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГЂГўГІГ® Г°ГҐГ¦ГЁГ¬
 _015: A     DB24.DBX   72.0; 
       JNB   _016; 
       R     DB24.DBX   72.0; 
@@ -4406,7 +4406,7 @@ _015: A     DB24.DBX   72.0;
       AN    DB24.DBX   44.5; 
       =     "Fuel Phase Block".IBC_start_auto; 
 
-//Останов перекачивания в IBC. Авто режим
+//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC. ГЂГўГІГ® Г°ГҐГ¦ГЁГ¬
 _016: A     DB24.DBX   72.1; 
       JNB   _017; 
       R     DB24.DBX   72.1; 
@@ -4418,13 +4418,13 @@ _017: NOP   0;
 
 
 NETWORK
-TITLE =Запуск оборудования в авто режиме
+TITLE =Г‡Г ГЇГіГ±ГЄ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГї Гў Г ГўГІГ® Г°ГҐГ¦ГЁГ¬ГҐ
 
-//Запуск в авторежиме
+//Г‡Г ГЇГіГ±ГЄ Гў Г ГўГІГ®Г°ГҐГ¦ГЁГ¬ГҐ
       A     "Fuel Phase Block".Status_start; 
       JNB   _080; 
 
-//Копирование текущего рецепта
+//ГЉГ®ГЇГЁГ°Г®ГўГ Г­ГЁГҐ ГІГҐГЄГіГ№ГҐГЈГ® Г°ГҐГ¶ГҐГЇГІГ 
       A(    ; 
       L     "Fuel Phase Block".Current_id; 
       L     "Fuel Phase Block".Recipe.rec_id; 
@@ -4434,7 +4434,7 @@ TITLE =Запуск оборудования в авто режиме
       L     "Fuel Phase Block".Current_id; 
       T     "Fuel Phase Block".Recipe.rec_id; 
 
-//Блок работы мешалки
+//ГЃГ«Г®ГЄ Г°Г ГЎГ®ГІГ» Г¬ГҐГёГ Г«ГЄГЁ
 nex3: A     "Fuel Phase Block".Recipe.mixer_using; 
       JNB   _049; 
 
@@ -4488,7 +4488,7 @@ nex2: A(    ;
       L     0; 
       T     "Fuel Phase Block".Mixer_timer; 
 
-//Проверка окончания загрузки масла 
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬Г Г±Г«Г  
 _049: A(    ; 
       L     "DB_TenzoM".Analog_Output; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -4496,8 +4496,8 @@ _049: A(    ;
       )     ; 
       JC    _054; 
 
-//Подача масла в емкость
-//Проверка на запуск какого-либо из узлов
+//ГЏГ®Г¤Г Г·Г  Г¬Г Г±Г«Г  Гў ГҐГ¬ГЄГ®Г±ГІГј
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г§Г ГЇГіГ±ГЄ ГЄГ ГЄГ®ГЈГ®-Г«ГЁГЎГ® ГЁГ§ ГіГ§Г«Г®Гў
       A(    ; 
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
@@ -4508,39 +4508,39 @@ _049: A(    ;
       )     ; 
       JC    MAN; 
 
-//Свободен насос DB_P-FS-03M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-03M
       A     "DB_P-FS-03M".Status_OFF; 
       AN    "DB_H-FS-50".Start; 
       JC    _050; 
 
-//Свободен насос DB_P-FS-04M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-04M
       A     "DB_P-FS-04M".Status_OFF; 
       AN    "DB_H-FS-49".Start; 
       JC    _051; 
 
-//Открытие клапана DB_H-FS-49    
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-49    
 _050: AN    "DB_H-FS-49".Status_Open; 
       AN    "DB_H-FS-49".Start; 
       =     "DB_H-FS-49".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-03M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-03M
       A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_P-FS-03M".Start_WinCC; 
       JU    MAN; 
 
-//Открытие клапана DB_H-FS-50
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-50
 _051: AN    "DB_H-FS-50".Status_Open; 
       AN    "DB_H-FS-50".Start; 
       =     "DB_H-FS-50".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-04M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-04M
       A     "DB_H-FS-50".Status_Open; 
       A     "DB_P-FS-04M".Status_OFF; 
       =     "DB_P-FS-04M".Start_WinCC; 
       JU    MAN; 
 
-//Проверка окончания загрузки эмульгатора 1
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _054: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
@@ -4550,17 +4550,17 @@ _054: A(    ;
       )     ; 
       JC    _057; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    MAN; 
 
-//Проверка на остановку узлов
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г®Г±ГІГ Г­Г®ГўГЄГі ГіГ§Г«Г®Гў
       A     "DB_H-FS-49".Status_Close; 
       A     "DB_H-FS-50".Status_Close; 
       JC    _053; 
 
-//Если запущен узел 1
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 1
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _055; 
@@ -4568,7 +4568,7 @@ _054: A(    ;
       =     "DB_P-FS-03M".Stop_WinCC; 
       JU    _056; 
 
-//Если запущен узел 2
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 2
 _055: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _056; 
@@ -4576,7 +4576,7 @@ _055: A     "DB_P-FS-04M".Status_ON;
       =     "DB_P-FS-04M".Stop_WinCC; 
       JU    _056; 
 
-//Останов насоса и клапана
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  ГЁ ГЄГ«Г ГЇГ Г­Г 
 _056: A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_H-FS-49".Close_WinCC; 
@@ -4585,20 +4585,20 @@ _056: A     "DB_H-FS-49".Status_Open;
       =     "DB_H-FS-50".Close_WinCC; 
       JU    MAN; 
 
-//Подача эмульгатора 1 в емкость
-//Переключение клапана DB_H-FS-51 в положение 1
+//ГЏГ®Г¤Г Г·Г  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1 Гў ГҐГ¬ГЄГ®Г±ГІГј
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 1
 _053: AN    "DB_H-FS-51".Status_Open; 
       AN    "DB_H-FS-51".Start; 
       =     "DB_H-FS-51".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    MAN; 
 
-//Проверка окончания загрузки эмульгатора 2
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _057: A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
       L     "Fuel Phase Block".Recipe.emuls1_amount; 
@@ -4610,47 +4610,47 @@ _057: A(    ;
       )     ; 
       JC    _058; 
 
-//Подача эмульгатора 2 в емкость
-//Проверка включения узла    
+//ГЏГ®Г¤Г Г·Г  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2 Гў ГҐГ¬ГЄГ®Г±ГІГј
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г     
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Open; 
       =     "DB_P-FS-10M".Stop_WinCC; 
 
-//Переключение клапана DB_H-FS-51 в положение 2
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 2
       AN    "DB_H-FS-51".Status_Close; 
       AN    "DB_H-FS-51".Stop; 
       A     "DB_P-FS-10M".Status_OFF; 
       =     "DB_H-FS-51".Close_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    MAN; 
 
-//Окончание загрузки компонентов
-//Проверка остановки насоса
+//ГЋГЄГ®Г­Г·Г Г­ГЁГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЄГ®Г¬ГЇГ®Г­ГҐГ­ГІГ®Гў
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®Г±ГІГ Г­Г®ГўГЄГЁ Г­Г Г±Г®Г±Г 
 _058: A     "DB_P-FS-10M".Status_OFF; 
       JC    _059; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
 
-//Завершение программы
-//Проверка окончания работы мешалки
+//Г‡Г ГўГҐГ°ГёГҐГ­ГЁГҐ ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГЄГ®Г­Г·Г Г­ГЁГї Г°Г ГЎГ®ГІГ» Г¬ГҐГёГ Г«ГЄГЁ
 _059: A     "DB_A-FS-30M".Status_OFF; 
       JNB   MAN; 
 
-//Проверка завершения программы
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г§Г ГўГҐГ°ГёГҐГ­ГЁГї ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
       A     "Fuel Phase Block".Status_start; 
       JNB   MAN; 
       R     "Fuel Phase Block".Status_start; 
@@ -4663,11 +4663,11 @@ _059: A     "DB_A-FS-30M".Status_OFF;
 
 
 
-//Останов программы
+//ГЋГ±ГІГ Г­Г®Гў ГЇГ°Г®ГЈГ°Г Г¬Г¬Г»
 _080: A     "Fuel Phase Block".Status_stop; 
       JNB   _060; 
 
-//Отключение мешалки 
+//ГЋГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ Г¬ГҐГёГ Г«ГЄГЁ 
       R     "Fuel Phase Block".Mixer_end; 
       R     "Fuel Phase Block".Mixer_enable; 
       A     "DB_A-FS-30M".Status_ON; 
@@ -4675,7 +4675,7 @@ _080: A     "Fuel Phase Block".Status_stop;
       A     "DB_A-FS-30M".Status_ON; 
       =     "DB_A-FS-30M".Stop_WinCC; 
 
-//Останов на этапе загрузки мин. масла
+//ГЋГ±ГІГ Г­Г®Гў Г­Г  ГЅГІГ ГЇГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ Г¬ГЁГ­. Г¬Г Г±Г«Г 
 _081: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "DB_TenzoM".Analog_Output; 
@@ -4684,13 +4684,13 @@ _081: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _082; 
 
-//Отключение узлов мин. масла
+//ГЋГІГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГіГ§Г«Г®Гў Г¬ГЁГ­. Г¬Г Г±Г«Г 
       A     "DB_H-FS-49".Status_Close; 
       A     "DB_H-FS-50".Status_Close; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Если запущен узел 1
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 1
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _083; 
@@ -4698,14 +4698,14 @@ _081: A     "Fuel Phase Block".Status_stop;
       =     "DB_P-FS-03M".Stop_WinCC; 
       JU    _084; 
 
-//Если запущен узел 2
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 2
 _083: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _084; 
       A     "DB_P-FS-04M".Status_ON; 
       =     "DB_P-FS-04M".Stop_WinCC; 
 
-//Закрытие клапана
+//Г‡Г ГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г 
 _084: A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_H-FS-49".Close_WinCC; 
@@ -4714,7 +4714,7 @@ _084: A     "DB_H-FS-49".Status_Open;
       =     "DB_H-FS-50".Close_WinCC; 
       JU    MAN; 
 
-//Останов на этапе загрузки эмульгатора 1
+//ГЋГ±ГІГ Г­Г®Гў Г­Г  ГЅГІГ ГЇГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _082: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -4725,17 +4725,17 @@ _082: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _085; 
 
-//Проверка останова насоса
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®Г±ГІГ Г­Г®ГўГ  Г­Г Г±Г®Г±Г 
       A     "DB_P-FS-10M".Status_OFF; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
 
-//Останов на этапе загрузки эмульгатора 2
+//ГЋГ±ГІГ Г­Г®Гў Г­Г  ГЅГІГ ГЇГҐ Г§Г ГЈГ°ГіГ§ГЄГЁ ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _085: A     "Fuel Phase Block".Status_stop; 
       A(    ; 
       L     "Fuel Phase Block".Recipe.minoil_amount; 
@@ -4748,12 +4748,12 @@ _085: A     "Fuel Phase Block".Status_stop;
       )     ; 
       JNB   _086; 
 
-//Проверка останова насоса
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®Г±ГІГ Г­Г®ГўГ  Г­Г Г±Г®Г±Г 
       A     "DB_P-FS-10M".Status_OFF; 
       R     "Fuel Phase Block".Status_stop; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    MAN; 
@@ -4766,13 +4766,13 @@ _086: A     "Fuel Phase Block".Status_stop;
 
 
 
-//Перекачивание в IBC
+//ГЏГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГҐ Гў IBC
 _060: A     "Fuel Phase Block".IBC_start_auto; 
       JNB   _070; 
       A     "Fuel Phase Block".Status_ready; 
       R     "Fuel Phase Block".Status_ready; 
 
-//Контроль перекачки по весу
+//ГЉГ®Г­ГІГ°Г®Г«Гј ГЇГҐГ°ГҐГЄГ Г·ГЄГЁ ГЇГ® ГўГҐГ±Гі
       A(    ; 
       L     "DB_TenzoM".Analog_Output; 
       L     "Fuel Phase Block".Weight_control; 
@@ -4784,18 +4784,18 @@ _060: A     "Fuel Phase Block".IBC_start_auto;
       S     "Fuel Phase Block".IBC_stop_auto; 
       JU    _070; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _061: A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_ON; 
       JC    MAN; 
 
-//Открытие клапана DB_H-FS-52
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Open; 
       AN    "DB_H-FS-52".Start; 
       =     "DB_H-FS-52".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-02M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_OFF; 
       =     "DB_P-FS-02M".Start_WinCC; 
@@ -4805,22 +4805,22 @@ _061: A     "DB_H-FS-52".Status_Open;
 
 
 
-//Останов перекачивания в IBC
+//ГЋГ±ГІГ Г­Г®Гў ГЇГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГї Гў IBC
 _070: A     "Fuel Phase Block".IBC_stop_auto; 
       JNB   MAN; 
 
-//Проверка отключения
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї
       A     "DB_P-FS-02M".Status_OFF; 
       A     "DB_H-FS-52".Status_Close; 
       R     "Fuel Phase Block".IBC_stop_auto; 
       JC    MAN; 
 
-//Останов насоса DB_P-FS-02M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_P-FS-02M".Status_ON; 
       A     "DB_H-FS-52".Status_Open; 
       =     "DB_P-FS-02M".Stop_WinCC; 
 
-//Закрытие клапана DB_H-FS-52
+//Г‡Г ГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Close; 
       AN    "DB_H-FS-52".Stop; 
@@ -4828,9 +4828,9 @@ _070: A     "Fuel Phase Block".IBC_stop_auto;
       JU    MAN; 
 
 NETWORK
-TITLE =Запуск оборудования в ручном режиме
+TITLE =Г‡Г ГЇГіГ±ГЄ Г®ГЎГ®Г°ГіГ¤Г®ГўГ Г­ГЁГї Гў Г°ГіГ·Г­Г®Г¬ Г°ГҐГ¦ГЁГ¬ГҐ
 
-//Запуск мешалки
+//Г‡Г ГЇГіГ±ГЄ Г¬ГҐГёГ Г«ГЄГЁ
 MAN:  A     "Fuel Phase Block".Mixer_start; 
       JNB   _100; 
       A     "DB_A-FS-30M".Status_ON; 
@@ -4839,7 +4839,7 @@ MAN:  A     "Fuel Phase Block".Mixer_start;
       AN    DB24.DBX   44.4; 
       =     "DB_A-FS-30M".Start_WinCC; 
 
-//Останов мешалки
+//ГЋГ±ГІГ Г­Г®Гў Г¬ГҐГёГ Г«ГЄГЁ
 _100: A     "Fuel Phase Block".Mixer_stop; 
       JNB   _101; 
       A     "DB_A-FS-30M".Status_OFF; 
@@ -4848,15 +4848,15 @@ _100: A     "Fuel Phase Block".Mixer_stop;
       A     "DB_A-FS-30M".Status_ON; 
       =     "DB_A-FS-30M".Stop_WinCC; 
 
-//Загрузка масла
+//Г‡Г ГЈГ°ГіГ§ГЄГ  Г¬Г Г±Г«Г 
 _101: A     "Fuel Phase Block".Minoil_start; 
       JNB   _102; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка на запуск какого-либо из узлов
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г§Г ГЇГіГ±ГЄ ГЄГ ГЄГ®ГЈГ®-Г«ГЁГЎГ® ГЁГ§ ГіГ§Г«Г®Гў
       A(    ; 
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
@@ -4867,39 +4867,39 @@ _101: A     "Fuel Phase Block".Minoil_start;
       )     ; 
       JC    END; 
 
-//Свободен насос DB_P-FS-03M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-03M
       A     "DB_P-FS-03M".Status_OFF; 
       AN    "DB_H-FS-50".Start; 
       JC    _103; 
 
-//Свободен насос DB_P-FS-04M
+//Г‘ГўГ®ГЎГ®Г¤ГҐГ­ Г­Г Г±Г®Г± DB_P-FS-04M
       A     "DB_P-FS-04M".Status_OFF; 
       AN    "DB_H-FS-49".Start; 
       JC    _104; 
 
-//Открытие клапана DB_H-FS-49    
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-49    
 _103: AN    "DB_H-FS-49".Status_Open; 
       AN    "DB_H-FS-49".Start; 
       =     "DB_H-FS-49".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-03M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-03M
       A     "DB_H-FS-49".Status_Open; 
       A     "DB_P-FS-03M".Status_OFF; 
       =     "DB_P-FS-03M".Start_WinCC; 
       JU    END; 
 
-//Открытие клапана DB_H-FS-50
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-50
 _104: AN    "DB_H-FS-50".Status_Open; 
       AN    "DB_H-FS-50".Start; 
       =     "DB_H-FS-50".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-04M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-04M
       A     "DB_H-FS-50".Status_Open; 
       A     "DB_P-FS-04M".Status_OFF; 
       =     "DB_P-FS-04M".Start_WinCC; 
       JU    END; 
 
-//Проверка на остановку узлов
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г®Г±ГІГ Г­Г®ГўГЄГі ГіГ§Г«Г®Гў
 _102: A     "Fuel Phase Block".Minoil_stop; 
       JNB   _105; 
       A     "DB_H-FS-49".Status_Close; 
@@ -4908,7 +4908,7 @@ _102: A     "Fuel Phase Block".Minoil_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _105; 
 
-//Если запущен узел 1
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 1
       A     "DB_P-FS-03M".Status_ON; 
       A     "DB_H-FS-49".Status_Open; 
       JNB   _106; 
@@ -4918,7 +4918,7 @@ _102: A     "Fuel Phase Block".Minoil_stop;
       T     MW   102; 
       JU    _107; 
 
-//Если запущен узел 2
+//Г…Г±Г«ГЁ Г§Г ГЇГіГ№ГҐГ­ ГіГ§ГҐГ« 2
 _106: A     "DB_P-FS-04M".Status_ON; 
       A     "DB_H-FS-50".Status_Open; 
       JNB   _107; 
@@ -4928,7 +4928,7 @@ _106: A     "DB_P-FS-04M".Status_ON;
       T     MW   102; 
       JU    _107; 
 
-//Останов насоса и клапана     
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  ГЁ ГЄГ«Г ГЇГ Г­Г      
 _107: NOP   0; 
       OPN   DB [MW 100]; 
       OPN   DI [MW 102]; 
@@ -4938,32 +4938,32 @@ _107: NOP   0;
       =     DIX    0.4; 
       JU    END; 
 
-//Загрузка эмульгатора 1
+//Г‡Г ГЈГ°ГіГ§ГЄГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  1
 _105: A     "Fuel Phase Block".Emuls1_start; 
       JNB   _108; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    END; 
 
-//Переключение клапана DB_H-FS-51 в положение 1
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 1
       AN    "DB_H-FS-51".Status_Open; 
       AN    "DB_H-FS-51".Start; 
       =     "DB_H-FS-51".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Open; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    END; 
 
-//Проверка отключения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _108: A     "Fuel Phase Block".Emuls1_stop; 
       JNB   _109; 
       A     "DB_P-FS-10M".Status_OFF; 
@@ -4971,39 +4971,39 @@ _108: A     "Fuel Phase Block".Emuls1_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _109; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Open; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    END; 
 
-//Загрузка эмульгатора 2
+//Г‡Г ГЈГ°ГіГ§ГЄГ  ГЅГ¬ГіГ«ГјГЈГ ГІГ®Г°Г  2
 _109: A     "Fuel Phase Block".Emuls2_start; 
       JNB   _110; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_ON; 
       JC    END; 
 
-//Переключение клапана DB_H-FS-51 в положение 2
+//ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-51 Гў ГЇГ®Г«Г®Г¦ГҐГ­ГЁГҐ 2
       AN    "DB_H-FS-51".Status_Close; 
       AN    "DB_H-FS-51".Stop; 
       A     "DB_P-FS-10M".Status_OFF; 
       =     "DB_H-FS-51".Close_WinCC; 
 
-//Запуск насоса DB_P-FS-10M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_H-FS-51".Status_Close; 
       A     "DB_P-FS-10M".Status_OFF; 
       AN    DB24.DBX   44.1; 
       =     "DB_P-FS-10M".Start_WinCC; 
       JU    END; 
 
-//Проверка отключения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _110: A     "Fuel Phase Block".Emuls2_stop; 
       JNB   _111; 
       A     "DB_P-FS-10M".Status_OFF; 
@@ -5011,42 +5011,42 @@ _110: A     "Fuel Phase Block".Emuls2_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    _111; 
 
-//Останов насоса DB_P-FS-10M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-10M
       A     "DB_P-FS-10M".Status_ON; 
       A     "DB_H-FS-51".Status_Close; 
       =     "DB_P-FS-10M".Stop_WinCC; 
       JU    END; 
 
-//Перекачивание в IBC
+//ГЏГҐГ°ГҐГЄГ Г·ГЁГўГ Г­ГЁГҐ Гў IBC
 _111: A     "Fuel Phase Block".IBC_start; 
       JNB   _112; 
 
-//Сброс ТФ готова
+//Г‘ГЎГ°Г®Г± Г’Г” ГЈГ®ГІГ®ГўГ 
       A     "Fuel Phase Block".Status_ready; 
       R     "Fuel Phase Block".Status_ready; 
 
-//Активация бита запущенного процесса
+//ГЂГЄГІГЁГўГ Г¶ГЁГї ГЎГЁГІГ  Г§Г ГЇГіГ№ГҐГ­Г­Г®ГЈГ® ГЇГ°Г®Г¶ГҐГ±Г±Г 
       AN    "Fuel Phase Block".Process_busy; 
       S     "Fuel Phase Block".Process_busy; 
 
-//Проверка включения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  ГўГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_ON; 
       JC    END; 
 
-//Открытие клапана DB_H-FS-52
+//ГЋГІГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Open; 
       AN    "DB_H-FS-52".Start; 
       =     "DB_H-FS-52".Open_WinCC; 
 
-//Запуск насоса DB_P-FS-02M
+//Г‡Г ГЇГіГ±ГЄ Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_H-FS-52".Status_Open; 
       A     "DB_P-FS-02M".Status_OFF; 
       =     "DB_P-FS-02M".Start_WinCC; 
       JU    END; 
 
-//Проверка отключения узла
+//ГЏГ°Г®ГўГҐГ°ГЄГ  Г®ГІГЄГ«ГѕГ·ГҐГ­ГЁГї ГіГ§Г«Г 
 _112: A     "Fuel Phase Block".IBC_stop; 
       JNB   END; 
       A     "DB_P-FS-02M".Status_OFF; 
@@ -5055,12 +5055,12 @@ _112: A     "Fuel Phase Block".IBC_stop;
       R     "Fuel Phase Block".Process_busy; 
       JC    END; 
 
-//Останов насоса DB_P-FS-02M
+//ГЋГ±ГІГ Г­Г®Гў Г­Г Г±Г®Г±Г  DB_P-FS-02M
       A     "DB_P-FS-02M".Status_ON; 
       A     "DB_H-FS-52".Status_Open; 
       =     "DB_P-FS-02M".Stop_WinCC; 
 
-//Закрытие клапана DB_H-FS-52
+//Г‡Г ГЄГ°Г»ГІГЁГҐ ГЄГ«Г ГЇГ Г­Г  DB_H-FS-52
       A     "DB_P-FS-02M".Status_OFF; 
       AN    "DB_H-FS-52".Status_Close; 
       AN    "DB_H-FS-52".Stop; 
